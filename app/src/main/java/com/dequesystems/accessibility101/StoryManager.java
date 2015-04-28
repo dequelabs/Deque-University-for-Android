@@ -75,15 +75,13 @@ public class StoryManager {
 
         ArrayList<Tab> mTabs;
 
-        int mTabOrderCounter = 0;
-
         private Story (String title) {
             mTitle = title;
             mTabs = new ArrayList<>();
         }
 
         private void addTab(String tabTitle, Fragment content) {
-            mTabs.add(new Tab(tabTitle, content, mTabOrderCounter++));
+            mTabs.add(new Tab(tabTitle, content));
         }
 
         private void makeActiveStory(TabHost tabHost) {
@@ -131,17 +129,20 @@ public class StoryManager {
             return mTabs.iterator();
         }
 
-        class Tab implements  TabHost.TabContentFactory{
+        private class Tab implements  TabHost.TabContentFactory{
+
+            private View mView = null;
+
             private final String mTitle;
 
             private final String mTabID;
 
             private Fragment mFragment;
 
-            private Tab(String title, Fragment fragment, int order) {
+            private Tab(String title, Fragment fragment) {
                 mFragment = fragment;
                 mTitle = title;
-                mTabID = TAB_ID + order;
+                mTabID = Story.this.getTitle().toUpperCase() + "_" + mTitle.toUpperCase() + "_TAB";
             }
 
             public String getTitle() { return mTitle;}
@@ -152,16 +153,20 @@ public class StoryManager {
 
             @Override
             public View createTabContent(String tag) {
+                Log.v(LOG_TAG, "Creating tab content for tab: " + tag.toString());
+
+                if (mView != null) return mView;
+
                 final int viewId = Math.abs(mTabID.hashCode());
 
-                View view = new RelativeLayout(mActivity);
-                view.setId(viewId);
+                mView = new RelativeLayout(mActivity);
+                mView.setId(viewId);
 
                 FragmentTransaction fragmentTransaction = mActivity.getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(viewId, mFragment);
                 fragmentTransaction.commit();
 
-                return view;
+                return mView;
             }
         }
     }

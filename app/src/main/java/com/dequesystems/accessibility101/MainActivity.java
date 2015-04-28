@@ -1,6 +1,5 @@
 package com.dequesystems.accessibility101;
 
-import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 
@@ -98,6 +97,7 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void onSectionAttached(int number) {
+        Log.v(LOG_TAG, "Attaching new section: " + number);
         mStoryManager.setActiveStory(number, mTabHost);
         mTitle = mStoryManager.getActiveStory().getTitle();
     }
@@ -110,6 +110,6 @@ public class MainActivity extends ActionBarActivity
             result.add(story.getTitle());
         }
 
-        return result.toArray(new String[0]);
+        return result.toArray(new String[result.size()]);
     }
 }
