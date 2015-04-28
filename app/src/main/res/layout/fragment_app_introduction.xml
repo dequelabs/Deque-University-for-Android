@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dequesystems.accessibility101.introduction.AppIntroductionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/text_body_margin"
+            android:text="@string/intro_about_paragraph1"/>
+    </ScrollView>
+
+</LinearLayout>

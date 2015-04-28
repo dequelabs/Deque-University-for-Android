@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dequesystems.accessibility101.introduction.AboutDequeFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/text_body_margin"
+                android:text="@string/intro_deque_paragraph1"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/intro_deque_contact_button"
+                android:id="@+id/button_contact_us"
+                android:textColor="#ff0300ff" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
