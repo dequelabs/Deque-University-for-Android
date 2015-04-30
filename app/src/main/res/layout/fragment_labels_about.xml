@@ -1,18 +1,29 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.LabelsAboutFragment">
+    tools:context="com.dequesystems.accessibility101.labels.LabelsAboutFragment"
+    android:background="@color/aac_story_background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_text_body_margin"
+            android:elevation="@dimen/aac_text_body_elevation_level_1"
+            android:id="@+id/relativeLayout"
+            android:orientation="vertical"
+            android:background="@color/aac_worldspace_white">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button4"
-        android:layout_gravity="center" />
+            <TextView android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/labels_about_heading_1" />
 
-</FrameLayout>
+            <TextView android:id="@+id/textViewParagraph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_text_body_padding"
+                android:text="@string/labels_about_paragraph_1" />
+
+        </LinearLayout>
+</ScrollView>

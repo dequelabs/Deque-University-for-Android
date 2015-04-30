@@ -15,7 +15,7 @@
 
             <TextView android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/text_body_margin"
+                android:layout_margin="@dimen/aac_text_body_margin"
                 android:text="@string/intro_deque_paragraph1"/>
 
             <Button
