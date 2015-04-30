@@ -3,6 +3,26 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:textAppearanceSmall">@style/AACTextAppearanceSmall</item>
+        <item name="android:textAppearanceMedium">@style/AACTextAppearanceMedium</item>
     </style>
+
+    <style name="AACTextAppearanceSmall" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/aac_text_body</item>
+    </style>
+
+    <style name="AACTextAppearanceMedium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/aac_text_body</item>
+    </style>
+
+    <color name="aac_text_body">@color/aac_worldspace_black</color>
+    <color name="aac_story_background">@color/aac_worldspace_blue</color>
+
+    <color name="aac_worldspace_blue">#083378</color>
+    <color name="aac_worldspace_white">#F2F2F4</color>
+    <color name="aac_worldspace_orange">#EF611A</color>
+    <color name="aac_worldspace_green">#72BA32</color>
+    <color name="aac_worldspace_red">#DB341A</color>
+    <color name="aac_worldspace_black">#030210</color>
 
 </resources>

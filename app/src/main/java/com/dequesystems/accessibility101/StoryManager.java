@@ -11,6 +11,7 @@ import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragme
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.introduction.AboutDequeFragment;
 import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
+import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -40,13 +41,12 @@ public class StoryManager {
         tempList.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.labels_title));
-        tempStory.addTab(mActivity.getString(R.string.story_about), LabelsAboutFragment.newInstance("Blarg", "Blargety"));
-        tempStory.addTab(mActivity.getString(R.string.story_broken), LabelsBrokenFragment.newInstance("Blarg", "Blargety"));
+        tempStory.addTab(mActivity.getString(R.string.story_tab_title_about), new LabelsAboutFragment());
         tempList.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.cont_desc_title));
-        tempStory.addTab(mActivity.getString(R.string.story_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
-        tempStory.addTab(mActivity.getString(R.string.story_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
+        tempStory.addTab(mActivity.getString(R.string.story_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
+        tempStory.addTab(mActivity.getString(R.string.story_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
         tempList.add(tempStory);
 
         mStories = tempList;
