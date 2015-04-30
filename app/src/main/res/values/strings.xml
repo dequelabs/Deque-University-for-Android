@@ -33,5 +33,14 @@
 
     <!-- ContDesc Story Strings-->
     <string name="cont_desc_title">Content Descriptions</string>
+    <string name="cont_desc_about_intro">The contentDescription attribute for ImageViews and other focusable objects allows accessibility services, like TalkBack, to describe the content to users, as the name implies. In order to be useful, content descriptions must be clear, concise, and most of all, present. </string>
+    <string name="cont_desc_about_details">Look at the \"Broken\" tab to see how content descriptions can be unhelpful if used inappropriately or not at all. Then, check out the \"Fixed\" tab to see how properly used content descriptions can greatly enhance the user experience. </string>
+    <string name="cont_desc_about_dog_pic_description">This image has an empty string as a content description, thus TalkBack can\'t describe what the object is. </string>
+    <string name="cont_desc_about_cat_pic_description">This image has a null content description and can\'t be focused on using TalkBack</string>
+    <string name="cont_desc_broken_cat_null">Notice that this image is not focusable because it has a null content description. This means that someone using TalkBack would not even know that this image exists. </string>
+    <string name="cont_desc_broken_dog_empty">Notice that this image has content description, so it is focusable using TalkBack, but it is and empty string (\"\"). This would allow someone using TalkBack to focus on the image, but he/she would not gain any helpful information about the image.</string>
+    <string name="cont_desc_broken_instructions">Try using TalkBack to \"look\" at these images. </string>
+    <string name="cont_desc_broken_null">Null content description</string>
+    <string name="cont_desc_broken_empty">Empty content description</string>
 
 </resources>
