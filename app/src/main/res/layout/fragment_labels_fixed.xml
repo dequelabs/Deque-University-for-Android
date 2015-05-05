@@ -40,7 +40,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
                     android:text="@string/aac_labels_setting_1"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:labelFor="@id/switchRed" />
 
                 <Switch
                     android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
                     android:text="@string/aac_labels_setting_2"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:labelFor="@id/switchGreen" />
 
                 <Switch
                     android:layout_width="wrap_content"
@@ -88,7 +90,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
                     android:text="@string/aac_labels_setting_3"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:labelFor="@id/switchBlue" />
 
                 <Switch
                     android:layout_width="wrap_content"
@@ -105,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
             android:padding="@dimen/aac_global_border"
-            android:text="@string/aac_labels_broken_conclusion"
+            android:text="@string/aac_labels_fixed_conclusion"
             android:textAppearance="@style/AACTextAppearance.body"
             android:background="@color/aac_background_text" />
     </LinearLayout>

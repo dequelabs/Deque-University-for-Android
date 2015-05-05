@@ -1,6 +1,6 @@
 package com.dequesystems.accessibility101.labels;
 
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +11,10 @@ import android.widget.Switch;
 
 import com.dequesystems.accessibility101.R;
 
-public class LabelsBrokenFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class LabelsFixedFragment extends Fragment {
 
     private View mView;
     private View mViewDemoContent;
@@ -24,7 +27,7 @@ public class LabelsBrokenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        mView = inflater.inflate(R.layout.fragment_labels_broken, container, false);
+        mView = inflater.inflate(R.layout.fragment_labels_fixed, container, false);
 
         mViewDemoContent = mView.findViewById(R.id.demoContent);
 
@@ -46,16 +49,7 @@ public class LabelsBrokenFragment extends Fragment {
             boolean isGreen = mSwitchGreen.isChecked();
             boolean isBlue = mSwitchBlue.isChecked();
 
-            mViewDemoContent.setBackgroundColor(getBackgroundColor(isRed, isGreen, isBlue));
+            mViewDemoContent.setBackgroundColor(LabelsBrokenFragment.getBackgroundColor(isRed, isGreen, isBlue));
         }
     };
-
-    public static int getBackgroundColor(boolean isRed, boolean isGreen, boolean isBlue) {
-
-        int red = isRed ? 255 : 0;
-        int green = isGreen ? 255 : 0;
-        int blue = isBlue ? 255 : 0;
-
-        return Color.rgb(red, green, blue);
-    }
 }

@@ -9,9 +9,9 @@
     <string name="action_settings">Settings</string>
 
     <!-- Global Story Strings-->
-    <string name="story_tab_title_about">About</string>
-    <string name="story_tab_title_broken">Broken</string>
-    <string name="story_tab_title_fixed">Fixed</string>
+    <string name="aac_tab_title_about">About</string>
+    <string name="aac_tab_title_broken">Broken</string>
+    <string name="aac_tab_title_fixed">Fixed</string>
 
     <!-- Intro Story Strings-->
     <string name="intro_title">Introduction</string>
@@ -26,6 +26,8 @@
 
     <!-- Labels Story Strings-->
     <string name="aac_labels_title">Labels</string>
+
+    <string name="aac_labels_content_description">This is a content description.</string>
 
     <string name="aac_labels_about_introduction">In the Android Accessibility world there are multiple ways of providing alternate text for a control.  The contentDescription is the most basic.  However, you can also use the labelFor attribute.  By marking a text element as the "labelFor" something, you associate a visible label with the announcement in TalkBack.  While not all controls require a contentDescription, all controls that do not contain text as a primary feature of the control, absolutely require a label of some kind!  Labels are not an Android element, it is a word we have chosen to represent the presence of either a labelFor or a contentDescription.  In general, the labelFor property should be preferred.</string>
 
