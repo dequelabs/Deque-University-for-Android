@@ -1,20 +1,51 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.introduction.AppIntroductionFragment">
+    tools:context="com.dequesystems.accessibility101.introduction.AppIntroductionFragment"
+    android:background="@color/aac_worldspace_green">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView" >
+        android:id="@+id/scrollView"
+        android:orientation="vertical">
 
-        <TextView android:layout_height="wrap_content"
+        <TextView android:id="@+id/aacTextView1"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_margin="@dimen/aac_global_border"
-            android:text="@string/intro_about_paragraph1"/>
+            android:text="@string/aac_intro_about_paragraph1"
+            android:background="@color/aac_background_text"
+            android:textAppearance="@style/AACTextAppearance.body"
+            android:linksClickable="false"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1" />
 
-    </ScrollView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/aac_background_text"
+            android:padding="@dimen/aac_global_border"
+            android:layout_margin="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1">
 
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_intro_deque_heading"
+                android:id="@+id/textView" />
+
+            <TextView android:id="@+id/aacTextView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_intro_deque_paragraph1"
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:padding="@dimen/aac_global_border" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
