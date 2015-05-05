@@ -4,167 +4,170 @@
     tools:context="com.dequesystems.accessibility101.labels.LabelsAboutFragment"
     android:background="@color/aac_story_background">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:text="@string/aac_labels_about_introduction"
+            android:textAppearance="@style/AACTextAppearance.body"
+            android:background="@color/aac_background_text"
+            android:id="@+id/aacTextView1" />
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical"
+            android:background="@color/aac_background_text" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_labels_about_heading_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_labels_about_paragraph_1"
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:id="@+id/aacTextView2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:layout_margin="@dimen/aac_global_border"
+                android:elevation="@dimen/aac_elevation_level_2"
+                android:background="@color/aac_worldspace_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:text="@string/aac_labels_about_visible_text_1"
+                    android:layout_weight="1" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/aac_labels_content_description"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:background="@color/aac_worldspace_white"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_labels_about_heading_2" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/aac_global_border"
                 android:padding="@dimen/aac_global_border"
-                android:text="@string/aac_labels_about_introduction"
+                android:text="@string/aac_labels_about_paragraph_2"
                 android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_background_text" />
+                android:id="@+id/aacTextView3" />
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/aac_global_border"
+                android:layout_height="fill_parent"
                 android:padding="@dimen/aac_global_border"
-                android:elevation="@dimen/aac_elevation_level_1"
-                android:id="@+id/linearLayout4"
-                android:orientation="vertical"
-                android:background="@color/aac_background_text" >
+                android:background="@color/aac_background_text"
+                android:layout_margin="@dimen/aac_global_border"
+                android:elevation="@dimen/aac_elevation_level_2">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/AACTextAppearance.heading"
-                    android:text="@string/aac_labels_about_heading_1" />
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:text="@string/aac_labels_about_visible_text_2"
+                    android:layout_weight="1"
+                    android:labelFor="@+id/switch1" />
 
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:text="@string/aac_labels_about_paragraph_1"
-                    android:textAppearance="@style/AACTextAppearance.body" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:layout_margin="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
-                    android:background="@color/aac_worldspace_white">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:text="@string/aac_labels_about_visible_text_1"
-                        android:layout_weight="1"/>
-
-                    <ToggleButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="New ToggleButton"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:layout_weight="0"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
-                android:elevation="@dimen/aac_elevation_level_1"
-                android:background="@color/aac_worldspace_white"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView5"
+                <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/AACTextAppearance.heading"
-                    android:text="@string/aac_labels_about_heading_2" />
+                    android:layout_weight="0"
+                    android:id="@+id/switch1" />
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:text="@string/aac_labels_about_paragraph_2"
-                    android:textAppearance="@style/AACTextAppearance.body" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:padding="@dimen/aac_global_border"
-                    android:background="@color/aac_background_text"
-                    android:layout_margin="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:text="@string/aac_labels_about_visible_text_2"
-                        android:layout_weight="1"/>
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
-                android:elevation="@dimen/aac_elevation_level_1"
-                android:id="@+id/linearLayout2"
-                android:orientation="vertical"
-                android:background="@color/aac_worldspace_white" >
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/AACTextAppearance.heading"
-                    android:text="@string/aac_labels_about_heading_3" />
-
-                <TextView
-                    android:id="@+id/textViewParagraph1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:text="@string/aac_labels_about_paragraph_3"
-                    android:textAppearance="@style/AACTextAppearance.body" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:padding="@dimen/aac_global_border"
-                    android:background="@color/aac_background_text"
-                    android:layout_margin="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:text="@string/aac_labels_about_visible_text_3"
-                        android:layout_weight="1"/>
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:layout_weight="0"/>
-                </LinearLayout>
 
             </LinearLayout>
-
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical"
+            android:background="@color/aac_worldspace_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_labels_about_heading_3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_labels_about_paragraph_3"
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:id="@+id/aacTextView4" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:background="@color/aac_background_text"
+                android:layout_margin="@dimen/aac_global_border"
+                android:elevation="@dimen/aac_elevation_level_2">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:text="@string/aac_labels_about_visible_text_3"
+                    android:layout_weight="1"
+                    android:labelFor="@+id/checkBox" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/aac_labels_content_description"
+                    android:id="@+id/checkBox" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>
