@@ -17,7 +17,8 @@
             android:elevation="@dimen/aac_elevation_level_1"
             android:text="@string/aac_labels_about_introduction"
             android:textAppearance="@style/AACTextAppearance.body"
-            android:background="@color/aac_background_text" />
+            android:background="@color/aac_background_text"
+            android:id="@+id/aacTextView1" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -39,7 +40,8 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_labels_about_paragraph_1"
-                android:textAppearance="@style/AACTextAppearance.body" />
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:id="@+id/aacTextView2" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -86,7 +88,8 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_labels_about_paragraph_2"
-                android:textAppearance="@style/AACTextAppearance.body" />
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:id="@+id/aacTextView3" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -135,7 +138,8 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_labels_about_paragraph_3"
-                android:textAppearance="@style/AACTextAppearance.body" />
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:id="@+id/aacTextView4" />
 
             <LinearLayout
                 android:orientation="horizontal"
