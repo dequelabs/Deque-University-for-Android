@@ -40,11 +40,11 @@ public class StoryManager {
         tempStory.addTab(mActivity.getString(R.string.intro_tab_2), new AboutDequeFragment());
         tempList.add(tempStory);
 
-        tempStory = new Story(mActivity.getString(R.string.labels_title));
+        tempStory = new Story(mActivity.getString(R.string.aac_labels_title));
         tempStory.addTab(mActivity.getString(R.string.story_tab_title_about), new LabelsAboutFragment());
         tempList.add(tempStory);
 
-        tempStory = new Story(mActivity.getString(R.string.cont_desc_title));
+        tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title));
         tempStory.addTab(mActivity.getString(R.string.story_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
         tempStory.addTab(mActivity.getString(R.string.story_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
         tempList.add(tempStory);
