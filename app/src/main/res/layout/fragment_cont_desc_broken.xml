@@ -1,72 +1,60 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/aac_story_background"
     tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cont_desc_broken_instructions"
-        android:id="@+id/contentDescriptionBrokenInstructions"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginBottom="@dimen/content_separation_margin"/>
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/catPicBroken"
-        android:src="@drawable/cat"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/contentDescriptionBrokenInstructions" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aac_worldspace_white"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_broken_null"
-        android:id="@+id/nullContentDescriptionText"
-        android:layout_below="@+id/catPicBroken"
-        android:layout_alignLeft="@+id/catPicBroken"
-        android:layout_marginBottom="@dimen/image_description_margin" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/catPicBroken"
+                android:src="@drawable/cat"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/side_by_side_image_margin"
+                android:layout_marginStart="@dimen/side_by_side_image_margin"
+                android:padding="@dimen/aac_global_border" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_broken_cat_null"
-        android:id="@+id/contentDescriptionBrokenNullText"
-        android:layout_below="@+id/nullContentDescriptionText"
-        android:layout_marginBottom="@dimen/content_separation_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dogPicBroken"
+                android:src="@drawable/dog"
+                android:contentDescription=" "
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/side_by_side_image_margin"
+                android:layout_marginEnd="@dimen/side_by_side_image_margin"
+                android:layout_alignTop="@+id/catPicBroken"
+                android:layout_alignBottom="@+id/catPicBroken"
+                android:padding="@dimen/aac_global_border" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dogPicBroken"
-        android:contentDescription=""
-        android:src="@drawable/dog"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/contentDescriptionBrokenNullText" />
+        </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_broken_empty"
-        android:id="@+id/emptyContentDescriptionText"
-        android:layout_below="@+id/dogPicBroken"
-        android:layout_alignLeft="@+id/dogPicBroken"
-        android:layout_marginBottom="@dimen/image_description_margin"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_broken_dog_empty"
-        android:id="@+id/contentDescriptionBrokenEmptyText"
-        android:layout_below="@+id/emptyContentDescriptionText"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aac_cont_desc_broken_conclusion"
+            android:id="@+id/contentDescriptionBrokenNullText"
+            android:padding="@dimen/aac_global_border"
+            android:textAppearance="@style/AACTextAppearance.body"
+            android:background="@color/aac_worldspace_white"
+            android:layout_margin="@dimen/aac_global_border" />
 
 
+    </LinearLayout>
 
-</RelativeLayout>
+
+</ScrollView>

@@ -9,6 +9,7 @@ import android.widget.TabHost;
 
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
+import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
 import com.dequesystems.accessibility101.introduction.AboutDequeFragment;
 import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
@@ -47,6 +48,7 @@ public class StoryManager {
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title));
         tempStory.addTab(mActivity.getString(R.string.story_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
         tempStory.addTab(mActivity.getString(R.string.story_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
+        tempStory.addTab(mActivity.getString(R.string.story_tab_title_fixed), ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
         tempList.add(tempStory);
 
         mStories = tempList;

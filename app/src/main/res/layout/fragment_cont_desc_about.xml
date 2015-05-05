@@ -1,72 +1,115 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment" >
+    tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment"
+    android:background="@color/aac_story_background">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cont_desc_about_intro"
-        android:id="@+id/contentDescriptionAboutIntroTextView"
-        android:layout_marginTop="@dimen/content_separation_margin"
-        android:layout_marginBottom="@dimen/content_separation_margin"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/catPic"
-        android:src="@drawable/cat"
-        android:layout_below="@id/contentDescriptionAboutIntroTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="@dimen/side_by_side_image_margin"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/aac_worldspace_white"
+            android:text="@string/aac_cont_desc_about_intro"
+            android:id="@+id/contentDescriptionAboutIntroTextView"
+            android:padding="@dimen/aac_global_border"
+            android:textAppearance="@style/AACTextAppearance.body"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dogPic"
-        android:src="@drawable/dog"
-        android:contentDescription=""
-        android:layout_below="@id/contentDescriptionAboutIntroTextView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/side_by_side_image_margin"
-        android:layout_alignTop="@+id/catPic"
-        android:layout_alignBottom="@+id/catPic" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_about_dog_pic_description"
-        android:id="@+id/dogPicDescription"
-        android:layout_below="@+id/dogPic"
-        android:layout_alignLeft="@+id/dogPic"
-        android:layout_alignStart="@+id/dogPic"
-        android:layout_alignRight="@+id/dogPic"
-        android:layout_alignEnd="@+id/dogPic"
-        android:layout_marginBottom="@dimen/content_separation_margin"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_cont_desc_about_heading_3"
+                android:textAppearance="@style/AACTextAppearance.heading"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_about_cat_pic_description"
-        android:id="@+id/catPicDescription"
-        android:layout_below="@+id/dogPic"
-        android:layout_alignRight="@+id/catPic"
-        android:layout_alignEnd="@+id/catPic"
-        android:layout_alignLeft="@+id/catPic"
-        android:layout_alignStart="@+id/catPic"
-        android:layout_marginBottom="@dimen/content_separation_margin"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_cont_desc_about_paragraph_3_when_to_use"
+                android:textAppearance="@style/AACTextAppearance.body"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cont_desc_about_details"
-        android:id="@+id/contentDescriptionAboutDetailedTextView"
-        android:layout_below="@id/catPicDescription"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+        </LinearLayout>
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout1"
+            android:background="@color/aac_worldspace_white"
+            android:layout_margin="5dp"
+            android:padding="@dimen/aac_global_border">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_cont_desc_about_heading_1"
+                android:textAppearance="@style/AACTextAppearance.heading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_cont_desc_about_paragraph_1_null"
+                android:id="@+id/nullContentDescriptionText"
+                android:padding="@dimen/aac_global_border"
+                android:background="@color/aac_worldspace_white"
+                android:textAppearance="@style/AACTextAppearance.body"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/catPicAbout"
+                android:src="@drawable/cat"
+                android:padding="@dimen/aac_global_border"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:orientation="vertical"
+            android:background="@color/aac_worldspace_white"
+            android:layout_margin="5dp"
+            android:padding="@dimen/aac_global_border">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_cont_desc_about_heading_2"
+                android:textAppearance="@style/AACTextAppearance.heading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_cont_desc_about_paragraph_2_empty"
+                android:id="@+id/emptyContentDescriptionText"
+                android:padding="@dimen/aac_global_border"
+                android:background="@color/aac_worldspace_white"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dogPicAbout"
+                android:contentDescription=" "
+                android:src="@drawable/dog"
+                android:padding="@dimen/aac_global_border"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
