@@ -25,19 +25,33 @@
     <string name="intro_deque_contact_button"><u>Contact Us</u></string>
 
     <!-- Labels Story Strings-->
-    <string name="labels_title">Labels</string>
+    <string name="aac_labels_title">Labels</string>
 
-    <string name="labels_about_heading_1">Labels vs contentDescriptions</string>
-    <string name="labels_about_paragraph_1">In the Android Accessibility world there are multiple ways of providing alternate text for a control.  The contentDescription is the most basic.  However, you can also use the labelFor attribute.  By marking a text element as the "labelFor" something, you associate a visible label with the announcement in TalkBack.  While not all controls require a contentDescription, all controls that do not contain text as a primary feature of the control, absolutely require a label of some kind!  Labels are not an Android element, it is a word we have chosen to represent the presence of either a labelFor or a contentDescription.  In general, the labelFor property should be preferred.</string>
+    <string name="aac_labels_about_introduction">In the Android Accessibility world there are multiple ways of providing alternate text for a control.  The contentDescription is the most basic.  However, you can also use the labelFor attribute.  By marking a text element as the "labelFor" something, you associate a visible label with the announcement in TalkBack.  While not all controls require a contentDescription, all controls that do not contain text as a primary feature of the control, absolutely require a label of some kind!  Labels are not an Android element, it is a word we have chosen to represent the presence of either a labelFor or a contentDescription.  In general, the labelFor property should be preferred.</string>
 
-    <string name="labels_about_heading_2">Using contentDescriptions</string>
+    <string name="aac_labels_about_heading_1"><i>Content Description</i> Attribute</string>
+    <string name="aac_labels_about_visible_text_1">Visible Text 1</string>
+    <string name="aac_labels_about_paragraph_1"><i>Content descriptions</i> are similar to alt text in HTML.  They provide a control that otherwise has no string content, with a description of what the control is.  When writing <i>content descriptions</i> be sure to consider the basic ARIA name, role, state, and value.  Though remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of control you are using.  Test your application with TalkBack to ensure everythign is announced properly.</string>
 
-    <string name="labels_about_heading_3">Using labelFor Attribute</string>
+    <string name="aac_labels_about_heading_2"><i>Label For</i> Attribute</string>
+    <string name="aac_labels_about_visible_text_2">Visible Text 2</string>
+    <string name="aac_labels_about_paragraph_2">The <i>Label For</i> attribute allows you to set a visual label as labelling a control.  This way, instead of duplicating the text of the label in the control\'s <i>content description</i>, you simple create an association bewteen the two elements.  Then the control will announce the visible text, and remove any ambiguity about which control a label belongs to.</string>
 
-    <string name="labels_about_heading_4">Mixing Them Together</string>
+    <string name="aac_labels_about_heading_3">Mixing Them Together</string>
+    <string name="aac_labels_about_visible_text_3">Visible Text 3</string>
+    <string name="aac_labels_about_paragraph_3">Using both a <i>label for</i> and a <i>content description</i> is generally not required, and unless handled carefully can be confusing.  If a control requires more context than a simple label can provide, it may be better to consider elements of your design that would require this.  Though, a <i>content description</i> can be used to group sets of controls, that require additional labelling otherwise.  Just be careful not to overload TalkBack users with information or worse, duplicate information.</string>
+
+    <string name="aac_labels_broken_content_heading">Background Color Components</string>
+    <string name="aac_labels_setting_1">Red</string>
+    <string name="aac_labels_setting_2">Green</string>
+    <string name="aac_labels_setting_3">Blue</string>
+
+    <string name="aac_labels_broken_conclusion">The labels are not assoicated with their controls.  As you tab across the various labels you are not sure whether the label refers to the value before, or after the visual label.</string>
+
+    <string name="aac_labels_fixed_conclusion">By adding the <i>label for</i> attribute to the labels we create an association with the controls.  Now, when we highlight the control, we know which switch will toggle which setting.</string>
 
     <!-- ContDesc Story Strings-->
-    <string name="cont_desc_title">Content Descriptions</string>
+    <string name="aac_cont_desc_title">Content Descriptions</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

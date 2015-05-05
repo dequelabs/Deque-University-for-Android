@@ -7,9 +7,10 @@
          https://developer.android.com/design/patterns/navigation-drawer.html -->
     <dimen name="navigation_drawer_width">240dp</dimen>
 
-    <dimen name="aac_text_body_margin">8dp</dimen>
-    <dimen name="aac_text_body_padding">8dp</dimen>
-    <dimen name="aac_text_body_elevation_level_1">10dp</dimen>
+    <dimen name="aac_global_border">5dp</dimen>
+    <dimen name="aac_elevation_level_1">10dp</dimen>
+    <dimen name="aac_elevation_level_2">3dp</dimen>
+    <dimen name="aac_elevation_level_3">3dp</dimen>
 
     <dimen name="aac_text_heading_margin">5dp</dimen>
 </resources>

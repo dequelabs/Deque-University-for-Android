@@ -12,7 +12,7 @@
 
         <TextView android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_margin="@dimen/aac_text_body_margin"
+            android:layout_margin="@dimen/aac_global_border"
             android:text="@string/intro_about_paragraph1"/>
 
     </ScrollView>
