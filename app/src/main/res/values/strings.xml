@@ -46,30 +46,43 @@
     <string name="aac_labels_setting_2">Green</string>
     <string name="aac_labels_setting_3">Blue</string>
 
-    <string name="aac_labels_broken_conclusion">The labels are not assoicated with their controls.  As you tab across the various labels you are not sure whether the label refers to the value before, or after the visual label.</string>
+    <string name="aac_labels_broken_conclusion">The labels are not associated with their controls.  As you tab across the various labels you are not sure whether the label refers to the value before, or after the visual label.</string>
 
     <string name="aac_labels_fixed_conclusion">By adding the <a href="http://developer.android.com/reference/android/R.attr.html#labelFor">label for</a> attribute to the labels we create an association with the controls.  Now, when we highlight the control, we know which switch will toggle which setting.</string>
 
     <!-- ContDesc Story Strings-->
     <string name="aac_cont_desc_title">Content Descriptions</string>
 
-    <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a control.  The contentDescription attribute is the most basic. The provide a control, ImageView or other focusable object, that otherwise has no string content, with a description of what the object is. They also allow accessibility services, like TalkBack, to describe the content to users, as the name implies. When writing content descriptions, be sure to consider the basic ARIA name, roe, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of object you are using, but be sure to test your application with TalkBack to ensure everything is announced properly.</string>
-    <string name="aac_cont_desc_about_heading_1">Issue - Null Content Description</string>
-    <string name="aac_cont_desc_about_heading_2">Issue - Empty Content Description</string>
+    <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a control. The contentDescription attribute is the most basic. It provides a control, ImageView, or other focusable object, that otherwise has no string content, with a description of what the object is. Content descriptions also allow accessibility services, like TalkBack, to describe the content to users, as the name implies. When writing content descriptions, be sure to consider the basic ARIA name, roe, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of object you are using, but be sure to test your application with TalkBack to ensure everything is announced properly.</string>
+    <string name="aac_cont_desc_about_heading_1">Null Content Description</string>
+    <string name="aac_cont_desc_about_heading_2">Empty Content Description</string>
     <string name="aac_cont_desc_about_heading_3">When to Use Content Descriptions</string>
-    <string name="aac_cont_desc_about_paragraph_1_null">This image has a null content description and can\'t be focused on using TalkBack or describe the image to a user.</string>
-    <string name="aac_cont_desc_about_paragraph_2_empty">This image has an empty string as a content description, thus TalkBack can\'t describe the image.</string>
-    <string name="aac_cont_desc_about_paragraph_3_when_to_use">Content descriptions should be used when there is a focusable object, such as an ImageView, that does not have a visible label associated with it. Content descriptions do not need to (and should not) be used for background images, decorative borders, or other things that are not pertinent to the information being conveyed through your app or website.</string>
+    <string name="aac_cont_desc_about_heading_4">Duplicated Information</string>
+    <string name="aac_cont_desc_about_heading_5">How to Fix It</string>
+    <string name="aac_cont_desc_about_paragraph_1_null">This image has a null content description, so you can\'t focus on it using TalkBack. A TalkBack user would have no way of knowing this image is here and could not obtain information about it.</string>
+    <string name="aac_cont_desc_about_paragraph_2_empty">This image has a blank string as a content description, so you can focus on it with TalkBack, but the description is a default image number and that the image is \"unlabeled,\" which is entirely unhelpful. This occurs when the content description is hard-coded in xml as a blank string. If it is hardcoded as an empty string or coded as an empty or blank string in a separate strings.xml file, the same effects as a null content description are seen.</string>
+    <string name="aac_cont_desc_about_paragraph_3_when_to_use">Content descriptions should be used when there is a focusable object, such as an ImageView or control to provide information describing the object. Content descriptions do not need to (and should not) be used for background images, decorative borders, or other things that are not pertinent to the information being conveyed through your app or website.</string>
+    <string name="aac_cont_desc_about_paragraph_4_duplicated_info">This image\'s content description exactly duplicates the visual label and thus provides no new information to a TalkBack user.</string>
+    <string name="aac_cont_desc_about_paragraph_5_fix_it">Fixing this accessibility issue is simple. All you need to do is add a content description to objects that display pertinent information or perform a function such as non-decorative ImageViews, Switches, Buttons, other controls, etc. These content descriptions should be concise, but as descriptive as possible in order to provide a TalkBack user with the information necessary to interpret the object. The first two issues, null and empty content descriptions, can be fixed in this way. To fix the third issue, duplicated information, be sure to think about the best combination of content description and visual label so as not to be redundant, but still provide necessary information for a TalkBack user. </string>
+    <string name="aac_cont_desc_about_fish_cont_desc">fish image</string>
+    <string name="aac_cont_desc_about_fish_label">Fish Image</string>
 
-    <string name="aac_cont_desc_broken_cat_pic_label">Null content description</string>
-    <string name="aac_cont_desc_broken_conclusion">Notice that the first image is not focusable because it has a null content description. This means that someone using TalkBack would not even know that this image exists and would miss out on this information on your app or website.\n\nNotice that the second image has a content description, so it is focusable using TalkBack, but it is an empty string. This would not provide any useful information about the image to someone using TalkBack and would still limit TalkBack users\' access to information.</string>
-    <string name="aac_cont_desc_broken_dog_pic_label">Empty content description</string>
+    <string name="aac_cont_desc_broken_heading_1">Look at these drawings of animals!</string>
+    <string name="aac_cont_desc_broken_fish_label">Here is a drawing of a fish.</string>
+    <string name="aac_cont_desc_broken_fish_cont_desc">Drawing of a fish</string>
+    <string name="aac_cont_desc_broken_dog_label">Here is a drawing of a dog.</string>
+    <string name="aac_cont_desc_broken_cat_label">Here is a drawing of a cat.</string>
+    <string name="aac_cont_desc_broken_conclusion">Notice that the first image has duplicated information in the label and content description. While a TalkBack user knows what the image is, he or she does not gain any useful information from having both read out to him or her and are bogged down by redundant information.\n\nNotice that the second image has a content description, so it is focusable using TalkBack, but the content description is a blank string, so TalkBack describes the image by its image number and tells you that it is unlabeled. This limits a TalkBack user\'s access to information about your products, services, etc. Android Studio does not flag this as an accessibility warning. \n\nNotice that the third image is not focusable because it has a null content description. This means that a TalkBack user would not even know that this image exists and would miss out on this information on your app or website. Android Studio does flag this as an accessibility warning.</string>
 
-    <string name="aac_cont_desc_fixed_cat_pic_label">Content Description = \"cat image\"</string>
-    <string name="aac_cont_desc_fixed_cat_cont_desc">cat image</string>
-    <string name="aac_cont_desc_fixed_dog_pic_label">Content Description = \"dog image\"</string>
-    <string name="aac_cont_desc_fixed_dog_cont_desc">dog image</string>
-    <string name="aac_cont_desc_fixed_conclusion">By assigning a concise, descriptive content description to these images, you can now use TalkBack to gain information about these objects.</string>
+    <string name="aac_cont_desc_fixed_heading_1">Look at these drawings of animals!</string>
+    <string name="aac_cont_desc_fixed_intro">These two images are now accessible to a TalkBack user because they both have a content description.</string>
+    <string name="aac_cont_desc_fixed_cat_cont_desc">Red cat on yellow background</string>
+    <string name="aac_cont_desc_fixed_dog_cont_desc">Yellow dog on blue background</string>
+    <string name="aac_cont_desc_fixed_fish_cont_desc">Yellow fish on red background</string>
+    <string name="aac_cont_desc_fixed_fish_label">Here is a drawing of a fish.</string>
+    <string name="aac_cont_desc_fixed_dog_label"> Here is a drawing of a dog.</string>
+    <string name="aac_cont_desc_fixed_cat_label">Here is a drawing of a cat.</string>
+    <string name="aac_cont_desc_fixed_conclusion">By assigning concise, descriptive content descriptions that provide different information than the labels to these ImageViews, you can now use TalkBack to gain information about these objects.</string>
 
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
 

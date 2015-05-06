@@ -9,52 +9,107 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
             android:padding="@dimen/aac_global_border">
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/catPicBroken"
-                android:src="@drawable/cat"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="@dimen/side_by_side_image_margin"
-                android:layout_marginStart="@dimen/side_by_side_image_margin"
-                android:padding="@dimen/aac_global_border" />
+                android:text="@string/aac_cont_desc_broken_heading_1"
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/dogPicBroken"
-                android:src="@drawable/dog"
-                android:contentDescription=" "
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/side_by_side_image_margin"
-                android:layout_marginEnd="@dimen/side_by_side_image_margin"
-                android:layout_alignTop="@+id/catPicBroken"
-                android:layout_alignBottom="@+id/catPicBroken"
-                android:padding="@dimen/aac_global_border" />
+                android:background="@color/aac_worldspace_white"
+                android:orientation="horizontal"
+                android:padding="@dimen/aac_global_border">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aac_cont_desc_broken_fish_label"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fish"
+                    android:padding="@dimen/aac_global_border"
+                    android:contentDescription="@string/aac_cont_desc_broken_fish_cont_desc"
+                    android:layout_weight="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aac_worldspace_white"
+                android:orientation="horizontal"
+                android:padding="@dimen/aac_global_border">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aac_cont_desc_broken_dog_label"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dog"
+                    android:contentDescription=" "
+                    android:padding="@dimen/aac_global_border"
+                    android:layout_weight="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aac_worldspace_white"
+                android:orientation="horizontal"
+                android:padding="@dimen/aac_global_border">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aac_cont_desc_broken_cat_label"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cat"
+                    android:padding="@dimen/aac_global_border"
+                    android:layout_weight="0" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/aac_cont_desc_broken_conclusion"
-            android:id="@+id/contentDescriptionBrokenNullText"
             android:padding="@dimen/aac_global_border"
             android:textAppearance="@style/AACTextAppearance.body"
             android:background="@color/aac_worldspace_white"
-            android:layout_margin="@dimen/aac_global_border" />
-
+            android:layout_margin="5dp" />
 
     </LinearLayout>
-
 
 </ScrollView>
