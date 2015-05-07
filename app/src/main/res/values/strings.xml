@@ -35,7 +35,7 @@
 
     <string name="aac_labels_about_heading_2">Label For Attribute</string>
     <string name="aac_labels_about_visible_text_2">Visible Text 2</string>
-    <string name="aac_labels_about_paragraph_2">The <a href="http://developer.android.com/reference/android/R.attr.html#labelFor">label for</a> attribute allows you to set a visual label as labelling a control.  This way, instead of duplicating the text of the label in the control\'s <a href="http://developer.android.com/training/accessibility/accessible-app.html#contentdesc">content description</a>, you simple create an association bewteen the two elements.  Then the control will announce the visible text, and remove any ambiguity about which control a label belongs to.</string>
+    <string name="aac_labels_about_paragraph_2">The <a href="http://developer.android.com/reference/android/R.attr.html#labelFor">label for</a> attribute allows you to set a visual label as labelling a control.  This way, instead of duplicating the text of the label in the control\'s <a href="http://developer.android.com/training/accessibility/accessible-app.html#contentdesc">content description</a>, you simple create an association between the two elements.  Then the control will announce the visible text, and remove any ambiguity about which control a label belongs to.</string>
 
     <string name="aac_labels_about_heading_3">Mixing Them Together</string>
     <string name="aac_labels_about_visible_text_3">Visible Text 3</string>
@@ -53,6 +53,7 @@
     <!-- ContDesc Story Strings-->
     <string name="aac_cont_desc_title">Content Descriptions</string>
 
+    <!-- About Tab Strings-->
     <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a control. The contentDescription attribute is the most basic. It provides a control, ImageView, or other focusable object, that otherwise has no string content, with a description of what the object is. Content descriptions also allow accessibility services, like TalkBack, to describe the content to users, as the name implies. When writing content descriptions, be sure to consider the basic ARIA name, roe, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of object you are using, but be sure to test your application with TalkBack to ensure everything is announced properly.</string>
     <string name="aac_cont_desc_about_heading_1">Null Content Description</string>
     <string name="aac_cont_desc_about_heading_2">Empty Content Description</string>
@@ -67,6 +68,7 @@
     <string name="aac_cont_desc_about_fish_cont_desc">fish image</string>
     <string name="aac_cont_desc_about_fish_label">Fish Image</string>
 
+    <!-- Broken Tab Strings-->
     <string name="aac_cont_desc_broken_heading_1">Look at these drawings of animals!</string>
     <string name="aac_cont_desc_broken_fish_label">Here is a drawing of a fish.</string>
     <string name="aac_cont_desc_broken_fish_cont_desc">Drawing of a fish</string>
@@ -74,6 +76,7 @@
     <string name="aac_cont_desc_broken_cat_label">Here is a drawing of a cat.</string>
     <string name="aac_cont_desc_broken_conclusion">Notice that the first image has duplicated information in the label and content description. While a TalkBack user knows what the image is, he or she does not gain any useful information from having both read out to him or her and are bogged down by redundant information.\n\nNotice that the second image has a content description, so it is focusable using TalkBack, but the content description is a blank string, so TalkBack describes the image by its image number and tells you that it is unlabeled. This limits a TalkBack user\'s access to information about your products, services, etc. Android Studio does not flag this as an accessibility warning. \n\nNotice that the third image is not focusable because it has a null content description. This means that a TalkBack user would not even know that this image exists and would miss out on this information on your app or website. Android Studio does flag this as an accessibility warning.</string>
 
+    <!-- Fixed Tab Strings-->
     <string name="aac_cont_desc_fixed_heading_1">Look at these drawings of animals!</string>
     <string name="aac_cont_desc_fixed_intro">These two images are now accessible to a TalkBack user because they both have a content description.</string>
     <string name="aac_cont_desc_fixed_cat_cont_desc">Red cat on yellow background</string>
@@ -84,6 +87,49 @@
     <string name="aac_cont_desc_fixed_cat_label">Here is a drawing of a cat.</string>
     <string name="aac_cont_desc_fixed_conclusion">By assigning concise, descriptive content descriptions that provide different information than the labels to these ImageViews, you can now use TalkBack to gain information about these objects.</string>
 
-    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <!-- EditText Story Strings-->
+    <string name="aac_edit_text_title">Edit Texts</string>
+
+    <!-- About Tab Strings-->
+    <string name="aac_edit_text_about_intro">The EditText object is a subclass of the TextView object that is configured to be able to be edited by users. A thin veneer is overlaid on the TextView before a user selects it. When a user selects an EditText, the keyboard appears and the user can enter data, which then appears in the TextView. The EditText object possesses the capability to have a hint and/or contentDescription attribute to describe what should be entered into the field and can also be associated with a visual label using the labelFor attribute. EditText objects are not inherently accessible. If no hint or visual label is associated with the editText, any user, regardless of whether he or she is using TalkBack, would find it difficult to know what to put into the text field.</string>
+    <string name="aac_edit_text_about_heading_2_hints">Hint Attribute</string>
+    <string name="aac_edit_text_about_heading_3_cont_desc">Content Description Attribute</string>
+    <string name="aac_edit_text_about_heading_4_mixing">Mixing Them Together</string>
+    <string name="aac_edit_text_about_heading_5_label_for">Label For Attribute</string>
+    <string name="aac_edit_text_about_paragraph_2_hints">This EditText utilizes the hint attribute, so the hint is visible within the text field when it is empty (either before a user has entered data or after a user has deleted all previously entered data). Hints require TalkBack to announce them regardless of the EditText\'s content, so a TalkBack user always knows what is supposed to be in the EditText.</string>
+    <string name="aac_edit_text_about_paragraph_3_cont_desc">This EditText has only a contentDescription. This means that there is no visible text or label associated with the EditText. TalkBack will read out the contentDescription, but only if the EditText is empty, meaning that if a user has entered data, TalkBack will no longer announce what the EditText is for.</string>
+    <string name="aac_edit_text_about_paragraph_4_mixing_1">This EditText has both a contentDescription and a hint associated with it. This causes the contentDescription to be ignored entirely and only the hint to be used. It is best practice to avoid using contentDescriptions to describe EditText objects due to their lack of functionality in general. When using hints, they should be the only type of description used.</string>
+    <string name="aac_edit_text_about_paragraph_6_mixing_2">This EditText has both a visual label associated with the EditText via the labelFor attribute and a hint. This is redundant for a non-TalkBack user, and even more so for a TalkBack user because of the extended announcement. It is best practice not to mix labels and hints for EditText objects as it becomes redundant for all users. Using one or the other appropriately can be most effective depending on the situation, but using either method makes EditText objects accessible for all users.</string>
+    <string name="aac_edit_text_about_paragraph_5_label_for">This EditText has a visual label beside it that utilizes the labelFor attribute to associate the visual label with the EditText. TalkBack will announce the label as part of its description for the EditText regardless of the EditText\'s content. Non-TalkBack users have a constant visual clue to know what should be in the EditText.</string>
+    <string name="aac_edit_text_about_edit_text_1_cont_desc">This is a content description for the edit text</string>
+    <string name="aac_edit_text_about_edit_text_2_hint">This is a hint</string>
+    <string name="aac_edit_text_about_edit_text_3_label">Enter your name:</string>
+    <string name="aac_edit_text_about_edit_text_4_cont_desc">This is a content description for the edit text</string>
+    <string name="aac_edit_text_about_edit_text_4_hint">This is a hint for the EditText that also has a content description</string>
+    <string name="aac_edit_text_about_edit_text_5_label">Enter your name:</string>
+    <string name="aac_edit_text_about_edit_text_5_hint">Name</string>
+
+    <!-- Broken Tab Strings-->
+    <string name="aac_edit_text_broken_heading_1_demo">Complete Your Profile</string>
+    <string name="aac_edit_text_broken_conclusion">Notice that these editText boxes do not have any visible hints or labels, but they do have contentDescriptions, they are simply not visible. This provides TalkBack with enough information to supply information to a TalkBack user initially, but a non-TalkBack user would have no idea which box was for which piece of information. Additionally, contentDescriptions only require TalkBack to announce the description when the field is empty, so once a TalkBack user enters data, they can no longer tell which box was asking for which information.</string>
+    <string name="aac_edit_text_broken_edit_text_1_cont_desc">Enter your first name</string>
+    <string name="aac_edit_text_broken_edit_text_2_cont_desc">Enter your last name</string>
+    <string name="aac_edit_text_broken_edit_text_3_cont_desc">Enter your phone number</string>
+    <string name="aac_edit_text_broken_edit_text_4_cont_desc">Enter your company name</string>
+
+    <!-- Fixed Tab Strings-->
+    <string name="aac_edit_text_fixed_heading_1_demo_1">Complete Your Profile</string>
+    <string name="aac_edit_text_fixed_heading_2_or">OR</string>
+    <string name="aac_edit_text_fixed_heading_3_demo_2">Complete Your Profile</string>
+    <string name="aac_edit_text_fixed_conclusion_1">By eliminating the contentDescription and instead using the hint attribute for each editText field, a TalkBack user gains all necessary information, even after entering data, which is when the hint no longer being visible on the screen. Because hints are visible, unlike contentDescriptions, a non-TalkBack user is still able to understand what is required in each field as well.</string>
+    <string name="aac_edit_text_fixed_conclusion_2">By associating the editText field with its label by using the labelFor attribute, a TalkBack user can identify which box requires which information. By using visual labels, a non-TalkBack user can identify this information as well. It should be noted that if labels and the labelFor attribute are used, neither hints nor contentDescriptions should be used as they make the TalkBack readout redundant and lengthy.</string>
+    <string name="aac_edit_text_fixed_edit_text_1_label">Enter your first name:</string>
+    <string name="aac_edit_text_fixed_edit_text_2_label">Enter your last name:</string>
+    <string name="aac_edit_text_fixed_edit_text_3_label">Enter your phone number:</string>
+    <string name="aac_edit_text_fixed_edit_text_4_label">Enter your company name:</string>
+    <string name="aac_edit_text_fixed_edit_text_1_hint">Enter your first name</string>
+    <string name="aac_edit_text_fixed_edit_text_2_hint">Enter your last name</string>
+    <string name="aac_edit_text_fixed_edit_text_3_hint">Enter your phone number</string>
+    <string name="aac_edit_text_fixed_edit_text_4_hint">Enter your company name</string>
 
 </resources>
