@@ -17,12 +17,14 @@
             android:background="@color/aac_worldspace_white"
             android:orientation="vertical">
 
-            <TextView
+            <TextView android:id="@+id/aac_edit_text_fixed_heading_1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/aac_worldspace_white"
                 android:textAppearance="@style/AACTextAppearance.heading"
-                android:text="@string/aac_edit_text_fixed_heading_3_demo_2"/>
+                android:text="@string/aac_edit_text_fixed_heading_3_demo_2"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"/>
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -42,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
-                    android:inputType="textPersonName"
+                    android:inputType="textCapWords"
                     android:background="@color/aac_worldspace_green"/>
 
             </LinearLayout>
@@ -65,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
-                    android:inputType="textPersonName"
+                    android:inputType="textCapWords"
                     android:background="@color/aac_worldspace_green"/>
 
             </LinearLayout>
@@ -78,7 +80,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/aac_edit_text_about_edit_text_3_label"
+                    android:text="@string/aac_edit_text_fixed_edit_text_3_label"
                     android:labelFor="@+id/aac_edit_text_fixed_edit_text_3"
                     android:textAppearance="@style/AACTextAppearance.label"
                     android:layout_gravity="center_vertical" />
@@ -111,8 +113,9 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
-                    android:inputType="text"
-                    android:background="@color/aac_worldspace_green"/>
+                    android:inputType="textCapWords"
+                    android:background="@color/aac_worldspace_green"
+                    android:imeOptions="actionDone"/>
 
             </LinearLayout>
 
@@ -160,7 +163,8 @@
                 android:layout_margin="@dimen/aac_global_border"
                 android:hint="@string/aac_edit_text_fixed_edit_text_1_hint"
                 android:textColorHint="@color/aac_worldspace_black"
-                android:background="@color/aac_worldspace_green"/>
+                android:background="@color/aac_worldspace_green"
+                android:inputType="textCapWords"/>
 
             <EditText
                 android:layout_width="fill_parent"
@@ -169,7 +173,8 @@
                 android:layout_margin="@dimen/aac_global_border"
                 android:hint="@string/aac_edit_text_fixed_edit_text_2_hint"
                 android:textColorHint="@color/aac_worldspace_black"
-                android:background="@color/aac_worldspace_green"/>
+                android:background="@color/aac_worldspace_green"
+                android:inputType="textCapWords"/>
 
             <EditText
                 android:layout_width="fill_parent"
@@ -178,7 +183,8 @@
                 android:layout_margin="@dimen/aac_global_border"
                 android:hint="@string/aac_edit_text_fixed_edit_text_3_hint"
                 android:textColorHint="@color/aac_worldspace_black"
-                android:background="@color/aac_worldspace_green"/>
+                android:background="@color/aac_worldspace_green"
+                android:inputType="phone"/>
 
             <EditText
                 android:layout_width="fill_parent"
@@ -187,7 +193,9 @@
                 android:layout_margin="@dimen/aac_global_border"
                 android:hint="@string/aac_edit_text_fixed_edit_text_4_hint"
                 android:textColorHint="@color/aac_worldspace_black"
-                android:background="@color/aac_worldspace_green"/>
+                android:background="@color/aac_worldspace_green"
+                android:inputType="textCapWords"
+                android:imeOptions="actionDone"/>
 
         </LinearLayout>
 
