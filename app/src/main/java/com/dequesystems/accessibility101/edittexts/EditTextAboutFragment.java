@@ -12,9 +12,11 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.accessibility.AccessibilityManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;
 
@@ -27,13 +29,24 @@ public class EditTextAboutFragment extends Fragment {
         // Required empty public constructor
     }
 
+    TextView textView1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_text_about, container, false);
+        View view = inflater.inflate(R.layout.fragment_edit_text_about, container, false);
+        textView1 = (TextView) view.findViewById(R.id.aac_edit_text_about_heading_1);
+        return view;
     }
 
-
+    @Override
+    public void onResume() {
+        AccessibilityManager accessibilityManager = (AccessibilityManager) getActivity().getSystemService(Context.ACCESSIBILITY_SERVICE);
+        if (accessibilityManager.isEnabled()) {
+            textView1.setFocusable(true);
+            textView1.setFocusableInTouchMode(true);
+            textView1.requestFocus();
+        }
+        super.onResume();
     }
+}
