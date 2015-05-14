@@ -29,13 +29,13 @@ public class EditTextAboutFragment extends Fragment {
         // Required empty public constructor
     }
 
-    TextView textView1;
+    TextView mTextView1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_edit_text_about, container, false);
-        textView1 = (TextView) view.findViewById(R.id.aac_edit_text_about_heading_1);
+        mTextView1 = (TextView) view.findViewById(R.id.aac_edit_text_about_heading_1);
         return view;
     }
 
@@ -43,9 +43,9 @@ public class EditTextAboutFragment extends Fragment {
     public void onResume() {
         AccessibilityManager accessibilityManager = (AccessibilityManager) getActivity().getSystemService(Context.ACCESSIBILITY_SERVICE);
         if (accessibilityManager.isEnabled()) {
-            textView1.setFocusable(true);
-            textView1.setFocusableInTouchMode(true);
-            textView1.requestFocus();
+            mTextView1.setFocusable(true);
+            mTextView1.setFocusableInTouchMode(true);
+            mTextView1.requestFocus();
         }
         super.onResume();
     }

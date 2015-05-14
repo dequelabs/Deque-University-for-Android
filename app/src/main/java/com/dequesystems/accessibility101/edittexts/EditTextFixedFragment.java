@@ -25,16 +25,16 @@ public class EditTextFixedFragment extends Fragment {
         // Required empty public constructor
     }
 
-    TextView textView;
-    EditText editText;
+    TextView mTextView;
+    EditText mEditText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_edit_text_fixed, container, false);
-        textView = (TextView) view.findViewById(R.id.aac_edit_text_fixed_heading_1);
-        editText = (EditText) view.findViewById(R.id.aac_edit_text_fixed_edit_text_1);
-        editText.clearFocus();
+        mTextView = (TextView) view.findViewById(R.id.aac_edit_text_fixed_heading_1);
+        mEditText = (EditText) view.findViewById(R.id.aac_edit_text_fixed_edit_text_1);
+        mEditText.clearFocus();
         return view;
     }
 
@@ -42,9 +42,9 @@ public class EditTextFixedFragment extends Fragment {
     public void onResume() {
         AccessibilityManager accessibilityManager = (AccessibilityManager) getActivity().getSystemService(Context.ACCESSIBILITY_SERVICE);
         if (accessibilityManager.isEnabled()){
-            textView.setFocusable(true);
-            textView.setFocusableInTouchMode(true);
-            textView.requestFocus();
+            mTextView.setFocusable(true);
+            mTextView.setFocusableInTouchMode(true);
+            mTextView.requestFocus();
         }
         super.onResume();
     }
