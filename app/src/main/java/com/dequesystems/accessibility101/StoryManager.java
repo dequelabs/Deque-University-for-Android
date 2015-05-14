@@ -10,6 +10,9 @@ import android.widget.TabHost;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
+import com.dequesystems.accessibility101.edittexts.EditTextAboutFragment;
+import com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment;
+import com.dequesystems.accessibility101.edittexts.EditTextFixedFragment;
 import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.accessibility101.labels.LabelsBrokenFragment;
@@ -51,6 +54,12 @@ public class StoryManager {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
+        tempList.add(tempStory);
+
+        tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title));
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new EditTextAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new EditTextBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new EditTextFixedFragment());
         tempList.add(tempStory);
 
         mStories = tempList;
