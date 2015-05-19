@@ -2,10 +2,19 @@ package com.dequesystems.accessibility101;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
@@ -105,7 +114,26 @@ public class StoryManager {
 
                 TabHost.TabSpec tabSpec = tabHost.newTabSpec(tab.getTabID());
                 tabSpec.setContent(tab);
-                tabSpec.setIndicator(tab.getTitle());
+
+                View view = mActivity.getLayoutInflater().inflate(R.layout.tab_layout, null);
+
+                TextView textView = (TextView) view.findViewById(R.id.aac_tab_title);
+                textView.setText(tab.getTitle());
+
+                ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_image);
+
+                //ColorFilter overlayColor = new PorterDuffColorFilter(R.color.aac_worldspace_white, PorterDuff.Mode.LIGHTEN);
+                //imageView.setColorFilter(overlayColor);
+
+                if (tab.getTitle().equalsIgnoreCase("About")) {
+                    imageView.setImageDrawable(getColoredImage(R.drawable.about));
+                }else if(tab.getTitle().equalsIgnoreCase("Broken")){
+                    imageView.setImageDrawable(getColoredImage(R.drawable.broken));
+                }else if(tab.getTitle().equalsIgnoreCase("Fixed")){
+                    imageView.setImageDrawable(getColoredImage(R.drawable.fixed));
+                }
+
+                tabSpec.setIndicator(view);
                 tabHost.addTab(tabSpec);
             }
 
@@ -150,6 +178,7 @@ public class StoryManager {
 
             private final String mTabID;
 
+
             private Fragment mFragment;
 
             private Tab(String title, Fragment fragment) {
@@ -183,4 +212,22 @@ public class StoryManager {
             }
         }
     }
+    private Drawable getColoredImage(int resourceId) {
+
+        Drawable d = mActivity.getResources().getDrawable(resourceId);
+
+
+        int to = Color.WHITE;
+
+        //Need to copy to ensure that the bitmap is mutable.
+        Bitmap src = ((BitmapDrawable) d).getBitmap();
+        Bitmap bitmap = src.copy(Bitmap.Config.ARGB_8888, true);
+        for(int x = 0;x < bitmap.getWidth();x++)
+            for(int y = 0;y < bitmap.getHeight();y++)
+                if(Color.alpha(bitmap.getPixel(x,y)) > 0)
+                    bitmap.setPixel(x, y, to);
+
+        return new BitmapDrawable(bitmap);
+    }
+
 }

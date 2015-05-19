@@ -2,7 +2,6 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
     </style>
 
     <style name="AACTextAppearance" parent="@android:style/TextAppearance">
@@ -24,7 +23,7 @@
 
     <color name="aac_text_body">@color/aac_worldspace_black</color>
     <color name="aac_background_text">@color/aac_worldspace_white</color>
-    <color name="aac_story_background">@color/aac_worldspace_blue</color>
+    <color name="aac_story_background">@color/aac_deque_light_blue</color>
     <color name="aac_edit_text_gray">#585858</color>
 
     <color name="aac_worldspace_blue">#083378</color>
@@ -33,5 +32,12 @@
     <color name="aac_worldspace_green">#72BA32</color>
     <color name="aac_worldspace_red">#DB341A</color>
     <color name="aac_worldspace_black">#030210</color>
+
+    <color name="aac_deque_dark_blue">#061B3C</color>
+    <color name="aac_deque_light_blue">#0F3E89</color>
+    <color name="aac_deque_pale_blue">#E1EDF9</color>
+    <color name="aac_deque_gray">#E0E3E9</color>
+    <color name="aac_deque_orange">#E23A00</color>
+    <color name="aac_deque_green">#356B10</color>
 
 </resources>
