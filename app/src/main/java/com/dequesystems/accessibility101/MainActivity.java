@@ -1,5 +1,6 @@
 package com.dequesystems.accessibility101;
 
+import android.graphics.PorterDuff;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 
@@ -49,25 +50,28 @@ public class MainActivity extends ActionBarActivity
         mTabHost = (TabHost)findViewById(R.id.tabHost);
         mTabHost.setup();
 
-//        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-//            @Override
-//            public void onTabChanged(String tabId) {
-//                int tab = mTabHost.getCurrentTab();
-//
-////                for(int i = 0; i < mTabHost.getTabWidget().getTabCount(); i++){
-////                    //ViewGroup viewGroup = (ViewGroup) mTabHost.getTabWidget().getChildTabViewAt(i); //checked tab
-////                    TextView tv = (TextView) mTabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-////
-////                    if(i == tab){
-////                        //viewGroup.setBackgroundColor(getResources().getColor(R.color.aac_deque_orange));
-////                        tv.setTextColor(getResources().getColor(R.color.aac_worldspace_orange));
-////                    }else{
-////                        //viewGroup.setBackgroundColor(getResources().getColor(R.color.aac_deque_pale_blue));
-////                        tv.setTextColor(getResources().getColor(R.color.aac_worldspace_white));
-////                    }
-////                }
-//            }
-//        });
+        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                int tab = mTabHost.getCurrentTab();
+
+                for(int i = 0; i < mTabHost.getTabWidget().getTabCount(); i++){
+                    ImageView imageView = (ImageView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_image);
+                    TextView textView = (TextView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_title);
+
+                    int color;
+
+                    if(i == tab){
+                        color = getResources().getColor(R.color.aac_tab_bar_selected);
+                    } else {
+                        color = getResources().getColor(R.color.aac_tab_bar_dimmed);
+                    }
+
+                    imageView.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+                    textView.setTextColor(color);
+                }
+            }
+        });
 
         mStoryManager = new StoryManager(this);
 

@@ -25,6 +25,9 @@
     <color name="aac_background_text">@color/aac_worldspace_white</color>
     <color name="aac_story_background">@color/aac_deque_light_blue</color>
     <color name="aac_edit_text_gray">#585858</color>
+    <color name="aac_tab_bar_dimmed">@color/aac_worldspace_white</color>
+    <color name="aac_tab_bar_selected">@color/aac_deque_orange</color>
+    <color name="aac_tab_bar_background">@color/aac_deque_dark_blue</color>
 
     <color name="aac_worldspace_blue">#083378</color>
     <color name="aac_worldspace_white">#F2F2F4</color>
