@@ -108,11 +108,6 @@ public class MainActivity extends ActionBarActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -121,13 +116,7 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        onSectionAttached(position);
-        //TODO: Change content based on navigation drawer selection
-    }
-
-    public void onSectionAttached(int number) {
-        Log.v(LOG_TAG, "Attaching new section: " + number);
-        mStoryManager.setActiveStory(number, mTabHost);
+        mStoryManager.setActiveStory(position, mTabHost);
         mTitle = mStoryManager.getActiveStory().getTitle();
     }
 
