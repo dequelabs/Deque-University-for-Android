@@ -123,7 +123,7 @@ public class MainActivity extends ActionBarActivity
         int id = item.getItemId();
 
         if (id == R.id.action_example) {
-            toggleOverlayIsOn();
+            toggleOverlayIsOn(item);
         }
 
         return super.onOptionsItemSelected(item);
@@ -133,9 +133,12 @@ public class MainActivity extends ActionBarActivity
         return mIsOverlayOn;
     }
 
-    public void toggleOverlayIsOn() {
+    public void toggleOverlayIsOn(MenuItem item) {
         mIsOverlayOn = !mIsOverlayOn;
 
+        if (mIsOverlayOn) {
+            item.setIcon()
+        }
         observeOverlayIsOn();
     }
 
