@@ -2,14 +2,9 @@ package com.dequesystems.accessibility101;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +28,6 @@ import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * Created by chrismcmeeking on 4/24/15.
@@ -83,7 +77,16 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         textView.setText(this.getItem(position).getTitle());
 
         ImageView imageView = (ImageView) tabLayout.findViewById(R.id.aac_navigation_drawer_image_view);
-        imageView.setImageResource(R.drawable.about);
+
+        if(textView.getText().toString().equalsIgnoreCase("Introduction")){
+            imageView.setImageResource(R.drawable.aac_intro_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Labels")){
+            imageView.setImageResource(R.drawable.aac_labels_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Content Descriptions")){
+            imageView.setImageResource(R.drawable.aac_cont_desc_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Edit Texts")){
+            imageView.setImageResource(R.drawable.aac_edit_text_icon);
+        }
 
         return tabLayout;
     }
@@ -142,11 +145,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_image);
 
                 if (tab.getTitle().equalsIgnoreCase("About")) {
-                    imageView.setImageResource(R.drawable.about);
+                    imageView.setImageResource(R.drawable.aac_about_icon);
                 }else if(tab.getTitle().equalsIgnoreCase("Broken")){
-                    imageView.setImageResource(R.drawable.broken);
+                    imageView.setImageResource(R.drawable.aac_broken_icon);
                 }else if(tab.getTitle().equalsIgnoreCase("Fixed")){
-                    imageView.setImageResource(R.drawable.fixed);
+                    imageView.setImageResource(R.drawable.aac_fixed_icon);
                 }
 
                 ColorFilter overlayColor = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
