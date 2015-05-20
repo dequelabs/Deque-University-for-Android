@@ -55,13 +55,13 @@ public class MainActivity extends ActionBarActivity
             public void onTabChanged(String tabId) {
                 int tab = mTabHost.getCurrentTab();
 
-                for(int i = 0; i < mTabHost.getTabWidget().getTabCount(); i++){
+                for (int i = 0; i < mTabHost.getTabWidget().getTabCount(); i++) {
                     ImageView imageView = (ImageView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_image);
                     TextView textView = (TextView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_title);
 
                     int color;
 
-                    if(i == tab){
+                    if (i == tab) {
                         color = getResources().getColor(R.color.aac_tab_bar_selected);
                     } else {
                         color = getResources().getColor(R.color.aac_tab_bar_dimmed);
@@ -75,9 +75,8 @@ public class MainActivity extends ActionBarActivity
 
         mStoryManager = new StoryManager(this);
 
-        //Set up Navigation Drawer
         mNavigationDrawerFragment = (NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout)findViewById(R.id.drawer_layout));
+        mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
     public void restoreActionBar() {
@@ -107,6 +106,10 @@ public class MainActivity extends ActionBarActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        if (item.getItemId() == R.id.action_example) {
+            Log.wtf(LOG_TAG, "I'm logging things!");
+        }
 
         return super.onOptionsItemSelected(item);
     }
