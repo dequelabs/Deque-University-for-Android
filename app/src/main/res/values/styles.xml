@@ -1,9 +1,26 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AACAppTheme" parent="Theme.AppCompat.Light">
         <item name="android:activatedBackgroundIndicator">@drawable/selected_menu_option</item>
+
+        <item name="android:actionBarStyle">@style/AACAppTheme.ActionBar</item>
+        <item name="actionBarStyle">@style/AACAppTheme.ActionBar</item>
+
+        <item name="android:actionMenuTextColor">@color/aac_deque_orange</item>
     </style>
+
+    <style name="AACAppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/aac_deque_pale_blue</item>
+        <item name="background">@color/aac_deque_pale_blue</item>
+
+        <item name="android:textColor">@color/aac_deque_orange</item>
+    </style>
+
+    <!--<style name="AACAppTheme.ActionBar.TitleTextStyle">-->
+        <!--<item name="android:textColor">@color/aac_deque_orange</item>-->
+    <!--</style>-->
+
 
     <style name="AACTextAppearance" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/aac_text_body</item>
@@ -21,7 +38,6 @@
     <style name="AACTextAppearance.label">
         <item name="android:textSize">18sp</item>
     </style>
-
 
     <color name="aac_text_body">@color/aac_worldspace_black</color>
     <color name="aac_background_text">@color/aac_worldspace_white</color>
