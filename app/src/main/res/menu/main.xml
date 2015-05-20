@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item android:id="@+id/action_example"
         android:icon="@drawable/aac_unsighted_icon"
-        android:title="Non Sighted Simulation"
+        android:title="Non Sighted Simulation switch, off"
         app:showAsAction="always" />
 </menu>

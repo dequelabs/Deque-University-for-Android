@@ -137,8 +137,13 @@ public class MainActivity extends ActionBarActivity
         mIsOverlayOn = !mIsOverlayOn;
 
         if (mIsOverlayOn) {
-            item.setIcon()
+            item.setIcon(getResources().getDrawable(R.drawable.aac_sighted_icon));
+            item.setTitle("Non Sighted Simulation switch, ON");
+        } else {
+            item.setIcon(getResources().getDrawable(R.drawable.aac_unsighted_icon));
+            item.setTitle("Non Sighted Simulation switch, OFF");
         }
+
         observeOverlayIsOn();
     }
 
