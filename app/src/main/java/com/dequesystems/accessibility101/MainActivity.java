@@ -1,5 +1,6 @@
 package com.dequesystems.accessibility101;
 
+import android.graphics.PorterDuff;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 
@@ -8,7 +9,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.dequesystems.accessibility101.StoryManager.Story;
 
@@ -43,6 +49,29 @@ public class MainActivity extends ActionBarActivity
 
         mTabHost = (TabHost)findViewById(R.id.tabHost);
         mTabHost.setup();
+
+        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                int tab = mTabHost.getCurrentTab();
+
+                for(int i = 0; i < mTabHost.getTabWidget().getTabCount(); i++){
+                    ImageView imageView = (ImageView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_image);
+                    TextView textView = (TextView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_title);
+
+                    int color;
+
+                    if(i == tab){
+                        color = getResources().getColor(R.color.aac_tab_bar_selected);
+                    } else {
+                        color = getResources().getColor(R.color.aac_tab_bar_dimmed);
+                    }
+
+                    imageView.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+                    textView.setTextColor(color);
+                }
+            }
+        });
 
         mStoryManager = new StoryManager(this);
 
@@ -79,11 +108,6 @@ public class MainActivity extends ActionBarActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -92,13 +116,7 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        onSectionAttached(position);
-        //TODO: Change content based on navigation drawer selection
-    }
-
-    public void onSectionAttached(int number) {
-        Log.v(LOG_TAG, "Attaching new section: " + number);
-        mStoryManager.setActiveStory(number, mTabHost);
+        mStoryManager.setActiveStory(position, mTabHost);
         mTitle = mStoryManager.getActiveStory().getTitle();
     }
 

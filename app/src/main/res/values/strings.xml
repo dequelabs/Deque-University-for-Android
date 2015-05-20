@@ -101,7 +101,7 @@
     <string name="aac_edit_text_about_paragraph_2_hints">The<i>EditText</i> below utilizes the <i>hint</i> attribute, so the <i>hint</i> is visible within the text field when it is empty (either before a user has entered data or after a user has deleted all previously entered data). On some devices, <i>hints</i> require TalkBack to announce them regardless of the <i>EditText\'s</i> content, so a TalkBack user always knows what is supposed to be in the <i>EditText</i> when the <i>hint</i> attribute is used, but on most, <i>hints</i> are not read aloud by TalkBack after they are no longer visible on the screen, making the <i>EditText</i> boxes inaccessible in most cases.</string>
     <string name="aac_edit_text_about_paragraph_3_cont_desc">This <i>EditText</i> has only a <i>content description</i>. This means that there is no visible text or label associated with the <i>EditText</i>. TalkBack will read out the <i>content description</i>, but only if the <i>EditText</i> is empty, meaning that if a user has entered data, TalkBack will no longer announce what the <i>EditText</i> is for.</string>
     <string name="aac_edit_text_about_paragraph_4_mixing_1">The <i>EditText</i> below has both a <i>content description</i> and a <i>hint</i> associated with it. This causes the <i>content description</i> to be ignored entirely and only the <i>hint</i> to be used. It is best practice to avoid using <i>content descriptions</i> to describe <i>EditText</i> objects due to their lack of functionality in general. </string>
-    <string name="aac_edit_text_about_paragraph_6_mixing_2">The <i>EditText</i> below has a visual label associated with the <i>EditText</i> via the <i>label for</i> attribute, a <i>hint</i>, and a <i>content description</i>. The <i>content description</i> is completely ignored by TalkBack and offers nothing in terms of accessibility. It is often best not to mix labels and <i>hint</i> for <i>EditText</i> objects as it becomes redundant for all users, but can be useful to provide users a guide for formatting their information (for example, a <i>hint</i> for a phone number could be (###)\-###\-### ).</string>
+    <string name="aac_edit_text_about_paragraph_6_mixing_2">The <i>EditText</i> below has a visual label associated with the <i>EditText</i> via the <i>label for</i> attribute, a <i>hint</i>, and a <i>content description</i>. The <i>content description</i> is completely ignored by TalkBack and offers nothing in terms of accessibility. It is often best not to mix labels and <i>hint</i> for <i>EditText</i> objects as it becomes redundant for all users, but can be useful to provide users a guide for formatting their information (for example, a <i>hint</i> for a phone number could be (###)-###-### ).</string>
     <string name="aac_edit_text_about_paragraph_5_label_for">The <i>EditText</i> below has a visual label beside it that utilizes the <i>label for</i>  attribute to associate the visual label with the <i>EditText</i>. TalkBack will announce the label as part of its description for the <i>EditText</i> regardless of the <i>EditText\'s</i> content. Non-TalkBack users have a constant visual clue that indicates what should be in the <i>EditText</i>.</string>
 
     <!-- Broken Tab Strings -->
@@ -129,6 +129,9 @@
     <string name="aac_edit_text_phone_num_hint">Phone number</string>
     <string name="aac_edit_text_com_name_hint">Company name</string>
     <string name="aac_edit_text_fixed_phone_num_hint">(###) - ### - ####</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 </resources>

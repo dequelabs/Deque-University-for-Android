@@ -2,10 +2,19 @@ package com.dequesystems.accessibility101;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
@@ -40,23 +49,23 @@ public class StoryManager {
 
         ArrayList<Story> tempList = new ArrayList<>();
 
-        Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title));
+        Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title), false);
         tempStory.addTab(mActivity.getString(R.string.aac_intro_tab_1), new AppIntroductionFragment());
         tempList.add(tempStory);
 
-        tempStory = new Story(mActivity.getString(R.string.aac_labels_title));
+        tempStory = new Story(mActivity.getString(R.string.aac_labels_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new LabelsAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new LabelsBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new LabelsFixedFragment());
         tempList.add(tempStory);
 
-        tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title));
+        tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
         tempList.add(tempStory);
 
-        tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title));
+        tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new EditTextAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new EditTextBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new EditTextFixedFragment());
@@ -84,12 +93,15 @@ public class StoryManager {
     class Story {
         static final String TAB_ID = "TAB_ID_";
 
+        final boolean mTabBarVisible;
+
         final String mTitle;
 
         ArrayList<Tab> mTabs;
 
-        private Story (String title) {
+        private Story (String title, boolean tabBarVisible) {
             mTitle = title;
+            mTabBarVisible = tabBarVisible;
             mTabs = new ArrayList<>();
         }
 
@@ -100,12 +112,37 @@ public class StoryManager {
         private void makeActiveStory(TabHost tabHost) {
             tabHost.clearAllTabs();
 
+            if (mTabBarVisible) {
+                tabHost.getTabWidget().setVisibility(View.VISIBLE);
+            } else {
+                tabHost.getTabWidget().setVisibility(View.GONE);
+            }
+
             for (Iterator it = this.getTabIterator(); it.hasNext(); ) {
                 Story.Tab tab = (Story.Tab)it.next();
 
                 TabHost.TabSpec tabSpec = tabHost.newTabSpec(tab.getTabID());
                 tabSpec.setContent(tab);
-                tabSpec.setIndicator(tab.getTitle());
+
+                View view = mActivity.getLayoutInflater().inflate(R.layout.tab_layout, null);
+
+                TextView textView = (TextView) view.findViewById(R.id.aac_tab_title);
+                textView.setText(tab.getTitle());
+
+                ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_image);
+
+                if (tab.getTitle().equalsIgnoreCase("About")) {
+                    imageView.setImageResource(R.drawable.about);
+                }else if(tab.getTitle().equalsIgnoreCase("Broken")){
+                    imageView.setImageResource(R.drawable.broken);
+                }else if(tab.getTitle().equalsIgnoreCase("Fixed")){
+                    imageView.setImageResource(R.drawable.fixed);
+                }
+
+                ColorFilter overlayColor = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
+                imageView.setColorFilter(overlayColor);
+
+                tabSpec.setIndicator(view);
                 tabHost.addTab(tabSpec);
             }
 
@@ -149,6 +186,7 @@ public class StoryManager {
             private final String mTitle;
 
             private final String mTabID;
+
 
             private Fragment mFragment;
 
