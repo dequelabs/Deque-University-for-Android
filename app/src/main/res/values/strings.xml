@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Accessibility 101</string>
+    <string name="app_name">A11y 101</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,7 +17,7 @@
     <string name="aac_intro_title">Introduction</string>
     <string name="aac_intro_tab_1">Accessibility 101</string>
 
-    <string name="aac_intro_about_paragraph1">Welcome to Accessibility 101.  This app will take you through a set of demonstrations that aim to help developers understand the implications the Android Accessibility APIs have for users with disabilities.\n\nBe sure to enable <a href="http://support.google.com/accessibility/android/answer/6007100?hl=en">TalkBack</a>.  The demonstrations in this app use Android\'s accessibility APIs and are only meaningful in this context.  It is also helpful to enable the <i>TalkBack</i> shortcut, so you can turn <i>TalkBack</i> on and off easily.</string>
+    <string name="aac_intro_about_paragraph1">Welcome to Accessibility 101.  This app will take you through a set of demonstrations that aim to help developers understand the implications the Android Accessibility APIs have for users with disabilities.\n\nBe sure to enable <i>TalkBack</i>.  The demonstrations in this app use Android\'s accessibility APIs and are only meaningful in this context.  It is also helpful to enable the <i>TalkBack</i> shortcut, so you can turn <i>TalkBack</i> on and off easily.</string>
 
     <string name="aac_intro_deque_heading">About Deque</string>
     <string name="aac_intro_deque_paragraph1">Accessibility is both our mission and our passion and something we have been doing for over ten years with major corporations, government agencies, and other organizations. Every Deque team member – some of whom have been with the company since it was founded in 1999 – is passionate about the importance of accessibility in the digital world and in helping customers achieve the outcomes that accessibility provides. Our culture focuses heavily on these key pillars, in hiring, evaluation, and career paths and we have fostered a team of website accessibility experts.  Feel free to <a href="http://accessibility.deque.com/contact-deque-today">Contact Us</a> or visit our <a href="http://www.deque.com/">website</a> for more information.</string>
@@ -27,7 +27,7 @@
 
     <string name="aac_labels_content_description">This is a content description.</string>
 
-    <string name="aac_labels_about_introduction">In the Android Accessibility world there are multiple ways of providing alternate text for a control.  The <a href="http://developer.android.com/training/accessibility/accessible-app.html#contentdesc">content description</a> is the most basic.  However, you can also use the <a href="http://developer.android.com/reference/android/R.attr.html#labelFor">label for</a> attribute.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  While not all controls require a <i>content description</i>, all controls that do not contain text as a primary feature of the control, absolutely require a label of some kind!  Labels are not an Android element, it is a word we have chosen to represent the presence of either a <i>label for</i> or a <i>content description</i>.  In general, the <i>label for</i> property should be preferred.</string>
+    <string name="aac_labels_about_introduction">In the Android Accessibility world there are multiple ways of providing alternate text for a control.  The <i>content description</i> is the most basic.  However, you can also use the <i>label for</i> attribute.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  While not all controls require a <i>content description</i>, all controls that do not contain text as a primary feature of the control, absolutely require a label of some kind!  Labels are not an Android element, it is a word we have chosen to represent the presence of either a <i>label for</i> or a <i>content description</i>.  In general, the <i>label for</i> property should be preferred.</string>
 
     <string name="aac_labels_about_heading_1"><i>Content Description</i> Attribute</string>
     <string name="aac_labels_about_visible_text_1">Visible Text 1</string>
@@ -54,7 +54,7 @@
     <string name="aac_cont_desc_title">Content Descriptions</string>
 
     <!-- About Tab Strings-->
-    <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a control. The <a href="http://developer.android.com/training/accessibility/accessible-app.html#contentdesc">content description</a> attribute is the most basic. It provides a control, <a href="http://developer.android.com/reference/android/widget/ImageView.html">ImageView</a>, or other focusable object, that otherwise has no string content, with a description of what the object is. <i>Content descriptions</i> also allow accessibility services, like TalkBack, to describe the content to users, as the name implies. When writing <i>content descriptions</i>, be sure to consider the basic ARIA name, roe, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of object you are using, but be sure to test your application with TalkBack to ensure everything is announced properly.</string>
+    <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a control. The <i>content description</i> attribute is the most basic. It provides a control, <i>ImageView</i>, or other focusable object, that otherwise has no string content, with a description of what the object is. <i>Content descriptions</i> also allow accessibility services, like TalkBack, to describe the content to users, as the name implies. When writing <i>content descriptions</i>, be sure to consider the basic ARIA name, roe, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of object you are using, but be sure to test your application with TalkBack to ensure everything is announced properly.</string>
     <string name="aac_cont_desc_about_heading_1">Null Content Description</string>
     <string name="aac_cont_desc_about_heading_2">Empty Content Description</string>
     <string name="aac_cont_desc_about_heading_3">When to Use Content Descriptions</string>
@@ -93,7 +93,7 @@
     <string name="aac_edit_text_title">Edit Texts</string>
 
     <!-- About Tab Strings-->
-    <string name="aac_edit_text_about_intro">The <a href="http://developer.android.com/reference/android/widget/EditText.html">EditText</a> object is a subclass of the <a href="http://developer.android.com/reference/android/widget/TextView.html">TextView</a> object that is configured to be able to be edited by users. A thin veneer is overlaid on a <i>TextView</i>  before a user selects it. When a user selects an <i>EditText</i>, the keyboard appears and the user can enter data, which then appears in the <i>TextView</i>. The <i>EditText</i> object possesses the capability to have a <a href="http://developer.android.com/reference/android/R.attr.html#hint">hint</a> and/or <a href="http://developer.android.com/training/accessibility/accessible-app.html#contentdesc">content description</a> attribute to describe what should be entered into the field, and can also be associated with a visual label using the <a href="http://developer.android.com/reference/android/R.attr.html#labelFor">label for</a> attribute. <i>EditText</i> objects are not inherently accessible. If no <i>hint</i> or visual label is associated with the <i>EditText</i>, any user, regardless of whether he or she is using TalkBack, would find it difficult to know what to put into the text field.</string>
+    <string name="aac_edit_text_about_intro">The <i>EditText</i> object is a subclass of the <i>TextView</i> object that is configured to be able to be edited by users. A thin veneer is overlaid on a <i>TextView</i>  before a user selects it. When a user selects an <i>EditText</i>, the keyboard appears and the user can enter data, which then appears in the <i>TextView</i>. The <i>EditText</i> object possesses the capability to have a <i>hint</i> and/or <i>content description</i> attribute to describe what should be entered into the field, and can also be associated with a visual label using the <i>label for</i> attribute. <i>EditText</i> objects are not inherently accessible. If no <i>hint</i> or visual label is associated with the <i>EditText</i>, any user, regardless of whether he or she is using TalkBack, would find it difficult to know what to put into the text field.</string>
     <string name="aac_edit_text_about_heading_2_hints">Hint Attribute</string>
     <string name="aac_edit_text_about_heading_3_cont_desc">Content Description Attribute</string>
     <string name="aac_edit_text_about_heading_4_mixing">Mixing Them Together</string>
@@ -130,8 +130,4 @@
     <string name="aac_edit_text_com_name_hint">Company name</string>
     <string name="aac_edit_text_fixed_phone_num_hint">(###) - ### - ####</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
-
-    <string name="hello_world">Hello world!</string>
-
-
 </resources>

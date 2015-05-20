@@ -100,21 +100,6 @@ public class MainActivity extends ActionBarActivity
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        if (item.getItemId() == R.id.action_example) {
-            Log.wtf(LOG_TAG, "I'm logging things!");
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
     //Navigation Drawer Callbacks and support functions
 
     @Override
