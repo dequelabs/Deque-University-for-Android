@@ -150,12 +150,16 @@ public class NavigationDrawerFragment extends Fragment {
                     return;
                 }
 
+                mCallbacks.onNavigationDrawerClosed();
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
 
             @Override
             public void onDrawerOpened(View drawerView) {
+                mCallbacks.onNavigationDrawerOpened();
+
                 super.onDrawerOpened(drawerView);
+
                 if (!isAdded()) {
                     return;
                 }
@@ -249,11 +253,6 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -280,6 +279,7 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
-        String[] getSectionHeadings();
+        void onNavigationDrawerClosed();
+        void onNavigationDrawerOpened();
     }
 }

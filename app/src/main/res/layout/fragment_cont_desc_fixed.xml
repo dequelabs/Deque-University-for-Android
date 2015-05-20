@@ -9,7 +9,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout android:id="@+id/aac_cont_desc_broken_image_demo"
+            <LinearLayout android:id="@+id/demoContent"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
