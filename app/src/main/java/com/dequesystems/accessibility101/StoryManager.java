@@ -88,6 +88,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
         }
 
+
         return tabLayout;
     }
 
@@ -131,8 +132,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 tabHost.getTabWidget().setVisibility(View.GONE);
             }
 
-            for (Iterator it = this.getTabIterator(); it.hasNext(); ) {
-                Story.Tab tab = (Story.Tab)it.next();
+            for (int i = 0; i < mTabs.size(); i++) {
+                Story.Tab tab = mTabs.get(i);
 
                 TabHost.TabSpec tabSpec = tabHost.newTabSpec(tab.getTabID());
                 tabSpec.setContent(tab);
@@ -166,8 +167,9 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         Tab getTabByTitle(String tabTitle) {
 
-            for (Iterator<Tab> it = mTabs.iterator(); it.hasNext(); ) {
-                Tab tab = it.next();
+            for (int i = 0; i < mTabs.size(); i++ ) {
+                Tab tab = mTabs.get(i);
+
                 if (tabTitle == tab.mTitle) {
                     return tab;
                 }
@@ -178,8 +180,9 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         Tab getTabByID(String tabId) {
 
-            for (Iterator<Tab> it = mTabs.iterator(); it.hasNext(); ) {
-                Tab tab = it.next();
+            for (int i = 0; i < mTabs.size(); i++ ) {
+                Tab tab =  mTabs.get(i);
+
                 if (tabId == tab.getTabID()) {
                     return tab;
                 }
