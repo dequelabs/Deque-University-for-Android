@@ -14,7 +14,7 @@
         <TextView android:id="@+id/aac_tab_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/aac_worldspace_white"
+            android:textColor="@color/aac_tab_bar_dimmed"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"/>
 

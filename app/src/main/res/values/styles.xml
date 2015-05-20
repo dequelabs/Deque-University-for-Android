@@ -7,19 +7,22 @@
         <item name="android:actionBarStyle">@style/AACAppTheme.ActionBar</item>
         <item name="actionBarStyle">@style/AACAppTheme.ActionBar</item>
 
-        <item name="android:actionMenuTextColor">@color/aac_deque_orange</item>
+        <item name="android:actionMenuTextColor">@color/aac_navigation_drawer_text</item>
     </style>
 
-    <style name="AACAppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@color/aac_deque_pale_blue</item>
-        <item name="background">@color/aac_deque_pale_blue</item>
+    <style name="AACAppTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar">
 
-        <item name="android:textColor">@color/aac_deque_orange</item>
+        <item name="android:background">@color/aac_action_bar_background</item>
+        <item name="background">@color/aac_action_bar_background</item>
+
+
+        <item name="android:titleTextStyle">@style/AACAppTheme.ActionBar.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/AACAppTheme.ActionBar.TitleTextStyle</item>
     </style>
 
-    <!--<style name="AACAppTheme.ActionBar.TitleTextStyle">-->
-        <!--<item name="android:textColor">@color/aac_deque_orange</item>-->
-    <!--</style>-->
+    <style name="AACAppTheme.ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/aac_navigation_drawer_text</item>
+    </style>
 
 
     <style name="AACTextAppearance" parent="@android:style/TextAppearance">
@@ -46,12 +49,17 @@
     <color name="aac_text_body">@color/aac_worldspace_black</color>
     <color name="aac_background_text">@color/aac_worldspace_white</color>
     <color name="aac_story_background">@color/aac_deque_light_blue</color>
+
+    <color name="aac_tab_bar_background">@color/aac_deque_dark_blue</color>
     <color name="aac_tab_bar_dimmed">@color/aac_worldspace_white</color>
     <color name="aac_tab_bar_selected">@color/aac_deque_orange</color>
-    <color name="aac_tab_bar_background">@color/aac_deque_dark_blue</color>
+
+
     <color name="aac_navigation_drawer_background">@color/aac_worldspace_white</color>
     <color name="aac_navigation_drawer_text">@color/aac_deque_dark_blue</color>
     <color name="aac_navigation_drawer_selected">@color/aac_deque_pale_blue</color>
+
+    <color name="aac_action_bar_background">@color/aac_deque_gray</color>
 
     <color name="aac_worldspace_blue">#083378</color>
     <color name="aac_worldspace_white">#F2F2F4</color>
