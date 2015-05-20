@@ -54,7 +54,6 @@ public class NavigationDrawerFragment extends Fragment {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
     private View mFragmentContainerView;
-    private StoryManager mStory;
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
@@ -108,9 +107,7 @@ public class NavigationDrawerFragment extends Fragment {
      * @param fragmentId   The android:id of this fragment in its activity's layout.
      * @param drawerLayout The DrawerLayout containing this fragment's UI.
      */
-    public void setUp(int fragmentId, DrawerLayout drawerLayout, StoryManager story) {
-
-        mStory = story;
+    public void setUp(int fragmentId, DrawerLayout drawerLayout, StoryManager storyManager) {
 
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -119,24 +116,7 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        String titles[] = new String[mStory.getCount()];
-
-        for(int i = 0; i < mStory.getCount(); i++){
-            titles[i] = mStory.getView(i, null, null).toString();
-        }
-
-//        mDrawerListView.setAdapter(
-//                mStory.getContext(),
-//                R.id.navigation_drawer,
-//                R.id.navigation_drawer_text_view,
-//                titles
-//                );
-
-//        mDrawerListView.setAdapter((
-//                getActionBar().getThemedContext(),
-//                android.R.layout.simple_list_item_activated_1,
-//                android.R.id.text1,
-//               mCallbacks.getSectionHeadings());
+        mDrawerListView.setAdapter(storyManager);
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 

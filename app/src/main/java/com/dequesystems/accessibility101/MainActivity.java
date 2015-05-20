@@ -129,4 +129,8 @@ public class MainActivity extends ActionBarActivity
 
         return result.toArray(new String[result.size()]);
     }
+
+    public StoryManager getStoryManager() {
+        return mStoryManager;
+    }
 }

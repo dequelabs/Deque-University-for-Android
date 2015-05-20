@@ -6,8 +6,8 @@
     android:background="@color/aac_deque_dark_blue">
 
         <ImageView android:id="@+id/aac_tab_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/aac_tab_bar_image_size"
+            android:layout_height="@dimen/aac_tab_bar_image_size"
             android:padding="@dimen/aac_global_border"
             android:layout_gravity="center"/>
 

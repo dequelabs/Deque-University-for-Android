@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -74,11 +75,17 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
     }
 
     @Override
-    public TextView getView(int position, View convertView, ViewGroup parent){
-        TextView textView = new TextView(this.getContext());
+    public View getView(int position, View convertView, ViewGroup parent){
+
+        LinearLayout tabLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
+
+        TextView textView = (TextView) tabLayout.findViewById(R.id.aac_navigation_drawer_text_view);
         textView.setText(this.getItem(position).getTitle());
 
-        return textView;
+        ImageView imageView = (ImageView) tabLayout.findViewById(R.id.aac_navigation_drawer_image_view);
+        imageView.setImageResource(R.drawable.about);
+
+        return tabLayout;
     }
 
     public void setActiveStory(int index, TabHost tabHost) {
