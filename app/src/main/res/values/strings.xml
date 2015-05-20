@@ -5,6 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="aac_logo_cont_desc">Deque logo</string>
+    <string name="aac_navigation_drawer_unsighted_icon_cont_desc">Unsighted demo icon</string>
+    <string name="aac_navigation_drawer_unsighted_icon_text">Click on this icon in any story to experience \"unsighted\" demos.</string>
 
     <string name="action_example">Example action</string>
 

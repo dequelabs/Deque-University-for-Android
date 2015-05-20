@@ -88,6 +88,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
         }
 
+
         return tabLayout;
     }
 
