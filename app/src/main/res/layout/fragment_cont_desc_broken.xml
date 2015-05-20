@@ -1,7 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/aac_story_background"
+    android:background="@color/aac_story_broken_background"
     tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment">
 
     <LinearLayout
@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <LinearLayout android:id="@+id/demoContent"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

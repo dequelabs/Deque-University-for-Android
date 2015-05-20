@@ -46,25 +46,25 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         mActivity = activity;
 
         Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title), false);
-        tempStory.addTab(mActivity.getString(R.string.aac_intro_tab_1), new AppIntroductionFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_intro_tab_1), R.drawable.aac_about_icon, new AppIntroductionFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_labels_title), true);
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new LabelsAboutFragment());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new LabelsBrokenFragment());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new LabelsFixedFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new LabelsAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new LabelsBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new LabelsFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true);
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, ContDescAboutFragment.newInstance("Blarg", "Blargety"));
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title), true);
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new EditTextAboutFragment());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new EditTextBrokenFragment());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new EditTextFixedFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new EditTextAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new EditTextBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
         this.add(tempStory);
     }
 
@@ -87,6 +87,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         }else if(textView.getText().toString().equalsIgnoreCase("Edit Texts")){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
         }
+
 
         return tabLayout;
     }
@@ -118,8 +119,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             mTabs = new ArrayList<>();
         }
 
-        private void addTab(String tabTitle, Fragment content) {
-            mTabs.add(new Tab(tabTitle, content));
+        private void addTab(String tabTitle, int imageResource, Fragment content) {
+            mTabs.add(new Tab(tabTitle, imageResource, content));
         }
 
         private void makeActiveStory(TabHost tabHost) {
@@ -202,13 +203,15 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
             private final String mTabID;
 
-
             private Fragment mFragment;
 
-            private Tab(String title, Fragment fragment) {
+            private final int mImageResource;
+
+            private Tab(String title, int imageResource, Fragment fragment) {
                 mFragment = fragment;
                 mTitle = title;
                 mTabID = Story.this.getTitle().toUpperCase() + "_" + mTitle.toUpperCase() + "_TAB";
+                mImageResource = imageResource;
             }
 
             public String getTitle() { return mTitle;}
@@ -216,6 +219,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             public Fragment getFragment() { return mFragment;}
 
             public String getTabID() { return mTabID;}
+
+            public int getImageResource() { return mImageResource;}
 
             @Override
             public View createTabContent(String tag) {

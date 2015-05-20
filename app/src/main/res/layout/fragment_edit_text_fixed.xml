@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment"
-    android:background="@color/aac_deque_green"
+    android:background="@color/aac_story_fixed_background"
     android:tag="fixed_tab"
     android:fillViewport="false">
 
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <LinearLayout android:id="@+id/demoContent"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"

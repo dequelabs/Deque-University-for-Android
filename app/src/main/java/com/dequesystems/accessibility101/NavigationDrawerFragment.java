@@ -18,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -94,6 +93,7 @@ public class NavigationDrawerFragment extends Fragment {
 
         ImageView imageView = (ImageView) layout.findViewById(R.id.navigation_drawer_header);
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
+        imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
 
         for(int i = 1; i < mDrawerListView.getCount() + 1; i++) {
             if (mDrawerListView.getChildAt(i) != null) {
@@ -142,6 +142,8 @@ public class NavigationDrawerFragment extends Fragment {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
 
+
+
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -158,12 +160,16 @@ public class NavigationDrawerFragment extends Fragment {
                     return;
                 }
 
+                mCallbacks.onNavigationDrawerClosed();
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
 
             @Override
             public void onDrawerOpened(View drawerView) {
+                mCallbacks.onNavigationDrawerOpened();
+
                 super.onDrawerOpened(drawerView);
+
                 if (!isAdded()) {
                     return;
                 }
@@ -257,11 +263,6 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -288,6 +289,7 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
-        String[] getSectionHeadings();
+        void onNavigationDrawerClosed();
+        void onNavigationDrawerOpened();
     }
 }

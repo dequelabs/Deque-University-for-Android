@@ -1,6 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_example" android:title="@string/action_example"
-        app:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_example"
+        android:icon="@drawable/aac_unsighted_icon"
+        android:title="Non Sighted Simulation switch, off"
+        app:showAsAction="always" />
 </menu>

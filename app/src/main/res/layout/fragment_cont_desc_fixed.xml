@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment"
-    android:background="@color/aac_deque_green">
+    android:background="@color/aac_story_fixed_background">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout android:id="@+id/aac_cont_desc_broken_image_demo"
+            <LinearLayout android:id="@+id/demoContent"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
