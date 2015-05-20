@@ -4,6 +4,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="aac_logo_cont_desc">Deque logo</string>
+
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>

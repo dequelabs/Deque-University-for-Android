@@ -18,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -94,6 +93,7 @@ public class NavigationDrawerFragment extends Fragment {
 
         ImageView imageView = (ImageView) layout.findViewById(R.id.navigation_drawer_header);
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
+        imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
 
         for(int i = 1; i < mDrawerListView.getCount() + 1; i++) {
             if (mDrawerListView.getChildAt(i) != null) {
@@ -141,6 +141,8 @@ public class NavigationDrawerFragment extends Fragment {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
+
+
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
