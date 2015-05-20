@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -53,6 +54,7 @@ public class NavigationDrawerFragment extends Fragment {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
     private View mFragmentContainerView;
+    private StoryManager mStory;
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
@@ -87,7 +89,12 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
-
+        for(int i = 0; i < mDrawerListView.getCount(); i++) {
+            if (mDrawerListView.getChildAt(i) != null) {
+                TextView textView = (TextView) mDrawerListView.getChildAt(i);
+                textView.setTextColor(getResources().getColor(R.color.aac_worldspace_black));
+            }
+        }
         return mDrawerListView;
     }
 
@@ -101,8 +108,9 @@ public class NavigationDrawerFragment extends Fragment {
      * @param fragmentId   The android:id of this fragment in its activity's layout.
      * @param drawerLayout The DrawerLayout containing this fragment's UI.
      */
-    public void setUp(int fragmentId, DrawerLayout drawerLayout) {
+    public void setUp(int fragmentId, DrawerLayout drawerLayout, StoryManager story) {
 
+        mStory = story;
 
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -111,11 +119,24 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                mCallbacks.getSectionHeadings()));
+        String titles[] = new String[mStory.getCount()];
+
+        for(int i = 0; i < mStory.getCount(); i++){
+            titles[i] = mStory.getView(i, null, null).toString();
+        }
+
+//        mDrawerListView.setAdapter(
+//                mStory.getContext(),
+//                R.id.navigation_drawer,
+//                R.id.navigation_drawer_text_view,
+//                titles
+//                );
+
+//        mDrawerListView.setAdapter((
+//                getActionBar().getThemedContext(),
+//                android.R.layout.simple_list_item_activated_1,
+//                android.R.id.text1,
+//               mCallbacks.getSectionHeadings());
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 

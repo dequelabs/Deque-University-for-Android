@@ -77,7 +77,7 @@ public class MainActivity extends ActionBarActivity
 
         //Set up Navigation Drawer
         mNavigationDrawerFragment = (NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout)findViewById(R.id.drawer_layout));
+        mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout)findViewById(R.id.drawer_layout), this.mStoryManager);
     }
 
     public void restoreActionBar() {
@@ -134,9 +134,8 @@ public class MainActivity extends ActionBarActivity
     public String[] getSectionHeadings() {
         ArrayList<String> result = new ArrayList<>();
 
-        for (Iterator it = mStoryManager.getStoryIterator(); it.hasNext(); ) {
-            Story story = (Story) it.next();
-            result.add(story.getTitle());
+        for (int i = 0; i < mStoryManager.getCount(); i++ ) {
+            result.add(mStoryManager.getItem(i).getTitle());
         }
 
         return result.toArray(new String[result.size()]);

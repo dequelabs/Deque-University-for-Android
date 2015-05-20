@@ -2,6 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:activatedBackgroundIndicator">@drawable/selected_menu_option</item>
     </style>
 
     <style name="AACTextAppearance" parent="@android:style/TextAppearance">
@@ -20,6 +21,7 @@
     <style name="AACTextAppearance.label">
         <item name="android:textSize">18sp</item>
     </style>
+
 
     <color name="aac_text_body">@color/aac_worldspace_black</color>
     <color name="aac_background_text">@color/aac_worldspace_white</color>
