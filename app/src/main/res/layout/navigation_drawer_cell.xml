@@ -3,7 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/aac_navigation_drawer_background"
+    android:background="@drawable/selected_menu_option"
     android:padding="@dimen/aac_global_border">
 
     <ImageView android:id="@+id/aac_navigation_drawer_image_view"
@@ -15,7 +15,7 @@
     <TextView android:id="@+id/aac_navigation_drawer_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/aac_text_body"
+        android:textColor="@color/aac_navigation_drawer_text"
         android:layout_gravity="center"
         android:textAppearance="@style/AACTextAppearance.navigation_drawer"/>
 
