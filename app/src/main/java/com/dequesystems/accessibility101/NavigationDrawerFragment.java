@@ -19,7 +19,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -86,9 +89,20 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        mDrawerListView = (ListView) layout.findViewById(R.id.navigation_drawer_list_view);
 
-        return mDrawerListView;
+        ImageView imageView = (ImageView) layout.findViewById(R.id.navigation_drawer_header);
+        imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
+
+        for(int i = 1; i < mDrawerListView.getCount() + 1; i++) {
+            if (mDrawerListView.getChildAt(i) != null) {
+                TextView textView = (TextView) mDrawerListView.getChildAt(i);
+                textView.setTextColor(getResources().getColor(R.color.aac_worldspace_black));
+            }
+        }
+
+        return layout;
     }
 
     public boolean isDrawerOpen() {
@@ -101,8 +115,7 @@ public class NavigationDrawerFragment extends Fragment {
      * @param fragmentId   The android:id of this fragment in its activity's layout.
      * @param drawerLayout The DrawerLayout containing this fragment's UI.
      */
-    public void setUp(int fragmentId, DrawerLayout drawerLayout) {
-
+    public void setUp(int fragmentId, DrawerLayout drawerLayout, StoryManager storyManager) {
 
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -111,11 +124,7 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                mCallbacks.getSectionHeadings()));
+        mDrawerListView.setAdapter(storyManager);
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 

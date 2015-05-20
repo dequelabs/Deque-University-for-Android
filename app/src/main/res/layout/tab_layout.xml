@@ -3,18 +3,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/aac_deque_dark_blue">
+    android:background="@color/aac_tab_bar_background">
 
         <ImageView android:id="@+id/aac_tab_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/aac_tab_bar_image_size"
+            android:layout_height="@dimen/aac_tab_bar_image_size"
             android:padding="@dimen/aac_global_border"
             android:layout_gravity="center"/>
 
         <TextView android:id="@+id/aac_tab_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/aac_worldspace_white"
+            android:textColor="@color/aac_tab_bar_dimmed"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"/>
 

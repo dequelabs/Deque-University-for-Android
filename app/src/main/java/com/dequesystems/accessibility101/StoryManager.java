@@ -2,16 +2,15 @@ package com.dequesystems.accessibility101;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -29,65 +28,79 @@ import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * Created by chrismcmeeking on 4/24/15.
  */
-public class StoryManager {
+public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
     private static final String LOG_TAG = StoryManager.class.getSimpleName();
-
-    List<Story> mStories;
 
     MainActivity mActivity;
 
     private Story mActiveStory = null;
 
     StoryManager(MainActivity activity) {
-        mActivity = activity;
+        super(activity, 0, /*objects*/new ArrayList<Story>());
 
-        ArrayList<Story> tempList = new ArrayList<>();
+        mActivity = activity;
 
         Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title), false);
         tempStory.addTab(mActivity.getString(R.string.aac_intro_tab_1), new AppIntroductionFragment());
-        tempList.add(tempStory);
+        this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_labels_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new LabelsAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new LabelsBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new LabelsFixedFragment());
-        tempList.add(tempStory);
+        this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), ContDescAboutFragment.newInstance("Blarg", "Blargety"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
-        tempList.add(tempStory);
+        this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), new EditTextAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), new EditTextBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), new EditTextFixedFragment());
-        tempList.add(tempStory);
+        this.add(tempStory);
+    }
 
-        mStories = tempList;
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent){
+
+        LinearLayout tabLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
+
+        TextView textView = (TextView) tabLayout.findViewById(R.id.aac_navigation_drawer_text_view);
+        textView.setText(this.getItem(position).getTitle());
+
+        ImageView imageView = (ImageView) tabLayout.findViewById(R.id.aac_navigation_drawer_image_view);
+
+        if(textView.getText().toString().equalsIgnoreCase("Introduction")){
+            imageView.setImageResource(R.drawable.aac_intro_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Labels")){
+            imageView.setImageResource(R.drawable.aac_labels_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Content Descriptions")){
+            imageView.setImageResource(R.drawable.aac_cont_desc_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Edit Texts")){
+            imageView.setImageResource(R.drawable.aac_edit_text_icon);
+        }
+
+        return tabLayout;
     }
 
     public void setActiveStory(int index, TabHost tabHost) {
-        mStories.get(index).makeActiveStory(tabHost);
+        this.getItem(index).makeActiveStory(tabHost);
     }
 
     public Story getActiveStory() {
         return mActiveStory;
     }
 
-    Iterator<Story> getStoryIterator() {
-        return mStories.iterator();
-    }
-
     Story getStory(int index) {
-        return mStories.get(index);
+        return getItem(index);
     }
 
     class Story {
@@ -118,8 +131,8 @@ public class StoryManager {
                 tabHost.getTabWidget().setVisibility(View.GONE);
             }
 
-            for (Iterator it = this.getTabIterator(); it.hasNext(); ) {
-                Story.Tab tab = (Story.Tab)it.next();
+            for (int i = 0; i < mTabs.size(); i++) {
+                Story.Tab tab = mTabs.get(i);
 
                 TabHost.TabSpec tabSpec = tabHost.newTabSpec(tab.getTabID());
                 tabSpec.setContent(tab);
@@ -132,11 +145,11 @@ public class StoryManager {
                 ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_image);
 
                 if (tab.getTitle().equalsIgnoreCase("About")) {
-                    imageView.setImageResource(R.drawable.about);
+                    imageView.setImageResource(R.drawable.aac_about_icon);
                 }else if(tab.getTitle().equalsIgnoreCase("Broken")){
-                    imageView.setImageResource(R.drawable.broken);
+                    imageView.setImageResource(R.drawable.aac_broken_icon);
                 }else if(tab.getTitle().equalsIgnoreCase("Fixed")){
-                    imageView.setImageResource(R.drawable.fixed);
+                    imageView.setImageResource(R.drawable.aac_fixed_icon);
                 }
 
                 ColorFilter overlayColor = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
@@ -153,8 +166,9 @@ public class StoryManager {
 
         Tab getTabByTitle(String tabTitle) {
 
-            for (Iterator<Tab> it = mTabs.iterator(); it.hasNext(); ) {
-                Tab tab = it.next();
+            for (int i = 0; i < mTabs.size(); i++ ) {
+                Tab tab = mTabs.get(i);
+
                 if (tabTitle == tab.mTitle) {
                     return tab;
                 }
@@ -165,8 +179,9 @@ public class StoryManager {
 
         Tab getTabByID(String tabId) {
 
-            for (Iterator<Tab> it = mTabs.iterator(); it.hasNext(); ) {
-                Tab tab = it.next();
+            for (int i = 0; i < mTabs.size(); i++ ) {
+                Tab tab =  mTabs.get(i);
+
                 if (tabId == tab.getTabID()) {
                     return tab;
                 }

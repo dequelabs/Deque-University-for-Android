@@ -16,4 +16,8 @@
     <dimen name="aac_elevation_level_3">3dp</dimen>
 
     <dimen name="aac_text_heading_margin">5dp</dimen>
+
+    <dimen name="aac_navigation_drawer_cell_image_size_responsive">35sp</dimen>
+    <dimen name="aac_tab_bar_image_size">40dp</dimen>
+
 </resources>
