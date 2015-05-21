@@ -1,43 +1,26 @@
-require 'typhoeus'
+require 'net/http'
 require 'json'
 
 Then(/^I perform DQTest (.*)$/) do |arg|
-	str = String.new(arg)
-	str = str.downcase
+	str = String.new(arg).downcase
+
 	result = ''
-	ipaddress = '172.27.250.66'
 
-	response = ''
+	host = 'http://localhost:38383/a11ytest/' + str
 
-	host = 'http://' + ipaddress + ':8080/A11yRules/'
-	if str.eql?('all')
-		response = Typhoeus.get(host + str)
-	elsif str.eql?('image descriptions')
-		raise 'Detected image/button without a content description'
-		response = Typhoeus.get(host + 'imgdesc')
-	elsif str.eql?('time announcement')
-		raise 'Shorthand time detected, should override content description'
-		response = Typhoeus.get(host + 'timeannounce')
-	elsif str.eql?('labeled by')
-		raise 'Missing labeledby attribute on switch button'
-		response = Typhoeus.get(host + 'labeledby')
-	else
-		puts 'No test found.'
+	uri = URI.parse(host)
+
+	http = Net::HTTP.new(uri.host, uri.port)
+	request = Net::HTTP::Get.new(uri.request_uri)
+
+	response = http.request(request)
+
+	sleep(1.0)
+
+	if (response.body.include?('FAIL'))
+		screenshot({:name=>"deque_test_failure.png"})
+		puts "Deque Accessibility Test Failed"
+		json = JSON.parse(response.body)
+		puts response.body + "\n"
 	end
-
-	if response.success?
-		
-		if (response.body.include?('FAIL'))
-			result = "Status: FAIL\n"
-			json = JSON.parse(response.body)
-			raise "Failed test"
-		end
-
-		puts result
-
-	else 
-		raise 'Request failed: Check that you\'re connected to the device at:' + host
-	end
-
-
 end
