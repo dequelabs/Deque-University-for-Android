@@ -226,6 +226,65 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aac_background_text"
+            android:padding="@dimen/aac_global_border"
+            android:layout_margin="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_learn_more"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/aacEditTextTextView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.link"
+                    android:text="@string/aac_editText_link"/>
+
+                <TextView android:id="@+id/aacEditTextTextView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.link"
+                    android:text="@string/aac_text_view_link"/>
+
+                <TextView android:id="@+id/aacEditTextTextView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_hint_link"
+                    android:textAppearance="@style/AACTextAppearance.link" />
+
+                <TextView android:id="@+id/aacEditTextTextView4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_cont_desc_link"
+                    android:textAppearance="@style/AACTextAppearance.link" />
+
+                <TextView android:id="@+id/aacEditTextTextView5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_label_for_link"
+                    android:textAppearance="@style/AACTextAppearance.link" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

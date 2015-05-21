@@ -16,8 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/aac_global_border"
-        android:textColor="@color/aac_navigation_drawer_text"
         android:layout_gravity="center"
-        android:textAppearance="@style/AACTextAppearance.navigation_drawer"/>
+        android:textAppearance="@style/AACTextAppearance.navigation_drawer"
+        android:singleLine="true"
+        android:ellipsize="end" />
 
 </LinearLayout>

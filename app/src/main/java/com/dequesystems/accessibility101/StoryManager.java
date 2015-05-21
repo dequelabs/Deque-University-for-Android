@@ -56,7 +56,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true);
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, ContDescAboutFragment.newInstance("Blarg", "Blargety"));
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new ContDescAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
         this.add(tempStory);
