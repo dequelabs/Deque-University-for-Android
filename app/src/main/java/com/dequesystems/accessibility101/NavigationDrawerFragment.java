@@ -21,8 +21,6 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -60,6 +58,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
+    private final String LOG_TAG = NavigationDrawerFragment.class.getSimpleName();
+
     public NavigationDrawerFragment() {
     }
 
@@ -94,13 +94,6 @@ public class NavigationDrawerFragment extends Fragment {
         ImageView imageView = (ImageView) layout.findViewById(R.id.navigation_drawer_header);
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
         imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
-
-        for(int i = 1; i < mDrawerListView.getCount() + 1; i++) {
-            if (mDrawerListView.getChildAt(i) != null) {
-                TextView textView = (TextView) mDrawerListView.getChildAt(i);
-                textView.setTextColor(getResources().getColor(R.color.aac_worldspace_black));
-            }
-        }
 
         return layout;
     }

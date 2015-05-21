@@ -16,11 +16,8 @@ public class LabelsAboutFragment extends Fragment {
 
     View mView;
 
-    ArrayList<TextView> mLinkedTextViews;
-
-    public LabelsAboutFragment() {
-        mLinkedTextViews = new ArrayList<>();
-    }
+    TextView mTextView1;
+    TextView mTextView2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,15 +26,16 @@ public class LabelsAboutFragment extends Fragment {
 
         mView = inflater.inflate(R.layout.fragment_labels_about, container, false);
 
+        mTextView1 = (TextView) mView.findViewById(R.id.aacLabelsTextView1);
+        mTextView2 = (TextView) mView.findViewById(R.id.aacLabelsTextView2);
 
-        mLinkedTextViews.add((TextView)mView.findViewById(R.id.aacTextView1));
-        mLinkedTextViews.add((TextView)mView.findViewById(R.id.aacTextView2));
-        mLinkedTextViews.add((TextView)mView.findViewById(R.id.aacTextView3));
-        mLinkedTextViews.add((TextView)mView.findViewById(R.id.aacTextView4));
+        mTextView1.setMovementMethod(LinkMovementMethod.getInstance());
+        mTextView2.setMovementMethod(LinkMovementMethod.getInstance());
 
-        for (TextView textView : mLinkedTextViews) {
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
-        }
+        int linkColor = getResources().getColor(R.color.aac_text_link);
+
+        mTextView1.setLinkTextColor(linkColor);
+        mTextView2.setLinkTextColor(linkColor);
 
         return mView;
     }
