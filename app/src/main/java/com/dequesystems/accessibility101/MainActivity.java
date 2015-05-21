@@ -179,8 +179,10 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
 
-            mStoryManager.setActiveStory(position , mTabHost);
-            mTitle = mStoryManager.getActiveStory().getTitle();
+        int storyNumber = position > 0 ? position - 1 : 0;
+
+        mStoryManager.setActiveStory(storyNumber , mTabHost);
+        mTitle = mStoryManager.getActiveStory().getTitle();
     }
 
     @Override

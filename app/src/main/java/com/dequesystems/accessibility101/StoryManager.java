@@ -66,17 +66,21 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new EditTextBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
         this.add(tempStory);
+
+        tempStory = new Story("TalkBack Simulation", true);
+        tempStory.addTab("TalkBack Simulation", R.drawable.aac_unsighted_icon, new TalkBackSimulationFragment());
+        this.add(tempStory);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        LinearLayout tabLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
+        LinearLayout navDrawerLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
 
-        TextView textView = (TextView) tabLayout.findViewById(R.id.aac_navigation_drawer_text_view);
+        TextView textView = (TextView) navDrawerLayout.findViewById(R.id.aac_navigation_drawer_cell_text_view);
         textView.setText(this.getItem(position).getTitle());
 
-        ImageView imageView = (ImageView) tabLayout.findViewById(R.id.aac_navigation_drawer_image_view);
+        ImageView imageView = (ImageView) navDrawerLayout.findViewById(R.id.aac_navigation_drawer_cell_image_view);
 
         if(textView.getText().toString().equalsIgnoreCase("Introduction")){
             imageView.setImageResource(R.drawable.aac_intro_icon);
@@ -86,10 +90,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
         }else if(textView.getText().toString().equalsIgnoreCase("Edit Texts")){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
+        }else if(textView.getText().toString().equalsIgnoreCase("Talkback simulation")){
+            imageView.setImageResource(R.drawable.aac_unsighted_icon);
         }
 
-
-        return tabLayout;
+        return navDrawerLayout;
     }
 
     public void setActiveStory(int index, TabHost tabHost) {
@@ -151,6 +156,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                     imageView.setImageResource(R.drawable.aac_broken_icon);
                 }else if(tab.getTitle().equalsIgnoreCase("Fixed")){
                     imageView.setImageResource(R.drawable.aac_fixed_icon);
+                }else if(tab.getTitle().equalsIgnoreCase("TalkBack simulation")){
+                    imageView.setImageResource(R.drawable.aac_unsighted_icon);
                 }
 
                 ColorFilter overlayColor = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
