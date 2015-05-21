@@ -21,8 +21,6 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -60,6 +58,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
+    private final String LOG_TAG = NavigationDrawerFragment.class.getSimpleName();
+
     public NavigationDrawerFragment() {
     }
 
@@ -88,21 +88,19 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
-        mDrawerListView = (ListView) layout.findViewById(R.id.navigation_drawer_list_view);
+        mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
 
-        ImageView imageView = (ImageView) layout.findViewById(R.id.navigation_drawer_header);
+        LinearLayout layout2 = (LinearLayout) inflater.inflate(R.layout.navigation_drawer_header, container, false);
+        ImageView imageView = (ImageView) layout2.findViewById(R.id.navigation_drawer_header);
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
         imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
 
-        for(int i = 1; i < mDrawerListView.getCount() + 1; i++) {
-            if (mDrawerListView.getChildAt(i) != null) {
-                TextView textView = (TextView) mDrawerListView.getChildAt(i);
-                textView.setTextColor(getResources().getColor(R.color.aac_worldspace_black));
-            }
-        }
+        //View layout3 = inflater.inflate(R.layout.navigation_drawer_footer, container, false);
 
-        return layout;
+        mDrawerListView.addHeaderView(layout2);
+        //mDrawerListView.addFooterView(layout3);
+
+        return mDrawerListView;
     }
 
     public boolean isDrawerOpen() {
