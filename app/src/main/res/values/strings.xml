@@ -147,4 +147,7 @@
     <string name="aac_edit_text_fixed_phone_num_hint">(###) - ### - ####</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
 
+    <!-- TalkBack Simulation Story -->
+    <string name="aac_talkBack_sim_description"> Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
+
 </resources>

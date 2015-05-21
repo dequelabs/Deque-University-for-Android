@@ -20,4 +20,6 @@
     <dimen name="aac_navigation_drawer_cell_image_size_responsive">35sp</dimen>
     <dimen name="aac_tab_bar_image_size">40dp</dimen>
 
+    <dimen name="aac_talkBack_sim_image_size">100dp</dimen>
+
 </resources>

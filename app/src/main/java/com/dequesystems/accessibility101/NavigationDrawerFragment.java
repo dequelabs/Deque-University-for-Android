@@ -88,14 +88,19 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
-        mDrawerListView = (ListView) layout.findViewById(R.id.navigation_drawer_list_view);
+        mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
 
-        ImageView imageView = (ImageView) layout.findViewById(R.id.navigation_drawer_header);
+        LinearLayout layout2 = (LinearLayout) inflater.inflate(R.layout.navigation_drawer_header, container, false);
+        ImageView imageView = (ImageView) layout2.findViewById(R.id.navigation_drawer_header);
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
         imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
 
-        return layout;
+        //View layout3 = inflater.inflate(R.layout.navigation_drawer_footer, container, false);
+
+        mDrawerListView.addHeaderView(layout2);
+        //mDrawerListView.addFooterView(layout3);
+
+        return mDrawerListView;
     }
 
     public boolean isDrawerOpen() {
