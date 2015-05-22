@@ -11,7 +11,7 @@
             android:padding="@dimen/aac_global_border"
             android:layout_gravity="center"/>
 
-        <TextView android:id="@+id/aac_tab_title"
+        <com.dequesystems.accessibility101.TextViewTab android:id="@+id/aac_tab_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/aac_tab_bar_dimmed"
