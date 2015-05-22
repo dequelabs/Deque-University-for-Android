@@ -191,14 +191,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView android:id="@+id/aacLabelsTextView1"
+                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacLabelsTextView1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
                     android:text="@string/aac_cont_desc_link"/>
 
-                <TextView android:id="@+id/aacLabelsTextView2"
+                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacLabelsTextView2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
@@ -208,7 +208,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

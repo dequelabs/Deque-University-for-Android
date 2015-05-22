@@ -21,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -95,10 +96,7 @@ public class NavigationDrawerFragment extends Fragment {
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
         imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
 
-        //View layout3 = inflater.inflate(R.layout.navigation_drawer_footer, container, false);
-
         mDrawerListView.addHeaderView(layout2);
-        //mDrawerListView.addFooterView(layout3);
 
         return mDrawerListView;
     }
@@ -139,8 +137,6 @@ public class NavigationDrawerFragment extends Fragment {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-
-
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.

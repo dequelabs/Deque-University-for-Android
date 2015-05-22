@@ -66,21 +66,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView android:id="@+id/aacIntroTextView1"
+                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacIntroTextView1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
                     android:text="@string/aac_talkBack_link"/>
 
-                <TextView android:id="@+id/aacIntroTextView2"
+                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacIntroTextView2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
                     android:text="@string/aac_contact_us_link"/>
 
-                <TextView android:id="@+id/aacIntroTextView3"
+                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacIntroTextView3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
