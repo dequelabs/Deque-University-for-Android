@@ -28,7 +28,6 @@ import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
 import com.dequesystems.accessibility101.talkbacksimulation.TalkBackSimulationFragment;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * Created by chrismcmeeking on 4/24/15.
@@ -51,7 +50,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_talkBack_sim_title), false);
-        tempStory.addTab(mActivity.getString(R.string.aac_talkBack_sim_title), R.drawable.aac_unsighted_icon, new TalkBackSimulationFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_talkBack_sim_title), R.drawable.aac_non_sighted_icon, new TalkBackSimulationFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_separator_heading_title), false);
@@ -96,7 +95,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             tabNumber = 1;
             tabCount = 2;
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_talkBack_sim_title))){
-            imageView.setImageResource(R.drawable.aac_unsighted_icon);
+            imageView.setImageResource(R.drawable.aac_non_sighted_icon);
             tabNumber = 2;
             tabCount = 2;
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
