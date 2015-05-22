@@ -13,12 +13,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.accessibility.AccessibilityEvent;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 import com.dequesystems.a11yframework.TabLayout;
 import com.dequesystems.accessibility101.StoryManager.Story;
@@ -189,6 +191,8 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerClosed() {
         observeOverlayIsOn();
+        Toolbar toolBar = (Toolbar)this.findViewById(R.id.action_bar);
+        toolBar.getChildAt(0).sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED);
     }
 
     @Override
