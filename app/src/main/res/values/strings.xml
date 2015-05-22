@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">Accessibility 101</string>
+    <string name="navigation_drawer_title">Deque U for Android</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_heading_demos">Demos</string>
 
     <string name="aac_logo_cont_desc">Deque logo</string>
-    <string name="aac_navigation_drawer_unsighted_icon_cont_desc">Non sighted simulation icon</string>
-    <string name="aac_navigation_drawer_unsighted_icon_text">TalkBack Simulation</string>
+    <string name="aac_navigation_drawer_non_sighted_icon_cont_desc">Non sighted simulation icon</string>
+    <string name="aac_navigation_drawer_non_sighted_icon_text">TalkBack Simulation</string>
 
     <string name="action_example">Example action</string>
 
@@ -151,6 +152,8 @@
     <!-- TalkBack Simulation Story -->
     <string name="aac_talkBack_sim_title">TalkBack Simulation</string>
     <string name="aac_talkBack_sim_description"> Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
+    <string name="aac_talkBack_sim_switch_on">TalkBack simulation switch, ON</string>
+    <string name="aac_talkBack_sim_switch_off">TalkBack simulation switch, OFF</string>
 
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
