@@ -80,30 +80,50 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        LinearLayout navDrawerLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
+        LinearLayout navDrawerCellLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
 
-        TextView textView = (TextView) navDrawerLayout.findViewById(R.id.aac_navigation_drawer_cell_text_view);
+        TextView textView = (TextView) navDrawerCellLayout.findViewById(R.id.aac_navigation_drawer_cell_text_view);
         textView.setText(this.getItem(position).getTitle());
 
+        ImageView imageView = (ImageView) navDrawerCellLayout.findViewById(R.id.aac_navigation_drawer_cell_image_view);
 
-        ImageView imageView = (ImageView) navDrawerLayout.findViewById(R.id.aac_navigation_drawer_cell_image_view);
+        String text = textView.getText().toString();
+        int tabCount = 0;
+        int tabNumber = 0;
 
-        if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_intro_title))){
+        if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_intro_title))){
             imageView.setImageResource(R.drawable.aac_intro_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
+            tabNumber = 1;
+            tabCount = 2;
+        }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_talkBack_sim_title))){
+            imageView.setImageResource(R.drawable.aac_unsighted_icon);
+            tabNumber = 2;
+            tabCount = 2;
+        }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
             imageView.setVisibility(View.GONE);
             textView.setTextAppearance(getContext(), R.style.AACTextAppearance_navigation_drawer_heading);
-        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
+        }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
+            tabNumber = 1;
+            tabCount = 3;
+        } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
+            tabNumber = 2;
+            tabCount = 3;
+        } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_talkBack_sim_title))){
-            imageView.setImageResource(R.drawable.aac_unsighted_icon);
+            tabNumber = 3;
+            tabCount = 3;
         }
 
-        return navDrawerLayout;
+        if (!text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
+            navDrawerCellLayout.setContentDescription(text + ", tab " + tabNumber + " of " + tabCount);
+        }else{
+            navDrawerCellLayout.setContentDescription(text);
+
+        }
+
+        return navDrawerCellLayout;
     }
 
     @Override
