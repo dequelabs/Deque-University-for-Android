@@ -20,13 +20,14 @@ import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.dequesystems.a11yframework.TabLayout;
 import com.dequesystems.accessibility101.StoryManager.Story;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, TabLayout.TabLayoutCallbacks {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     /**
@@ -199,5 +200,10 @@ public class MainActivity extends ActionBarActivity
     private void logDebug(String message) {
         if (true)
             Log.d(LOG_TAG, message);
+    }
+
+    @Override
+    public TabHost getTabHost() {
+        return mTabHost;
     }
 }
