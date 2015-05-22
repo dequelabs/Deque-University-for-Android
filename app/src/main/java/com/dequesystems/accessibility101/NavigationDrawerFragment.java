@@ -156,6 +156,7 @@ public class NavigationDrawerFragment extends Fragment {
 
                 mCallbacks.onNavigationDrawerClosed();
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+
             }
 
             @Override

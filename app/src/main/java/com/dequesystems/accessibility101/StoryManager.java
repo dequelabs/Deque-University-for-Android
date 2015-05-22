@@ -50,6 +50,10 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_intro_tab_1), R.drawable.aac_about_icon, new AppIntroductionFragment());
         this.add(tempStory);
 
+        tempStory = new Story(mActivity.getString(R.string.aac_talkBack_sim_title), false);
+        tempStory.addTab(mActivity.getString(R.string.aac_talkBack_sim_title), R.drawable.aac_unsighted_icon, new TalkBackSimulationFragment());
+        this.add(tempStory);
+
         tempStory = new Story(mActivity.getString(R.string.aac_separator_heading_title), false);
         this.add(tempStory);
 
@@ -61,8 +65,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new ContDescAboutFragment());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, ContDescBrokenFragment.newInstance("Blarg", "BLBLBLB"));
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, ContDescFixedFragment.newInstance("Blarg", "Blarguree"));
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new ContDescBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new ContDescFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title), true);
@@ -71,9 +75,6 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
         this.add(tempStory);
 
-        tempStory = new Story(mActivity.getString(R.string.aac_talkBack_sim_title), false);
-        tempStory.addTab("TalkBack Simulation", R.drawable.aac_unsighted_icon, new TalkBackSimulationFragment());
-        this.add(tempStory);
     }
 
     @Override
@@ -87,18 +88,18 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         ImageView imageView = (ImageView) navDrawerLayout.findViewById(R.id.aac_navigation_drawer_cell_image_view);
 
-        if(textView.getText().toString().equalsIgnoreCase("Introduction")){
+        if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_intro_title))){
             imageView.setImageResource(R.drawable.aac_intro_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase("Demos")){
+        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
             imageView.setVisibility(View.GONE);
             textView.setTextAppearance(getContext(), R.style.AACTextAppearance_navigation_drawer_heading);
-        }else if(textView.getText().toString().equalsIgnoreCase("Labels")){
+        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase("Content Descriptions")){
+        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase("Edit Texts")){
+        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
-        }else if(textView.getText().toString().equalsIgnoreCase("Talkback simulation")){
+        }else if(textView.getText().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_talkBack_sim_title))){
             imageView.setImageResource(R.drawable.aac_unsighted_icon);
         }
 
@@ -107,16 +108,14 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
     @Override
     public boolean isEnabled(int position){
-        if(position == 1){
+        if(this.getItem(position).getTitle().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
             return false;
         }
         return true;
     }
 
     public void setActiveStory(int index, TabHost tabHost) {
-        if(!this.getItem(index).getTitle().toString().equalsIgnoreCase("Demos")) {
-            this.getItem(index).makeActiveStory(tabHost);
-        }
+        this.getItem(index).makeActiveStory(tabHost);
     }
 
     public Story getActiveStory() {
@@ -168,11 +167,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
                 ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_image);
 
-                if (tab.getTitle().equalsIgnoreCase("About")) {
+                if (tab.getTitle().equalsIgnoreCase(mActivity.getString(R.string.aac_tab_title_about))) {
                     imageView.setImageResource(R.drawable.aac_about_icon);
-                }else if(tab.getTitle().equalsIgnoreCase("Broken")){
+                }else if(tab.getTitle().equalsIgnoreCase(mActivity.getString(R.string.aac_tab_title_broken))){
                     imageView.setImageResource(R.drawable.aac_broken_icon);
-                }else if(tab.getTitle().equalsIgnoreCase("Fixed")){
+                }else if(tab.getTitle().equalsIgnoreCase(mActivity.getString(R.string.aac_tab_title_fixed))){
                     imageView.setImageResource(R.drawable.aac_fixed_icon);
                 }
 
@@ -203,7 +202,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         Tab getTabByID(String tabId) {
 
-            for (int i = 0; i < mTabs.size(); i++ ) {
+            for (int i = 0; i < mTabs.size(); i++) {
                 Tab tab =  mTabs.get(i);
 
                 if (tabId == tab.getTabID()) {
