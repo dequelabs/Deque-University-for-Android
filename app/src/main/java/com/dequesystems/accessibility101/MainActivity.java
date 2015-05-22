@@ -1,6 +1,5 @@
 package com.dequesystems.accessibility101;
 
-import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -11,22 +10,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
+
+import android.view.accessibility.AccessibilityEvent;
+
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
-import com.dequesystems.accessibility101.StoryManager.Story;
-
-import java.util.ArrayList;
-import java.util.Iterator;
+import com.dequesystems.a11yframework.TabLayout;
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, TabLayout.TabLayoutCallbacks {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     /**
@@ -138,10 +134,10 @@ public class MainActivity extends ActionBarActivity
 
         if (mIsOverlayOn) {
             item.setIcon(getResources().getDrawable(R.drawable.aac_sighted_icon));
-            item.setTitle("Non Sighted Simulation switch, ON");
+            item.setTitle(getResources().getString(R.string.aac_talkBack_sim_switch_on));
         } else {
-            item.setIcon(getResources().getDrawable(R.drawable.aac_unsighted_icon));
-            item.setTitle("Non Sighted Simulation switch, OFF");
+            item.setIcon(getResources().getDrawable(R.drawable.aac_non_sighted_icon));
+            item.setTitle(getResources().getString(R.string.aac_talkBack_sim_switch_off));
         }
 
         observeOverlayIsOn();
@@ -188,6 +184,8 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerClosed() {
         observeOverlayIsOn();
+        Toolbar toolBar = (Toolbar)this.findViewById(R.id.action_bar);
+        toolBar.getChildAt(0).sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED);
     }
 
     @Override
@@ -199,5 +197,10 @@ public class MainActivity extends ActionBarActivity
     private void logDebug(String message) {
         if (true)
             Log.d(LOG_TAG, message);
+    }
+
+    @Override
+    public TabHost getTabHost() {
+        return mTabHost;
     }
 }

@@ -44,8 +44,9 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="AACTextAppearance.navigation_drawer_description">
-        <item name="android:textSize">14sp</item>
+    <style name="AACTextAppearance.navigation_drawer_heading">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/aac_navigation_drawer_text</item>
     </style>
 

@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -95,10 +97,7 @@ public class NavigationDrawerFragment extends Fragment {
         imageView.setImageResource(R.drawable.aac_nav_drawer_header_icon);
         imageView.setContentDescription(getResources().getString(R.string.aac_logo_cont_desc));
 
-        //View layout3 = inflater.inflate(R.layout.navigation_drawer_footer, container, false);
-
         mDrawerListView.addHeaderView(layout2);
-        //mDrawerListView.addFooterView(layout3);
 
         return mDrawerListView;
     }
@@ -136,11 +135,9 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
 
-        ActionBar actionBar = getActionBar();
+        final ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-
-
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
@@ -159,7 +156,7 @@ public class NavigationDrawerFragment extends Fragment {
                 }
 
                 mCallbacks.onNavigationDrawerClosed();
-                getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+                getActivity().supportInvalidateOptionsMenu();
             }
 
             @Override
@@ -203,6 +200,9 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
     private void selectItem(int position) {
+
+        position = position == 0 ? 1 : position;
+
         mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
