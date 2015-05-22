@@ -17,6 +17,7 @@ android:background="@color/aac_story_background">
         android:layout_width="@dimen/aac_talkBack_sim_image_size"
         android:layout_height="@dimen/aac_talkBack_sim_image_size"
         android:padding="@dimen/aac_global_border"
+        android:contentDescription="@string/aac_navigation_drawer_unsighted_icon_cont_desc"
         android:src="@drawable/aac_unsighted_icon"/>
 
     <TextView
@@ -27,8 +28,7 @@ android:background="@color/aac_story_background">
         android:text="@string/aac_talkBack_sim_description"
         android:background="@color/aac_background_text"
         android:textAppearance="@style/AACTextAppearance.body"
-        android:padding="@dimen/aac_global_border"
-         />
+        android:padding="@dimen/aac_global_border" />
 
 </LinearLayout>
 
