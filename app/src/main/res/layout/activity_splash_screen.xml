@@ -6,6 +6,7 @@
     <ImageView
         android:id="@+id/splashScreen"
         android:background="@drawable/splash_screen"
+        android:contentDescription="@string/aac_logo_cont_desc"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
