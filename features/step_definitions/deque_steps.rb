@@ -18,7 +18,7 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 	sleep(1.0)
 
 	if (response.body.include?('FAIL'))
-		screenshot({:name=>"deque_test_failure.png"})
+		screenshot({:name=>"DequeTestResults/deque_test_failure.png"})
 		puts "Deque Accessibility Test Failed"
 		json = JSON.parse(response.body)
 		puts response.body + "\n"
