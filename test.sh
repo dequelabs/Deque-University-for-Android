@@ -44,16 +44,16 @@ while getopts ":hd:t:" opt; do
 			;;
 
 		:) 
-		if [ $OPTARG == "d" ]; then
-			DEVICE=$ONE_DEVICE
-		else 
-			echo "Option -$OPTARG requires an argument"
-		fi
+			if [ $OPTARG == "d" ]; then
+				DEVICE=$ONE_DEVICE
+			else 
+				echo "Option -$OPTARG requires an argument"
+			fi
     esac
 done
 
 if [ "$DEVICE" == "" ] || [ "$DEVICE" == "$ONE_DEVICE" ]; then
-
+	
 	adb devices | while read line; do
 		if [ ! "$line" == "" ] && [ `echo $line | awk '{print $2}'` == "device" ]
 	    then
