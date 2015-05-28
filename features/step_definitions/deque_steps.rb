@@ -1,8 +1,7 @@
 require 'net/http'
 require 'json'
 
-RESULTS_DIR = Dir.pwd + "/DequeTestResults"
-Dir.mkdir(RESULTS_DIR) unless File.exists?(RESULTS_DIR)
+puts "#{ARGV.join(" ")}"
 
 Then(/^I perform DQTest (.*)$/) do |arg|
 
@@ -15,9 +14,34 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 	sleep(1.0) #TODO: This shouldn't be necessary.  Need to fix this in the A11yService
 
 	if (response.body.include?('FAIL'))
-		screenshot({:name=>RESULTS_DIR+"/deque_test_failure.png"})
-		puts "Deque Accessibility Test Failed"
 		json = JSON.parse(response.body)
-		puts response.body + "\n"
+		puts response.body
+		raise "Deque Accessibility Test Failed"
 	end
 end
+#Just want to adda  line because blarg
+
+      # {
+      #     "testStatus": "FAIL",
+      #     "ruleResults": [
+      #         {
+      #             "status": "PASS",
+      #             "message": "Check images for proper content descriptions.",
+      #             "failedNodes": []
+      #         },
+      #         {
+      #             "status": "FAIL",
+      #             "message": "Check controls for alternative text labels.",
+      #             "failedNodes": [
+      #                 "android.widget.Switch",
+      #                 "android.widget.Switch",
+      #                 "android.widget.Switch"
+      #             ]
+      #         },
+      #         {
+      #             "status": "PASS",
+      #             "message": "Check EditText boxes for visual labels",
+      #             "failedNodes": []
+      #         }
+      #     ]
+      # }
