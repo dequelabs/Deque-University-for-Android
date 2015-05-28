@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Accessibility 101</string>
-    <string name="navigation_drawer_title">Deque U for Android</string>
+    <string name="app_name">Deque University for Android</string>
+    <string name="app_name_short">DequeU</string>
+    <string name="navigation_drawer_title">Deque University for Android</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

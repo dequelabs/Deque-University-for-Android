@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;
 
@@ -20,6 +21,8 @@ public class LabelsBrokenFragment extends Fragment {
     private Switch mSwitchGreen;
     private Switch mSwitchBlue;
 
+    private TextView mLabelForRed;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,7 +34,11 @@ public class LabelsBrokenFragment extends Fragment {
         mSwitchRed = (Switch) mView.findViewById(R.id.switchRed);
         mSwitchGreen = (Switch) mView.findViewById(R.id.switchGreen);
         mSwitchBlue = (Switch) mView.findViewById(R.id.switchBlue);
-
+        /*
+        // #DEMO: Associate the red switch with it's visible label using the labelFor attribute.
+        mLabelForRed = (TextView) mView.findViewById(R.id.labelRed);
+        mSwitchRed.setLabelFor(mSwitchRed.getId());
+        */
         mSwitchRed.setOnCheckedChangeListener(mSwitchListener);
         mSwitchGreen.setOnCheckedChangeListener(mSwitchListener);
         mSwitchBlue.setOnCheckedChangeListener(mSwitchListener);

@@ -17,7 +17,11 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 	http = Net::HTTP.new(uri.host, uri.port)
 	request = Net::HTTP::Get.new(uri.request_uri)
 
-	response = http.request(request)
+	begin 
+		response = http.request(request)
+	rescue EOFError
+		raise "Coult not connect to Accessibility Analyzer service on device.  Is it running?"
+	end
 
 	sleep(1.0) #TODO: This shouldn't be necessary.  Need to fix this in the A11yService
 
