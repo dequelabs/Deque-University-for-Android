@@ -1,7 +1,15 @@
 require 'net/http'
 require 'json'
 
-puts "#{ARGV.join(" ")}"
+dq_html_output=false
+
+ARGV.each_with_index { |value, index| 
+	if (value == "--format")
+		if (ARGV[index+1] == "html")
+			dq_html_output=true
+		end
+	end
+}
 
 Then(/^I perform DQTest (.*)$/) do |arg|
 
@@ -14,8 +22,31 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 	sleep(1.0) #TODO: This shouldn't be necessary.  Need to fix this in the A11yService
 
 	if (response.body.include?('FAIL'))
-		json = JSON.parse(response.body)
-		puts response.body
+		responseObject = JSON.parse(response.body)
+		
+		if (dq_html_output)
+			htmlString = ""
+
+			responseObject["ruleResults"].each { |result|
+
+				colorString = "red"
+				
+				if (result["status"] == "PASS")
+					colorString = "green"
+				end
+					
+				htmlString.concat("<p><b><font color=\"" + colorString + "\">" + result["status"] + "</font></b> " + result["message"]+ "</b></p>")
+
+				result["failedNodes"].each { |failedNode|
+					htmlString.concat("<blockquote><i>" + failedNode + "</i></blockquote>")
+				}
+			}
+
+			puts htmlString
+		else 
+			puts response.body
+		end
+
 		raise "Deque Accessibility Test Failed"
 	end
 end
