@@ -1,11 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.SplashScreen">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/splashScreen"
-        android:background="@drawable/splash_screen_potrait"
+        android:background="@drawable/splash_screen_land"
         android:contentDescription="@string/aac_logo_cont_desc"
         android:layout_gravity="center"
         android:layout_width="match_parent"
