@@ -10,6 +10,7 @@ Runs the calabash-android tests in the current directory.
     -d DEVICE   Target Device.  Default targets all devices.  No argument runs first device only.
     -s TAG		Scenario tag to run.  Valid: {all, EditText, ContDesc, Labels}
     -t 			Enable terminal output instead of HTML Report.
+    -r 			Repeat tests forever.
 
 Requirements: 
     calabash-android: sudo gem install calabash-android
@@ -30,6 +31,7 @@ run_test () {
 	fi
 }
 
+RUN_FOREVER=false
 DEVICE_PORT=38383
 LOCAL_PORT=38383
 DEVICE=""
@@ -38,7 +40,7 @@ SCENARIO_TAG="all"
 HTML_OUTPUT=true
 
 OPTIND=1 # Reset is necessary if getopts was used previously in the script.  It is a good idea to make this local in a function.
-while getopts ":htd:s:" opt; do
+while getopts ":htrd:s:" opt; do
     case "$opt" in
         h)
             show_help
@@ -50,6 +52,9 @@ while getopts ":htd:s:" opt; do
 			;;
 
 		t)  HTML_OUTPUT=false
+			;;
+
+		r)  RUN_FOREVER=true
 			;;
 
 		\?) echo "Invalid option -$OPTARG"
@@ -80,5 +85,14 @@ if [ "$DEVICE" == "" ] || [ "$DEVICE" == "$ONE_DEVICE" ]; then
 else 
 	run_test $DEVICE
 fi
+
+if [ RUN_FOREVER ] && [ $? == 0 ]; then
+	sh test.sh $@
+fi
+
+function ctrl_c() {
+    echo "Cleaning up and exiting"
+    RUN_FOREVER=false
+}
 	
 
