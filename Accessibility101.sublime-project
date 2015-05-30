@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["gradle", "app", ".idea", ".gradle", "build", "test_servers"],
+			"file_exclude_patterns": ["*.git*", "*gradle*", "*.iml", "*.properties"]
+		}
+	]
+}

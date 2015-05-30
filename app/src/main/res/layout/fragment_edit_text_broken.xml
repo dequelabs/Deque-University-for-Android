@@ -38,7 +38,7 @@
                     android:background="@color/aac_worldspace_white"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <TextView android:id="@+id/aac_editTextBroken_textView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aac_edit_text_first_name_label"
@@ -46,7 +46,7 @@
                         android:layout_gravity="center_vertical"
                         android:padding="@dimen/aac_global_border" />
 
-                    <EditText android:id="@+id/aac_edit_text_broken_edit_text_1"
+                    <EditText android:id="@+id/aac_editTextBroken_editText1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/aac_global_border"

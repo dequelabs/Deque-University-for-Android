@@ -1,4 +1,4 @@
-package com.dequesystems.accessibility101.separtor;
+package com.dequesystems.accessibility101.separator;
 
 
 import android.os.Bundle;
