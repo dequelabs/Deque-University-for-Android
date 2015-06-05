@@ -107,6 +107,7 @@ public class MainActivity extends ActionBarActivity
             getMenuInflater().inflate(R.menu.main, menu);
             restoreActionBar();
             return true;
+
         }
         return super.onCreateOptionsMenu(menu);
     }
@@ -198,6 +199,8 @@ public class MainActivity extends ActionBarActivity
         if (true)
             Log.d(LOG_TAG, message);
     }
+
+    public StoryManager getStoryManager(){return mStoryManager;}
 
     @Override
     public TabHost getTabHost() {

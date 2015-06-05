@@ -1,10 +1,11 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.dequesystems.accessibility101.labels.LabelsAboutFragment"
     android:background="@color/aac_story_background">
 
-    <LinearLayout
+    <LinearLayout android:id = "@+id/aac_labels_about_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

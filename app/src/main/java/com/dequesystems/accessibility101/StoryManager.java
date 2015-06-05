@@ -166,7 +166,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         private void makeActiveStory(TabHost tabHost) {
             tabHost.clearAllTabs();
-
+            
             if (mTabBarVisible) {
                 tabHost.getTabWidget().setVisibility(View.VISIBLE);
             } else {
@@ -265,13 +265,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
                 if (mView != null) return mView;
 
-                final int viewId = Math.abs(mTabID.hashCode());
-
                 mView = new RelativeLayout(mActivity);
-                mView.setId(viewId);
+                mView.setId(Math.abs(mTabID.hashCode()));
 
                 FragmentTransaction fragmentTransaction = mActivity.getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(viewId, mFragment);
+                fragmentTransaction.replace(mView.getId(), mFragment, tag);
                 fragmentTransaction.commit();
 
                 return mView;

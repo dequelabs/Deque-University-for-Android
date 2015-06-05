@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/aac_intro_scrollView_layout"
     tools:context="com.dequesystems.accessibility101.introduction.AppIntroductionFragment"
     android:background="@color/aac_story_background">
 
@@ -10,7 +11,7 @@
         android:id="@+id/scrollView"
         android:orientation="vertical">
 
-        <TextView
+        <TextView android:id="@+id/aac_intro_paragraph1_textView"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_margin="@dimen/aac_global_border"
