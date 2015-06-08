@@ -3,6 +3,12 @@ require 'json'
 
 dq_html_output=false
 
+port_number=ENV["DQ_TEST_PORT"]
+
+if (!defined? port_number || port_number == 0)
+	port_number=38383
+end
+
 ARGV.each_with_index { |value, index| 
 	if (value == "--format")
 		if (ARGV[index+1] == "html")
@@ -13,7 +19,7 @@ ARGV.each_with_index { |value, index|
 
 Then(/^I perform DQTest (.*)$/) do |arg|
 
-	uri = URI.parse('http://localhost:38383/a11ytest/' + String.new(arg).downcase)
+	uri = URI.parse('http://localhost:' + port_number.to_s + '/a11ytest/' + String.new(arg).downcase)
 	http = Net::HTTP.new(uri.host, uri.port)
 	request = Net::HTTP::Get.new(uri.request_uri)
 
@@ -54,29 +60,3 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 		raise "Deque Accessibility Test Failed"
 	end
 end
-#Just want to adda  line because blarg
-
-      # {
-      #     "testStatus": "FAIL",
-      #     "ruleResults": [
-      #         {
-      #             "status": "PASS",
-      #             "message": "Check images for proper content descriptions.",
-      #             "failedNodes": []
-      #         },
-      #         {
-      #             "status": "FAIL",
-      #             "message": "Check controls for alternative text labels.",
-      #             "failedNodes": [
-      #                 "android.widget.Switch",
-      #                 "android.widget.Switch",
-      #                 "android.widget.Switch"
-      #             ]
-      #         },
-      #         {
-      #             "status": "PASS",
-      #             "message": "Check EditText boxes for visual labels",
-      #             "failedNodes": []
-      #         }
-      #     ]
-      # }
