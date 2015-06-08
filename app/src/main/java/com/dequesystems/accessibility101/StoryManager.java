@@ -157,7 +157,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         private Story (String title, boolean tabBarVisible) {
             mTitle = title;
             mTabBarVisible = tabBarVisible;
-            mTabs = new ArrayList<>();
+            mTabs = new ArrayList();
         }
 
         private void addTab(String tabTitle, int imageResource, Fragment content) {
