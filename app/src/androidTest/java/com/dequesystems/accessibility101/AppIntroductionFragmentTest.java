@@ -10,7 +10,6 @@ import android.widget.TabHost;
 
 public class AppIntroductionFragmentTest extends ActivityInstrumentationTestCase2<MainActivity>{
 
-    private static MainActivity mActivity;
     private static TabHost mTabHost;
     private static StoryManager mStoryManager;
 
@@ -22,7 +21,7 @@ public class AppIntroductionFragmentTest extends ActivityInstrumentationTestCase
     public void setUp() throws Exception{
         super.setUp();
 
-        mActivity = getActivity();
+        MainActivity mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();

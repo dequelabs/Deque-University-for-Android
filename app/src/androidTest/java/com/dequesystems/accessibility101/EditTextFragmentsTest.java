@@ -9,7 +9,6 @@ import android.widget.TabHost;
  */
 public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
-    private MainActivity mActivity;
     private TabHost mTabHost;
     private StoryManager mStoryManager;
 
@@ -21,14 +20,14 @@ public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<Main
     public void setUp() throws Exception{
         super.setUp();
 
-        mActivity = getActivity();
+        MainActivity mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();
         assertNotNull("mTabHost is null", mTabHost);
 
         mStoryManager = mActivity.getStoryManager();
-        assertNotNull("mStoryManager is null", mStoryManager);;
+        assertNotNull("mStoryManager is null", mStoryManager);
     }
 
     @UiThreadTest
@@ -44,4 +43,6 @@ public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<Main
         mTabHost.setCurrentTab(2);
         assertNotNull(mStoryManager.getActiveStory().getTitle()+ " fixed tab is null", mTabHost.getTabContentView());
     }
+
+
 }

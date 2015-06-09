@@ -2,8 +2,10 @@ package com.dequesystems.accessibility101;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 
 public class SplashScreen extends Activity {
 
@@ -14,6 +16,7 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
 
         if (!splashLoaded) {
+
             setContentView(R.layout.activity_splash_screen);
             splashLoaded = true;
 

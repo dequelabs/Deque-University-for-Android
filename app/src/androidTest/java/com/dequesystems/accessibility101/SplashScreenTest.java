@@ -1,6 +1,7 @@
 package com.dequesystems.accessibility101;
 
 import android.content.res.Configuration;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
@@ -13,7 +14,6 @@ public class SplashScreenTest extends ActivityInstrumentationTestCase2<SplashScr
 
     private static String LOG_TAG = "FUCKOFF";
 
-    private static ImageView mImageView;
 
     private static int mTestNumber = 0;
 
@@ -30,6 +30,7 @@ public class SplashScreenTest extends ActivityInstrumentationTestCase2<SplashScr
     }
 
     public void testSplashScreen_backgroundImage() {
+        ImageView mImageView;
 
         Log.wtf(LOG_TAG, "testSplashScreen");
 
@@ -46,9 +47,17 @@ public class SplashScreenTest extends ActivityInstrumentationTestCase2<SplashScr
             expected = getActivity().getResources().getDrawable(R.drawable.splash_screen_land);
         }
 
-        assertEquals(expected.getConstantState().equals(actual.getConstantState()), true);
-
-        assertNotNull("mImageView is null", mImageView);
+        assertTrue(compareDrawable((BitmapDrawable) expected, (BitmapDrawable) actual));
     }
 
+    public void logDrawable(Drawable drawable) {
+        int width = drawable.getIntrinsicWidth();
+        int height = drawable.getIntrinsicHeight();
+        double ratio = (double)width / (double)height;
+        Log.d(LOG_TAG, "W: " + Integer.toString(width) + " H:" + Integer.toString(height) + " R:" + Double.toString(ratio) + " Class:" + drawable.getClass().getCanonicalName());
+    }
+
+    public boolean compareDrawable(BitmapDrawable drawable1, BitmapDrawable drawable2) {
+        return drawable1.getBitmap().sameAs(drawable2.getBitmap());
+    }
 }

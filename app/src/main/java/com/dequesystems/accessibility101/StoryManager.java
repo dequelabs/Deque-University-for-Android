@@ -166,7 +166,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         private void makeActiveStory(TabHost tabHost) {
             tabHost.clearAllTabs();
-            
+
             if (mTabBarVisible) {
                 tabHost.getTabWidget().setVisibility(View.VISIBLE);
             } else {

@@ -4,14 +4,11 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.widget.TabHost;
 
-import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
-
 /**
  * Created by melindakothbauer on 6/5/15.
  */
 public class ContDescFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity>{
 
-    private MainActivity mActivity;
     private TabHost mTabHost;
     private StoryManager mStoryManager;
 
@@ -23,7 +20,7 @@ public class ContDescFragmentsTest extends ActivityInstrumentationTestCase2<Main
     public void setUp() throws Exception{
         super.setUp();
 
-        mActivity = getActivity();
+        MainActivity mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();

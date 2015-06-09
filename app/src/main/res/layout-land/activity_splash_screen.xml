@@ -3,8 +3,7 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/splashScreenL"
+    <ImageView android:id="@+id/splashScreenL"
         android:background="@drawable/splash_screen_land"
         android:contentDescription="@string/aac_logo_cont_desc"
         android:layout_gravity="center"
