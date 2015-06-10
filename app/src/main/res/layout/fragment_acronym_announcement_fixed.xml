@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/aac_acronym_the_fix"
                 android:padding="@dimen/aac_global_border"
+                android:contentDescription="@string/aac_acronym_the_fix_cont_desc"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp"/>
