@@ -174,14 +174,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacContDescTextView1"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacContDescTextView1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
                     android:text="@string/aac_cont_desc_link"/>
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacContDescTextView2"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacContDescTextView2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"

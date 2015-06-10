@@ -246,35 +246,40 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacEditTextTextView1"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacEditTextTextView1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
                     android:text="@string/aac_editText_link"/>
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacEditTextTextView2"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacEditTextTextView2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
                     android:text="@string/aac_text_view_link"/>
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacEditTextTextView3"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacEditTextTextView3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:text="@string/aac_hint_link"
                     android:textAppearance="@style/AACTextAppearance.link" />
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacEditTextTextView4"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacEditTextTextView4"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:text="@string/aac_cont_desc_link"
                     android:textAppearance="@style/AACTextAppearance.link" />
 
-                <com.dequesystems.accessibility101.TextViewLink android:id="@+id/aacEditTextTextView5"
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacEditTextTextView5"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"

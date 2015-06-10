@@ -159,4 +159,23 @@
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
 
+    <!-- Tabbed Navigation Story -->
+    <string name="aac_tab_nav_title">Tabbed Navigation</string>
+    <string name="aac_tab_nav_cat_tab_title">Cat</string>
+    <string name="aac_tab_nav_dog_tab_title">Dog</string>
+    <string name="aac_tab_nav_fish_tab_title">Fish</string>
+
+    <string name="aac_tab_nav_about_intro">Tabs can be implemented using the action bar or simply utilizing the <i>TabHost</i> class. They are a useful tool for developers, but are not accessible without some adding some features programmatically.  </string>
+    <string name="aac_tab_nav_about_heading_1">Selected State</string>
+    <string name="aac_tab_nav_about_heading_2">Tab # of #</string>
+    <string name="aac_tab_nav_about_heading_3">Animal Images</string>
+    <string name="aac_tab_nav_about_paragraph_1">The tab bar at the bottom of this page has an added feature that tells <i>TalkBack</i> to let users know whether the tab is selected or not. By announcing what the state of the tab is (selected or not selected), the tab becomes more accessible.</string>
+    <string name="aac_tab_nav_about_paragraph_2">The tab bar at the bottom of this page has an added feature that tells <i>TalkBack</i> to let users know which tab is currently focused on and out of how many. By announcing which tab of how many makes the tab more accessible.</string>
+
+    <string name="aac_tab_nav_broken_heading_1">Animal Images</string>
+    <string name="aac_tab_nav_broken_conclusion">Notice that <i>Talkback</i> does not announce anything other than the visible text when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information and do not know much about where they are on the screen or what their options are.</string>
+
+    <string name="aac_tab_nav_fixed_heading_1">Animal Images</string>
+    <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce which tab of how many and the state of the tab, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
+
 </resources>

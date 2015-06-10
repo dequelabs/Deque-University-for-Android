@@ -25,6 +25,9 @@ import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.accessibility101.labels.LabelsBrokenFragment;
 import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationBrokenFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedFragment;
 import com.dequesystems.accessibility101.talkbacksimulation.TalkBackSimulationFragment;
 
 import java.util.ArrayList;
@@ -72,6 +75,12 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new EditTextAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new EditTextBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
+        this.add(tempStory);
+
+        tempStory = new Story(mActivity.getString(R.string.aac_tab_nav_title), true);
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new TabbedNavigationAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new TabbedNavigationBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new TabbedNavigationFixedFragment());
         this.add(tempStory);
 
     }
