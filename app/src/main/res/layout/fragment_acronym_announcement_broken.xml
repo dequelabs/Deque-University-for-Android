@@ -19,25 +19,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_1"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_2"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_3"
+                android:text="@string/aac_acronym_broken_flight"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"
@@ -62,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_3"
+                android:text="@string/aac_acronym_broken_whats_wrong"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"

@@ -19,25 +19,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_1"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_2"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_3"
+                android:text="@string/aac_acronym_broken_flight"
+                android:contentDescription="@string/aac_acronym_flight_cont_desc"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"
@@ -56,13 +39,13 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="something cool doe"
+                android:text="The Fix"
                 android:textAppearance="@style/AACTextAppearance.heading"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_3"
+                android:text="@string/aac_acronym_the_fix"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"
