@@ -113,22 +113,25 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 1;
-            tabCount = 3;
+            tabCount = 4;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
             tabNumber = 2;
-            tabCount = 3;
+            tabCount = 4;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
             tabNumber = 3;
-            tabCount = 3;
+            tabCount = 4;
+        }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_tab_nav_title))){
+            imageView.setImageResource(R.drawable.aac_labels_icon);
+            tabNumber = 4;
+            tabCount = 4;
         }
 
         if (!text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
             navDrawerCellLayout.setContentDescription(text + ", tab " + tabNumber + " of " + tabCount);
         }else{
             navDrawerCellLayout.setContentDescription(text);
-
         }
 
         return navDrawerCellLayout;

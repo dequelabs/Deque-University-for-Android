@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.dequesystems.a11yframework.TabLayout;
 import com.dequesystems.accessibility101.R;
 
 /**
@@ -41,7 +40,6 @@ public class TabbedNavigationBrokenFragment extends Fragment {
         mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
         mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
 
-        mTabHost.setCurrentTab(0);
 
         TextView textView = (TextView) mTabHost.getCurrentTabView().findViewById(R.id.aac_tab_nav_tab_title);
         textView.setTextColor(getResources().getColor(R.color.aac_tab_bar_selected));
@@ -95,7 +93,7 @@ public class TabbedNavigationBrokenFragment extends Fragment {
     }
 
     private View getTabIndicator(Context context, int title) {
-        View view = LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout_broken, null);
         TextView tv = (TextView) view.findViewById(R.id.aac_tab_nav_tab_title);
         tv.setText(title);
         return view;

@@ -2,11 +2,9 @@ package com.dequesystems.accessibility101.tabbednavigation;
 
 
 import android.content.Context;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +39,6 @@ public class TabbedNavigationAboutFragment extends Fragment implements TabLayout
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_cat_tab_title)));
         mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
         mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
-
-        mTabHost.setCurrentTab(0);
 
         TextView textView = (TextView) mTabHost.getCurrentTabView().findViewById(R.id.aac_tab_nav_tab_title);
         textView.setTextColor(getResources().getColor(R.color.aac_tab_bar_selected));
@@ -96,7 +92,7 @@ public class TabbedNavigationAboutFragment extends Fragment implements TabLayout
     }
 
     private View getTabIndicator(Context context, int title) {
-        View view = LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout_fixed, null);
         TextView tv = (TextView) view.findViewById(R.id.aac_tab_nav_tab_title);
         tv.setText(title);
         return view;

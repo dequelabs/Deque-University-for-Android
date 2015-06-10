@@ -39,7 +39,7 @@
                 <FrameLayout android:id="@android:id/tabcontent"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0"
                     android:padding="@dimen/aac_global_border">
 
                     <LinearLayout android:id="@+id/tab1"
@@ -62,7 +62,6 @@
             </LinearLayout>
 
         </TabHost>
-
 
         <LinearLayout
             android:layout_width="fill_parent"
