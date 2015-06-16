@@ -15,6 +15,9 @@ import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementAboutFragment;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementBrokenFragment;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementFixedFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
@@ -74,6 +77,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
         this.add(tempStory);
 
+        tempStory = new Story("Acronym Announcement", true);
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new AcronymAnnouncementAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new AcronymAnnouncementBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
+        this.add(tempStory);
     }
 
     @Override
@@ -157,7 +165,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         private Story (String title, boolean tabBarVisible) {
             mTitle = title;
             mTabBarVisible = tabBarVisible;
-            mTabs = new ArrayList<>();
+            mTabs = new ArrayList();
         }
 
         private void addTab(String tabTitle, int imageResource, Fragment content) {
