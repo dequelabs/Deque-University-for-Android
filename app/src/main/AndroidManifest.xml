@@ -5,10 +5,6 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <instrumentation
-        android:name="com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
-        android:targetPackage="com.dequesystems." />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
@@ -18,10 +14,6 @@
             android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-
-        <activity
-            android:name=".TestFragmentActivity"
-            android:exported="false" />
 
         <activity
             android:name=".SplashScreen"

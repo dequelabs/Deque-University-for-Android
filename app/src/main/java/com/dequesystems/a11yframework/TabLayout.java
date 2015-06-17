@@ -1,10 +1,8 @@
 package com.dequesystems.a11yframework;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -19,30 +17,21 @@ import android.widget.TextView;
  */
 public class TabLayout extends LinearLayout {
 
-    TabLayoutCallbacks mCallbacks;
+    private TabHost mTabHost = null;
 
     private static final String LOG_TAG = TabLayout.class.getSimpleName();
 
-    private void initialize() {
-        mCallbacks = (TabLayoutCallbacks)getContext();
-    }
 
     public TabLayout(Context context) {
         super(context);
-
-        initialize();
     }
 
     public TabLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-        initialize();
     }
 
     public TabLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-        initialize();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -53,9 +42,8 @@ public class TabLayout extends LinearLayout {
     @Override
     public CharSequence getContentDescription() {
 
-        final TabHost tabHost = mCallbacks.getTabHost();
-        final TabWidget tabWidget = tabHost.getTabWidget();
-        final View view = tabWidget.getChildTabViewAt(tabHost.getCurrentTab());
+        final TabWidget tabWidget = mTabHost.getTabWidget();
+        final View view = tabWidget.getChildTabViewAt(mTabHost.getCurrentTab());
         final int tabCount = tabWidget.getTabCount();
         int tabNumber;
 
@@ -106,7 +94,8 @@ public class TabLayout extends LinearLayout {
         return null;
     }
 
-    public static interface TabLayoutCallbacks {
-        TabHost getTabHost();
+    public void setTabHost(TabHost tabHost){
+        mTabHost = tabHost;
+        //TODO: add exception handling if this value is not set before the logic in this class
     }
 }

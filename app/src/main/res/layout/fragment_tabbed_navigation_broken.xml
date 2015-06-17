@@ -17,7 +17,7 @@
             android:background="@color/aac_worldspace_white"
             android:padding="@dimen/aac_global_border">
 
-            <TabHost android:id="@+id/tabHost3"
+            <TabHost android:id="@+id/tabNavBrokenTabHost"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:padding="@dimen/aac_global_border"
@@ -74,7 +74,8 @@
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/aac_tab_nav_broken_heading_1"
+                    android:gravity="center"
+                    android:text="@string/aac_tab_nav_demo_heading"
                     android:textAppearance="@style/AACTextAppearance.heading"/>
 
                 <ImageView android:id="@+id/aac_tab_nav_broken_image_view"

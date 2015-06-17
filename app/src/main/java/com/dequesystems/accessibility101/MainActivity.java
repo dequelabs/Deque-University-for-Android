@@ -20,9 +20,10 @@ import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
 import com.dequesystems.a11yframework.TabLayout;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment;
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks, TabLayout.TabLayoutCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     /**
@@ -43,7 +44,11 @@ public class MainActivity extends ActionBarActivity
 
     private StoryManager mStoryManager;
 
-    private TabHost mTabHost;
+    private TabHost mGlobalTabHost;
+
+    private TabHost mFixedTabHost;
+
+    private TabHost mAboutTabHost;
 
 
     @Override
@@ -55,17 +60,17 @@ public class MainActivity extends ActionBarActivity
 
         mTitle = getTitle();
 
-        mTabHost = (TabHost) findViewById(R.id.tabHost);
-        mTabHost.setup();
+        mGlobalTabHost = (TabHost) findViewById(R.id.globalTabHost);
+        mGlobalTabHost.setup();
 
-        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+        mGlobalTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String tabId) {
-                int tab = mTabHost.getCurrentTab();
+                int tab = mGlobalTabHost.getCurrentTab();
 
-                for (int i = 0; i < mTabHost.getTabWidget().getTabCount(); i++) {
-                    ImageView imageView = (ImageView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_image);
-                    TextView textView = (TextView) mTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_title);
+                for (int i = 0; i < mGlobalTabHost.getTabWidget().getTabCount(); i++) {
+                    ImageView imageView = (ImageView) mGlobalTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_image);
+                    TextView textView = (TextView) mGlobalTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_title);
 
                     int color;
 
@@ -178,7 +183,7 @@ public class MainActivity extends ActionBarActivity
 
         int storyNumber = position > 0 ? position - 1 : 0;
 
-        mStoryManager.setActiveStory(storyNumber , mTabHost);
+        mStoryManager.setActiveStory(storyNumber , mGlobalTabHost);
         mTitle = mStoryManager.getActiveStory().getTitle();
     }
 
@@ -202,8 +207,4 @@ public class MainActivity extends ActionBarActivity
 
     public StoryManager getStoryManager(){return mStoryManager;}
 
-    @Override
-    public TabHost getTabHost() {
-        return mTabHost;
-    }
 }

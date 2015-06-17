@@ -33,7 +33,7 @@ public class TabbedNavigationBrokenFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_tabbed_navigation_broken, container, false);
 
-        mTabHost = (TabHost) view.findViewById(R.id.tabHost3);
+        mTabHost = (TabHost) view.findViewById(R.id.tabNavBrokenTabHost);
         mTabHost.setup();
 
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_cat_tab_title)));

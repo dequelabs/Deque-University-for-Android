@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.dequesystems.a11yframework.TabLayout;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
@@ -191,7 +192,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 TabHost.TabSpec tabSpec = tabHost.newTabSpec(tab.getTabID());
                 tabSpec.setContent(tab);
 
-                View view = mActivity.getLayoutInflater().inflate(R.layout.tab_layout, null);
+                TabLayout view = (TabLayout) mActivity.getLayoutInflater().inflate(R.layout.tab_layout, null);
+                view.setTabHost(tabHost);
 
                 TextView textView = (TextView) view.findViewById(R.id.aac_tab_title);
                 textView.setText(tab.getTitle());

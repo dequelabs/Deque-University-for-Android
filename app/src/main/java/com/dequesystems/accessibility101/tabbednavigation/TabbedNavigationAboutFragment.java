@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +19,15 @@ import com.dequesystems.accessibility101.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabbedNavigationAboutFragment extends Fragment implements TabLayout.TabLayoutCallbacks {
+public class TabbedNavigationAboutFragment extends Fragment{
 
     private static final String LOG_TAG = TabbedNavigationAboutFragment.class.getSimpleName();
     private TabHost mTabHost;
+
+
+    TextView mTextView1;
+    TextView mTextView2;
+
 
     public TabbedNavigationAboutFragment() {
         // Required empty public constructor
@@ -33,12 +39,20 @@ public class TabbedNavigationAboutFragment extends Fragment implements TabLayout
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_tabbed_navigation_about, container, false);
 
-        mTabHost = (TabHost) view.findViewById(R.id.tabHost2);
+        mTextView1 = (TextView) view.findViewById(R.id.aacTabNavTextView1);
+
+        mTextView1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        int linkColor = getResources().getColor(R.color.aac_text_link);
+
+        mTextView1.setLinkTextColor(linkColor);
+
+        mTabHost = (TabHost) view.findViewById(R.id.tabNavAboutTabHost);
         mTabHost.setup();
 
-        mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_cat_tab_title)));
-        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
-        mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
+        mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tab1).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_cat_tab_title)));
+        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tab1).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
+        mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tab1).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
 
         TextView textView = (TextView) mTabHost.getCurrentTabView().findViewById(R.id.aac_tab_nav_tab_title);
         textView.setTextColor(getResources().getColor(R.color.aac_tab_bar_selected));
@@ -91,16 +105,12 @@ public class TabbedNavigationAboutFragment extends Fragment implements TabLayout
         return view;
     }
 
-    private View getTabIndicator(Context context, int title) {
-        View view = LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout_fixed, null);
+    private View createTabIndicator(Context context, int title) {
+        TabLayout view = (TabLayout) LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout_fixed, null);
+        view.setTabHost(mTabHost);
         TextView tv = (TextView) view.findViewById(R.id.aac_tab_nav_tab_title);
         tv.setText(title);
         return view;
-    }
-
-    @Override
-    public TabHost getTabHost(){
-        return mTabHost;
     }
 
 }

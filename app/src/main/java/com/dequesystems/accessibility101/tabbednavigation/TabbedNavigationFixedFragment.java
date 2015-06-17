@@ -19,7 +19,7 @@ import com.dequesystems.accessibility101.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabbedNavigationFixedFragment extends Fragment implements TabLayout.TabLayoutCallbacks {
+public class TabbedNavigationFixedFragment extends Fragment {
 
     private static final String LOG_TAG = TabbedNavigationFixedFragment.class.getSimpleName();
     private TabHost mTabHost;
@@ -34,7 +34,7 @@ public class TabbedNavigationFixedFragment extends Fragment implements TabLayout
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_tabbed_navigation_fixed, container, false);
 
-        mTabHost = (TabHost) view.findViewById(R.id.tabHost3);
+        mTabHost = (TabHost) view.findViewById(R.id.tabNavFixedTabHost);
         mTabHost.setup();
 
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_cat_tab_title)));
@@ -94,15 +94,10 @@ public class TabbedNavigationFixedFragment extends Fragment implements TabLayout
     }
 
     private View getTabIndicator(Context context, int title) {
-        View view = LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout_fixed, null);
+        TabLayout view = (TabLayout) LayoutInflater.from(context).inflate(R.layout.tab_nav_story_tab_layout_fixed, null);
+        view.setTabHost(mTabHost);
         TextView tv = (TextView) view.findViewById(R.id.aac_tab_nav_tab_title);
         tv.setText(title);
         return view;
     }
-
-    @Override
-    public TabHost getTabHost() {
-        return mTabHost;
-    }
-
 }
