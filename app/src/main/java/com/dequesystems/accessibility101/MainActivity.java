@@ -207,4 +207,8 @@ public class MainActivity extends ActionBarActivity
 
     public StoryManager getStoryManager(){return mStoryManager;}
 
+    public TabHost getTabHost(){
+        return mGlobalTabHost;
+    }
+
 }
