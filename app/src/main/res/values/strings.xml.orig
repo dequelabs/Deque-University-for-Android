@@ -169,6 +169,7 @@
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
 
+<<<<<<< HEAD
     <!-- Tabbed Navigation Story -->
     <string name="aac_tab_nav_title">Tabbed Navigation</string>
     <string name="aac_tab_nav_cat_tab_title">Cat</string>
@@ -183,5 +184,9 @@
     <string name="aac_tab_nav_broken_conclusion">Notice that <i>Talkback</i> does not announce anything other than the visible text, the name, when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information about the role, value, or state of the object and do not know much about what is on the screen or what their options are.</string>
 
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
+=======
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+>>>>>>> 234b31a95e8b1e33f8391aae2115e213b4a41ec1
 
 </resources>

@@ -15,9 +15,13 @@ import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+<<<<<<< HEAD
+import com.dequesystems.a11yframework.TabLayout;
+=======
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementAboutFragment;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementBrokenFragment;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementFixedFragment;
+>>>>>>> 234b31a95e8b1e33f8391aae2115e213b4a41ec1
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
@@ -80,11 +84,20 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
         this.add(tempStory);
 
+<<<<<<< HEAD
+        tempStory = new Story(mActivity.getString(R.string.aac_tab_nav_title), true);
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new TabbedNavigationAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new TabbedNavigationBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new TabbedNavigationFixedFragment());
+        this.add(tempStory);
+
+=======
         tempStory = new Story("Acronym Announcement", true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new AcronymAnnouncementAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new AcronymAnnouncementBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
         this.add(tempStory);
+>>>>>>> 234b31a95e8b1e33f8391aae2115e213b4a41ec1
     }
 
     @Override

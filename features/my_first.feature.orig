@@ -23,14 +23,15 @@ Feature: Login feature
 		* I press "Broken"
 		* I perform DQTest all
 
+<<<<<<< HEAD
 	@TabbedNavigation @all
 	Scenario: The Tabben Navigation Story is Accessible
 		* I press "Tabbed Navigation"
 		* I Press "Fixed"
 		* I perform DQTest all
 		* I press "Broken"
-		* I perform DQTest all		* I perform DQTest all
-
+		* I perform DQTest all
+=======
 	@AcronymAnnouncement @all
 	Scenario: The Acronym Announcement Story is Accessible
 		* I press "Acronym Announcement"
@@ -38,3 +39,4 @@ Feature: Login feature
 		* I perform DQTest all
 		* I press "Broken"
 		* I perform DQTest all
+>>>>>>> 234b31a95e8b1e33f8391aae2115e213b4a41ec1
