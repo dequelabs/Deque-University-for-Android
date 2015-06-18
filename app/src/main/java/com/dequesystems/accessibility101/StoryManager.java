@@ -16,6 +16,9 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.dequesystems.a11yframework.TabLayout;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementAboutFragment;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementBrokenFragment;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementFixedFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
@@ -84,6 +87,12 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new TabbedNavigationFixedFragment());
         this.add(tempStory);
 
+        tempStory = new Story("Acronym Announcement", true);
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new AcronymAnnouncementAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new AcronymAnnouncementBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
+        this.add(tempStory);
+
     }
 
     @Override
@@ -114,19 +123,23 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 1;
-            tabCount = 4;
+            tabCount = 5;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
             tabNumber = 2;
-            tabCount = 4;
+            tabCount = 5;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
             tabNumber = 3;
-            tabCount = 4;
+            tabCount = 5;
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_tab_nav_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 4;
-            tabCount = 4;
+            tabCount = 5;
+        }else if(text.equalsIgnoreCase("Acronym Announcement")){
+            imageView.setImageResource(R.drawable.aac_broken_icon);
+            tabNumber = 5;
+            tabCount = 5;
         }
 
         if (!text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
@@ -170,7 +183,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         private Story (String title, boolean tabBarVisible) {
             mTitle = title;
             mTabBarVisible = tabBarVisible;
-            mTabs = new ArrayList<>();
+            mTabs = new ArrayList();
         }
 
         private void addTab(String tabTitle, int imageResource, Fragment content) {

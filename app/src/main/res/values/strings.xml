@@ -151,6 +151,15 @@
     <string name="aac_edit_text_fixed_phone_num_hint">(###) - ### - ####</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
 
+    <!-- Acronyms -->
+    <string name="aac_acronym_about_cont_desc">Sometimes Developers use <i>acronyms</i> in their apps to shorten verbose and commonly used phrases. Unfortunately, to an unsighted user, these <i>acronyms</i> are often read out incorrectly by voiceover. This can be quite confusing since an unsighted user cannot tell when it is an <i>acronym</i> being read or simply regular text. This story demonstrates the challenges that <i>acronyms</i> create, and shows how to fix the issue.</string>
+    <string name="aac_acronym_about_talkback">With many different versions of Android out there, each coming with a different preinstalled version of <i>TalkBack</i>, predicting how the device will interpret any given <i>acronym</i> can be difficult. To avoid confusing users who use <i>TalkBack</i>, we must find a solution such that the software <i>always</i> knows what an <i>acronym</i> means.</string>
+    <string name="aac_acronym_broken_flight">Flight XY-111 to Los Angeles, CA is on time to depart in 45m</string>
+    <string name="aac_acronym_broken_whats_wrong">Depending on what version of Android your device is running, CA -- meaning California -- may have been read out by <i>TalkBack</i> as: \'Certificate Authority\'. Another possible <i>TalkBack</i> bug, 45m -- meaning \'forty-five minutes\' -- May have announced as \'forty-five meters\'. As you can probably see, this could become very problematic for an unsighted user.</string>
+    <string name="aac_acronym_flight_cont_desc">Flight X Y 111 to Los Angeles, California is on time to depart in forty-five minutes</string>
+    <string name="aac_acronym_the_fix">The fix for this issue is quick and easy. Just add a <i>content description</i> for the text field with the same text from the body, but replace the <i>acronyms</i> with their actual meanings. Now, CA is always announced as California and 45m is always forty-five minutes, no matter which version of Android your user has.</string>
+    <string name="aac_acronym_the_fix_cont_desc">The fix for this issue is quick and easy. Just add a content description for the text field with the same text from the body, but replace the acronyms with their actual meanings. Now, C-A is always announced as California and forty-five M is always forty-five minutes, no matter which version of android your user has.</string>
+
     <!-- TalkBack Simulation Story -->
     <string name="aac_talkBack_sim_title">TalkBack Simulation</string>
     <string name="aac_talkBack_sim_description"> Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>

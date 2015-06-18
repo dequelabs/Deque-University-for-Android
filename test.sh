@@ -24,7 +24,7 @@ Runs the calabash-android tests in the current directory.
 
 Requirements: 
     calabash-android: sudo gem install calabash-android
-    adb in path: export PATH=/Path/To/Android/sdk/platform-tools
+    adb in path: export PATH=/Library/Android/sdk/platform-tools/
 EOF
 }
 
