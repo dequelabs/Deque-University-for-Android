@@ -47,13 +47,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/aac_worldspace_white"
-            android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border">
+            android:layout_margin="@dimen/aac_global_border">
 
             <TabHost android:id="@+id/tabNavAboutTabHost"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:padding="@dimen/aac_global_border"
+                android:paddingBottom="@dimen/aac_global_border"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true">
@@ -66,8 +65,7 @@
                     <TabWidget android:id="@android:id/tabs"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:background="@color/aac_tab_bar_background"/>
+                        android:layout_weight="0"/>
 
                     <FrameLayout android:id="@android:id/tabcontent"
                         android:layout_width="fill_parent"

@@ -81,7 +81,7 @@ public class TabbedNavigationFixedFragment extends Fragment {
                     if (i == tab) {
                         color = getResources().getColor(R.color.aac_tab_bar_selected);
                     } else {
-                        color = getResources().getColor(R.color.aac_tab_bar_dimmed);
+                        color = getResources().getColor(R.color.aac_deque_dark_blue);
                     }
 
                     if(textView != null) textView.setTextColor(color);
