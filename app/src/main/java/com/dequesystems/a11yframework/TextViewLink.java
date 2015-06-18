@@ -1,4 +1,4 @@
-package com.dequesystems.accessibility101;
+package com.dequesystems.a11yframework;
 
 import android.content.Context;
 import android.text.TextUtils;

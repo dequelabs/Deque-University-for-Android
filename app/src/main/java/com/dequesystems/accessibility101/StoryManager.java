@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.dequesystems.a11yframework.TabLayout;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementAboutFragment;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementBrokenFragment;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementFixedFragment;
@@ -28,6 +29,9 @@ import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.accessibility101.labels.LabelsBrokenFragment;
 import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationBrokenFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedFragment;
 import com.dequesystems.accessibility101.talkbacksimulation.TalkBackSimulationFragment;
 
 import java.util.ArrayList;
@@ -77,11 +81,18 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
         this.add(tempStory);
 
+        tempStory = new Story(mActivity.getString(R.string.aac_tab_nav_title), true);
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new TabbedNavigationAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new TabbedNavigationBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new TabbedNavigationFixedFragment());
+        this.add(tempStory);
+
         tempStory = new Story("Acronym Announcement", true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new AcronymAnnouncementAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new AcronymAnnouncementBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
         this.add(tempStory);
+
     }
 
     @Override
@@ -112,22 +123,29 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 1;
-            tabCount = 3;
+            tabCount = 5;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
             tabNumber = 2;
-            tabCount = 3;
+            tabCount = 5;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
             tabNumber = 3;
-            tabCount = 3;
+            tabCount = 5;
+        }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_tab_nav_title))){
+            imageView.setImageResource(R.drawable.aac_labels_icon);
+            tabNumber = 4;
+            tabCount = 5;
+        }else if(text.equalsIgnoreCase("Acronym Announcement")){
+            imageView.setImageResource(R.drawable.aac_broken_icon);
+            tabNumber = 5;
+            tabCount = 5;
         }
 
         if (!text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
             navDrawerCellLayout.setContentDescription(text + ", tab " + tabNumber + " of " + tabCount);
         }else{
             navDrawerCellLayout.setContentDescription(text);
-
         }
 
         return navDrawerCellLayout;
@@ -187,7 +205,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 TabHost.TabSpec tabSpec = tabHost.newTabSpec(tab.getTabID());
                 tabSpec.setContent(tab);
 
-                View view = mActivity.getLayoutInflater().inflate(R.layout.tab_layout, null);
+                TabLayout view = (TabLayout) mActivity.getLayoutInflater().inflate(R.layout.tab_layout, null);
+                view.setTabHost(tabHost);
 
                 TextView textView = (TextView) view.findViewById(R.id.aac_tab_title);
                 textView.setText(tab.getTitle());
