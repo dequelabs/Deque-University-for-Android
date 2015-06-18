@@ -18,11 +18,7 @@
 
             <TabHost android:id="@+id/tabNavBrokenTabHost"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:paddingBottom="@dimen/aac_global_border"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true">
+                android:layout_height="fill_parent">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -32,13 +28,13 @@
                     <TabWidget android:id="@android:id/tabs"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0"/>
+                        android:layout_weight="0"
+                        android:background="@color/aac_tab_bar_background"/>
 
                     <FrameLayout android:id="@android:id/tabcontent"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="@dimen/aac_global_border">
+                        android:layout_weight="1">
 
                         <LinearLayout android:id="@+id/tab1"
                             android:layout_width="fill_parent"
