@@ -15,8 +15,7 @@
                 android:orientation="vertical"
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
-                android:elevation="@dimen/aac_elevation_level_1">
+                android:padding="@dimen/aac_global_border">
 
                 <TextView
                     android:layout_width="fill_parent"

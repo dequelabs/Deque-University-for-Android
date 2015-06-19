@@ -105,6 +105,7 @@
                     android:textAppearance="@style/AACTextAppearance.heading"/>
 
                 <ImageView android:id="@+id/aac_tab_nav_about_image_view"
+                    android:contentDescription="@string/aac_cont_desc_fixed_cat_cont_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"

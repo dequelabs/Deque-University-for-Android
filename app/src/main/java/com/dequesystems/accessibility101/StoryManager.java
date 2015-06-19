@@ -101,7 +101,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        LinearLayout navDrawerCellLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, parent);
+        LinearLayout navDrawerCellLayout = (LinearLayout) mActivity.getLayoutInflater().inflate(R.layout.navigation_drawer_cell, null);
 
         TextView textView = (TextView) navDrawerCellLayout.findViewById(R.id.aac_navigation_drawer_cell_text_view);
         textView.setText(this.getItem(position).getTitle());
@@ -156,7 +156,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
     @Override
     public boolean isEnabled(int position){
-        return getItem(position).getTitle().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title));
+        return !getItem(position).getTitle().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title));
     }
 
     public void setActiveStory(int index, TabHost tabHost) {
