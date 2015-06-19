@@ -21,12 +21,10 @@ import com.dequesystems.accessibility101.R;
  */
 public class TabbedNavigationAboutFragment extends Fragment{
 
-    private static final String LOG_TAG = TabbedNavigationAboutFragment.class.getSimpleName();
     private TabHost mTabHost;
 
 
     TextView mTextView1;
-    TextView mTextView2;
 
 
     public TabbedNavigationAboutFragment() {

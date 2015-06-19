@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
             android:orientation="vertical">
 
             <TextView
@@ -22,9 +23,7 @@
                 android:text="@string/aac_acronym_broken_flight"
                 android:contentDescription="@string/aac_acronym_flight_cont_desc"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
+                android:textAppearance="@style/AACTextAppearance.body"/>
 
         </LinearLayout>
 
@@ -33,13 +32,13 @@
             android:layout_height="wrap_content"
             android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
-            android:orientation="vertical"
-            android:padding="5dp">
+            android:padding="@dimen/aac_global_border"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="The Fix"
+                android:text="@string/aac_acronym_fixed_heading_1"
                 android:textAppearance="@style/AACTextAppearance.heading"/>
 
             <TextView
@@ -48,9 +47,7 @@
                 android:text="@string/aac_acronym_the_fix"
                 android:padding="@dimen/aac_global_border"
                 android:contentDescription="@string/aac_acronym_the_fix_cont_desc"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp"/>
+                android:textAppearance="@style/AACTextAppearance.body"/>
 
         </LinearLayout>
 

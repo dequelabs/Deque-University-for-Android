@@ -1,13 +1,11 @@
 package com.dequesystems.accessibility101.edittexts;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.accessibility.AccessibilityManager;
 import android.widget.EditText;
 import android.widget.TextView;
 

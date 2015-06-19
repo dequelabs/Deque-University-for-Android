@@ -13,7 +13,10 @@ import android.widget.TabWidget;
 import android.widget.TextView;
 
 /**
- * Created by chrismcmeeking on 5/22/15.
+ * Created by chris.mcmeeking@deque.com on 5/22/15.
+ *
+ * Framework class that makes tab bars accessible by adding the state, role, and value to tabs' content descriptions
+ * Can be implemented by inflating a custom xml layout that uses this class
  */
 public class TabLayout extends LinearLayout {
 

@@ -1,14 +1,16 @@
 package com.dequesystems.a11yframework;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Created by melindakothbauer on 5/22/15.
+ * Created by melinda.kothbauer@deque.com on 5/22/15.
+ *
+ * Framework class that makes hyperlinks accessible by adding the word, "link" to a textview's content description
+ * Can be implemented by using this class rather than a TextView in xml layout files.
+ *
  */
-
 
 public class TextViewLink extends TextView {
 
@@ -26,8 +28,7 @@ public class TextViewLink extends TextView {
 
     @Override
     public CharSequence getContentDescription() {
-        CharSequence contentDescription = super.getText() + ", link";
-        return contentDescription;
+        return super.getText() + ", link";
     }
 
 }

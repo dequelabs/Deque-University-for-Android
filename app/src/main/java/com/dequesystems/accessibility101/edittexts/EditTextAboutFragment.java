@@ -1,22 +1,14 @@
 package com.dequesystems.accessibility101.edittexts;
 
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.os.IBinder;
-import android.support.v4.app.FragmentActivity;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;

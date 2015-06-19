@@ -1,6 +1,5 @@
 package com.dequesystems.accessibility101.contentdescriptions;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.text.method.LinkMovementMethod;

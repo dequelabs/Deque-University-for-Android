@@ -19,7 +19,6 @@ import com.dequesystems.accessibility101.R;
  */
 public class TabbedNavigationBrokenFragment extends Fragment {
 
-    private static final String LOG_TAG = TabbedNavigationBrokenFragment.class.getSimpleName();
     private TabHost mTabHost;
 
     public TabbedNavigationBrokenFragment() {
