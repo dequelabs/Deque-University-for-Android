@@ -152,6 +152,7 @@
     <string name="title_activity_splash_screen">SplashScreen</string>
 
     <!-- Acronyms -->
+    <string name="aac_acronym_annoucement_title">Acronym Announcement</string>
     <string name="aac_acronym_about_cont_desc">Sometimes Developers use <i>acronyms</i> in their apps to shorten verbose and commonly used phrases. Unfortunately, to an unsighted user, these <i>acronyms</i> are often read out incorrectly by voiceover. This can be quite confusing since an unsighted user cannot tell when it is an <i>acronym</i> being read or simply regular text. This story demonstrates the challenges that <i>acronyms</i> create, and shows how to fix the issue.</string>
     <string name="aac_acronym_about_talkback">With many different versions of Android out there, each coming with a different preinstalled version of <i>TalkBack</i>, predicting how the device will interpret any given <i>acronym</i> can be difficult. To avoid confusing users who use <i>TalkBack</i>, we must find a solution such that the software <i>always</i> knows what an <i>acronym</i> means.</string>
     <string name="aac_acronym_broken_flight">Flight XY-111 to Los Angeles, CA is on time to depart in 45m</string>
