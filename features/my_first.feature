@@ -24,7 +24,7 @@ Feature: Login feature
 		* I perform DQTest all
 
 	@TabbedNavigation @all
-	Scenario: The Tabben Navigation Story is Accessible
+	Scenario: The Tabbed Navigation Story is Accessible
 		* I press "Tabbed Navigation"
 		* I Press "Fixed"
 		* I perform DQTest all
