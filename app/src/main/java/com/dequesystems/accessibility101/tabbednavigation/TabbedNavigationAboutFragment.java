@@ -21,12 +21,10 @@ import com.dequesystems.accessibility101.R;
  */
 public class TabbedNavigationAboutFragment extends Fragment{
 
-    private static final String LOG_TAG = TabbedNavigationAboutFragment.class.getSimpleName();
     private TabHost mTabHost;
 
 
     TextView mTextView1;
-    TextView mTextView2;
 
 
     public TabbedNavigationAboutFragment() {
@@ -90,9 +88,9 @@ public class TabbedNavigationAboutFragment extends Fragment{
 
                     int color;
                     if (i == tab) {
-                        color = getResources().getColor(R.color.aac_tab_bar_selected);
+                        color = getResources().getColor(R.color.aac_demo_tab_bar_selected);
                     } else {
-                        color = getResources().getColor(R.color.aac_tab_bar_dimmed);
+                        color = getResources().getColor(R.color.aac_demo_tab_bar_dimmed);
                     }
 
                     if(textView != null) textView.setTextColor(color);

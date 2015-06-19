@@ -14,11 +14,9 @@ import com.dequesystems.accessibility101.R;
  */
 public class AcronymAnnouncementAboutFragment extends Fragment {
 
-
     public AcronymAnnouncementAboutFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,6 +24,5 @@ public class AcronymAnnouncementAboutFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_acronym_announcement_about, container, false);
     }
-
 
 }

@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
             android:orientation="vertical">
 
             <TextView
@@ -22,7 +23,6 @@
                 android:text="@string/aac_acronym_broken_flight"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp" />
 
         </LinearLayout>
@@ -32,13 +32,13 @@
             android:layout_height="wrap_content"
             android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
-            android:orientation="vertical"
-            android:padding="5dp">
+            android:padding="@dimen/aac_global_border"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Whats Wrong?"
+                android:text="@string/aac_acronym_broken_heading_1"
                 android:textAppearance="@style/AACTextAppearance.heading"/>
 
             <TextView
@@ -46,9 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/aac_acronym_broken_whats_wrong"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp"/>
+                android:textAppearance="@style/AACTextAppearance.body"/>
 
         </LinearLayout>
 

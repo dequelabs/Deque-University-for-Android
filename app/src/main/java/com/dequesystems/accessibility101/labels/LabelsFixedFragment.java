@@ -16,7 +16,6 @@ import com.dequesystems.accessibility101.R;
  */
 public class LabelsFixedFragment extends Fragment {
 
-    private View mView;
     private View mViewDemoContent;
 
     private Switch mSwitchRed;
@@ -26,8 +25,7 @@ public class LabelsFixedFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        mView = inflater.inflate(R.layout.fragment_labels_fixed, container, false);
+        View mView = inflater.inflate(R.layout.fragment_labels_fixed, container, false);
 
         mViewDemoContent = mView.findViewById(R.id.demoContent);
 

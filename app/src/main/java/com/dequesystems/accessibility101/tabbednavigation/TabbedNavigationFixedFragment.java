@@ -21,7 +21,6 @@ import com.dequesystems.accessibility101.R;
  */
 public class TabbedNavigationFixedFragment extends Fragment {
 
-    private static final String LOG_TAG = TabbedNavigationFixedFragment.class.getSimpleName();
     private TabHost mTabHost;
 
     public TabbedNavigationFixedFragment() {
@@ -41,15 +40,12 @@ public class TabbedNavigationFixedFragment extends Fragment {
         mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
         mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tab1).setIndicator(getTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
 
-        Log.d(LOG_TAG, "" + mTabHost.getTabWidget().getTabCount());
-
         TextView textView = (TextView) mTabHost.getCurrentTabView().findViewById(R.id.aac_tab_nav_tab_title);
         textView.setTextColor(getResources().getColor(R.color.aac_tab_bar_selected));
 
         ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_nav_fixed_image_view);
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.cat));
         imageView.setContentDescription(getResources().getString(R.string.aac_cont_desc_fixed_cat_cont_desc));
-
 
         mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
@@ -79,9 +75,9 @@ public class TabbedNavigationFixedFragment extends Fragment {
 
                     int color;
                     if (i == tab) {
-                        color = getResources().getColor(R.color.aac_tab_bar_selected);
+                        color = getResources().getColor(R.color.aac_demo_tab_bar_selected);
                     } else {
-                        color = getResources().getColor(R.color.aac_tab_bar_dimmed);
+                        color = getResources().getColor(R.color.aac_demo_tab_bar_dimmed);
                     }
 
                     if(textView != null) textView.setTextColor(color);

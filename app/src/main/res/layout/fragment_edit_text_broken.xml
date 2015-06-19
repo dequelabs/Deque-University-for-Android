@@ -140,8 +140,7 @@
                 android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
                 android:textAppearance="@style/AACTextAppearance.body"
-                android:text="@string/aac_edit_text_broken_conclusion_1"
-                android:elevation="@dimen/aac_elevation_level_1" />
+                android:text="@string/aac_edit_text_broken_conclusion_1" />
 
 
         </LinearLayout>
@@ -218,8 +217,7 @@
                 android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
                 android:textAppearance="@style/AACTextAppearance.body"
-                android:text="@string/aac_edit_text_broken_conclusion_2"
-                android:elevation="@dimen/aac_elevation_level_1" />
+                android:text="@string/aac_edit_text_broken_conclusion_2" />
 
         </LinearLayout>
 

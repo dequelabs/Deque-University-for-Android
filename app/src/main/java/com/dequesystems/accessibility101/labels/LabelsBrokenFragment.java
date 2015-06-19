@@ -8,26 +8,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;
 
 public class LabelsBrokenFragment extends Fragment {
 
-    private View mView;
     private View mViewDemoContent;
 
     private Switch mSwitchRed;
     private Switch mSwitchGreen;
     private Switch mSwitchBlue;
 
-    private TextView mLabelForRed;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        mView = inflater.inflate(R.layout.fragment_labels_broken, container, false);
+        View mView = inflater.inflate(R.layout.fragment_labels_broken, container, false);
 
         mViewDemoContent = mView.findViewById(R.id.demoContent);
 

@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
     <LinearLayout
@@ -14,16 +14,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="@dimen/aac_global_border"
-        android:background="@color/aac_worldspace_white"
-        android:padding="@dimen/aac_global_border">
+        android:background="@color/aac_worldspace_white">
 
         <TabHost android:id="@+id/tabNavFixedTabHost"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:padding="@dimen/aac_global_border"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true">
+            android:layout_height="fill_parent">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -39,8 +34,7 @@
                 <FrameLayout android:id="@android:id/tabcontent"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:padding="@dimen/aac_global_border">
+                    android:layout_weight="0">
 
                     <LinearLayout android:id="@+id/tab1"
                         android:layout_width="fill_parent"

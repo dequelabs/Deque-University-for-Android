@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;
 
-import java.util.ArrayList;
-
 public class LabelsAboutFragment extends Fragment {
 
     View mView;

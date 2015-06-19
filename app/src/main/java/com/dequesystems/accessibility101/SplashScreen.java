@@ -2,10 +2,14 @@ package com.dequesystems.accessibility101;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.ImageView;
+
+/*
+ *Created by melinda.kothbauer@deque.com
+ *
+ * Loads the splash screen & waits before launching MainActivity
+ */
 
 public class SplashScreen extends Activity {
 

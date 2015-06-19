@@ -38,7 +38,10 @@ import java.util.ArrayList;
 
 /**
  * Created by chrismcmeeking on 4/24/15.
+ *
+ * Class that manages the different "stories" for the app. Also hosts the content addition of the navigation drawer and global tab bar.
  */
+
 public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
     private static final String LOG_TAG = StoryManager.class.getSimpleName();
@@ -87,7 +90,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new TabbedNavigationFixedFragment());
         this.add(tempStory);
 
-        tempStory = new Story("Acronym Announcement", true);
+        tempStory = new Story(mActivity.getString(R.string.aac_acronym_annoucement_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new AcronymAnnouncementAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new AcronymAnnouncementBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
@@ -136,7 +139,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 4;
             tabCount = 5;
-        }else if(text.equalsIgnoreCase("Acronym Announcement")){
+        }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_acronym_annoucement_title))){
             imageView.setImageResource(R.drawable.aac_broken_icon);
             tabNumber = 5;
             tabCount = 5;
@@ -153,10 +156,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
     @Override
     public boolean isEnabled(int position){
-        if(this.getItem(position).getTitle().toString().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
-            return false;
-        }
-        return true;
+        return !getItem(position).getTitle().equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title));
     }
 
     public void setActiveStory(int index, TabHost tabHost) {
@@ -183,7 +183,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         private Story (String title, boolean tabBarVisible) {
             mTitle = title;
             mTabBarVisible = tabBarVisible;
-            mTabs = new ArrayList();
+            mTabs = new ArrayList<>();
         }
 
         private void addTab(String tabTitle, int imageResource, Fragment content) {
@@ -238,7 +238,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             for (int i = 0; i < mTabs.size(); i++ ) {
                 Tab tab = mTabs.get(i);
 
-                if (tabTitle == tab.mTitle) {
+                if (tabTitle.equalsIgnoreCase(tab.mTitle)) {
                     return tab;
                 }
             }
@@ -251,7 +251,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             for (int i = 0; i < mTabs.size(); i++) {
                 Tab tab =  mTabs.get(i);
 
-                if (tabId == tab.getTabID()) {
+                if (tabId.equalsIgnoreCase(tab.getTabID())) {
                     return tab;
                 }
             }
@@ -288,7 +288,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
             @Override
             public View createTabContent(String tag) {
-                Log.v(LOG_TAG, "Creating tab content for tab: " + tag.toString());
+                Log.v(LOG_TAG, "Creating tab content for tab: " + tag);
 
                 if (mView != null) return mView;
 

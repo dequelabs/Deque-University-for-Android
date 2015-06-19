@@ -19,8 +19,11 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
-import com.dequesystems.a11yframework.TabLayout;
-import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment;
+/*
+ * created by chris.mcmeeking@deque.com
+ *
+ * Runs set up/updates of some layout elements for the app
+ */
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -45,11 +48,6 @@ public class MainActivity extends ActionBarActivity
     private StoryManager mStoryManager;
 
     private TabHost mGlobalTabHost;
-
-    private TabHost mFixedTabHost;
-
-    private TabHost mAboutTabHost;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -201,10 +199,13 @@ public class MainActivity extends ActionBarActivity
     }
 
     private void logDebug(String message) {
-        if (true)
             Log.d(LOG_TAG, message);
     }
 
     public StoryManager getStoryManager(){return mStoryManager;}
+
+    public TabHost getTabHost(){
+        return mGlobalTabHost;
+    }
 
 }

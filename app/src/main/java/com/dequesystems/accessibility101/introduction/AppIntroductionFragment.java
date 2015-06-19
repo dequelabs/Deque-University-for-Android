@@ -3,11 +3,9 @@ package com.dequesystems.accessibility101.introduction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;

@@ -3,6 +3,4 @@
     android:layout_height="match_parent"
     tools:context="com.dequesystems.accessibility101.separator.SeparatorHeading">
 
-
-
 </FrameLayout>

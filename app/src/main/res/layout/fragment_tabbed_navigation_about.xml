@@ -47,16 +47,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/aac_worldspace_white"
-            android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border">
+            android:layout_margin="@dimen/aac_global_border">
 
             <TabHost android:id="@+id/tabNavAboutTabHost"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:padding="@dimen/aac_global_border"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true">
+                android:layout_height="fill_parent">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -72,8 +67,7 @@
                     <FrameLayout android:id="@android:id/tabcontent"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="@dimen/aac_global_border">
+                        android:layout_weight="1">
 
                         <LinearLayout android:id="@+id/tab1"
                             android:layout_width="fill_parent"
@@ -111,6 +105,7 @@
                     android:textAppearance="@style/AACTextAppearance.heading"/>
 
                 <ImageView android:id="@+id/aac_tab_nav_about_image_view"
+                    android:contentDescription="@string/aac_cont_desc_fixed_cat_cont_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"

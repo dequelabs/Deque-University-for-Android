@@ -71,6 +71,9 @@
     <color name="aac_tab_bar_dimmed">@color/aac_worldspace_white</color>
     <color name="aac_tab_bar_selected">@color/aac_deque_orange</color>
 
+    <color name="aac_demo_tab_bar_background">@color/aac_deque_pale_blue</color>
+    <color name="aac_demo_tab_bar_dimmed">@color/aac_deque_dark_blue</color>
+    <color name="aac_demo_tab_bar_selected">@color/aac_deque_orange</color>
 
     <color name="aac_navigation_drawer_background">@color/aac_worldspace_white</color>
     <color name="aac_navigation_drawer_text">@color/aac_deque_dark_blue</color>
