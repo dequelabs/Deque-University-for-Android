@@ -15,11 +15,9 @@ import com.dequesystems.accessibility101.R;
  */
 public class TalkBackSimulationFragment extends Fragment {
 
-
     public TalkBackSimulationFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
