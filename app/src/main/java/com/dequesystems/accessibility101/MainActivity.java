@@ -138,10 +138,10 @@ public class MainActivity extends ActionBarActivity
 
         if (mIsOverlayOn) {
             item.setIcon(getResources().getDrawable(R.drawable.aac_sighted_icon));
-            item.setTitle(getResources().getString(R.string.aac_talkBack_sim_switch_on));
+            item.setTitle(getResources().getString(R.string.aac_talkBack_switch_on));
         } else {
             item.setIcon(getResources().getDrawable(R.drawable.aac_non_sighted_icon));
-            item.setTitle(getResources().getString(R.string.aac_talkBack_sim_switch_off));
+            item.setTitle(getResources().getString(R.string.aac_talkBack_switch_off));
         }
 
         observeOverlayIsOn();

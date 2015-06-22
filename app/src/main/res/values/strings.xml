@@ -169,22 +169,22 @@
     <string name="aac_acronym_the_fix_cont_desc">By adding a content description for the text field with the same text from the body, but replacing the acronyms with their actual meanings. Now, C-A is always announced as California and forty-five M is always forty-five minutes, no matter which device or version of android the user has.</string>
 
     <!-- TalkBack Simulation Story -->
-    <string name="aac_talkBack_sim_title">TalkBack</string>
+    <string name="aac_talkBack_title">TalkBack</string>
 
-    <string name="aac_talkBack_sim_description">Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
-    <string name="aac_talkBack_sim_switch_on">TalkBack simulation switch, ON</string>
-    <string name="aac_talkBack_sim_switch_off">TalkBack simulation switch, OFF</string>
+    <string name="aac_talkBack_description">Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
+    <string name="aac_talkBack_switch_on">TalkBack simulation switch, ON</string>
+    <string name="aac_talkBack_switch_off">TalkBack simulation switch, OFF</string>
 
-    <string name="aac_talkBack_sim_what_is_talkBack_heading">What is TalkBack?</string>
-    <string name="aac_talkBack_sim_how_to_use_heading">How to Use TalkBack</string>
-    <string name="aac_talkBack_sim_how_to_turn_on_heading">How to Turn on TalkBack</string>
+    <string name="aac_talkBack_what_is_talkBack_heading">What is TalkBack?</string>
+    <string name="aac_talkBack_how_to_use_heading">How to Use TalkBack</string>
+    <string name="aac_talkBack_how_to_turn_on_heading">How to Turn on TalkBack</string>
 
-    <string name="aac_talkBack_sim_what_is_talkBack"><i>TalkBack</i> is a pre-installed screen reader and accessibility tool on Android devices. When activated, it uses cues such as audible announcements, vibrations, and sounds to provide users with the information they need to navigate the screen. <i>TalkBack</i> works with <i>Explore by Touch</i>, which is a system feature, to enable users to touch the screen and hear what is selected, along with other valuable information such as which actions are available or which other screen elements are associated with the selected element. </string>
-    <string name="aac_talkBack_sim_how_to_turn_on_desc"><i>TalkBack</i> can be turned on by going into Settings > Accessibility > TalkBack and toggle the switch to turn it on (you will need to accept some conditions first!). </string>
-    <string name="aac_talkBack_sim_how_to_use_desc">Although there are dozens of shortcuts and gestures that help most efficiently utilize <i>TalkBack</i>, there are a few that are most important.</string>
-    <string name="aac_talkBack_sim_control_1"><b><i>Swipe down/right:</i></b> This scrolls \"down\" through views that can be highlighted.</string>
-    <string name="aac_talkBack_sim_control_2"><b><i>Swipe up/left:</i></b> This scrolls \"up\" through views that can be highlighted.</string>
-    <string name="aac_talkBack_sim_control_3"><b><i>Double tap:</i></b> This clicks on whichever view is currently highlighted. If clicking triggers an action for the current view, it will be triggered by this gesture when <i>TalkBack</i> is on.</string>
+    <string name="aac_talkBack_what_is_talkBack"><i>TalkBack</i> is a pre-installed screen reader and accessibility tool on Android devices. When activated, it uses cues such as audible announcements, vibrations, and sounds to provide users with the information they need to navigate the screen. <i>TalkBack</i> works with <i>Explore by Touch</i>, which is a system feature, to enable users to touch the screen and hear what is selected, along with other valuable information such as which actions are available or which other screen elements are associated with the selected element. </string>
+    <string name="aac_talkBack_how_to_turn_on_desc"><i>TalkBack</i> can be turned on by going into Settings > Accessibility > TalkBack and toggle the switch to turn it on (you will need to accept some conditions first!). </string>
+    <string name="aac_talkBack_how_to_use_desc">Although there are dozens of shortcuts and gestures that help most efficiently utilize <i>TalkBack</i>, there are a few that are most important.</string>
+    <string name="aac_talkBack_control_1"><b><i>Swipe down/right:</i></b> This scrolls \"down\" through views that can be highlighted.</string>
+    <string name="aac_talkBack_control_2"><b><i>Swipe up/left:</i></b> This scrolls \"up\" through views that can be highlighted.</string>
+    <string name="aac_talkBack_control_3"><b><i>Double tap:</i></b> This clicks on whichever view is currently highlighted. If clicking triggers an action for the current view, it will be triggered by this gesture when <i>TalkBack</i> is on.</string>
 
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
