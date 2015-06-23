@@ -226,11 +226,15 @@
     <string name="aac_talkBack_advanced_gesture_2">Down then up</string>
     <string name="aac_talkBack_advanced_gesture_3">Up then left</string>
     <string name="aac_talkBack_advanced_gesture_4">Down then left</string>
+    <string name="aac_talkBack_advanced_gesture_5">Right then Left</string>
+    <string name="aac_talkBack_advanced_gesture_6">Left then right</string>
 
     <string name="aac_talkBack_advanced_action_1">Highlight first element on the screen</string>
     <string name="aac_talkBack_advanced_action_2">Highlight the last element on the screen</string>
     <string name="aac_talkBack_advanced_action_3">Home button</string>
     <string name="aac_talkBack_advanced_action_4">Back button</string>
+    <string name="aac_talkBack_advanced_action_5">Scroll forward, if the view is longer than one page</string>
+    <string name="aac_talkBack_advanced_action_6">Scroll backwards, if the view is longer than one page</string>
 
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
