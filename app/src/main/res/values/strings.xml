@@ -168,24 +168,69 @@
     <string name="aac_acronym_the_fix">By adding a <i>content description</i> for the text field with the same text from the body, but replacing the <i>acronyms</i> with their actual meanings. Now, CA is always announced as \"California\" and 45m is always \"forty-five minutes\", no matter which device or version of Android the user has.</string>
     <string name="aac_acronym_the_fix_cont_desc">By adding a content description for the text field with the same text from the body, but replacing the acronyms with their actual meanings. Now, C-A is always announced as California and forty-five M is always forty-five minutes, no matter which device or version of android the user has.</string>
 
-    <!-- TalkBack Simulation Story -->
+    <!-- TalkBack Story -->
     <string name="aac_talkBack_title">TalkBack</string>
 
-    <string name="aac_talkBack_description">Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
     <string name="aac_talkBack_switch_on">TalkBack simulation switch, ON</string>
     <string name="aac_talkBack_switch_off">TalkBack simulation switch, OFF</string>
 
-    <string name="aac_talkBack_what_is_talkBack_heading">What is TalkBack?</string>
-    <string name="aac_talkBack_how_to_use_heading">How to Use TalkBack</string>
-    <string name="aac_talkBack_how_to_turn_on_heading">How to Turn on TalkBack</string>
-    <string name="aac_talkBack_try_it_heading">Try It Out!</string>
+    <string name="aac_talkBack_tab_title_demo">Demo</string>
+    <string name="aac_talkBack_tab_title_advanced">Advanced</string>
 
-    <string name="aac_talkBack_what_is_talkBack"><i>TalkBack</i> is a pre-installed screen reader and accessibility tool on Android devices. When activated, it uses cues such as audible announcements, vibrations, and sounds to provide users with the information they need to navigate the screen. <i>TalkBack</i> works with <i>Explore by Touch</i>, which is a system feature, to enable users to touch the screen and hear what is selected, along with other valuable information such as which actions are available or which other screen elements are associated with the selected element. </string>
-    <string name="aac_talkBack_how_to_turn_on_desc"><i>TalkBack</i> can be turned on by going into Settings > Accessibility > TalkBack and toggle the switch to turn it on (you will need to accept some conditions first). </string>
-    <string name="aac_talkBack_how_to_use_desc">Although there are dozens of shortcuts and gestures that help most efficiently utilize <i>TalkBack</i>, there are a few that are most important.</string>
-    <string name="aac_talkBack_control_1"><b><i>Swipe down/right:</i></b> This scrolls \"down\" through views that can be highlighted.</string>
-    <string name="aac_talkBack_control_2"><b><i>Swipe up/left:</i></b> This scrolls \"up\" through views that can be highlighted.</string>
-    <string name="aac_talkBack_control_3"><b><i>Double tap:</i></b> This clicks on whichever view is currently highlighted. If clicking triggers an action for the current view, it will be triggered by this gesture when <i>TalkBack</i> is on.</string>
+    <!-- TalkBack About Tab -->
+    <string name="aac_talkBack_about_description">Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
+    <string name="aac_talkBack_about_what_is_talkBack_heading">What is TalkBack?</string>
+    <string name="aac_talkBack_about_how_to_use_heading">How to Use TalkBack</string>
+    <string name="aac_talkBack_about_how_to_turn_on_heading">How to Turn on TalkBack</string>
+    <string name="aac_talkBack_about_try_it_heading">Try It Out!</string>
+
+    <string name="aac_talkBack_about_what_is_talkBack_paragraph"><i>TalkBack</i> is a pre-installed screen reader and accessibility tool on Android devices. When activated, it uses cues such as audible announcements, vibrations, and sounds to provide users with the information they need to navigate the screen. <i>TalkBack</i> works with <i>Explore by Touch</i>, which is a system feature, to enable users to touch the screen and hear what is selected, along with other valuable information such as which actions are available or which other screen elements are associated with the selected element. </string>
+    <string name="aac_talkBack_about_how_to_turn_on_paragraph"><i>TalkBack</i> can be turned on by going into Settings > Accessibility > TalkBack and toggle the switch to turn it on (you will need to accept some conditions first). </string>
+    <string name="aac_talkBack_about_how_to_use_paragraph">Although there are dozens of shortcuts and gestures that help most efficiently utilize <i>TalkBack</i>, there are a few that are most important.</string>
+
+    <string name="aac_talkBack_control_1"><b><i>Swipe down or right:</i></b> This scrolls \"down\" through views that can be highlighted.</string>
+    <string name="aac_talkBack_control_2"><b><i>Swipe up or left:</i></b> This scrolls \"up\" through views that can be highlighted.</string>
+    <string name="aac_talkBack_control_3"><b><i>Double tap:</i></b> This clicks on whichever view is currently highlighted. If clicking triggers an action for the current view, it will be triggered by this gesture when <i>TalkBack</i> is activated.</string>
+    <string name="aac_talkBack_control_4"><b><i>Two fingered scroll:</i></b> To scroll down a screen, you need to use two fingers when <i>TalkBack</i> is activated.</string>
+
+    <!-- TalkBack Demos Tab -->
+    <string name="aac_talkBack_demos_scroll_disclaimer">If you need to scroll down the page to view all its content when TalkBack is activated, don\'t forget to scroll with two fingers instead of one!</string>
+
+    <string name="aac_talkBack_demos_step1_heading">Step 1: Turn on TalkBack</string>
+    <string name="aac_talkBack_demos_step2_heading">Step 2: Scroll Down Through Views</string>
+    <string name="aac_talkBack_demos_step3_heading">Step 3: Scroll Up Through Views</string>
+    <string name="aac_talkBack_demos_step4_heading">Step 4: Explore By Touch</string>
+    <string name="aac_talkBack_demos_step5_heading">Step 5: Double Tap to Click</string>
+    <string name="aac_talkBack_demos_test_heading">Test Your Skills!</string>
+
+    <string name="aac_talkBack_demos_step1_paragraph">Is TalkBack turned on? If not, see the \"About\" tab for instructions on how to do so. Once that\'s done, come back to this page and tap this TextView.</string>
+    <string name="aac_talkBack_demos_step2_paragraph_1">Swipe right or down until you reach the EditText below.</string>
+    <string name="aac_talkBack_demos_step2_paragraph_2">Now follow the prompts that TalkBack gives you and double tap to edit.</string>
+    <string name="aac_talkBack_demos_step2_editText_label">Enter your name</string>
+    <string name="aac_talkBack_demos_step3_paragraph_1">Continue swiping right or down until you reach this view. Now try going backwards. Swipe left or up to scroll up through the views on the page. Continue this pattern until you get the hang of scrolling through views.</string>
+    <string name="aac_talkBack_demos_imageView1_cont_desc">@string/aac_cont_desc_fixed_cat_cont_desc</string>
+    <string name="aac_talkBack_demos_step4_paragraph_1">Tap and hold on the screen. Now move your finger around to explore the views this way. Once you lift your finger, whichever view was under it last will be highlighted.</string>
+    <string name="aac_talkBack_demos_imageView2_cont_desc">@string/aac_cont_desc_fixed_dog_cont_desc</string>
+    <string name="aac_talkBack_demos_step4_paragraph_2">Continue to explore the screen by touch, but at the end highlight the \"Advanced\" tab below.</string>
+    <string name="aac_talkBack_demos_step5_paragraph">Once a clickable view, such as the \"Advanced\" tab below, is highlighted, double tap the screen anywhere to click on the tab and navigate to the next tab.</string>
+    <string name="aac_talkBack_demos_test_paragraph">Click on this icon in the upper right hand corner to simulate what it\'s like to rely on TalkBack to navigate through the screen. See if you can navigate to different views and screens using your new <i>TalkBack</i> skills.</string>
+
+    <!-- TalkBack Advanced Tab -->
+    <string name="aac_talkBack_advanced_intro_heading">Advanced Gestures</string>
+    <string name="aac_talkBack_advanced_intro_paragraph">Now that you know the basics of how to navigate the screen using <i>TalkBack</i>, you can learn about some more handy gestures and shortcuts that can aid <i>TalkBack</i> users.</string>
+
+    <string name="aac_talkBack_advanced_title_gesture">Gesture</string>
+    <string name="aac_talkBack_advanced_title_action">Action</string>
+
+    <string name="aac_talkBack_advanced_gesture_1">Up then down</string>
+    <string name="aac_talkBack_advanced_gesture_2">Down then up</string>
+    <string name="aac_talkBack_advanced_gesture_3">Up then left</string>
+    <string name="aac_talkBack_advanced_gesture_4">Down then left</string>
+
+    <string name="aac_talkBack_advanced_action_1">Highlight first element on the screen</string>
+    <string name="aac_talkBack_advanced_action_2">Highlight the last element on the screen</string>
+    <string name="aac_talkBack_advanced_action_3">Home button</string>
+    <string name="aac_talkBack_advanced_action_4">Back button</string>
 
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
@@ -204,5 +249,8 @@
     <string name="aac_tab_nav_broken_conclusion">Notice that <i>Talkback</i> does not announce anything other than the visible text, the name, when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information about the role, value, or state of the object and do not know much about what is on the screen or what their options are.</string>
 
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

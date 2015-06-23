@@ -1,0 +1,212 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aac_story_background"
+    tools:context="com.dequesystems.accessibility101.talkback.TalkBackAdvancedFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/aac_global_border">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_talkBack_advanced_intro_heading"
+                android:textAppearance="@style/AACTextAppearance.heading" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_intro_paragraph"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
+            android:padding="@dimen/aac_global_border">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_talkBack_advanced_title_gesture"
+                    android:textAppearance="@style/AACTextAppearance.heading" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/aac_table_divider_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_talkBack_advanced_title_action"
+                        android:textAppearance="@style/AACTextAppearance.heading" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="@color/aac_table_divider_color" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_weight="0"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_talkBack_advanced_gesture_1"
+                    android:textAppearance="@style/AACTextAppearance.body" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/aac_table_divider_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_talkBack_advanced_action_1"
+                        android:textAppearance="@style/AACTextAppearance.body" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="@color/aac_table_divider_color" />
+
+            <TableRow>
+
+                <TextView
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_talkBack_advanced_gesture_2"
+                    android:textAppearance="@style/AACTextAppearance.body" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/aac_table_divider_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_talkBack_advanced_action_2"
+                        android:textAppearance="@style/AACTextAppearance.body" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="@color/aac_table_divider_color" />
+
+            <TableRow>
+
+                <TextView
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_talkBack_advanced_gesture_3"
+                    android:textAppearance="@style/AACTextAppearance.body" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/aac_table_divider_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_talkBack_advanced_action_3"
+                        android:textAppearance="@style/AACTextAppearance.body" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="@color/aac_table_divider_color" />
+
+            <TableRow>
+
+                <TextView
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_talkBack_advanced_gesture_4"
+                    android:textAppearance="@style/AACTextAppearance.body" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/aac_table_divider_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_talkBack_advanced_action_4"
+                        android:textAppearance="@style/AACTextAppearance.body" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>

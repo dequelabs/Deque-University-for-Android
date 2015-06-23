@@ -1,4 +1,4 @@
-package com.dequesystems.accessibility101.talkbacksimulation;
+package com.dequesystems.accessibility101.talkback;
 
 
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import com.dequesystems.accessibility101.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TalkBackSimulationFragment extends Fragment {
+public class TalkBackAboutFragment extends Fragment {
 
-    public TalkBackSimulationFragment() {
+    public TalkBackAboutFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class TalkBackSimulationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_talk_back_simulation, container, false);
+        return inflater.inflate(R.layout.fragment_talk_back_about, container, false);
     }
 
 
