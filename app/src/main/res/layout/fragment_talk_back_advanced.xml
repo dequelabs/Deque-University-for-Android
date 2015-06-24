@@ -1,0 +1,104 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aac_story_background"
+    tools:context="com.dequesystems.accessibility101.talkback.TalkBackAdvancedFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/aac_global_border">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_talkBack_advanced_intro_heading"
+                android:textAppearance="@style/AACTextAppearance.heading" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_intro_paragraph"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_action_1"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_action_2"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_action_5"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_action_6"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_action_3"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_action_4"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_talkBack_advanced_conclusion_heading"
+                android:textAppearance="@style/AACTextAppearance.heading" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_talkBack_advanced_conclusion_paragraph"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

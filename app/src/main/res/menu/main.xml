@@ -4,7 +4,7 @@
 
     <item android:id="@+id/action_example"
         android:icon="@drawable/aac_non_sighted_icon"
-        android:title="@string/aac_talkBack_sim_switch_off"
+        android:title="@string/aac_talkBack_switch_off"
         android:actionLayout="@layout/overlay_switch"
         app:showAsAction="always" />
 
