@@ -178,7 +178,7 @@
     <string name="aac_talkBack_tab_title_advanced">Advanced</string>
 
     <!-- TalkBack About Tab -->
-    <string name="aac_talkBack_about_description">Click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
+    <string name="aac_talkBack_about_description">Turn on TalkBack and click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
     <string name="aac_talkBack_about_what_is_talkBack_heading">What is TalkBack?</string>
     <string name="aac_talkBack_about_how_to_use_heading">How to Use TalkBack</string>
     <string name="aac_talkBack_about_how_to_turn_on_heading">How to Turn on TalkBack</string>
@@ -217,24 +217,28 @@
 
     <!-- TalkBack Advanced Tab -->
     <string name="aac_talkBack_advanced_intro_heading">Advanced Gestures</string>
+    <string name="aac_talkBack_advanced_conclusion_heading">Personalize Gestures</string>
+
     <string name="aac_talkBack_advanced_intro_paragraph">Now that you know the basics of how to navigate the screen using <i>TalkBack</i>, you can learn about some more handy gestures and shortcuts that can aid <i>TalkBack</i> users.</string>
+    <string name="aac_talkBack_advanced_conclusion_paragraph">You can use the default gestures that are programmed into the pre-installed <i>TalkBack</i> or you can set your own by navigating to Settings > Accessibility > TalkBack > Settings > Touch Exploration > Manage gestures. This menu also hosts the entire set of default gestures that <i>TalkBack</i> recognizes.</string>
 
     <string name="aac_talkBack_advanced_title_gesture">Gesture</string>
     <string name="aac_talkBack_advanced_title_action">Action</string>
+    <string name="aac_talkBack_advanced_gestures_heading">Gestures</string>
 
     <string name="aac_talkBack_advanced_gesture_1">Up then down</string>
     <string name="aac_talkBack_advanced_gesture_2">Down then up</string>
     <string name="aac_talkBack_advanced_gesture_3">Up then left</string>
     <string name="aac_talkBack_advanced_gesture_4">Down then left</string>
-    <string name="aac_talkBack_advanced_gesture_5">Right then Left</string>
+    <string name="aac_talkBack_advanced_gesture_5">Right then left</string>
     <string name="aac_talkBack_advanced_gesture_6">Left then right</string>
 
-    <string name="aac_talkBack_advanced_action_1">Highlight first element on the screen</string>
-    <string name="aac_talkBack_advanced_action_2">Highlight the last element on the screen</string>
-    <string name="aac_talkBack_advanced_action_3">Home button</string>
-    <string name="aac_talkBack_advanced_action_4">Back button</string>
-    <string name="aac_talkBack_advanced_action_5">Scroll forward, if the view is longer than one page</string>
-    <string name="aac_talkBack_advanced_action_6">Scroll backwards, if the view is longer than one page</string>
+    <string name="aac_talkBack_advanced_action_1"><i><b>Up then down:</b></i> Highlight first element on the screen</string>
+    <string name="aac_talkBack_advanced_action_2"><i><b>Down then up:</b></i> Highlight the last element on the screen</string>
+    <string name="aac_talkBack_advanced_action_3"><i><b>Up then left:</b></i> Home button</string>
+    <string name="aac_talkBack_advanced_action_4"><i><b>Down then left:</b></i> Back button</string>
+    <string name="aac_talkBack_advanced_action_5"><i><b>Right then left:</b></i> Scroll forward, if the view is longer than one page</string>
+    <string name="aac_talkBack_advanced_action_6"><i><b>Left then right:</b></i> Scroll backwards, if the view is longer than one page</string>
 
     <!-- Separator Heading Story -->
     <string name="aac_separator_heading_title">Demos</string>
@@ -254,7 +258,7 @@
 
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
