@@ -81,6 +81,8 @@
 
     <color name="aac_action_bar_background">@color/aac_deque_gray</color>
 
+    <color name="aac_table_divider_color">@color/aac_deque_dark_blue</color>
+
     <color name="aac_worldspace_blue">#083378</color>
     <color name="aac_worldspace_white">#F2F2F4</color>
     <color name="aac_worldspace_orange">#EF611A</color>
