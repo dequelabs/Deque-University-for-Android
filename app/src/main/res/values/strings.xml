@@ -212,7 +212,7 @@
     <string name="aac_talkBack_demos_step4_paragraph_1">Tap and hold on the screen. Now move your finger around to explore the views this way. Once you lift your finger, whichever view was under it last will be highlighted.</string>
     <string name="aac_talkBack_demos_imageView2_cont_desc">@string/aac_cont_desc_fixed_dog_cont_desc</string>
     <string name="aac_talkBack_demos_step4_paragraph_2">Continue to explore the screen by touch, but at the end highlight the \"Advanced\" tab below.</string>
-    <string name="aac_talkBack_demos_step5_paragraph">Once a clickable view, such as the \"Advanced\" tab below, is highlighted, double tap the screen anywhere to click on the tab and navigate to the next tab.</string>
+    <string name="aac_talkBack_demos_step5_paragraph">Once a clickable view, such as the EditText above, is highlighted, double tap the screen anywhere to perform a click action. Navigate to the EditText above (there are multiple ways to do this!) and double tap to edit it.</string>
     <string name="aac_talkBack_demos_test_paragraph">Click on this icon in the upper right hand corner to simulate what it\'s like to rely on TalkBack to navigate through the screen. See if you can navigate to different views and screens using your new <i>TalkBack</i> skills.</string>
 
     <!-- TalkBack Advanced Tab -->

@@ -92,13 +92,6 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/aac_global_border"
-                android:text="@string/aac_talkBack_demos_step2_paragraph_2"
-                android:textAppearance="@style/AACTextAppearance.body" />
-
         </LinearLayout>
 
         <LinearLayout
