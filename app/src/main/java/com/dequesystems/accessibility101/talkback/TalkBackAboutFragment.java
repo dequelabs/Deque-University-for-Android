@@ -26,5 +26,4 @@ public class TalkBackAboutFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_talk_back_about, container, false);
     }
 
-
 }

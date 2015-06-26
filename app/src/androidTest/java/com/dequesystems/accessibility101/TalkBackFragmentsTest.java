@@ -10,18 +10,19 @@ import android.widget.TabHost;
  */
 public class TalkBackFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
+    private MainActivity mActivity;
     private TabHost mTabHost;
     private StoryManager mStoryManager;
 
-    public TalkBackFragmentsTest(){
+    public TalkBackFragmentsTest() {
         super(MainActivity.class);
     }
 
     @Override
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
         super.setUp();
 
-        MainActivity mActivity = getActivity();
+        mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();
@@ -32,17 +33,19 @@ public class TalkBackFragmentsTest extends ActivityInstrumentationTestCase2<Main
     }
 
     @UiThreadTest
-    public void testTabs(){
+    public void testTabs() {
         mStoryManager.setActiveStory(1, mTabHost);
 
-        mTabHost.setCurrentTab(0);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null",  mTabHost.getTabContentView());
-        ;
-        mTabHost.setCurrentTab(1);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " demos tab is null", mTabHost.getTabContentView());
+        String tabTitle;
 
-        mTabHost.setCurrentTab(2);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " advanced tab is null", mTabHost.getTabContentView());
+        tabTitle = mActivity.getString(R.string.aac_tab_title_about);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+
+        tabTitle = mActivity.getString(R.string.aac_talkBack_tab_title_demo);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " demos tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+
+        tabTitle = mActivity.getString(R.string.aac_talkBack_tab_title_advanced);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " advanced tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
 
 }
