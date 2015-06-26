@@ -5,23 +5,25 @@ import android.test.UiThreadTest;
 import android.widget.TabHost;
 
 /*
- * Created by melindakothbauer on 6/2/15.
+ * Created by melinda.kothbauer@deque.com on 6/2/15.
+ * Tests Introduction Story fragment
  */
 
-public class AppIntroductionFragmentTest extends ActivityInstrumentationTestCase2<MainActivity>{
+public class AppIntroductionFragmentTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
-    private static TabHost mTabHost;
-    private static StoryManager mStoryManager;
+    private TabHost mTabHost;
+    private MainActivity mActivity;
+    private StoryManager mStoryManager;
 
-    public AppIntroductionFragmentTest(){
+    public AppIntroductionFragmentTest() {
         super(MainActivity.class);
     }
 
     @Override
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
         super.setUp();
 
-        MainActivity mActivity = getActivity();
+        mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();
@@ -32,14 +34,13 @@ public class AppIntroductionFragmentTest extends ActivityInstrumentationTestCase
     }
 
     @UiThreadTest
-    public void testTabs(){
+    public void testTabs() {
+            mStoryManager.setActiveStory(0, mTabHost);
 
-        for(int i = 0; i < 2; i++){
-            mStoryManager.setActiveStory(i, mTabHost); // checks both instances where the introduction is the current story due to the Deque logo being the first item in nav. drawer
+            String tabTitle;
 
-            mTabHost.setCurrentTab(0);
-            assertNotNull(mStoryManager.getActiveStory().getTitle() + " view is null", mTabHost.getTabContentView());
-        }
+            tabTitle = mActivity.getString(R.string.aac_intro_tab_1);
+            assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
     }
 

@@ -5,11 +5,13 @@ import android.test.UiThreadTest;
 import android.widget.TabHost;
 
 /**
- * Created by melindakothbauer on 6/5/15.
+ * Created by melinda.kothbauer@deque.com on 6/5/15.
+ * Tests EditText Story Fragments
  */
 public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
     private TabHost mTabHost;
+    private MainActivity mActivity;
     private StoryManager mStoryManager;
 
     public EditTextFragmentsTest(){
@@ -20,7 +22,7 @@ public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<Main
     public void setUp() throws Exception{
         super.setUp();
 
-        MainActivity mActivity = getActivity();
+        mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();
@@ -34,14 +36,16 @@ public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<Main
     public void testTabs(){
         mStoryManager.setActiveStory(5, mTabHost);
 
-        mTabHost.setCurrentTab(0);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mTabHost.getTabContentView());
+        String tabTitle;
 
-        mTabHost.setCurrentTab(1);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " broken tab is null", mTabHost.getTabContentView());
+        tabTitle = mActivity.getString(R.string.aac_tab_title_about);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
-        mTabHost.setCurrentTab(2);
-        assertNotNull(mStoryManager.getActiveStory().getTitle()+ " fixed tab is null", mTabHost.getTabContentView());
+        tabTitle = mActivity.getString(R.string.aac_tab_title_broken);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " demos tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+
+        tabTitle = mActivity.getString(R.string.aac_tab_title_fixed);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " advanced tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
 
 

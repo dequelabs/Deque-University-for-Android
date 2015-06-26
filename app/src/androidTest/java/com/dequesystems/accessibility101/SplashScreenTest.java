@@ -8,7 +8,8 @@ import android.util.Log;
 import android.widget.ImageView;
 
 /**
- * Created by melindakothbauer on 6/1/15.
+ * Created by melinda.kothbauer@deque.com on 6/1/15.
+ * Tests Splash Screen
  */
 public class SplashScreenTest extends ActivityInstrumentationTestCase2<SplashScreen> {
 
