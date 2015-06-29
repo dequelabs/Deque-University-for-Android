@@ -40,7 +40,7 @@ public class AppIntroductionFragmentTest extends ActivityInstrumentationTestCase
             String tabTitle;
 
             tabTitle = mActivity.getString(R.string.aac_intro_tab_1);
-            assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+            assertNotNull(mStoryManager.getActiveStory().getTitle() + " intro tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
     }
 

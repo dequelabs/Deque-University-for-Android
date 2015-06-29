@@ -42,10 +42,10 @@ public class ContDescFragmentsTest extends ActivityInstrumentationTestCase2<Main
         assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
         tabTitle = mActivity.getString(R.string.aac_tab_title_broken);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " demos tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " broken tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
         tabTitle = mActivity.getString(R.string.aac_tab_title_fixed);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " advanced tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " fixed tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
 
 }
