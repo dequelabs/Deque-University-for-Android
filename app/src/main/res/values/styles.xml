@@ -16,7 +16,6 @@
         <item name="android:background">@color/aac_action_bar_background</item>
         <item name="background">@color/aac_action_bar_background</item>
 
-
         <item name="android:titleTextStyle">@style/AACAppTheme.ActionBar.TitleTextStyle</item>
         <item name="titleTextStyle">@style/AACAppTheme.ActionBar.TitleTextStyle</item>
 

@@ -26,7 +26,7 @@ Feature: Login feature
 	@TabbedNavigation @all
 	Scenario: The Tabbed Navigation Story is Accessible
 		* I press "Tabbed Navigation"
-		* I Press "Fixed"
+		* I press "Fixed"
 		* I perform DQTest all
 		* I press "Broken"
 		* I perform DQTest all
