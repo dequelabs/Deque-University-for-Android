@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_labels_about_paragraph_1"
+                android:contentDescription="@string/aac_labels_about_paragraph_1_cont_desc"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:id="@+id/aacTextView2" />
 

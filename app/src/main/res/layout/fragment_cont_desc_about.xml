@@ -15,6 +15,7 @@
             android:layout_margin="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
             android:text="@string/aac_cont_desc_about_intro"
+            android:contentDescription="@string/aac_cont_desc_about_intro_cont_desc"
             android:padding="@dimen/aac_global_border"
             android:textAppearance="@style/AACTextAppearance.body"/>
 
