@@ -1,10 +1,10 @@
 package com.dequesystems.accessibility101.tabbednavigation;
 
 
+import android.app.Fragment;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ import com.dequesystems.accessibility101.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabbedNavigationAboutFragment extends Fragment{
+public class TabbedNavigationAboutFragment extends Fragment {
 
     private TabHost mTabHost;
 
@@ -49,8 +49,8 @@ public class TabbedNavigationAboutFragment extends Fragment{
         mTabHost.setup();
 
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tab1).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_cat_tab_title)));
-        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tab1).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
-        mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tab1).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
+        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.just4).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_dog_tab_title)));
+        mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.PREVIEW).setIndicator(createTabIndicator(mTabHost.getContext(), R.string.aac_tab_nav_fish_tab_title)));
 
         TextView textView = (TextView) mTabHost.getCurrentTabView().findViewById(R.id.aac_tab_nav_tab_title);
         textView.setTextColor(getResources().getColor(R.color.aac_tab_bar_selected));
@@ -93,7 +93,7 @@ public class TabbedNavigationAboutFragment extends Fragment{
                         color = getResources().getColor(R.color.aac_demo_tab_bar_dimmed);
                     }
 
-                    if(textView != null) textView.setTextColor(color);
+                    if (textView != null) textView.setTextColor(color);
                 }
 
             }

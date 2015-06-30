@@ -5,21 +5,21 @@ import android.test.UiThreadTest;
 import android.widget.TabHost;
 
 /**
- * Created by melinda.kothbauer@deque.com on 6/5/15.
- * Tests EditText Story Fragments
+ * Created by melinda.kothbauer@deque.com on 6/25/15.
+ * Tests the TalkBack story's fragments
  */
-public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity> {
+public class TalkBackFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
-    private TabHost mTabHost;
     private MainActivity mActivity;
+    private TabHost mTabHost;
     private StoryManager mStoryManager;
 
-    public EditTextFragmentsTest(){
+    public TalkBackFragmentsTest() {
         super(MainActivity.class);
     }
 
     @Override
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
         super.setUp();
 
         mActivity = getActivity();
@@ -33,20 +33,19 @@ public class EditTextFragmentsTest extends ActivityInstrumentationTestCase2<Main
     }
 
     @UiThreadTest
-    public void testTabs(){
-        mStoryManager.setActiveStory(5, mTabHost);
+    public void testTabs() {
+        mStoryManager.setActiveStory(1, mTabHost);
 
         String tabTitle;
 
         tabTitle = mActivity.getString(R.string.aac_tab_title_about);
         assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
-        tabTitle = mActivity.getString(R.string.aac_tab_title_broken);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " broken tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+        tabTitle = mActivity.getString(R.string.aac_talkBack_tab_title_demo);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " demos tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
-        tabTitle = mActivity.getString(R.string.aac_tab_title_fixed);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " fixed tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+        tabTitle = mActivity.getString(R.string.aac_talkBack_tab_title_advanced);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " advanced tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
-
 
 }

@@ -31,7 +31,7 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 
 	sleep(1.0) #TODO: This shouldn't be necessary.  Need to fix this in the A11yService
 
-	if (response.body.include?('FAIL'))
+	if (response.body.include?('FAIL') || response.body.include?('WARN'))
 		responseObject = JSON.parse(response.body)
 		
 		if (dq_html_output)

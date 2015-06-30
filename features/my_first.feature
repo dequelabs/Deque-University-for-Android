@@ -29,7 +29,7 @@ Feature: Login feature
 		* I Press "Fixed"
 		* I perform DQTest all
 		* I press "Broken"
-		* I perform DQTest all		* I perform DQTest all
+		* I perform DQTest all
 
 	@AcronymAnnouncement @all
 	Scenario: The Acronym Announcement Story is Accessible
