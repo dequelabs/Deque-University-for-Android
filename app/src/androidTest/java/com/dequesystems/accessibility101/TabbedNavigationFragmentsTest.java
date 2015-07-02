@@ -11,6 +11,7 @@ public class TabbedNavigationFragmentsTest extends ActivityInstrumentationTestCa
 
     private TabHost mTabHost;
     private StoryManager mStoryManager;
+    private MainActivity mActivity;
 
     public TabbedNavigationFragmentsTest(){
         super(MainActivity.class);
@@ -20,7 +21,7 @@ public class TabbedNavigationFragmentsTest extends ActivityInstrumentationTestCa
     public void setUp() throws Exception{
         super.setUp();
 
-        MainActivity mActivity = getActivity();
+        mActivity = getActivity();
         assertNotNull("mActivity is null", mActivity);
 
         mTabHost = mActivity.getTabHost();
@@ -34,14 +35,16 @@ public class TabbedNavigationFragmentsTest extends ActivityInstrumentationTestCa
     public void testTabs(){
         mStoryManager.setActiveStory(6, mTabHost);
 
-        mTabHost.setCurrentTab(0);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mTabHost.getTabContentView());
+        String tabTitle;
 
-        mTabHost.setCurrentTab(1);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " broken tab is null", mTabHost.getTabContentView());
+        tabTitle = mActivity.getString(R.string.aac_tab_title_about);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " about tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
 
-        mTabHost.setCurrentTab(2);
-        assertNotNull(mStoryManager.getActiveStory().getTitle() + " fixed tab is null", mTabHost.getTabContentView());
+        tabTitle = mActivity.getString(R.string.aac_tab_title_broken);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " broken tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
+
+        tabTitle = mActivity.getString(R.string.aac_tab_title_fixed);
+        assertNotNull(mStoryManager.getActiveStory().getTitle() + " fixed tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
 
 }
