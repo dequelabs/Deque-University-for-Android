@@ -18,7 +18,7 @@ Runs the calabash-android tests in the current directory.
 
     -h          display help
     -d DEVICE   Target Device.  Default targets all devices.  No argument runs first device only.
-    -s TAG		Scenario tag to run.  Valid: {all, EditText, ContDesc, Labels}
+    -s TAG		Scenario tag to run.  Valid: {all, EditText, ContDesc, Labels, TabbedNavigation, AcronymAnnouncement}
     -t 			Enable terminal output instead of HTML Report.
     -r 			Repeat tests forever.
 
