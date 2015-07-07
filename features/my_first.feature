@@ -3,38 +3,38 @@ Feature: Login feature
   	Scenario: The Labels Story is Accessible
     	When I press "Labels"
 	    When I press "Fixed"
-	    Then I perform DQTest all
+	    Then I perform DQTest 
 	    Then I press "Broken"
-	    Then I perform DQTest all
+	    Then I perform DQTest 
 
 	@ContDesc @all
 	Scenario: The Content Descriptions Story is Accessible
 		* I press "Content Descriptions"
 		* I press "Fixed"
-		* I perform DQTest all
+		* I perform DQTest 
 		* I press "Broken"
-		* I perform DQTest all
+		* I perform DQTest 
 
 	@EditText @all
 	Scenario: The Edit Texts Story is Accessible
 		* I press "Edit Texts"
 		* I press "Fixed"
-		* I perform DQTest all
+		* I perform a silent DQTest 
 		* I press "Broken"
-		* I perform DQTest all
+		* I perform DQTest ?ruleEditText=true&unspecified=false
 
 	@TabbedNavigation @all
 	Scenario: The Tabbed Navigation Story is Accessible
 		* I press "Tabbed Navigation"
 		* I press "Fixed"
-		* I perform DQTest all
+		* I perform DQTest 
 		* I press "Broken"
-		* I perform DQTest all
+		* I perform DQTest 
 
 	@AcronymAnnouncement @all
 	Scenario: The Acronym Announcement Story is Accessible
 		* I press "Acronym Announcement"
 		* I press "Fixed"
-		* I perform DQTest all
+		* I perform DQTest 
 		* I press "Broken"
-		* I perform DQTest all
+		* I perform DQTest 

@@ -17,9 +17,23 @@ ARGV.each_with_index { |value, index|
 	end
 }
 
-Then(/^I perform DQTest (.*)$/) do |arg|
+def getHtmlString(results, statusString, colorString) 
+	htmlString = ""
 
-	uri = URI.parse('http://localhost:' + port_number.to_s + '/a11ytest')
+	results.each { |result|
+		htmlString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + " </font></b>" + result["message"] + "</p>")
+
+		result["nodes"].each { |node|
+			htmlString.concat("<blockquote><i>" + node + "</i></blockquote>")
+		}
+	}
+
+	return htmlString
+end
+
+def runTestWithURL(url, silent, html_output) 
+
+	uri = URI.parse(url)
 	http = Net::HTTP.new(uri.host, uri.port)
 	request = Net::HTTP::Get.new(uri.request_uri)
 
@@ -29,34 +43,33 @@ Then(/^I perform DQTest (.*)$/) do |arg|
 		raise "Could not connect to Accessibility Analyzer service on device.  Is it running?"
 	end
 
-	sleep(1.0) #TODO: This shouldn't be necessary.  Need to fix this in the A11yService
+	responseObject = JSON.parse(response.body)
+	
+	if (html_output)
+		htmlString = ""
 
-	if (response.body.include?('FAIL') || response.body.include?('WARN'))
-		responseObject = JSON.parse(response.body)
-		
-		if (dq_html_output)
-			htmlString = ""
+		htmlString.concat(getHtmlString(responseObject["fail"], "FAIL", "red"))
+		htmlString.concat(getHtmlString(responseObject["warn"], "WARN", "yellow"))
+		htmlString.concat(getHtmlString(responseObject["pass"], "PASS", "green"))
 
-			responseObject["ruleResults"].each { |result|
+		puts htmlString
+	else 
+		puts response.body
+	end
 
-				colorString = "red"
-				
-				if (result["status"] == "PASS")
-					colorString = "green"
-				end
-					
-				htmlString.concat("<p><b><font color=\"" + colorString + "\">" + result["status"] + "</font></b> " + result["message"]+ "</b></p>")
-
-				result["failedNodes"].each { |failedNode|
-					htmlString.concat("<blockquote><i>" + failedNode + "</i></blockquote>")
-				}
-			}
-
-			puts htmlString
-		else 
-			puts response.body
-		end
-
+	if (!silent && responseObject["testStatus"] == "FAIL")
 		raise "Deque Accessibility Test Failed"
 	end
+end
+
+Then(/^I perform DQTest$/) do 
+	runTestWithURL('http://localhost:' + port_number.to_s + '/a11ytest', false, dq_html_output)
+end
+
+Then(/^I perform DQTest (.*)$/) do |arg|
+	runTestWithURL('http://localhost:' + port_number.to_s + '/a11ytest' + arg.to_s, false, dq_html_output)	
+end
+
+Then(/^I perform a silent DQTest$/) do 
+	runTestWithURL('http://localhost:' + port_number.to_s + '/a11ytest', true, dq_html_output)
 end
