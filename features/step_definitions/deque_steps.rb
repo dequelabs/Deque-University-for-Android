@@ -9,6 +9,8 @@ if (!defined? port_number || port_number == 0)
 	port_number=38383
 end
 
+device_test_url='http://localhost:' + port_number.to_s + '/a11ytest'
+
 ARGV.each_with_index { |value, index| 
 	if (value == "--format")
 		if (ARGV[index+1] == "html")
@@ -63,13 +65,13 @@ def runTestWithURL(url, silent, html_output)
 end
 
 Then(/^I perform DQTest$/) do 
-	runTestWithURL('http://localhost:' + port_number.to_s + '/a11ytest', false, dq_html_output)
+	runTestWithURL(device_test_url, false, dq_html_output)
 end
 
 Then(/^I perform DQTest (.*)$/) do |arg|
-	runTestWithURL('http://localhost:' + port_number.to_s + '/a11ytest' + arg.to_s, false, dq_html_output)	
+	runTestWithURL(device_test_url + arg.to_s, false, dq_html_output)	
 end
 
-Then(/^I perform a silent DQTest$/) do 
-	runTestWithURL('http://localhost:' + port_number.to_s + '/a11ytest', true, dq_html_output)
+Then(/^I perform silent DQTest$/) do 
+	runTestWithURL(device_test_url, true, dq_html_output)
 end
