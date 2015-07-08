@@ -75,3 +75,7 @@ end
 Then(/^I perform silent DQTest$/) do 
 	runTestWithURL(device_test_url, true, dq_html_output)
 end
+
+Then(/^I perform silent DQTest (.*)$/) do |arg|
+	runTestWithURL(device_test_url + arg.to_s, false, dq_html_output)	
+end
