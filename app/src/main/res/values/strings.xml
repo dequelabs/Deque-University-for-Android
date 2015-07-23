@@ -260,6 +260,22 @@
 
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
 
+
+    <!-- ListView Story -->
+    <string name="aac_listView_title">ListViews</string>
+
+    <!-- About Tab Strings -->
+    <string name="aac_listView_about_intro"><i>ListViews</i> are a popular layout used in the Android world to display a fixed or dynamic list of data. They often populate contacts apps, navigation drawers, and setting menus. <i>ListViews</i> are not inherently accessible, especially when other objects, such as switches or buttons, are imbeded in <i>ListView</i> entries.</string>
+
+    <string name="aac_listView_about_heading_1">Controls in ListViews</string>
+
+    <string name="aac_listView_about_paragraph_1">When controls, such as switches, are embedded in <i>ListView</i> entries, they are often not accessible. If the switch is independent of the text associated with it, <i>TalkBack</i> users are not able to gain all the necessary information at the right time when scrolling through a <i>ListView</i>, nor are they able to activate the control as efficiently as they could. To fix this issue, FILL IN CORRECT INFO HERE</string>
+
+    <string name="aac_listView_about_list_item_1">Dog Image</string>
+    <string name="aac_listView_about_list_item_2">Cat Image</string>
+    <string name="aac_listView_about_list_item_3">Fish Image</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

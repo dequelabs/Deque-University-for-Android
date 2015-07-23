@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/aac_global_border"
+    android:orientation="horizontal">
+
+    <TextView android:id="@+id/listView_item_switch_textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:padding="@dimen/aac_global_border"
+        android:textAppearance="@style/AACTextAppearance.listView"/>
+
+    <Switch android:id="@+id/listView_item_switch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:padding="@dimen/aac_global_border" />
+
+</LinearLayout>

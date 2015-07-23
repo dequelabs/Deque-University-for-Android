@@ -29,6 +29,9 @@ import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.accessibility101.labels.LabelsBrokenFragment;
 import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
+import com.dequesystems.accessibility101.listviews.ListViewAboutFragment;
+import com.dequesystems.accessibility101.listviews.ListViewBrokenFragment;
+import com.dequesystems.accessibility101.listviews.ListViewFixedFragment;
 import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment;
 import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationBrokenFragment;
 import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedFragment;
@@ -100,6 +103,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
         this.add(tempStory);
 
+        tempStory = new Story(mActivity.getString(R.string.aac_listView_title), true);
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new ListViewAboutFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new ListViewBrokenFragment());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new ListViewFixedFragment());
+        this.add(tempStory);
     }
 
     @Override
@@ -130,23 +138,27 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_labels_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 1;
-            tabCount = 5;
+            tabCount = 6;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_cont_desc_title))){
             imageView.setImageResource(R.drawable.aac_cont_desc_icon);
             tabNumber = 2;
-            tabCount = 5;
+            tabCount = 6;
         } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_edit_text_title))){
             imageView.setImageResource(R.drawable.aac_edit_text_icon);
             tabNumber = 3;
-            tabCount = 5;
+            tabCount = 6;
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_tab_nav_title))){
             imageView.setImageResource(R.drawable.aac_labels_icon);
             tabNumber = 4;
-            tabCount = 5;
+            tabCount = 6;
         }else if(text.equalsIgnoreCase(mActivity.getString(R.string.aac_acronym_annoucement_title))){
             imageView.setImageResource(R.drawable.aac_broken_icon);
             tabNumber = 5;
-            tabCount = 5;
+            tabCount = 6;
+        } else if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_listView_title))) {
+            imageView.setImageResource(R.drawable.ic_drawer);
+            tabNumber = 6;
+            tabCount = 6;
         }
 
         if (!text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){

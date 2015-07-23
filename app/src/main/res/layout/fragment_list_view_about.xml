@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aac_story_background"
+    tools:context="com.dequesystems.accessibility101.listviews.ListViewAboutFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_worldspace_white"
+            android:padding="@dimen/aac_global_border"
+            android:text="@string/aac_listView_about_intro"
+            android:textAppearance="@style/AACTextAppearance.body" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_listView_about_heading_1"
+                android:textAppearance="@style/AACTextAppearance.heading" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_listView_about_paragraph_1"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/aac_listView_about_list_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/aac_global_border"
+                    android:layout_weight="1"
+                    android:background="@color/aac_deque_pale_blue"
+                    android:padding="@dimen/aac_global_border" />
+
+                <ImageView
+                    android:id="@+id/aac_listView_about_imageView"
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dog" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

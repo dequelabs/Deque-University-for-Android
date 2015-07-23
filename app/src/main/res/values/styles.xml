@@ -43,6 +43,10 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="AACTextAppearance.listView">
+        <item name="android:textSize">15sp</item>
+    </style>
+
     <style name="AACTextAppearance.navigation_drawer_heading">
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>

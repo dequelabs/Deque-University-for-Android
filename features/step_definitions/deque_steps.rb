@@ -31,7 +31,7 @@ def getHtmlString(results, statusString, colorString)
 	return htmlString
 end
 
-def runTestWithURL(url, silent, html_output) 
+def runTestWithURL(url, silent, html_output) ==
 
 	uri = URI.parse(url)
 	http = Net::HTTP.new(uri.host, uri.port)
