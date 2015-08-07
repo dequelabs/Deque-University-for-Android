@@ -36,12 +36,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/aac_acronym_fixed_heading_1"
-                android:textAppearance="@style/AACTextAppearance.heading"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_acronym_the_fix"
