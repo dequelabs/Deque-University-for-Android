@@ -160,7 +160,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
-            android:background="@color/aac_worldspace_white"
+            android:background="@color/aac_deque_yellow"
             android:orientation="vertical">
 
             <LinearLayout
@@ -231,7 +231,6 @@
                 android:text="@string/aac_edit_text_fixed_conclusion_1" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 
