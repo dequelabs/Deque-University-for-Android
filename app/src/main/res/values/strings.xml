@@ -47,7 +47,7 @@
 
     <string name="aac_labels_content_description">This is a content description.</string>
 
-    <string name="aac_labels_about_introduction">In the Android Accessibility world there are multiple ways of providing labels or alternate text for a control.  A label is not an Android element; it is a word chosen to represent the presence of either the <i>label for</i> or the <i>content description</i> attribute. While the <i>content description</i> is the most basic, the <i>label for</i> attribute is generally preferred for controls.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  It is important to note that not all controls require a <i>content description</i>On the other hand, all controls that do not contain text as a primary feature of the control require a label of some kind.</string>
+    <string name="aac_labels_about_introduction">In Android Accessibility there are multiple ways of providing labels or alternate text for a control.  A label is not an Android element; it is a word chosen to represent the presence of either the <i>label for</i> or the <i>content description</i> attribute. While the <i>content description</i> is the most basic, the <i>label for</i> attribute is generally preferred for controls.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  It is important to note that not all controls require a <i>content description</i>On the other hand, all controls that do not contain text as a primary feature of the control require a label of some kind.</string>
 
     <string name="aac_labels_about_heading_1"><i>Content Description</i> Attribute</string>
     <string name="aac_labels_about_visible_text_1">Visible Text 1</string>
@@ -56,11 +56,11 @@
 
     <string name="aac_labels_about_heading_2">Label For Attribute</string>
     <string name="aac_labels_about_visible_text_2">Visible Text 2</string>
-    <string name="aac_labels_about_paragraph_2">The <i>label for</i> attribute allows you to link visual text labels with controls. TUsing this method, you create an association between the two elements instead of duplicating the text of the label in the control\'s <i>content description</i>. Then <i>Talkback</i> will announce the visible text and remove any ambiguity about which control a label belongs to.</string>
+    <string name="aac_labels_about_paragraph_2">The <i>label for</i> attribute allows you to link visual text labels with controls. TUsing this method, you create an association between the two elements instead of duplicating the text of the label in the control\'s <i>content description</i>. Then <i>TalkBack</i> will announce the visible text and remove any ambiguity about which control a label belongs to.</string>
 
     <string name="aac_labels_about_heading_3">Mixing Them Together</string>
     <string name="aac_labels_about_visible_text_3">Visible Text 3</string>
-    <string name="aac_labels_about_paragraph_3">Using both a <i>label for</i> and a <i>content description</i> is generally unnecessary. Moreover, using both could actually confuse the user. If a control requires mroe context than a simple lable can provide, it may be better to modify elements of your design. A <i>content description</i> can be used to group sets of controls that require additional labeling. Just be careful not to overload <i>TalkBack</i> users with too much or duplicated information.</string>
+    <string name="aac_labels_about_paragraph_3">Using both a <i>label for</i> and a <i>content description</i> is generally unnecessary. Moreover, using both could actually confuse the user. If a control requires more context than a simple label can provide, it may be better to modify elements of your design. A <i>content description</i> can be used to group sets of controls that require additional labeling. Just be careful not to overload <i>TalkBack</i> users with too much or duplicated information.</string>
 
     <string name="aac_labels_broken_content_heading">Background Color Components</string>
     <string name="aac_labels_setting_1">Red</string>
@@ -98,7 +98,7 @@
     <string name="aac_cont_desc_broken_cat_label">Here is a drawing of a cat.</string>
     <string name="aac_cont_desc_broken_conclusion_1">The first image in this example has duplicated information in the label and <i>content description</i>. The <i>TalkBack</i> user does not gain anything from having the same information read out twice and is instead bogged down by redundant informaiton.</string>
     <string name="aac_cont_desc_broken_conclusion_2">The second image in this example has a <i>content description</i>, so it is focusable using TalkBack. However, the <i>content description</i> is a blank string, so TalkBack describes the image by its image number and states that the image is unlabeled. TSuch information is not useful to the user. Unfortunately, Android Studio does not flag this as an accessibility warning.</string>
-    <string name="aac_cont_desc_broken_conclusion_3">The third image in this example is not focusable because it has a null <i>content description</i>. A <i>TalkBack</i> user would not even know that htis image exists. Android Studio flags this as an accessibility warning, as long as the check is enabled.</string>
+    <string name="aac_cont_desc_broken_conclusion_3">The third image in this example is not focusable because it has a null <i>content description</i>. A <i>TalkBack</i> user would not even know that this image exists. Android Studio flags this as an accessibility warning, as long as the check is enabled.</string>
 
     <!-- Fixed Tab Strings-->
     <string name="aac_cont_desc_fixed_heading_1">Look at these drawings of animals!</string>
@@ -257,16 +257,27 @@
     <string name="aac_tab_nav_dog_tab_title">Dog</string>
     <string name="aac_tab_nav_fish_tab_title">Fish</string>
 
-    <string name="aac_tab_nav_about_intro">Tabs can be implemented using the action bar or by utilizing the <i>TabHost</i> class. It is a useful tool for developers, but but you must add some features programmatically to make it accessible.  </string>
+    <string name="aac_tab_nav_about_intro">Tabs can be implemented using the action bar or by utilizing the <i>TabHost</i> class. It is a useful tool for developers, but you must add some features programmatically to make it accessible.  </string>
     <string name="aac_tab_nav_about_heading_1">Name, Role, Value, State</string>
     <string name="aac_tab_nav_demo_heading">Animal Images</string>
-    <string name="aac_tab_nav_about_paragraph_1">The tab bar at the bottom of this page has an added feature that forces <i>TalkBack</i> to announce the name, role, value and state of the selected tab. Alerting users to the name of the selected object is the only information provided by the app for <i>TalkBack</i> to announce. Alerrting users to the role of the selected object, namely that it is a tab, is necessary for two important reasons. Firstly, without knowing that the object is a tab, <i>TalkBack</i> users cannot know to expect content change. Secondly, without the knowledge that the selected object is a tab, <i>TalkBack</i> users do not know what they can do with the selected object. By announcing the value, meaning which tab of how many, and if the tab is currently selected, <i>TalkBack</i> users gain valuable information about what is on the screen and can decide what their next action should be.</string>
+    <string name="aac_tab_nav_about_paragraph_1">The tab bar at the bottom of this page has an added feature that forces <i>TalkBack</i> to announce the name, role, value and state of the selected tab. Alerting users to the name of the selected object is the only information provided by the app for <i>TalkBack</i> to announce. Alerting users to the role of the selected object, namely that it is a tab, is necessary for two important reasons. Firstly, without knowing that the object is a tab, <i>TalkBack</i> users cannot know to expect content change. Secondly, without the knowledge that the selected object is a tab, <i>TalkBack</i> users do not know what they can do with the selected object. By announcing the value, meaning which tab of how many, and if the tab is currently selected, <i>TalkBack</i> users gain valuable information about what is on the screen and can decide what their next action should be.</string>
 
-    <string name="aac_tab_nav_broken_conclusion">Notice that <i>Talkback</i> does not announce anything other than the visible text, the name, when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information about the role, value, or state of the object and do not know much about what is on the screen or what their options are.</string>
+    <string name="aac_tab_nav_broken_conclusion">Notice that <i>TalkBack</i> does not announce anything other than the visible text, the name, when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information about the role, value, or state of the object and do not know much about what is on the screen or what their options are.</string>
 
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="aac_important_about_intro">The <i>important for accessibility</i> attribute allows you to hide content from accessibility services.  When set to <i>no</i> accessibility services that inspect the view hierarchy will not get this information.  If set to <i>noHideDescendants</i> you can have entire layouts ignored.  While this attribute is powerful, it is important to use this carefully.  It is easy to create accessibility violations by misusing this attribute.  In general you want to leave this set to <i>auto</i>.  Below are examples of behaviors you get when you use no, noHideDescendants, and yes.</string>
+
+    <string name="aac_important_title">Important for Accessibility</string>
+
+    <string name="aac_important_heading_no">NO</string>
+    <string name="aac_important_paragraph_no">When you set this attribute to <i>no</i> you are hiding information from TalkBack that it normally has access to.  This is generally a poor idea.  Notice how the button below, even thought it is dimmed, the fact that it is there and dimmed is important information!  Additionally, sighted users using TalkBack will be very confused why they cannot highlight visible onscreen controls.</string>
+
+    <string name="aac_important_heading_yes">YES</string>
+    <string name="aac_important_paragraph_yes">When you set <i>important for accessibility</i> to yes, you are able to communicate information to TalkBack that normally would be ignored.  Notice how below, with TalkBack on, we cannot individually focus "Visible Text 2" and the ON/OFF Switch.  They are focused as one element.  This is because we have set <i>important for accessibility</i> to yes.</string>
+
+    <string name="aac_important_heading_no_hd">No Hide Descendants</string>
+    <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  Notice how TalkBack cannot focus any of the views below.</string>
 
 </resources>
