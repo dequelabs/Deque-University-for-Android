@@ -9,14 +9,13 @@ import android.view.ViewGroup;
 import com.dequesystems.accessibility101.R;
 
 /**
- * Created by chrismcmeeking on 10/7/15.
+ * Created by chrismcmeeking on 10/8/15.
  */
-public class FragmentImportantAbout extends Fragment {
+public class FragmentImportantFixed extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View mainView = inflater.inflate(R.layout.fragment_important_about, container, false);
+        View mainView = inflater.inflate(R.layout.fragment_important_fixed, container, false);
 
         return mainView;
     }

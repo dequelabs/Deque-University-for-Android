@@ -26,6 +26,8 @@ import com.dequesystems.accessibility101.edittexts.EditTextAboutFragment;
 import com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment;
 import com.dequesystems.accessibility101.edittexts.EditTextFixedFragment;
 import com.dequesystems.accessibility101.important.FragmentImportantAbout;
+import com.dequesystems.accessibility101.important.FragmentImportantBroken;
+import com.dequesystems.accessibility101.important.FragmentImportantFixed;
 import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.accessibility101.labels.LabelsBrokenFragment;
@@ -52,8 +54,6 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
     MainActivity mActivity;
 
     private Story mActiveStory = null;
-
-    private static final int INTRO_STORY_COUNT = 2;
 
     StoryManager(MainActivity activity) {
         super(activity, 0, /*objects*/new ArrayList<Story>());
@@ -105,8 +105,8 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         tempStory = new Story(mActivity.getString(R.string.aac_important_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new FragmentImportantAbout());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new FragmentImportantAbout());
-        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new FragmentImportantAbout());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new FragmentImportantBroken());
+        tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new FragmentImportantFixed());
         this.add(tempStory);
     }
 
@@ -121,8 +121,6 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         ImageView imageView = (ImageView) navDrawerCellLayout.findViewById(R.id.aac_navigation_drawer_cell_image_view);
 
         String text = textView.getText().toString();
-        int tabCount = position >= INTRO_STORY_COUNT ? INTRO_STORY_COUNT : getCount() - INTRO_STORY_COUNT;
-        int tabNumber = position >= INTRO_STORY_COUNT ? position : position - INTRO_STORY_COUNT;
 
         if (text.equalsIgnoreCase(mActivity.getString(R.string.aac_intro_title))){
             imageView.setImageResource(R.drawable.aac_intro_icon);
@@ -145,8 +143,10 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             imageView.setImageResource(R.drawable.aac_about_icon);
         }
 
+        final int DEMO_SPLIT_POSITION = 3;
+        final int tabNumber = position < DEMO_SPLIT_POSITION ? position + 1 : position;
         if (!text.equalsIgnoreCase(mActivity.getString(R.string.aac_separator_heading_title))){
-            navDrawerCellLayout.setContentDescription(text + ", tab " + tabNumber + " of " + tabCount);
+            navDrawerCellLayout.setContentDescription(text + ", tab " + tabNumber + " of " + (getCount() - 1));
         }else{
             navDrawerCellLayout.setContentDescription(text);
         }
