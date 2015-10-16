@@ -106,7 +106,15 @@
             android:layout_height="wrap_content"
             android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_cont_desc_broken_conclusion_1_heading"
+                android:background="@color/aac_background_text"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,6 +126,13 @@
                 android:layout_margin="5dp" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_cont_desc_broken_conclusion_2_heading"
+                android:background="@color/aac_background_text"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_cont_desc_broken_conclusion_2"
@@ -127,6 +142,13 @@
                 android:layout_margin="5dp" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_cont_desc_broken_conclusion_3_heading"
+                android:background="@color/aac_background_text"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_cont_desc_broken_conclusion_3"
@@ -134,6 +156,22 @@
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp" />
+
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_cont_desc_link_view_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:textAppearance="@style/AACTextAppearance.link"
+                android:text="@string/aac_cont_desc_wcag_link_1"/>
+
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_cont_desc_link_view_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:textAppearance="@style/AACTextAppearance.link"
+                android:text="@string/aac_cont_desc_wcag_link_2"/>
 
         </LinearLayout>
 

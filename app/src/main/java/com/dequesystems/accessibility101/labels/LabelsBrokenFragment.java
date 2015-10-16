@@ -3,17 +3,21 @@ package com.dequesystems.accessibility101.labels;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.dequesystems.accessibility101.R;
 
 public class LabelsBrokenFragment extends Fragment {
 
     private View mViewDemoContent;
+
+    private TextView mTextView1;
 
     private Switch mSwitchRed;
     private Switch mSwitchGreen;
@@ -24,6 +28,10 @@ public class LabelsBrokenFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View mView = inflater.inflate(R.layout.fragment_labels_broken, container, false);
+
+        mTextView1 = (TextView) mView.findViewById(R.id.aac_labels_link_view);
+
+        mTextView1.setMovementMethod(LinkMovementMethod.getInstance());
 
         mViewDemoContent = mView.findViewById(R.id.demoContent);
 
