@@ -35,6 +35,8 @@
     <string name="aac_labels_wcag_link"><a href ="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"></a>Understanding WCag 1.3.1</string>
     <string name="aac_cont_desc_wcag_link_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html"></a>Understanding WCag 1.1.1</string>
     <string name="aac_cont_desc_wcag_link_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html"></a>Understanding WCag 2.4.3</string>
+    <string name="aac_edit_text_wcag_link_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"></a>Understanding WCag 1.3.1</string>
+    <string name="aac_edit_text_wcag_link_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html"></a>Understanding WCag 3.3.6</string>
 
     <!-- Intro Story Strings-->
     <string name="aac_intro_title">Introduction</string>
@@ -143,8 +145,11 @@
 
     <!-- Broken Tab Strings -->
     <string name="aac_edit_text_broken_heading_1_demo">Complete Your Profile</string>
-    <string name="aac_edit_text_broken_conclusion_1">Notice that these <i>EditText</i> boxes have visible labels; however, these labels are not associated with the <i>EditText</i> boxes. A TalkBack user would be unsure which <i>EditText</i> requires which piece of information when scrolling through the objects on this page. </string>
-    <string name="aac_edit_text_broken_conclusion_2">These <i>EditText</i> boxes have visible text within them. However, the text is not part of the <i>hint</i> attribute, but rather coded to be pre-populated text in the <i>EditText</i>. Such text initially alerts both a <i>TalkBack</i> or <i>non-TalkBack</i> user to the information desired in the <i>EditText</i>, but it causes more problems than it solves. It is cumbersome to enter the data, not to mention that the <i>hint</i> is inaccessible once data has been entered. The descriptive text does not repopulate the field, nor does <i>TalkBack</i> announce it if a user deletes the data. Additionally, a <i>TalkBack</i> user would not know to delete the text already in the <i>EditText</i> because the initial readout sounds the same as if the text were a <i>hint</i>.</string>
+
+    <string name="aac_edit_text_broken_conclusion_1_heading">Label Association</string>
+    <string name="aac_edit_text_broken_conclusion_1">Notice that these <i>EditText</i> boxes have visible labels; however, these labels are not associated with the <i>EditText</i> boxes. A TalkBack user would be unsure which <i>EditText</i> requires which piece of information when scrolling through the objects on this page. This violates WCag 1.3.1; you can learn more about this in the link below.</string>
+    <string name="aac_edit_text_broken_conclusion_2_heading">Hard Coded Text</string>
+    <string name="aac_edit_text_broken_conclusion_2">These <i>EditText</i> boxes have visible text within them. However, the text is not part of the <i>hint</i> attribute, but rather coded to be pre-populated text in the <i>EditText</i>. Such text initially alerts both a <i>TalkBack</i> or <i>non-TalkBack</i> user to the information desired in the <i>EditText</i>, but it causes more problems than it solves. It is cumbersome to enter the data, not to mention that the <i>hint</i> is inaccessible once data has been entered. The descriptive text does not repopulate the field, nor does <i>TalkBack</i> announce it if a user deletes the data. Additionally, a <i>TalkBack</i> user would not know to delete the text already in the <i>EditText</i> because the initial readout sounds the same as if the text were a <i>hint</i>. This violates WCag 3.3.6, which you can learn more about in the link below.</string>
 
     <!-- Fixed Tab Strings -->
     <string name="aac_edit_text_fixed_heading_1_demo_1">Complete Your Profile</string>
