@@ -45,7 +45,7 @@
     <!-- Labels Story Strings-->
     <string name="aac_labels_title">Labels</string>
 
-    <string name="aac_labels_content_description">This is a content description.</string>
+    <string name="aac_labels_content_description">This is a content description.  Notice that by adding this content description we have made this important for accessibility, however, we can no longer focus the individual text views!</string>
 
     <string name="aac_labels_about_introduction">In Android Accessibility there are multiple ways of providing labels or alternate text for a control.  A label is not an Android element; it is a word chosen to represent the presence of either the <i>label for</i> or the <i>content description</i> attribute. While the <i>content description</i> is the most basic, the <i>label for</i> attribute is generally preferred for controls.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  It is important to note that not all controls require a <i>content description</i>On the other hand, all controls that do not contain text as a primary feature of the control require a label of some kind.</string>
 
@@ -267,17 +267,28 @@
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
 
 
-    <string name="aac_important_about_intro">The <i>important for accessibility</i> attribute allows you to hide content from accessibility services.  When set to <i>no</i> accessibility services that inspect the view hierarchy will not get this information.  If set to <i>noHideDescendants</i> you can have entire layouts ignored.  While this attribute is powerful, it is important to use this carefully.  It is easy to create accessibility violations by misusing this attribute.  In general you want to leave this set to <i>auto</i>.  Below are examples of behaviors you get when you use no, noHideDescendants, and yes.</string>
+
 
     <string name="aac_important_title">Important for Accessibility</string>
+
+    <string name="aac_important_about_intro">The <i>important for accessibility</i> attribute allows you to hide content from accessibility services.  When set to <i>no</i> accessibility services that inspect the view hierarchy will not get this information.  If set to <i>noHideDescendants</i> you can have entire layouts ignored.  While this attribute is powerful, it is important to use this carefully.  It is easy to create accessibility violations by misusing this attribute.  In general you want to leave this set to <i>auto</i>.  Below are examples of behaviors you get when you use no, noHideDescendants, and yes.</string>
 
     <string name="aac_important_heading_no">NO</string>
     <string name="aac_important_paragraph_no">When you set this attribute to <i>no</i> you are hiding information from TalkBack that it normally has access to.  This is generally a poor idea.  Notice how the button below, even thought it is dimmed, the fact that it is there and dimmed is important information!  Additionally, sighted users using TalkBack will be very confused why they cannot highlight visible onscreen controls.</string>
 
     <string name="aac_important_heading_yes">YES</string>
-    <string name="aac_important_paragraph_yes">When you set <i>important for accessibility</i> to yes, you are able to communicate information to TalkBack that normally would be ignored.  Notice how below, with TalkBack on, we cannot individually focus "Visible Text 2" and the ON/OFF Switch.  They are focused as one element.  This is because we have set <i>important for accessibility</i> to yes.</string>
+    <string name="aac_important_paragraph_yes">When you set <i>important for accessibility</i> to yes, you are able to communicate information to TalkBack that normally would be ignored.  With TalkBack on, focus moves to the layout, rather than the individual text views, because this layout is important for accessibility.  This can be useful for organizing information, however, in this instance we have probably captured too large of a group.  Finally, note that the control remains separately focusable.</string>
 
     <string name="aac_important_heading_no_hd">No Hide Descendants</string>
-    <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  Notice how TalkBack cannot focus any of the views below.</string>
+    <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  TalkBack will not focus any of the views below.</string>
+
+    <string name="aac_important_broken_paragraph">This is an interesting example.  First, we have set <i>important for accessibility</i> to yes for the layout.  This causes all text elements to get read out.  However, we have marked the <i>Green</i> layout as not important, as well as the <i>Red</i> switch.  This causes Red and Blue to get read when TalkBack reads out the information for the layout.  It also means that we cannot focus MOST of the switches in the layout.  Only the blue switch is focusable, and that any of these switches are there is not obvious!</string>
+
+    <string name="aac_important_broken_paragraph2">In this example we have left all <i>important for accessibility</i> to their default, except for the linear layout.  Notice how it is focusable, and reads off the heading, as well as Red, Green, Blue.  However, the switches are also individually focusable.  This is frustrating.  Drag your finger down the switches and listen!  Also, notice how the green outline on the layout showing accessibility focus, has encompassed information that <i>TalkBack</i> has not spoken.  This is confusing for sighted users.</string>
+
+    <string name="aac_important_content_heading_top">Background Color Component Top</string>
+    <string name="aac_important_content_heading_bottom">Background Color Component Bottom</string>
+
+    <string name="aac_important_fixed_paragraph"></string>
 
 </resources>
