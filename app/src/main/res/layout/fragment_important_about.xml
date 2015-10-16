@@ -1,0 +1,216 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dequesystems.accessibility101.labels.LabelsAboutFragment"
+    android:background="@color/aac_story_background"
+    android:fillViewport="false">
+
+    <LinearLayout android:id = "@+id/aac_labels_about_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:text="@string/aac_important_about_intro"
+            android:textAppearance="@style/AACTextAppearance.body"
+            android:background="@color/aac_background_text"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical"
+            android:background="@color/aac_background_text" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_important_heading_no" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_important_paragraph_no"
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:id="@+id/aacTextView2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:layout_margin="@dimen/aac_global_border"
+                android:elevation="@dimen/aac_elevation_level_2"
+                android:background="@color/aac_worldspace_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:text="@string/aac_labels_about_visible_text_1"
+                    android:layout_weight="1" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/aac_labels_content_description"
+                    android:importantForAccessibility="no"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical"
+            android:background="@color/aac_background_text" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_important_heading_yes" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_important_paragraph_yes"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:layout_margin="@dimen/aac_global_border"
+                android:elevation="@dimen/aac_elevation_level_2"
+                android:background="@color/aac_worldspace_white"
+                android:importantForAccessibility="yes">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:text="@string/aac_labels_about_visible_text_2"
+                    android:layout_weight="1" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/aac_labels_content_description"
+                    android:importantForAccessibility="no"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical"
+            android:background="@color/aac_background_text" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_important_heading_no_hd" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_important_paragraph_no_hd"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:layout_margin="@dimen/aac_global_border"
+                android:elevation="@dimen/aac_elevation_level_2"
+                android:background="@color/aac_worldspace_white"
+                android:importantForAccessibility="noHideDescendants">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:text="@string/aac_labels_about_visible_text_3"
+                    android:layout_weight="1" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/aac_labels_content_description"
+                    android:importantForAccessibility="no"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aac_background_text"
+            android:padding="@dimen/aac_global_border"
+            android:layout_margin="@dimen/aac_global_border"
+            android:elevation="@dimen/aac_elevation_level_1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_learn_more"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacLabelsTextView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.link"
+                    android:text="@string/aac_cont_desc_link"/>
+
+                <com.dequesystems.a11yframework.TextViewLink
+                    android:id="@+id/aacLabelsTextView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/aac_global_border"
+                    android:textAppearance="@style/AACTextAppearance.link"
+                    android:text="@string/aac_label_for_link"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
