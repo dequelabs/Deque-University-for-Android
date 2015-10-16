@@ -25,35 +25,37 @@ import org.w3c.dom.Text;
  */
 public class FragmentImportantFixed extends Fragment{
 
+    View mTopLayout;
+    TextView mTopHeading;
+    Switch mTopSwitch1;
+    Switch mTopSwitch2;
+    Switch mTopSwitch3;
 
+
+    Switch mBottomSwitch1;
+    Switch mBottomSwitch2;
+    Switch mBottomSwitch3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_important_fixed, container, false);
 
-        View topDemoContent = view.findViewById(R.id.demoContent);
+        mTopLayout = view.findViewById(R.id.aacImportantLayoutTopMain);
+        mTopHeading = (TextView) view.findViewById(R.id.aacImportantTopHeadingMain);
+        mTopSwitch1 = (Switch) view.findViewById(R.id.aacImportantTopSwitchSetting1);
+        mTopSwitch2 = (Switch) view.findViewById(R.id.aacImportantTopSwitchSetting2);
+        mTopSwitch3 = (Switch) view.findViewById(R.id.aacImportantTopSwitchSetting3);
 
-        TextView topDemoHeading = (TextView) view.findViewById(R.id.aac_important_fixed_heading_top);
+        String contentDescription = "";
 
-        Switch switchRed = (Switch) view.findViewById(R.id.switchRed);
-        Switch switchBlue = (Switch) view.findViewById(R.id.switchBlue);
-        Switch switchGreen = (Switch) view.findViewById(R.id.switchGreen);
+        contentDescription += mTopHeading.getText();
+        contentDescription += getTextFromLayout((ViewGroup)mTopSwitch1.getParent());
+        contentDescription += getTextFromLayout((ViewGroup)mTopSwitch2.getParent());
+        contentDescription += getTextFromLayout((ViewGroup)mTopSwitch3.getParent());
 
-        TextView textViewOne = (TextView) view.findViewById(R.id.aac_switch_label_one_top);
-        TextView textViewTwo = (TextView) view.findViewById(R.id.aac_switch_label_two_top);
-        TextView textViewThree = (TextView) view.findViewById(R.id.aac_switch_label_three_top);
+        mTopLayout.setContentDescription(contentDescription);
 
-        SwitchListener topSwitchListener = new SwitchListener(topDemoContent, switchRed, switchBlue, switchGreen);
-
-        switchRed.setOnCheckedChangeListener(topSwitchListener);
-        switchBlue.setOnCheckedChangeListener(topSwitchListener);
-        switchGreen.setOnCheckedChangeListener(topSwitchListener);
-
-        textViewOne.setContentDescription(textViewOne.getText() + ", " + topDemoHeading.getText());
-        textViewThree.setContentDescription(textViewThree.getText() + ", " + topDemoHeading.getText());
-        textViewTwo.setContentDescription(textViewTwo.getText() + ", " + topDemoHeading.getText());
-
-        View bottomDemoContent = view.findViewById(R.id.demoContent2);
+        View bottomDemoContent = view.findViewById(R.id.aacImportantLayoutBottomMain);
         TextView bottomHeading = (TextView) view.findViewById(R.id.aac_important_fixed_heading_bottom);
         Switch bottomSwitchRed = (Switch) view.findViewById(R.id.switchRed2);
         Switch bottomSwitchBlue = (Switch) view.findViewById(R.id.switchBlue2);
@@ -71,6 +73,37 @@ public class FragmentImportantFixed extends Fragment{
         bottomSwitchGreen.setOnCheckedChangeListener(bottomSwitchListener);
 
         return view;
+    }
+
+    String getTextFromLayout(ViewGroup viewGroup) {
+
+        if (viewGroup.getContentDescription() != null) return viewGroup.getContentDescription().toString();
+
+        String result = "";
+
+        for (int i = 0; i < viewGroup.getChildCount(); ++i) {
+            View childView = viewGroup.getChildAt(i);
+
+            if (childView instanceof ViewGroup) {
+                result += getTextFromLayout((ViewGroup)childView);
+            }
+
+            if (childView instanceof TextView) {
+                result += " " + ((TextView) childView).getText();
+            }
+
+            if (childView instanceof Switch) {
+                Switch childSwitch = (Switch)childView;
+
+                if (childSwitch.isChecked()) {
+                    result += " switch, on";
+                } else {
+                    result += " switch, off";
+                }
+            }
+        }
+
+        return result;
     }
 
     class SwitchListener implements CompoundButton.OnCheckedChangeListener {

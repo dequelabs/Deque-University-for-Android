@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
-                    android:text="@string/aac_edit_text_wcag_link_1"/>
+                    android:text="This was aac_edit_text_wcag_link_1"/>
 
             </LinearLayout>
 
@@ -251,8 +251,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.heading"
                     android:text="@string/aac_edit_text_broken_conclusion_2_heading"
-                    android:background="@color/aac_background_text"
-                    />
+                    android:background="@color/aac_background_text" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -269,7 +268,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
                     android:textAppearance="@style/AACTextAppearance.link"
-                    android:text="@string/aac_edit_text_wcag_link_2"/>
+                    android:text="This was aac_edit_text_wcag_link_2"/>
 
                 ></LinearLayout>
 

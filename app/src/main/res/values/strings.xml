@@ -32,11 +32,10 @@
     <string name="aac_text_view_link"><a href="http://developer.android.com/reference/android/widget/TextView.html">TextViews</a></string>
     <string name="aac_hint_link"><a href="http://developer.android.com/reference/android/R.attr.html#hint">Hints</a></string>
     <string name="aac_tabHost_link"><a href="http://developer.android.com/reference/android/widget/TabHost.html">TabHost</a></string>
-    <string name="aac_labels_wcag_link"><a href ="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"></a>Understanding WCag 1.3.1</string>
-    <string name="aac_cont_desc_wcag_link_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html"></a>Understanding WCag 1.1.1</string>
-    <string name="aac_cont_desc_wcag_link_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html"></a>Understanding WCag 2.4.3</string>
-    <string name="aac_edit_text_wcag_link_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"></a>Understanding WCag 1.3.1</string>
-    <string name="aac_edit_text_wcag_link_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html"></a>Understanding WCag 3.3.6</string>
+    <string name="aac_link_wcag_1_1_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding WCag 1.1.1</a></string>
+    <string name="aac_link_wcag_2_4_3"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">Understanding WCag 2.4.3</a></string>
+    <string name="aac_link_wcag_1_3_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding WCag 1.3.1</a></string>
+    <string name="aac_link_wcag_3_3_6"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html">Understanding WCag 3.3.6</a></string>
 
     <!-- Intro Story Strings-->
     <string name="aac_intro_title">Introduction</string>
@@ -50,7 +49,7 @@
     <!-- Labels Story Strings-->
     <string name="aac_labels_title">Labels</string>
 
-    <string name="aac_labels_content_description">This is a content description.  Notice that by adding this content description we have made this important for accessibility, however, we can no longer focus the individual text views!</string>
+    <string name="aac_labels_content_description">This is a content description.</string>
 
     <string name="aac_labels_about_introduction">In Android Accessibility there are multiple ways of providing labels or alternate text for a control.  A label is not an Android element; it is a word chosen to represent the presence of either the <i>label for</i> or the <i>content description</i> attribute. While the <i>content description</i> is the most basic, the <i>label for</i> attribute is generally preferred for controls.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  It is important to note that not all controls require a <i>content description</i>On the other hand, all controls that do not contain text as a primary feature of the control require a label of some kind.</string>
 
@@ -295,12 +294,23 @@
     <string name="aac_important_heading_no_hd">No Hide Descendants</string>
     <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  TalkBack will not focus any of the views below.</string>
 
-    <string name="aac_important_broken_paragraph">This is an interesting example.  First, we have set <i>important for accessibility</i> to yes for the layout.  This causes all text elements to get read out.  However, we have marked the <i>Green</i> layout as not important, as well as the <i>Red</i> switch.  This causes Red and Blue to get read when TalkBack reads out the information for the layout.  It also means that we cannot focus MOST of the switches in the layout.  Only the blue switch is focusable, and that any of these switches are there is not obvious!</string>
+    <string name="aac_important_broken_heading_issue_1">Top Layout Announcement</string>
+    <string name="aac_important_broken_paragraph_issue_1">In an attempt to provide association between the heading and the rest of the components the layout is marked as important for accessibility.  However, the Green text view has been marked as not important, and so does not get included in the announcement.  Also not included in the announcement is the state of the on/off switches.  </string>
+    <string name="aac_important_broken_violation_issue_1">@string/aac_link_wcag_1_1_1</string>
 
-    <string name="aac_important_broken_paragraph2">In this example we have left all <i>important for accessibility</i> to their default, except for the linear layout.  Notice how it is focusable, and reads off the heading, as well as Red, Green, Blue.  However, the switches are also individually focusable.  This is frustrating.  Drag your finger down the switches and listen!  Also, notice how the green outline on the layout showing accessibility focus, has encompassed information that <i>TalkBack</i> has not spoken.  This is confusing for sighted users.</string>
+    <string name="aac_important_broken_heading_issue_2">Bottom Layout Announcement</string>
+    <string name="aac_important_broken_paragraph_issue_2">We have included a content description on the bottom layout.  This makes it important for accessibility.  However, the content description does not include any information about the components.  Only the heading.  When text views are contained within a layout that is important for accessibility, it is assumed that the layout has announced the information for these text views, and so they are not individually focusable.  This information has been completely lost to TalkBack.</string>
+    <string name="aac_important_broken_violation_issue_2">@string/aac_link_wcag_1_1_1</string>
 
+    <string name="aac_important_broken_heading_issue_3">Switch Heading Association</string>
+    <string name="aac_important_broken_paragraph_issue_3">The switches in these examples, at least the ones that are focusable by TalkBack, have similar markup to our Labels example.  However, in the labels example, there was only one collection.  When we added an additional set of switches, we created an additional layer of control association that needs to be maintained, namely which set of controls you are dealing with.  When you focus a Green switch with TalkBack, do you know whether it is changing the top or bottom color component?</string>
+    <string name="aac_important_broken_violation_issue_3">@string/aac_link_wcag_1_3_1</string>
+
+    <string name="aac_important_content_heading_main">Settings</string>
     <string name="aac_important_content_heading_top">Background Color Component Top</string>
     <string name="aac_important_content_heading_bottom">Background Color Component Bottom</string>
+    <string name="aac_important_content_heading_bottom_cd">This is a content description.  Background Color Component Bottom</string>
+
 
     <string name="aac_important_fixed_paragraph"></string>
 

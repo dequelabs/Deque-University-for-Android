@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_cont_desc_wcag_link_1"/>
+                android:text="This was aac_cont_desc_wcag_link_1"/>
 
             <com.dequesystems.a11yframework.TextViewLink
                 android:id="@+id/aac_cont_desc_link_view_2"
@@ -171,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_cont_desc_wcag_link_2"/>
+                android:text="This was aac_cont_desc_wcag_link_2"/>
 
         </LinearLayout>
 
