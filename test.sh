@@ -90,21 +90,25 @@ if [ "$DEVICE" == "" ] || [ "$DEVICE" == "$ONE_DEVICE" ]; then
 
 	array=( $(adb devices | awk '{print $1}') )
 
-	for device in ${array[@]:1}; do 
-      	
-      	#When you run terminal output in parrallel it gets all jumbled!  So don't.
-      	if $HTML_OUTPUT; then
-      	  	run_test $device $SCENARIO_TAG &
-      	else
-      		run_test $device $SCENARIO_TAG
-      	fi
+	if [ "${#array[@]}" -eq "1" ]; then
+		echo "No Devices Attached, check that ADB is detecting your device properly"
+	else
+		for device in ${array[@]:1}; do 
+	      	
+	      	#When you run terminal output in parrallel it gets all jumbled!  So don't.
+	      	if $HTML_OUTPUT; then
+	      	  	run_test $device $SCENARIO_TAG &
+	      	else
+	      		run_test $device $SCENARIO_TAG
+	      	fi
 
-      	((LOCAL_PORT+=1000))
+	      	((LOCAL_PORT+=1000))
 
-      	if [ "$DEVICE" == "$ONE_DEVICE" ]; then 
-      		break
-      	fi
-	done
+	      	if [ "$DEVICE" == "$ONE_DEVICE" ]; then 
+	      		break
+	      	fi
+		done
+	fi
 else 
 	run_test $DEVICE $SCENARIO_TAG &
 fi

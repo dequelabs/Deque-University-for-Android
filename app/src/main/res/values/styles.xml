@@ -95,5 +95,6 @@
     <color name="aac_deque_gray">#E0E3E9</color>
     <color name="aac_deque_orange">#E23A00</color>
     <color name="aac_deque_green">#356B10</color>
+    <color name="aac_deque_yellow">#FEF30A</color>
 
 </resources>
