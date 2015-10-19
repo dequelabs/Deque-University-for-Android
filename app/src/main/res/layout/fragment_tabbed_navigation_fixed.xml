@@ -1,85 +1,93 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedFragment"
-    android:background="@color/aac_story_fixed_background">
+    android:background="@color/aac_story_fixed_background"
+    tools:context="com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/aac_global_border"
-        android:background="@color/aac_worldspace_white">
-
-        <TabHost android:id="@+id/tabNavFixedTabHost"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="vertical">
-
-                <TabWidget android:id="@android:id/tabs"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:background="@color/aac_tab_bar_background"/>
-
-                <FrameLayout android:id="@android:id/tabcontent"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0">
-
-                    <LinearLayout android:id="@+id/tab1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical"/>
-
-                    <LinearLayout android:id="@+id/just4"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical"/>
-
-                    <LinearLayout android:id="@+id/PREVIEW"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical"/>
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-        </TabHost>
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_margin="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
-            android:padding="@dimen/aac_global_border">
+            android:orientation="vertical">
 
-            <TextView
+            <TabHost
+                android:id="@+id/tabNavFixedTabHost"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="@color/aac_tab_bar_background" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/just4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/PREVIEW"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </TabHost>
+
+            <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/aac_tab_nav_demo_heading"
-                android:textAppearance="@style/AACTextAppearance.heading"/>
+                android:background="@color/aac_worldspace_white"
+                android:orientation="vertical"
+                android:padding="@dimen/aac_global_border">
 
-            <ImageView android:id="@+id/aac_tab_nav_fixed_image_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/cat"
-                android:padding="@dimen/aac_global_border"
-                android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/aac_cont_desc_fixed_cat_cont_desc"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/aac_tab_nav_demo_heading"
+                    android:textAppearance="@style/AACTextAppearance.heading" />
 
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/aac_tab_nav_fixed_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/aac_cont_desc_fixed_cat_cont_desc"
+                    android:padding="@dimen/aac_global_border"
+                    android:src="@drawable/cat" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -94,9 +102,9 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_tab_nav_fixed_conclusion"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:padding="@dimen/aac_global_border" />
+                android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
 

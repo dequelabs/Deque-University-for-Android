@@ -38,6 +38,7 @@ public class LabelsBrokenFragment extends Fragment {
         mSwitchRed = (Switch) mView.findViewById(R.id.switchRed);
         mSwitchGreen = (Switch) mView.findViewById(R.id.switchGreen);
         mSwitchBlue = (Switch) mView.findViewById(R.id.switchBlue);
+
         /*
         // #DEMO: Associate the red switch with it's visible label using the labelFor attribute.
         mLabelForRed = (TextView) mView.findViewById(R.id.labelRed);

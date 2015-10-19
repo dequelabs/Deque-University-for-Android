@@ -1,5 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/aac_story_broken_background"
     tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment">
@@ -12,45 +13,52 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_worldspace_white"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_acronym_broken_flight"
+                android:layout_margin="5dp"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:layout_margin="5dp" />
+                android:text="@string/aac_acronym_broken_flight"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border"
-            android:orientation="vertical">
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_acronym_broken_heading_1"
-                android:textAppearance="@style/AACTextAppearance.heading"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_acronym_broken_whats_wrong"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"/>
+                android:text="@string/aac_acronym_broken_conclusion"
+                android:textAppearance="@style/AACTextAppearance.body" />
+
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_acronym_annoucement_link_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_link_wcag_3_1_4"
+                android:textAppearance="@style/AACTextAppearance.link" />
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </ScrollView>

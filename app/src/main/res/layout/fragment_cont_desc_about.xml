@@ -1,8 +1,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment"
-    android:background="@color/aac_story_background">
+    android:background="@color/aac_story_background"
+    tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -14,10 +15,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
-            android:text="@string/aac_cont_desc_about_intro"
             android:contentDescription="@string/aac_cont_desc_about_intro_cont_desc"
             android:padding="@dimen/aac_global_border"
-            android:textAppearance="@style/AACTextAppearance.body"/>
+            android:text="@string/aac_cont_desc_about_intro"
+            android:textAppearance="@style/AACTextAppearance.body" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -31,54 +32,54 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_cont_desc_about_heading_3"
-                android:textAppearance="@style/AACTextAppearance.heading"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_cont_desc_about_paragraph_3_when_to_use"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:padding="@dimen/aac_global_border" />
+                android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
             android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_cont_desc_about_heading_1"
-                android:textAppearance="@style/AACTextAppearance.heading"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_about_paragraph_1_null"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:textAppearance="@style/AACTextAppearance.body"/>
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_cont_desc_about_paragraph_1_null"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cat"
+                android:layout_gravity="center_horizontal"
                 android:padding="@dimen/aac_global_border"
-                android:layout_gravity="center_horizontal" />
+                android:src="@drawable/cat" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
             android:padding="@dimen/aac_global_border">
 
             <TextView
@@ -90,18 +91,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_about_paragraph_2_empty"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_cont_desc_about_paragraph_2_empty"
                 android:textAppearance="@style/AACTextAppearance.body" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:contentDescription=" "
-                android:src="@drawable/dog"
                 android:padding="@dimen/aac_global_border"
-                android:layout_gravity="center_horizontal" />
+                android:src="@drawable/dog" />
 
         </LinearLayout>
 
@@ -109,9 +110,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -123,33 +124,33 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:text="@string/aac_cont_desc_about_paragraph_4_duplicated_info"/>
+                android:text="@string/aac_cont_desc_about_paragraph_4_duplicated_info"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/aac_global_border">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:src="@drawable/fish"
+                    android:layout_weight="1"
                     android:contentDescription="@string/aac_cont_desc_about_fish_cont_desc"
-                    android:layout_weight="1" />
+                    android:padding="@dimen/aac_global_border"
+                    android:src="@drawable/fish" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/aac_cont_desc_about_fish_label"
-                    android:textAppearance="@style/AACTextAppearance.label"
-                    android:padding="@dimen/aac_global_border"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:layout_gravity="center_vertical" />
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_cont_desc_about_fish_label"
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
             </LinearLayout>
 
@@ -158,17 +159,17 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_background_text"
-            android:padding="@dimen/aac_global_border"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
             android:elevation="@dimen/aac_elevation_level_1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/AACTextAppearance.heading"
-                android:text="@string/aac_learn_more"/>
+                android:text="@string/aac_learn_more"
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -180,16 +181,16 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
-                    android:textAppearance="@style/AACTextAppearance.link"
-                    android:text="@string/aac_cont_desc_link"/>
+                    android:text="@string/aac_cont_desc_link"
+                    android:textAppearance="@style/AACTextAppearance.link" />
 
                 <com.dequesystems.a11yframework.TextViewLink
                     android:id="@+id/aacContDescTextView2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
-                    android:textAppearance="@style/AACTextAppearance.link"
-                    android:text="@string/aac_image_view_link"/>
+                    android:text="@string/aac_image_view_link"
+                    android:textAppearance="@style/AACTextAppearance.link" />
 
             </LinearLayout>
 
