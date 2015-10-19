@@ -23,8 +23,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/AACTextAppearance.heading"
                 android:text="@string/aac_labels_broken_content_heading"
-                android:background="@color/aac_background_text"
-                android:padding="@dimen/aac_global_border" />
+                android:background="@color/aac_background_text" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -96,14 +95,39 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/aac_global_border"
+            android:orientation="vertical"
             android:padding="@dimen/aac_global_border"
-            android:text="@string/aac_labels_broken_conclusion"
-            android:textAppearance="@style/AACTextAppearance.body"
-            android:background="@color/aac_background_text" />
+            android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_labels_broken_conclusion_heading"
+                android:background="@color/aac_background_text"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/aac_global_border"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_labels_broken_conclusion"
+                android:textAppearance="@style/AACTextAppearance.body"
+                android:background="@color/aac_background_text" />
+
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_labels_link_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_link_wcag_1_3_1"
+                android:textAppearance="@style/AACTextAppearance.link" />
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
