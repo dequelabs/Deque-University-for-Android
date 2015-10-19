@@ -157,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_cont_desc_wcag_link_1"/>
+                android:text="@string/aac_link_wcag_1_1_1"/>
 
         </LinearLayout>
 
@@ -185,13 +185,14 @@
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp" />
 
+
             <com.dequesystems.a11yframework.TextViewLink
                 android:id="@+id/aac_cont_desc_link_view_2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_cont_desc_wcag_link_2"/>
+                android:text="@string/aac_link_wcag_2_4_3"/>
 
         </LinearLayout>
 

@@ -32,13 +32,13 @@
     <string name="aac_text_view_link"><a href="http://developer.android.com/reference/android/widget/TextView.html">TextViews</a></string>
     <string name="aac_hint_link"><a href="http://developer.android.com/reference/android/R.attr.html#hint">Hints</a></string>
     <string name="aac_tabHost_link"><a href="http://developer.android.com/reference/android/widget/TabHost.html">TabHost</a></string>
-    <string name="aac_labels_wcag_link"><a href ="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"></a>Understanding WCag 1.3.1</string>
-    <string name="aac_cont_desc_wcag_link_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html"></a>Understanding WCag 1.1.1</string>
-    <string name="aac_cont_desc_wcag_link_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html"></a>Understanding WCag 2.4.3</string>
-    <string name="aac_edit_text_wcag_link_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"></a>Understanding WCag 1.3.1</string>
-    <string name="aac_edit_text_wcag_link_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html"></a>Understanding WCag 3.3.6</string>
-    <string name="aac_acronym_announcement_wcag_link"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html"></a>Understanding WCag 3.1.4</string>
-    <string name="aac_tab_nav_wcag_link"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html"></a>Understanding WCag 4.1.2</string>
+
+  <string name="aac_link_wcag_3_1_4"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html"></a>Understanding WCag 3.1.4</string>
+    <string name="aac_link_wcag_4_1_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html"></a>Understanding WCag 4.1.2</string>
+    <string name="aac_link_wcag_1_1_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding WCag 1.1.1</a></string>
+    <string name="aac_link_wcag_2_4_3"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">Understanding WCag 2.4.3</a></string>
+    <string name="aac_link_wcag_1_3_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding WCag 1.3.1</a></string>
+    <string name="aac_link_wcag_3_3_6"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html">Understanding WCag 3.3.6</a></string>
 
     <!-- Intro Story Strings-->
     <string name="aac_intro_title">Introduction</string>
@@ -283,17 +283,39 @@
     <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
 
 
-    <string name="aac_important_about_intro">The <i>important for accessibility</i> attribute allows you to hide content from accessibility services.  When set to <i>no</i> accessibility services that inspect the view hierarchy will not get this information.  If set to <i>noHideDescendants</i> you can have entire layouts ignored.  While this attribute is powerful, it is important to use this carefully.  It is easy to create accessibility violations by misusing this attribute.  In general you want to leave this set to <i>auto</i>.  Below are examples of behaviors you get when you use no, noHideDescendants, and yes.</string>
+
 
     <string name="aac_important_title">Important for Accessibility</string>
+
+    <string name="aac_important_about_intro">The <i>important for accessibility</i> attribute allows you to hide content from accessibility services.  When set to <i>no</i> accessibility services that inspect the view hierarchy will not get this information.  If set to <i>noHideDescendants</i> you can have entire layouts ignored.  While this attribute is powerful, it is important to use this carefully.  It is easy to create accessibility violations by misusing this attribute.  In general you want to leave this set to <i>auto</i>.  Below are examples of behaviors you get when you use no, noHideDescendants, and yes.</string>
 
     <string name="aac_important_heading_no">NO</string>
     <string name="aac_important_paragraph_no">When you set this attribute to <i>no</i> you are hiding information from TalkBack that it normally has access to.  This is generally a poor idea.  Notice how the button below, even thought it is dimmed, the fact that it is there and dimmed is important information!  Additionally, sighted users using TalkBack will be very confused why they cannot highlight visible onscreen controls.</string>
 
     <string name="aac_important_heading_yes">YES</string>
-    <string name="aac_important_paragraph_yes">When you set <i>important for accessibility</i> to yes, you are able to communicate information to TalkBack that normally would be ignored.  Notice how below, with TalkBack on, we cannot individually focus "Visible Text 2" and the ON/OFF Switch.  They are focused as one element.  This is because we have set <i>important for accessibility</i> to yes.</string>
+    <string name="aac_important_paragraph_yes">When you set <i>important for accessibility</i> to yes, you are able to communicate information to TalkBack that normally would be ignored.  With TalkBack on, focus moves to the layout, rather than the individual text views, because this layout is important for accessibility.  This can be useful for organizing information, however, in this instance we have probably captured too large of a group.  Finally, note that the control remains separately focusable.</string>
 
     <string name="aac_important_heading_no_hd">No Hide Descendants</string>
-    <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  Notice how TalkBack cannot focus any of the views below.</string>
+    <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  TalkBack will not focus any of the views below.</string>
+
+    <string name="aac_important_broken_heading_issue_1">Top Layout Announcement</string>
+    <string name="aac_important_broken_paragraph_issue_1">In an attempt to provide association between the heading and the rest of the components the layout is marked as important for accessibility.  However, the Green text view has been marked as not important, and so does not get included in the announcement.  Also not included in the announcement is the state of the on/off switches.  </string>
+    <string name="aac_important_broken_violation_issue_1">@string/aac_link_wcag_1_1_1</string>
+
+    <string name="aac_important_broken_heading_issue_2">Bottom Layout Announcement</string>
+    <string name="aac_important_broken_paragraph_issue_2">We have included a content description on the bottom layout.  This makes it important for accessibility.  However, the content description does not include any information about the components.  Only the heading.  When text views are contained within a layout that is important for accessibility, it is assumed that the layout has announced the information for these text views, and so they are not individually focusable.  This information has been completely lost to TalkBack.</string>
+    <string name="aac_important_broken_violation_issue_2">@string/aac_link_wcag_1_1_1</string>
+
+    <string name="aac_important_broken_heading_issue_3">Switch Heading Association</string>
+    <string name="aac_important_broken_paragraph_issue_3">The switches in these examples, at least the ones that are focusable by TalkBack, have similar markup to our Labels example.  However, in the labels example, there was only one collection.  When we added an additional set of switches, we created an additional layer of control association that needs to be maintained, namely which set of controls you are dealing with.  When you focus a Green switch with TalkBack, do you know whether it is changing the top or bottom color component?</string>
+    <string name="aac_important_broken_violation_issue_3">@string/aac_link_wcag_1_3_1</string>
+
+    <string name="aac_important_content_heading_main">Settings</string>
+    <string name="aac_important_content_heading_top">Background Color Component Top</string>
+    <string name="aac_important_content_heading_bottom">Background Color Component Bottom</string>
+    <string name="aac_important_content_heading_bottom_cd">This is a content description.  Background Color Component Bottom</string>
+
+
+    <string name="aac_important_fixed_paragraph"></string>
 
 </resources>

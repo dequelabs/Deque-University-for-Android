@@ -78,7 +78,8 @@
             android:padding="@dimen/aac_global_border"
             android:elevation="@dimen/aac_elevation_level_1"
             android:orientation="vertical"
-            android:background="@color/aac_background_text" >
+            android:background="@color/aac_background_text"
+            android:importantForAccessibility="yes">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -115,8 +116,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
                     android:layout_weight="0"
-                    android:contentDescription="@string/aac_labels_content_description"
-                    android:importantForAccessibility="no"/>
+                    android:contentDescription="@string/aac_labels_content_description"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -166,7 +166,7 @@
                     android:textAppearance="@style/AACTextAppearance.label"
                     android:layout_weight="0"
                     android:contentDescription="@string/aac_labels_content_description"
-                    android:importantForAccessibility="no"/>
+                    android:importantForAccessibility="auto"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_tab_nav_wcag_link"/>
+                android:text="@string/aac_link_wcag_4_1_2"/>
 
         </LinearLayout>
 
