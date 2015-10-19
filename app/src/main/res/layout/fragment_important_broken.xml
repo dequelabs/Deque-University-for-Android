@@ -158,7 +158,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:labelFor="@+id/switch2"
                         android:text="@string/aac_labels_setting_1"
                         android:textAppearance="@style/AACTextAppearance.label" />
 
@@ -185,7 +184,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:labelFor="@+id/switch3"
                         android:text="@string/aac_labels_setting_2"
                         android:textAppearance="@style/AACTextAppearance.label" />
 
@@ -212,7 +210,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:labelFor="@+id/switch4"
                         android:text="@string/aac_labels_setting_3"
                         android:textAppearance="@style/AACTextAppearance.label" />
 
