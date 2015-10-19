@@ -312,6 +312,7 @@
     <string name="aac_important_content_heading_bottom_cd">This is a content description.  Background Color Component Bottom</string>
 
 
-    <string name="aac_important_fixed_paragraph"></string>
+
+    <string name="aac_important_fixed_paragraph">Here we have two accessible groups of switches, using two very different approaches.  In the first we have set the content description of the main layout to hold all of the information pertinent to the layout.  This includes the heading, switch labels, switch roles, as well as their state.  Second, we set the content descriptions for the text views to associate them with the main heading.  Ex: The content description for Red is "Red Background Color Component Top".  Finally, we set the label for attribute on the switches to the text views.\n\nFor the second set we take advantage of the text property of the switch itself.  We set this to mark the label of the switch (red, green, blue).  We then set the content description of the switch itself to the text of the heading.\n\nBoth of these methods are accessible.  Which approach is better is dependent on your scenario.  In this case, the top method is more usable for non-sighted users relying on gesture navigation, and the bottom method for sighted users, relying only on voiceover readout, but using touch to explore navigation.  However, the top method would become weak in more complicated layouts, involving numerous settings.  Care must be taken to create discrete simple groups of information.</string>
 
 </resources>
