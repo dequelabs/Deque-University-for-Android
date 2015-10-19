@@ -125,8 +125,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_link_wcag_1_3_1"/>
+                android:text="@string/aac_link_wcag_1_3_1"
+                android:textAppearance="@style/AACTextAppearance.link" />
 
         </LinearLayout>
     </LinearLayout>

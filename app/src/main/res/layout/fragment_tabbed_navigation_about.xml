@@ -1,8 +1,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment"
-    android:background="@color/aac_story_background">
+    android:background="@color/aac_story_background"
+    tools:context="com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -14,42 +15,43 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
-            android:text="@string/aac_tab_nav_about_intro"
             android:padding="@dimen/aac_global_border"
-            android:textAppearance="@style/AACTextAppearance.body"/>
+            android:text="@string/aac_tab_nav_about_intro"
+            android:textAppearance="@style/AACTextAppearance.body" />
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
             android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/aac_tab_nav_about_heading_1"
-                android:textAppearance="@style/AACTextAppearance.heading"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_tab_nav_about_paragraph_1"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:textAppearance="@style/AACTextAppearance.body"/>
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_tab_nav_about_paragraph_1"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_margin="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
-            android:layout_margin="@dimen/aac_global_border">
+            android:orientation="vertical">
 
-            <TabHost android:id="@+id/tabNavAboutTabHost"
+            <TabHost
+                android:id="@+id/tabNavAboutTabHost"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -58,31 +60,36 @@
                     android:layout_height="fill_parent"
                     android:orientation="vertical">
 
-                    <TabWidget android:id="@android:id/tabs"
+                    <TabWidget
+                        android:id="@android:id/tabs"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
-                        android:background="@color/aac_tab_bar_background"/>
+                        android:background="@color/aac_tab_bar_background" />
 
-                    <FrameLayout android:id="@android:id/tabcontent"
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
 
-                        <LinearLayout android:id="@+id/tab1"
+                        <LinearLayout
+                            android:id="@+id/tab1"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:orientation="vertical"/>
+                            android:orientation="vertical" />
 
-                        <LinearLayout android:id="@+id/just4"
+                        <LinearLayout
+                            android:id="@+id/just4"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:orientation="vertical"/>
+                            android:orientation="vertical" />
 
-                        <LinearLayout android:id="@+id/PREVIEW"
+                        <LinearLayout
+                            android:id="@+id/PREVIEW"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:orientation="vertical"/>
+                            android:orientation="vertical" />
 
                     </FrameLayout>
 
@@ -93,8 +100,8 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@color/aac_worldspace_white"
+                android:orientation="vertical"
                 android:padding="@dimen/aac_global_border">
 
                 <TextView
@@ -102,14 +109,15 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/aac_tab_nav_demo_heading"
-                    android:textAppearance="@style/AACTextAppearance.heading"/>
+                    android:textAppearance="@style/AACTextAppearance.heading" />
 
-                <ImageView android:id="@+id/aac_tab_nav_about_image_view"
-                    android:contentDescription="@string/aac_cont_desc_fixed_cat_cont_desc"
+                <ImageView
+                    android:id="@+id/aac_tab_nav_about_image_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/aac_cont_desc_fixed_cat_cont_desc"
+                    android:padding="@dimen/aac_global_border" />
 
             </LinearLayout>
 
@@ -118,17 +126,17 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_background_text"
-            android:padding="@dimen/aac_global_border"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
             android:elevation="@dimen/aac_elevation_level_1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/AACTextAppearance.heading"
-                android:text="@string/aac_learn_more"/>
+                android:text="@string/aac_learn_more"
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -140,13 +148,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"
-                    android:textAppearance="@style/AACTextAppearance.link"
-                    android:text="@string/aac_tabHost_link"/>
+                    android:text="@string/aac_tabHost_link"
+                    android:textAppearance="@style/AACTextAppearance.link" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        </LinearLayout>
+    </LinearLayout>
 
 </ScrollView>

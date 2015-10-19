@@ -1,5 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/aac_story_broken_background"
     tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment">
@@ -9,12 +10,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout android:id="@+id/demoContent"
+        <LinearLayout
+            android:id="@+id/demoContent"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
             android:padding="@dimen/aac_global_border">
 
             <TextView
@@ -33,19 +35,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/aac_cont_desc_broken_fish_label"
-                    android:padding="@dimen/aac_global_border"
-                    android:textAppearance="@style/AACTextAppearance.label"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_cont_desc_broken_fish_label"
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/fish"
-                    android:padding="@dimen/aac_global_border"
+                    android:layout_weight="0"
                     android:contentDescription="@string/aac_cont_desc_broken_fish_cont_desc"
-                    android:layout_weight="0" />
+                    android:padding="@dimen/aac_global_border"
+                    android:src="@drawable/fish" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,19 +60,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/aac_cont_desc_broken_dog_label"
-                    android:padding="@dimen/aac_global_border"
-                    android:textAppearance="@style/AACTextAppearance.label"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_cont_desc_broken_dog_label"
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/dog"
+                    android:layout_weight="0"
                     android:contentDescription=" "
                     android:padding="@dimen/aac_global_border"
-                    android:layout_weight="0" />
+                    android:src="@drawable/dog" />
 
             </LinearLayout>
 
@@ -84,18 +86,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/aac_cont_desc_broken_cat_label"
-                    android:padding="@dimen/aac_global_border"
-                    android:textAppearance="@style/AACTextAppearance.label"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_cont_desc_broken_cat_label"
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
-                <ImageView android:id="@+id/aac_contDescBroken_imageViewCat"
+                <ImageView
+                    android:id="@+id/aac_contDescBroken_imageViewCat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/cat"
+                    android:layout_weight="0"
                     android:padding="@dimen/aac_global_border"
-                    android:layout_weight="0" />
+                    android:src="@drawable/cat" />
 
             </LinearLayout>
 
@@ -104,86 +107,86 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border"
-            android:orientation="vertical">
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/AACTextAppearance.heading"
+                android:background="@color/aac_background_text"
                 android:text="@string/aac_cont_desc_broken_conclusion_1_heading"
-                android:background="@color/aac_background_text"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_1"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
+                android:layout_margin="5dp"
                 android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_cont_desc_broken_conclusion_1"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border"
-            android:orientation="vertical">
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/AACTextAppearance.heading"
+                android:background="@color/aac_background_text"
                 android:text="@string/aac_cont_desc_broken_conclusion_2_heading"
-                android:background="@color/aac_background_text"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_2"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
+                android:layout_margin="5dp"
                 android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_cont_desc_broken_conclusion_2"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
             <com.dequesystems.a11yframework.TextViewLink
                 android:id="@+id/aac_cont_desc_link_view_1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_link_wcag_1_1_1"/>
+                android:text="@string/aac_link_wcag_1_1_1"
+                android:textAppearance="@style/AACTextAppearance.link" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aac_worldspace_white"
             android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border"
-            android:orientation="vertical">
+            android:background="@color/aac_worldspace_white"
+            android:orientation="vertical"
+            android:padding="@dimen/aac_global_border">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/AACTextAppearance.heading"
+                android:background="@color/aac_background_text"
                 android:text="@string/aac_cont_desc_broken_conclusion_3_heading"
-                android:background="@color/aac_background_text"/>
+                android:textAppearance="@style/AACTextAppearance.heading" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_cont_desc_broken_conclusion_3"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.body"
+                android:layout_margin="5dp"
                 android:background="@color/aac_worldspace_white"
-                android:layout_margin="5dp" />
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_cont_desc_broken_conclusion_3"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
 
             <com.dequesystems.a11yframework.TextViewLink
@@ -191,8 +194,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_link_wcag_2_4_3"/>
+                android:text="@string/aac_link_wcag_2_4_3"
+                android:textAppearance="@style/AACTextAppearance.link" />
 
         </LinearLayout>
 

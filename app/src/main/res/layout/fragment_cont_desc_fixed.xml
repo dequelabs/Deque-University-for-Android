@@ -39,13 +39,14 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1" />
 
-                    <ImageView android:id="@+id/fishPicFixed"
+                    <ImageView
+                        android:id="@+id/fishPicFixed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/fish"
-                        android:padding="@dimen/aac_global_border"
+                        android:layout_weight="0"
                         android:contentDescription="@string/aac_cont_desc_fixed_fish_cont_desc"
-                        android:layout_weight="0" />
+                        android:padding="@dimen/aac_global_border"
+                        android:src="@drawable/fish" />
                 </LinearLayout>
 
                 <LinearLayout

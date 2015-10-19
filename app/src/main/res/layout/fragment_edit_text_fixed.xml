@@ -1,46 +1,50 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment"
     android:background="@color/aac_story_fixed_background"
+    android:fillViewport="false"
     android:tag="fixed_tab"
-    android:fillViewport="false">
+    tools:context="com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout android:id="@+id/demoContent"
+        <LinearLayout
+            android:id="@+id/demoContent"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
             android:background="@color/aac_worldspace_white"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
 
-            <LinearLayout android:id="@+id/aac_edit_text_fixed_layout_1"
+            <LinearLayout
+                android:id="@+id/aac_edit_text_fixed_layout_1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/aac_global_border">
 
-                <LinearLayout android:id="@+id/aac_edit_text_fixed_heading_1_layout"
+                <LinearLayout
+                    android:id="@+id/aac_edit_text_fixed_heading_1_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView android:id="@+id/aac_edit_text_fixed_heading_1"
+                    <TextView
+                        android:id="@+id/aac_edit_text_fixed_heading_1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/aac_worldspace_white"
-                        android:textAppearance="@style/AACTextAppearance.heading"
-                        android:text="@string/aac_edit_text_fixed_heading_3_demo_2"
+                        android:focusable="true"
                         android:focusableInTouchMode="true"
-                        android:focusable="true"/>
+                        android:text="@string/aac_edit_text_fixed_heading_3_demo_2"
+                        android:textAppearance="@style/AACTextAppearance.heading" />
 
                 </LinearLayout>
 
@@ -52,19 +56,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/aac_edit_text_first_name_label"
+                        android:layout_gravity="center_vertical"
                         android:labelFor="@+id/aac_edit_text_fixed_edit_text_1"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/aac_global_border" />
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_edit_text_first_name_label"
+                        android:textAppearance="@style/AACTextAppearance.label" />
 
-                    <EditText android:id="@+id/aac_edit_text_fixed_edit_text_1"
+                    <EditText
+                        android:id="@+id/aac_edit_text_fixed_edit_text_1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/aac_global_border"
                         android:layout_margin="@dimen/aac_global_border"
+                        android:background="@color/aac_deque_pale_blue"
                         android:inputType="textCapWords"
-                        android:background="@color/aac_deque_pale_blue"/>
+                        android:padding="@dimen/aac_global_border" />
 
                 </LinearLayout>
 
@@ -76,19 +81,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/aac_edit_text_last_name_label"
+                        android:layout_gravity="center_vertical"
                         android:labelFor="@+id/aac_edit_text_fixed_edit_text_2"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/aac_global_border" />
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_edit_text_last_name_label"
+                        android:textAppearance="@style/AACTextAppearance.label" />
 
-                    <EditText android:id="@+id/aac_edit_text_fixed_edit_text_2"
+                    <EditText
+                        android:id="@+id/aac_edit_text_fixed_edit_text_2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/aac_global_border"
                         android:layout_margin="@dimen/aac_global_border"
+                        android:background="@color/aac_deque_pale_blue"
                         android:inputType="textCapWords"
-                        android:background="@color/aac_deque_pale_blue"/>
+                        android:padding="@dimen/aac_global_border" />
 
                 </LinearLayout>
 
@@ -100,20 +106,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/aac_edit_text_phone_num_label"
-                        android:labelFor="@+id/aac_edit_text_fixed_edit_text_3"
-                        android:textAppearance="@style/AACTextAppearance.label"
                         android:layout_gravity="center_vertical"
-                        android:padding="@dimen/aac_global_border" />
+                        android:labelFor="@+id/aac_edit_text_fixed_edit_text_3"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_edit_text_phone_num_label"
+                        android:textAppearance="@style/AACTextAppearance.label" />
 
-                    <EditText android:id="@+id/aac_edit_text_fixed_edit_text_3"
+                    <EditText
+                        android:id="@+id/aac_edit_text_fixed_edit_text_3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/aac_global_border"
                         android:layout_margin="@dimen/aac_global_border"
+                        android:background="@color/aac_deque_pale_blue"
                         android:hint="@string/aac_edit_text_fixed_phone_num_hint"
                         android:inputType="textCapWords"
-                        android:background="@color/aac_deque_pale_blue"
+                        android:padding="@dimen/aac_global_border"
                         android:textColorHint="@color/aac_worldspace_black" />
 
                 </LinearLayout>
@@ -126,20 +133,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/aac_edit_text_com_name_label"
-                        android:labelFor="@+id/aac_edit_text_fixed_edit_text_4"
-                        android:textAppearance="@style/AACTextAppearance.label"
                         android:layout_gravity="center_vertical"
-                        android:padding="@dimen/aac_global_border" />
+                        android:labelFor="@+id/aac_edit_text_fixed_edit_text_4"
+                        android:padding="@dimen/aac_global_border"
+                        android:text="@string/aac_edit_text_com_name_label"
+                        android:textAppearance="@style/AACTextAppearance.label" />
 
-                    <EditText android:id="@+id/aac_edit_text_fixed_edit_text_4"
+                    <EditText
+                        android:id="@+id/aac_edit_text_fixed_edit_text_4"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/aac_global_border"
                         android:layout_margin="@dimen/aac_global_border"
-                        android:inputType="textCapWords"
                         android:background="@color/aac_deque_pale_blue"
-                        android:imeOptions="actionDone"/>
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapWords"
+                        android:padding="@dimen/aac_global_border" />
 
                 </LinearLayout>
 
@@ -148,11 +156,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/aac_global_border"
                 android:layout_margin="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:text="@string/aac_edit_text_fixed_conclusion_2"/>
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_edit_text_fixed_conclusion_2"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
 
@@ -167,57 +175,57 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/aac_global_border">
 
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/aac_worldspace_white"
-                    android:textAppearance="@style/AACTextAppearance.heading"
-                    android:text="@string/aac_edit_text_fixed_heading_2_wrong"/>
+                    android:text="@string/aac_edit_text_fixed_heading_2_wrong"
+                    android:textAppearance="@style/AACTextAppearance.heading" />
 
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
                     android:background="@color/aac_deque_pale_blue"
-                    android:inputType="textCapWords"
                     android:hint="@string/aac_edit_text_first_name_hint"
-                    android:textColorHint="@color/aac_worldspace_black"/>
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/aac_global_border"
+                    android:textColorHint="@color/aac_worldspace_black" />
 
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
                     android:background="@color/aac_deque_pale_blue"
-                    android:inputType="textCapWords"
                     android:hint="@string/aac_edit_text_last_name_hint"
-                    android:textColorHint="@color/aac_worldspace_black"/>
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/aac_global_border"
+                    android:textColorHint="@color/aac_worldspace_black" />
 
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
                     android:background="@color/aac_deque_pale_blue"
-                    android:inputType="textCapWords"
                     android:hint="@string/aac_edit_text_phone_num_hint"
-                    android:textColorHint="@color/aac_worldspace_black"/>
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/aac_global_border"
+                    android:textColorHint="@color/aac_worldspace_black" />
 
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
                     android:background="@color/aac_deque_pale_blue"
-                    android:inputType="textCapWords"
                     android:hint="@string/aac_edit_text_com_name_hint"
-                    android:textColorHint="@color/aac_worldspace_black"
-                    android:imeOptions="actionDone"/>
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/aac_global_border"
+                    android:textColorHint="@color/aac_worldspace_black" />
 
             </LinearLayout>
 
@@ -225,10 +233,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
                 android:background="@color/aac_worldspace_white"
-                android:textAppearance="@style/AACTextAppearance.body"
-                android:text="@string/aac_edit_text_fixed_conclusion_1" />
+                android:padding="@dimen/aac_global_border"
+                android:text="@string/aac_edit_text_fixed_conclusion_1"
+                android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
 

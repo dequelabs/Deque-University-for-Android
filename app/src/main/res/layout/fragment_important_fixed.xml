@@ -1,166 +1,175 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dequesystems.accessibility101.labels.LabelsAboutFragment"
-    android:background="@color/aac_story_fixed_background">
+    android:background="@color/aac_story_fixed_background"
+    tools:context="com.dequesystems.accessibility101.labels.LabelsAboutFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout android:id="@+id/aacDemoContent"
+        <LinearLayout
+            android:id="@+id/aacDemoContent"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/aac_global_border"
-            android:padding="@dimen/aac_global_border"
+            android:background="@color/aac_background_text"
             android:orientation="vertical"
-            android:background="@color/aac_background_text">
+            android:padding="@dimen/aac_global_border">
 
-            <LinearLayout android:id="@+id/aacImportantLayoutTopMain"
+            <LinearLayout
+                android:id="@+id/aacImportantLayoutTopMain"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
+                android:background="@color/aac_background_text"
                 android:elevation="@dimen/aac_elevation_level_1"
                 android:orientation="vertical"
-                android:background="@color/aac_background_text">
+                android:padding="@dimen/aac_global_border">
 
-                <TextView android:id="@+id/aacImportantTopHeadingMain"
+                <TextView
+                    android:id="@+id/aacImportantTopHeadingMain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/AACTextAppearance.heading"
-                    android:text="@string/aac_important_content_heading_top"
                     android:background="@color/aac_background_text"
-                    android:padding="@dimen/aac_global_border" />
+                    android:padding="@dimen/aac_global_border"
+                    android:text="@string/aac_important_content_heading_top"
+                    android:textAppearance="@style/AACTextAppearance.heading" />
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
-                    android:background="@color/aac_worldspace_white">
-
-
-                    <TextView android:id="@+id/aacImportantTopTextViewSetting1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:text="@string/aac_labels_setting_1"
-                        android:layout_weight="1"
-                        android:labelFor="@id/switchRed"/>
-
-                    <Switch android:id="@+id/aacImportantTopSwitchSetting1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:layout_weight="0"
-                        android:showText="false"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:layout_margin="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
                     android:background="@color/aac_worldspace_white"
-                    android:id="@+id/layoutGreen">
+                    android:elevation="@dimen/aac_elevation_level_2"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/aac_global_border">
+
 
                     <TextView
+                        android:id="@+id/aacImportantTopTextViewSetting1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:text="@string/aac_labels_setting_2"
                         android:layout_weight="1"
-                        android:labelFor="@id/switchGreen"
-                        android:id="@+id/aacImportantTopTextViewSetting2"/>
+                        android:labelFor="@id/switchRed"
+                        android:text="@string/aac_labels_setting_1"
+                        android:textAppearance="@style/AACTextAppearance.label" />
 
                     <Switch
+                        android:id="@+id/aacImportantTopSwitchSetting1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
                         android:layout_weight="0"
-                        android:id="@+id/aacImportantTopSwitchSetting2"/>
+                        android:showText="false"
+                        android:textAppearance="@style/AACTextAppearance.label" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/layoutGreen"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
                     android:layout_margin="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
                     android:background="@color/aac_worldspace_white"
-                    android:id="@+id/layoutBlue">
+                    android:elevation="@dimen/aac_elevation_level_2"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/aac_global_border">
 
-                    <TextView android:id="@+id/aacImportantTopTextViewSetting3"
+                    <TextView
+                        android:id="@+id/aacImportantTopTextViewSetting2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:text="@string/aac_labels_setting_3"
                         android:layout_weight="1"
-                        android:labelFor="@id/switchBlue" />
+                        android:labelFor="@id/switchGreen"
+                        android:text="@string/aac_labels_setting_2"
+                        android:textAppearance="@style/AACTextAppearance.label" />
 
-                    <Switch android:id="@+id/aacImportantTopSwitchSetting3"
+                    <Switch
+                        android:id="@+id/aacImportantTopSwitchSetting2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/AACTextAppearance.label"
-                        android:layout_weight="0" />
+                        android:layout_weight="0"
+                        android:textAppearance="@style/AACTextAppearance.label" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutBlue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/aac_global_border"
+                    android:background="@color/aac_worldspace_white"
+                    android:elevation="@dimen/aac_elevation_level_2"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/aac_global_border">
+
+                    <TextView
+                        android:id="@+id/aacImportantTopTextViewSetting3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@id/switchBlue"
+                        android:text="@string/aac_labels_setting_3"
+                        android:textAppearance="@style/AACTextAppearance.label" />
+
+                    <Switch
+                        android:id="@+id/aacImportantTopSwitchSetting3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:textAppearance="@style/AACTextAppearance.label" />
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout android:id="@+id/aacImportantLayoutBottomMain"
+            <LinearLayout
+                android:id="@+id/aacImportantLayoutBottomMain"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/aac_global_border"
-                android:padding="@dimen/aac_global_border"
-                android:elevation="@dimen/aac_elevation_level_1"
-                android:orientation="vertical"
                 android:background="@color/aac_background_text"
-                android:importantForAccessibility="yes">
+                android:elevation="@dimen/aac_elevation_level_1"
+                android:importantForAccessibility="yes"
+                android:orientation="vertical"
+                android:padding="@dimen/aac_global_border">
 
                 <TextView
+                    android:id="@+id/aac_important_fixed_heading_bottom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/AACTextAppearance.heading"
-                    android:text="@string/aac_important_content_heading_bottom"
                     android:background="@color/aac_background_text"
                     android:padding="@dimen/aac_global_border"
-                    android:id="@+id/aac_important_fixed_heading_bottom"/>
+                    android:text="@string/aac_important_content_heading_bottom"
+                    android:textAppearance="@style/AACTextAppearance.heading" />
 
                 <Switch
+                    android:id="@+id/switchRed2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
                     android:background="@color/aac_worldspace_white"
-                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:elevation="@dimen/aac_elevation_level_2"
+                    android:padding="@dimen/aac_global_border"
                     android:text="@string/aac_labels_setting_1"
-                    android:id="@+id/switchRed2"/>
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
                 <Switch
+                    android:id="@+id/switchGreen2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
                     android:background="@color/aac_worldspace_white"
-                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:elevation="@dimen/aac_elevation_level_2"
+                    android:padding="@dimen/aac_global_border"
                     android:text="@string/aac_labels_setting_2"
-                    android:id="@+id/switchGreen2"/>
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
                 <Switch
+                    android:id="@+id/switchBlue2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/aac_global_border"
-                    android:elevation="@dimen/aac_elevation_level_2"
                     android:background="@color/aac_worldspace_white"
-                    android:textAppearance="@style/AACTextAppearance.label"
+                    android:elevation="@dimen/aac_elevation_level_2"
+                    android:padding="@dimen/aac_global_border"
                     android:text="@string/aac_labels_setting_3"
-                    android:id="@+id/switchBlue2"/>
+                    android:textAppearance="@style/AACTextAppearance.label" />
 
             </LinearLayout>
         </LinearLayout>

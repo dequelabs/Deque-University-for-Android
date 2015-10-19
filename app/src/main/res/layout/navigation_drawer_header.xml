@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/selected_menu_option"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
-    <ImageView android:id="@+id/navigation_drawer_header"
+    <ImageView
+        android:id="@+id/navigation_drawer_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/navigation_drawer_title"
-        android:textAppearance="@style/AACTextAppearance.navigation_drawer_heading"/>
+        android:textAppearance="@style/AACTextAppearance.navigation_drawer_heading" />
 
 </LinearLayout>
