@@ -5,6 +5,8 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.method.LinkMovementMethod;
+import android.text.method.MovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,8 @@ public class TabbedNavigationBrokenFragment extends Fragment {
 
     private TabHost mTabHost;
 
+    private TextView mTextView;
+
     public TabbedNavigationBrokenFragment() {
         // Required empty public constructor
     }
@@ -31,6 +35,10 @@ public class TabbedNavigationBrokenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_tabbed_navigation_broken, container, false);
+
+        mTextView = (TextView) view.findViewById(R.id.aac_tab_nav_link_view);
+
+        mTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         mTabHost = (TabHost) view.findViewById(R.id.tabNavBrokenTabHost);
         mTabHost.setup();

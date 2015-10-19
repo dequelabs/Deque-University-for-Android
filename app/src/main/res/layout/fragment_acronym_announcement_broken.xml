@@ -43,9 +43,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/aac_acronym_broken_whats_wrong"
+                android:text="@string/aac_acronym_broken_conclusion"
                 android:padding="@dimen/aac_global_border"
                 android:textAppearance="@style/AACTextAppearance.body"/>
+
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_acronym_annoucement_link_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:textAppearance="@style/AACTextAppearance.link"
+                android:text="@string/aac_acronym_announcement_wcag_link"/>
 
         </LinearLayout>
 

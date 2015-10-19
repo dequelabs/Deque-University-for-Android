@@ -125,6 +125,16 @@
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp" />
 
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aac_worldspace_white"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,6 +151,24 @@
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp" />
 
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_cont_desc_link_view_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:textAppearance="@style/AACTextAppearance.link"
+                android:text="@string/aac_cont_desc_wcag_link_1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aac_worldspace_white"
+            android:layout_margin="@dimen/aac_global_border"
+            android:padding="@dimen/aac_global_border"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -156,14 +184,6 @@
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_worldspace_white"
                 android:layout_margin="5dp" />
-
-            <com.dequesystems.a11yframework.TextViewLink
-                android:id="@+id/aac_cont_desc_link_view_1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/aac_global_border"
-                android:textAppearance="@style/AACTextAppearance.link"
-                android:text="@string/aac_cont_desc_wcag_link_1"/>
 
             <com.dequesystems.a11yframework.TextViewLink
                 android:id="@+id/aac_cont_desc_link_view_2"

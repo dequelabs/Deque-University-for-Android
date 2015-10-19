@@ -95,9 +95,24 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:textAppearance="@style/AACTextAppearance.heading"
+                android:text="@string/aac_tab_nav_broken_heading"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/aac_tab_nav_broken_conclusion"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:padding="@dimen/aac_global_border" />
+
+            <com.dequesystems.a11yframework.TextViewLink
+                android:id="@+id/aac_tab_nav_link_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/aac_global_border"
+                android:textAppearance="@style/AACTextAppearance.link"
+                android:text="@string/aac_tab_nav_wcag_link"/>
 
         </LinearLayout>
 
