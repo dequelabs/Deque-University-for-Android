@@ -9,7 +9,7 @@ if (!defined? port_number || port_number == 0)
 	port_number=38383
 end
 
-device_test_url='http://localhost:' + port_number.to_s + '/a11ytest'
+device_test_url='http://localhost:' + port_number.to_s + '/a11ytest?json=true'
 
 ARGV.each_with_index { |value, index| 
 	if (value == "--format")
