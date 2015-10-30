@@ -35,6 +35,8 @@ end
 
 def runTestWithURL(url, silent, html_output) 
 
+	sleep(2)
+
 	uri = URI.parse(url)
 	http = Net::HTTP.new(uri.host, uri.port)
 	request = Net::HTTP::Get.new(uri.request_uri)
@@ -44,6 +46,8 @@ def runTestWithURL(url, silent, html_output)
 	rescue EOFError
 		raise "Could not connect to Accessibility Analyzer service on device.  Is it running?"
 	end
+
+	sleep(2)
 
 	responseObject = JSON.parse(response.body)
 	
