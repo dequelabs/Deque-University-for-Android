@@ -52,7 +52,7 @@ def runTestWithURL(url, silent, html_output)
 
 		htmlString.concat(getHtmlString(responseObject["fail"], "FAIL", "red"))
 		htmlString.concat(getHtmlString(responseObject["warn"], "WARN", "yellow"))
-		htmlString.concat(getHtmlString(responseObject["pass"], "PASS", "green"))
+		#htmlString.concat(getHtmlString(responseObject["pass"], "PASS", "green"))
 
 		puts htmlString
 	else 
