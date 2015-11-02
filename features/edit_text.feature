@@ -5,4 +5,4 @@ Feature: EditText Story
 		* I press "Fixed"
 		* I perform silent DQTest 
 		* I press "Broken"
-		* I perform DQTest ?ruleEditText=true&unspecified=false
+		* I perform silent DQTest ?ruleEditText=true&unspecified=false

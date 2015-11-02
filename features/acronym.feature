@@ -3,6 +3,6 @@ Feature: Acronym Announcement Story
 	Scenario: The Acronym Announcement Story is Accessible
 		* I press "Acronym Announcement"
 		* I press "Fixed"
-		* I perform DQTest 
+		* I perform silent DQTest 
 		* I press "Broken"
-		* I perform DQTest 
+		* I perform silent DQTest 

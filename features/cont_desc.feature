@@ -3,6 +3,6 @@ Feature: Content Description Story
 	Scenario: The Content Descriptions Story is Accessible
 		* I press "Content Descriptions"
 		* I press "Fixed"
-		* I perform DQTest 
+		* I perform silent DQTest 
 		* I press "Broken"
-		* I perform DQTest 
+		* I perform silent DQTest 
