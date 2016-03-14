@@ -1,0 +1,3 @@
+[submodule "AndroidAxe"]
+	path = AndroidAxe
+	url = https://github.com/dequelabs/AndroidAxe.git
