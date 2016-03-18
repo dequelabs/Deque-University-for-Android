@@ -28,7 +28,7 @@ repositories {
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     maven {
         url "https://jitpack.io"
-        credentials { username "e8f79bfe2db5911b49651dec2fdcd684527d80bd" }
+        credentials { username jitpackToken }
     }
 }
 
