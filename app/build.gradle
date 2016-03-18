@@ -1,16 +1,16 @@
+
 apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "21.1.2"
+    buildToolsVersion "22"
 
     defaultConfig {
         applicationId "com.dequesystems.accessibility101"
-        minSdkVersion 15
+        minSdkVersion 18
         targetSdkVersion 21
         versionCode 4
         versionName "1.2"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,10 +24,35 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven {
+        url "https://jitpack.io"
+        credentials { username "e8f79bfe2db5911b49651dec2fdcd684527d80bd" }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:22.2.0'
+    }
+
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.0.0'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
-    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+    compile ('com.android.support:appcompat-v7:22.0.0')
+    compile ('com.android.support:support-annotations:22.2.0')
+
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    androidTestCompile ('com.github.dequelabs:AndroidAxe:master-SNAPSHOT') {
+        exclude module: 'appcompat-v7'
+    }
+
     testCompile 'junit:junit:4.12'
+    testCompile 'org.robolectric:robolectric:3.1-SNAPSHOT'
 }

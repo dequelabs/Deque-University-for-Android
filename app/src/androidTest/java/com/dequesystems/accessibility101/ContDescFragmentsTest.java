@@ -47,5 +47,4 @@ public class ContDescFragmentsTest extends ActivityInstrumentationTestCase2<Main
         tabTitle = mActivity.getString(R.string.aac_tab_title_fixed);
         assertNotNull(mStoryManager.getActiveStory().getTitle() + " fixed tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
-
 }

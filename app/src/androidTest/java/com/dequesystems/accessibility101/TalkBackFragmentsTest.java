@@ -47,5 +47,4 @@ public class TalkBackFragmentsTest extends ActivityInstrumentationTestCase2<Main
         tabTitle = mActivity.getString(R.string.aac_talkBack_tab_title_advanced);
         assertNotNull(mStoryManager.getActiveStory().getTitle() + " advanced tab is null", mStoryManager.getActiveStory().getTabByTitle(tabTitle));
     }
-
 }

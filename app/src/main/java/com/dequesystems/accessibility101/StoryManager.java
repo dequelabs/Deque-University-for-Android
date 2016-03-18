@@ -50,11 +50,11 @@ import java.util.ArrayList;
 
 public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
-    private static final String LOG_TAG = StoryManager.class.getSimpleName();
-
     MainActivity mActivity;
 
     private Story mActiveStory = null;
+
+    public static final int STORY_INDEX_ACRONYMS = 7;
 
     StoryManager(MainActivity activity) {
         super(activity, 0, /*objects*/new ArrayList<Story>());
