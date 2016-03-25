@@ -17,7 +17,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by chrismcmeeking on 3/18/16.
+ * Created by chris.mcmeeking@deque.com on 3/18/16.
+ *
+ * Instrumentation tests for the About Labels Fragment
  */
 public class LabelsAboutFragmentTest {
     static {
@@ -39,6 +41,8 @@ public class LabelsAboutFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .acceptWarnings()
+                .isAccessible();
     }
 }

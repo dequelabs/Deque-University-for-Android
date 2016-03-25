@@ -8,6 +8,7 @@ import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
+import com.dequesystems.axeandroid.RuleControlLabels;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -16,7 +17,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by chrismcmeeking on 3/18/16.
+ * Created by chris.mcmeeking@deque.com on 3/18/16.
+ *
+ * Instrumentation tests for the Labels broken fragment.
  */
 public class LabelsBrokenFragmentTest {
     static {
@@ -38,6 +41,11 @@ public class LabelsBrokenFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .expectedFailure(RuleControlLabels.class, null)
+                .expectedFailure(RuleControlLabels.class, null)
+                .expectedFailure(RuleControlLabels.class, null)
+                .acceptWarnings()
+                .isAccessible();
     }
 }

@@ -17,13 +17,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by chrismcmeeking on 3/18/16.
+ * Created by chris.mcmeeking@deque.com on 3/18/16.
+ *
+ * Instrumentation tests for the broken Acronym Announcement fragment
  */
 public class AcronymAnnouncementBrokenFragmentTest {
 
     static {
         CLog.initialize(AcronymAnnouncementAboutFragmentTest.class.getSimpleName(), BuildConfig.DEBUG);
     }
+
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
 
@@ -39,7 +42,11 @@ public class AcronymAnnouncementBrokenFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).rule(RuleAcronymAnnouncement.class).fails();
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).allRules().exceptRule(RuleAcronymAnnouncement.class).passes();
+
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .acceptWarnings()
+                .expectedFailure(RuleAcronymAnnouncement.class, null)
+                .expectedFailure(RuleAcronymAnnouncement.class, null)
+                .isAccessible();
     }
 }

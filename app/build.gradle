@@ -32,12 +32,13 @@ repositories {
     }
 }
 
+//noinspection GroovyAssignabilityCheck
 configurations.all {
     resolutionStrategy {
         force 'com.android.support:support-annotations:22.2.0'
     }
 
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    resolutionStrategy.cacheChangingModulesFor 60, 'minutes'
 }
 
 dependencies {

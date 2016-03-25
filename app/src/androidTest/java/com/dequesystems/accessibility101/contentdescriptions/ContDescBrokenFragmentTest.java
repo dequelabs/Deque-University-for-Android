@@ -9,6 +9,7 @@ import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.axeandroid.A11yAssert;
+import com.dequesystems.axeandroid.RuleImageContDesc;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -17,7 +18,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by chrismcmeeking on 3/18/16.
+ * Created by chris.mcmeeking@deque.com on 3/18/16.
+ *
+ * Instrumentation tests for the Broken Content Descriptions fragment
  */
 public class ContDescBrokenFragmentTest {
     static {
@@ -39,6 +42,10 @@ public class ContDescBrokenFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .acceptWarnings()
+                .expectedFailure(RuleImageContDesc.class, null)
+                .expectedFailure(RuleImageContDesc.class, " ")
+                .isAccessible();
     }
 }
