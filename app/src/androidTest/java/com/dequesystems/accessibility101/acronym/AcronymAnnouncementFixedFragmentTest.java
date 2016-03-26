@@ -2,22 +2,28 @@ package com.dequesystems.accessibility101.acronym;
 
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
 
 import com.chriscm.clog.CLog;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
+import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.*;
 
 /**
  * Created by chrismcmeeking on 3/18/16.
  */
+@RunWith(AndroidJUnit4.class)
 public class AcronymAnnouncementFixedFragmentTest {
     static {
         CLog.initialize(AcronymAnnouncementAboutFragmentTest.class.getSimpleName(), BuildConfig.DEBUG);
@@ -33,10 +39,14 @@ public class AcronymAnnouncementFixedFragmentTest {
         mActivity = mFragmentActivityRule.getActivity();
 
         TestUtils.replaceAllContentWithFragment(mActivity, new AcronymAnnouncementFixedFragment());
+
+
     }
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .acceptWarnings()
+                .isAccessible();
     }
 }

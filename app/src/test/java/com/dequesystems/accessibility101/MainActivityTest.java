@@ -5,6 +5,8 @@ import android.app.Activity;
 
 import com.chriscm.clog.CLog;
 import com.dequesystems.axeandroid.A11yAssert;
+import com.dequesystems.axeandroid.DroidRuleDuplicateClickableBounds;
+import com.dequesystems.axeandroid.DroidRuleRedundantContDesc;
 import com.dequesystems.axeandroid.RuleAcronymAnnouncement;
 
 import org.junit.Before;
@@ -45,9 +47,13 @@ public class MainActivityTest {
 
         mActivity.setContentView(R.layout.fragment_acronym_announcement_broken);
 
-        A11yAssert.thatRoboActivity(mActivity).allRules().exceptRule(RuleAcronymAnnouncement.class).passes();
-
-        A11yAssert.thatRoboActivity(mActivity).rule(RuleAcronymAnnouncement.class).fails();
+        A11yAssert.thatRoboActivity(mActivity)
+                .exceptRule(DroidRuleRedundantContDesc.class)
+                .exceptRule(DroidRuleDuplicateClickableBounds.class)
+                .expectedFailure(RuleAcronymAnnouncement.class, null)
+                .expectedFailure(RuleAcronymAnnouncement.class, null)
+                .acceptWarnings()
+                .isAccessible();
 
     }
 
@@ -56,7 +62,10 @@ public class MainActivityTest {
 
         mActivity.setContentView(R.layout.fragment_acronym_announcement_fixed);
 
-        A11yAssert.thatRoboActivity(mActivity).passes();
+        A11yAssert.thatRoboActivity(mActivity)
+                .exceptRule(DroidRuleRedundantContDesc.class)
+                .exceptRule(DroidRuleDuplicateClickableBounds.class)
+                .isAccessible();
 
     }
 }

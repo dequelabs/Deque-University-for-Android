@@ -6,15 +6,20 @@ import android.support.test.rule.ActivityTestRule;
 import com.chriscm.clog.CLog;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
+import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.axeandroid.A11yAssert;
+import com.dequesystems.axeandroid.DroidRuleDuplicateClickableBounds;
+import com.dequesystems.axeandroid.DroidRuleRedundantContDesc;
 import com.dequesystems.axeandroid.RuleImageContDesc;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.*;
 
 /**
@@ -43,6 +48,8 @@ public class ContDescBrokenFragmentTest {
     @Test
     public void testIsAccessible() {
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .exceptRule(DroidRuleDuplicateClickableBounds.class)
+                .exceptRule(DroidRuleRedundantContDesc.class)
                 .acceptWarnings()
                 .expectedFailure(RuleImageContDesc.class, null)
                 .expectedFailure(RuleImageContDesc.class, " ")

@@ -13,6 +13,7 @@ import com.chriscm.clog.CLog;
 import com.chriscm.clog.Logger;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
+import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
 import com.dequesystems.axeandroid.A11yTest;
@@ -25,6 +26,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+
 /**
  * Created by chrismcmeeking on 3/16/16.
  */
@@ -34,6 +40,7 @@ public class AcronymAnnouncementAboutFragmentTest {
     static {
         CLog.initialize(AcronymAnnouncementAboutFragmentTest.class.getSimpleName(), BuildConfig.DEBUG);
     }
+
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
 
