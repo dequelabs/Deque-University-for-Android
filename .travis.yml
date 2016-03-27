@@ -8,6 +8,7 @@ android:
 
     # The BuildTools version used by your project
     - build-tools-21.1.1
+    - extra-android-m2repository
 
     # The SDK version used to compile your project
     - android-22
@@ -25,4 +26,4 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  ./gradlew build connectedCheck --debug
+  ./gradlew build connectedCheck
