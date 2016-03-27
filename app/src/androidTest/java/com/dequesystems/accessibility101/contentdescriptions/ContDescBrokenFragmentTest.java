@@ -48,8 +48,6 @@ public class ContDescBrokenFragmentTest {
     @Test
     public void testIsAccessible() {
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .exceptRule(DroidRuleDuplicateClickableBounds.class)
-                .exceptRule(DroidRuleRedundantContDesc.class)
                 .acceptWarnings()
                 .expectedFailure(RuleImageContDesc.class, null)
                 .expectedFailure(RuleImageContDesc.class, " ")
