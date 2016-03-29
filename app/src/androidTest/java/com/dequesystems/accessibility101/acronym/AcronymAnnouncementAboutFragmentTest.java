@@ -1,38 +1,25 @@
 package com.dequesystems.accessibility101.acronym;
 
 
-import android.app.FragmentTransaction;
-import android.content.Context;
-import android.os.Build;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.support.test.uiautomator.UiDevice;
 
 import com.chriscm.clog.CLog;
-import com.chriscm.clog.Logger;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
-import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.A11yTest;
-import com.dequesystems.axeandroid.DQA11yRule;
-import com.dequesystems.axeandroid.RuleAcronymAnnouncement;
-import com.dequesystems.axeandroid.wrapper.DequeNodeInfo;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-
 /**
- * Created by chrismcmeeking on 3/16/16.
+ * Created by chris.mcmeeking@deque.com on 3/16/16.
+ *
+ * Tests for the broken acronym announcement fragment.
  */
 @RunWith(AndroidJUnit4.class)
 public class AcronymAnnouncementAboutFragmentTest {
