@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dequelabs/Deque-University-for-Android.svg?branch=master)](https://travis-ci.org/dequelabs/Deque-University-for-Android)
+
 # Deque-University-for-Android
 
 Welcome to the git repository for Deque University for Android! If you are looking for the iOS version, we also have [Deque University for iOS](https://github.com/dequelabs/Deque-University-for-iOS)
