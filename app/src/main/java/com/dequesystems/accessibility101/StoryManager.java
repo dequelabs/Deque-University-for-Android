@@ -38,6 +38,7 @@ import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedF
 import com.dequesystems.accessibility101.talkback.TalkBackAboutFragment;
 import com.dequesystems.accessibility101.talkback.TalkBackAdvancedFragment;
 import com.dequesystems.accessibility101.talkback.TalkBackDemosFragment;
+import com.dequesystems.accessibility101.verybroken.FragmentVeryBroken;
 
 import java.util.ArrayList;
 
@@ -49,11 +50,11 @@ import java.util.ArrayList;
 
 public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
-    private static final String LOG_TAG = StoryManager.class.getSimpleName();
-
     MainActivity mActivity;
 
     private Story mActiveStory = null;
+
+    public static final int STORY_INDEX_ACRONYMS = 7;
 
     StoryManager(MainActivity activity) {
         super(activity, 0, /*objects*/new ArrayList<Story>());
@@ -108,6 +109,12 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new FragmentImportantBroken());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new FragmentImportantFixed());
         this.add(tempStory);
+
+        if (BuildConfig.DEBUG) {
+            tempStory = new Story("Very Broken Demo", false);
+            tempStory.addTab("Very Broken", R.drawable.aac_about_icon, new FragmentVeryBroken());
+            add(tempStory);
+        }
     }
 
     @Override
