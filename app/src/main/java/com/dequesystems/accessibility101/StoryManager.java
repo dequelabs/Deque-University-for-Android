@@ -110,9 +110,11 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new FragmentImportantFixed());
         this.add(tempStory);
 
-        tempStory = new Story("Very Broken Demo", false);
-        tempStory.addTab("Very Broken", R.drawable.aac_about_icon, new FragmentVeryBroken());
-        add(tempStory);
+        if (BuildConfig.DEBUG) {
+            tempStory = new Story("Very Broken Demo", false);
+            tempStory.addTab("Very Broken", R.drawable.aac_about_icon, new FragmentVeryBroken());
+            add(tempStory);
+        }
     }
 
     @Override
