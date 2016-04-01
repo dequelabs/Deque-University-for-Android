@@ -6,7 +6,6 @@ import android.support.test.rule.ActivityTestRule;
 import com.chriscm.clog.CLog;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
-import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
 import com.dequesystems.axeandroid.RuleControlLabels;
@@ -15,16 +14,13 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
-
 /**
  * Created by chris.mcmeeking@deque.com on 3/18/16.
  *
  * Instrumentation tests for the Labels broken fragment.
  */
 public class LabelsBrokenFragmentTest {
+
     static {
         CLog.initialize("DequeA11yTest", BuildConfig.DEBUG);
     }
