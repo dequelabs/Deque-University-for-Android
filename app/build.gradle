@@ -47,9 +47,6 @@ dependencies {
     compile ('com.android.support:appcompat-v7:22.0.0')
     compile ('com.android.support:support-annotations:22.2.0')
 
-    compile ('com.github.dequelabs:AndroidAxe:0.1.4') {
-        exclude module: 'appcompat-v7'
-    }
 
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test:rules:0.5'
