@@ -1,0 +1,26 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aac_story_broken_background"
+    tools:context="com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/aac_worldspace_white"
+        android:id="@+id/container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="@dimen/aac_global_border"
+            android:text="@string/aac_acronym_broken_flight"
+            android:textAppearance="@style/AACTextAppearance.body" />
+
+    </LinearLayout>
+
+
+</ScrollView>

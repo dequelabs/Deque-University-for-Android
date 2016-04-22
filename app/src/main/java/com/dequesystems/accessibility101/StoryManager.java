@@ -22,6 +22,7 @@ import com.dequesystems.accessibility101.acronym.AcronymAnnouncementFixedFragmen
 import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
 import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
+import com.dequesystems.accessibility101.controlsublcasses.FragmentControlSubclassesBroken;
 import com.dequesystems.accessibility101.edittexts.EditTextAboutFragment;
 import com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment;
 import com.dequesystems.accessibility101.edittexts.EditTextFixedFragment;
@@ -63,52 +64,56 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title), false);
         tempStory.addTab(mActivity.getString(R.string.aac_intro_tab_1), R.drawable.aac_about_icon, new AppIntroductionFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_talkBack_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new TalkBackAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_talkBack_tab_title_demo), R.drawable.aac_cont_desc_icon, new TalkBackDemosFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_talkBack_tab_title_advanced), R.drawable.aac_fixed_icon, new TalkBackAdvancedFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_separator_heading_title), false);
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_labels_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new LabelsAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new LabelsBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new LabelsFixedFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new ContDescAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new ContDescBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new ContDescFixedFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new EditTextAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new EditTextBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new EditTextFixedFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_tab_nav_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new TabbedNavigationAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new TabbedNavigationBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new TabbedNavigationFixedFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_acronym_annoucement_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new AcronymAnnouncementAboutFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new AcronymAnnouncementBrokenFragment());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new AcronymAnnouncementFixedFragment());
-        this.add(tempStory);
+        add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_important_title), true);
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_about), R.drawable.aac_about_icon, new FragmentImportantAbout());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_broken), R.drawable.aac_broken_icon, new FragmentImportantBroken());
         tempStory.addTab(mActivity.getString(R.string.aac_tab_title_fixed), R.drawable.aac_fixed_icon, new FragmentImportantFixed());
-        this.add(tempStory);
+        add(tempStory);
+
+        tempStory = new Story("Control Subclasses", true);
+        tempStory.addTab("Broken", R.drawable.aac_broken_icon, new FragmentControlSubclassesBroken());
+        add(tempStory);
 
         if (BuildConfig.DEBUG) {
             tempStory = new Story("Very Broken Demo", false);
