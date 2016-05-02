@@ -1,7 +1,6 @@
 package com.dequesystems.accessibility101.controlsublcasses;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +15,6 @@ import com.dequesystems.accessibility101.R;
  * Created by chrismcmeeking on 4/22/16.
  */
 public class FragmentControlSubclassesBroken extends Fragment {
-
-    private class MyButton extends Button {
-
-        public MyButton(Context context) {
-            super(context);
-        }
-    }
 
     private LinearLayout mContainer;
 
@@ -48,10 +40,6 @@ public class FragmentControlSubclassesBroken extends Fragment {
         mContainer.addView(brokenButton);
         mContainer.addView(fixedButton);
 
-        /*
-        // #DEMO: Adding a content description to the cat image.
-        mImageViewCat.setContentDescription(getResources().getString(R.string.aac_cont_desc_fixed_cat_cont_desc));
-        */
         return view;
     }
 }
