@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/aac_story_broken_background"
     tools:context="com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationBrokenFragment">
 
@@ -17,52 +18,13 @@
             android:background="@color/aac_worldspace_white"
             android:orientation="vertical">
 
-            <TabHost
-                android:id="@+id/tabNavBrokenTabHost"
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabNavBrokenTabLayout"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical">
-
-                    <TabWidget
-                        android:id="@android:id/tabs"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:background="@color/aac_tab_bar_background" />
-
-                    <FrameLayout
-                        android:id="@android:id/tabcontent"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:id="@+id/tab1"
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical" />
-
-                        <LinearLayout
-                            android:id="@+id/just4"
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical" />
-
-                        <LinearLayout
-                            android:id="@+id/PREVIEW"
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical" />
-
-                    </FrameLayout>
-
-                </LinearLayout>
-
-            </TabHost>
+                android:layout_height="fill_parent"
+                app:tabTextColor="@color/aac_demo_tab_bar_dimmed"
+                app:tabSelectedTextColor="@color/aac_demo_tab_bar_selected">
+            </android.support.design.widget.TabLayout>
 
 
             <LinearLayout
