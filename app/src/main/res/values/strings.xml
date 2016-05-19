@@ -31,7 +31,7 @@
     <string name="aac_image_view_link"><a href="http://developer.android.com/reference/android/widget/ImageView.html">ImageViews</a></string>
     <string name="aac_text_view_link"><a href="http://developer.android.com/reference/android/widget/TextView.html">TextViews</a></string>
     <string name="aac_hint_link"><a href="http://developer.android.com/reference/android/R.attr.html#hint">Hints</a></string>
-    <string name="aac_tabHost_link"><a href="http://developer.android.com/reference/android/widget/TabHost.html">TabHost</a></string>
+    <string name="aac_tabLayout_link"><a href="https://developer.android.com/reference/android/support/design/widget/TabLayout.html">TabLayout</a></string>
 
   <string name="aac_link_wcag_3_1_4"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html"></a>Understanding WCag 3.1.4</string>
     <string name="aac_link_wcag_4_1_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html"></a>Understanding WCag 4.1.2</string>
@@ -272,7 +272,7 @@
     <string name="aac_tab_nav_dog_tab_title">Dog</string>
     <string name="aac_tab_nav_fish_tab_title">Fish</string>
 
-    <string name="aac_tab_nav_about_intro">Tabs can be implemented using the action bar or by utilizing the <i>TabHost</i> class. It is a useful tool for developers, but you must add some features programmatically to make it accessible.  </string>
+    <string name="aac_tab_nav_about_intro">Tabs can be implemented using the action bar or by utilizing the <i>TabLayout</i> class. It is a useful tool for developers, but you must add some features programmatically to make it accessible.  </string>
     <string name="aac_tab_nav_about_heading_1">Name, Role, Value, State</string>
     <string name="aac_tab_nav_demo_heading">Animal Images</string>
     <string name="aac_tab_nav_about_paragraph_1">The tab bar at the bottom of this page has an added feature that forces <i>TalkBack</i> to announce the name, role, value and state of the selected tab. Alerting users to the name of the selected object is the only information provided by the app for <i>TalkBack</i> to announce. Alerting users to the role of the selected object, namely that it is a tab, is necessary for two important reasons. Firstly, without knowing that the object is a tab, <i>TalkBack</i> users cannot know to expect content change. Secondly, without the knowledge that the selected object is a tab, <i>TalkBack</i> users do not know what they can do with the selected object. By announcing the value, meaning which tab of how many, and if the tab is currently selected, <i>TalkBack</i> users gain valuable information about what is on the screen and can decide what their next action should be.</string>

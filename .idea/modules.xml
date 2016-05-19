@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Accessibility-101-Android.iml" filepath="$PROJECT_DIR$/Accessibility-101-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Deque-University-for-Android.iml" filepath="$PROJECT_DIR$/Deque-University-for-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
