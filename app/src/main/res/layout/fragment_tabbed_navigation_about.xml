@@ -107,7 +107,7 @@
                 android:orientation="vertical">
 
                 <com.dequesystems.a11yframework.TextViewLink
-                    android:id="@+id/aacTabNavTextView1"
+                    android:id="@+id/aac_tab_nav_about_link_text_view"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/aac_global_border"

@@ -39,7 +39,7 @@ public class TabbedNavigationAboutFragment extends Fragment {
 
 
         //Link text view
-        mTextView1 = (TextView) view.findViewById(R.id.aacTabNavTextView1);
+        mTextView1 = (TextView) view.findViewById(R.id.aac_tab_nav_about_link_text_view);
 
         mTextView1.setMovementMethod(LinkMovementMethod.getInstance());
 

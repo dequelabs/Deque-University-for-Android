@@ -35,9 +35,14 @@ public class TabbedNavigationBrokenFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_tabbed_navigation_broken, container, false);
 
-        mTextView = (TextView) view.findViewById(R.id.aac_tab_nav_link_view);
+        //Link text view
+        mTextView = (TextView) view.findViewById(R.id.aac_tab_nav_broken_link_text_view);
 
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        int linkColor = ContextCompat.getColor(this.getActivity(), R.color.aac_text_link);
+
+        mTextView.setLinkTextColor(linkColor);
 
         //Tab layout
         mTabLayout = (TabLayout) view.findViewById(R.id.tabNavBrokenTabLayout);
