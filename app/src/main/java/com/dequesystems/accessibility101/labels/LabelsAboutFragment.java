@@ -17,6 +17,16 @@ public class LabelsAboutFragment extends Fragment {
     TextView mTextView1;
     TextView mTextView2;
 
+    public static final String ARG_PAGE = "LABELS_ABOUT";
+
+    public static LabelsAboutFragment newInstance(int page) {
+        Bundle args = new Bundle();
+        args.putInt(ARG_PAGE, page);
+        LabelsAboutFragment fragment = new LabelsAboutFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

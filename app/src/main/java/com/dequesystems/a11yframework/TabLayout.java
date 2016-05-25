@@ -3,6 +3,7 @@ package com.dequesystems.a11yframework;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -18,9 +19,9 @@ import android.widget.TextView;
  * Framework class that makes tab bars accessible by adding the state, role, and value to tabs' content descriptions
  * Can be implemented by inflating a custom xml layout that uses this class
  */
-public class TabLayout extends LinearLayout {
+public class TabLayout extends android.support.design.widget.TabLayout {
 
-    private TabHost mTabHost = null;
+    private com.dequesystems.a11yframework.TabLayout mTabLayout;
 
     private static final String LOG_TAG = TabLayout.class.getSimpleName();
 
@@ -37,21 +38,21 @@ public class TabLayout extends LinearLayout {
         super(context, attrs, defStyleAttr);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public TabLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
+//    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+//    public TabLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+//        super(context, attrs, defStyleAttr, defStyleRes);
+//    }
+
 
     @Override
     public CharSequence getContentDescription() {
 
-        final TabWidget tabWidget = mTabHost.getTabWidget();
-        final View view = tabWidget.getChildTabViewAt(mTabHost.getCurrentTab());
-        final int tabCount = tabWidget.getTabCount();
+        final android.support.design.widget.TabLayout.Tab tab = mTabLayout.getTabAt(mTabLayout.getSelectedTabPosition());
+        final int tabCount = mTabLayout.getTabCount();
         int tabNumber;
 
         for (tabNumber = 0; tabNumber < tabCount; tabNumber++) {
-            if (this == tabWidget.getChildTabViewAt(tabNumber)) break;
+            if (this.getTabAt(tabNumber) == mTabLayout.getTabAt(tabNumber)) break;
         }
 
         CharSequence contentDescription = findContentDescription(this);
@@ -61,7 +62,7 @@ public class TabLayout extends LinearLayout {
             Log.wtf(LOG_TAG, "Content Description should not be null, we need to throw an exception here");
         }
 
-        if (view == this) {
+        if (tab == this.getTabAt(this.getSelectedTabPosition())) {
             contentDescription = contentDescription + ", selected";
         }
 
@@ -97,8 +98,8 @@ public class TabLayout extends LinearLayout {
         return null;
     }
 
-    public void setTabHost(TabHost tabHost){
-        mTabHost = tabHost;
-        //TODO: add exception handling if this value is not set before the logic in this class
+    public void setTabLayout(com.dequesystems.a11yframework.TabLayout tabLayout) {
+        mTabLayout = tabLayout;
     }
+
 }
