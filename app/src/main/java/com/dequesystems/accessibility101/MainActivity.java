@@ -2,25 +2,19 @@ package com.dequesystems.accessibility101;
 
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-
 import android.view.accessibility.AccessibilityEvent;
-
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TabHost;
-import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
 
 /*
  * created by chris.mcmeeking@deque.com
@@ -50,7 +44,7 @@ public class MainActivity extends ActionBarActivity
 
     private StoryManager mStoryManager;
 
-    private com.dequesystems.a11yframework.TabLayout mGlobalTabLayout;
+    private TabLayout mGlobalTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +55,8 @@ public class MainActivity extends ActionBarActivity
 
         mTitle = getTitle();
 
-        mGlobalTabLayout = (com.dequesystems.a11yframework.TabLayout) findViewById(R.id.globalTabLayout);
-        mGlobalTabLayout.setTabLayout(mGlobalTabLayout);
+        mGlobalTabLayout = (TabLayout) findViewById(R.id.globalTabLayout);
+       // mGlobalTabLayout.setTabLayout(mGlobalTabLayout);
         mGlobalTabLayout.setBackgroundColor(getResources().getColor(R.color.aac_tab_bar_background));
         mGlobalTabLayout.setTabTextColors(getResources().getColor(R.color.aac_tab_bar_dimmed), getResources().getColor(R.color.aac_tab_bar_selected));
         mGlobalTabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.aac_tab_bar_selected));
@@ -207,7 +201,7 @@ public class MainActivity extends ActionBarActivity
 
     public StoryManager getStoryManager(){return mStoryManager;}
 
-    public com.dequesystems.a11yframework.TabLayout getTabLayout(){
+    public TabLayout getTabLayout(){
         return mGlobalTabLayout;
     }
 
