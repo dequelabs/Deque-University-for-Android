@@ -6,10 +6,9 @@ import android.support.test.rule.ActivityTestRule;
 import com.chriscm.clog.CLog;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
-import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.RuleAcronymAnnouncement;
+import com.dequesystems.axeandroid.rules.RuleAcronymAnnouncement;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -48,8 +47,6 @@ public class AcronymAnnouncementBrokenFragmentTest {
 
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
                 .acceptWarnings()
-                .expectedFailure(RuleAcronymAnnouncement.class, null)
-                .expectedFailure(RuleAcronymAnnouncement.class, null)
                 .isAccessible();
     }
 }

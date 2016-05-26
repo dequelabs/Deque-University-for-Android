@@ -3,17 +3,10 @@ package com.dequesystems.accessibility101.verybroken;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 
-import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
-import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.DroidRuleSpeakableText;
-import com.dequesystems.axeandroid.RuleAcronymAnnouncement;
-import com.dequesystems.axeandroid.RuleControlLabels;
-import com.dequesystems.axeandroid.RuleEditText;
-import com.dequesystems.axeandroid.RuleImageContDesc;
-import com.dequesystems.axeandroid.RuleTabWidget;
+
 
 import org.junit.Before;
 import org.junit.Rule;

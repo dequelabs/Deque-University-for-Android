@@ -6,13 +6,9 @@ import android.support.test.rule.ActivityTestRule;
 import com.chriscm.clog.CLog;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
-import com.dequesystems.accessibility101.R;
 import com.dequesystems.accessibility101.TestUtils;
-import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.DroidRuleDuplicateClickableBounds;
-import com.dequesystems.axeandroid.DroidRuleRedundantContDesc;
-import com.dequesystems.axeandroid.RuleImageContDesc;
+import com.dequesystems.axeandroid.rules.RuleImageViewControls;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -49,8 +45,8 @@ public class ContDescBrokenFragmentTest {
     public void testIsAccessible() {
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
                 .acceptWarnings()
-                .expectedFailure(RuleImageContDesc.class, null)
-                .expectedFailure(RuleImageContDesc.class, " ")
+                .expectedFailure(RuleImageViewControls.class, null)
+                .expectedFailure(RuleImageViewControls.class, " ")
                 .isAccessible();
     }
 }
