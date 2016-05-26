@@ -9,3 +9,9 @@ test_servers
 Accessibility101.sublime-workspace
 DequeTestResults
 TestResults
+*.iml
+.idea/.name
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea
