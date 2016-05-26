@@ -1,7 +1,7 @@
 package com.dequesystems.accessibility101.contentdescriptions;
 
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;

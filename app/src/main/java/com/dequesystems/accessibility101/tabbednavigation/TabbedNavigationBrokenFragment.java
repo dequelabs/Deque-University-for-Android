@@ -1,7 +1,7 @@
 package com.dequesystems.accessibility101.tabbednavigation;
 
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;

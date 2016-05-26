@@ -4,6 +4,7 @@ import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -14,6 +15,29 @@ import android.widget.TextView;
 import android.support.design.widget.TabLayout;
 
 import com.dequesystems.a11yframework.TabLayoutWrapper;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementAboutFragment;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementBrokenFragment;
+import com.dequesystems.accessibility101.acronym.AcronymAnnouncementFixedFragment;
+import com.dequesystems.accessibility101.contentdescriptions.ContDescAboutFragment;
+import com.dequesystems.accessibility101.contentdescriptions.ContDescBrokenFragment;
+import com.dequesystems.accessibility101.contentdescriptions.ContDescFixedFragment;
+import com.dequesystems.accessibility101.edittexts.EditTextAboutFragment;
+import com.dequesystems.accessibility101.edittexts.EditTextBrokenFragment;
+import com.dequesystems.accessibility101.edittexts.EditTextFixedFragment;
+import com.dequesystems.accessibility101.important.FragmentImportantAbout;
+import com.dequesystems.accessibility101.important.FragmentImportantBroken;
+import com.dequesystems.accessibility101.important.FragmentImportantFixed;
+import com.dequesystems.accessibility101.introduction.AppIntroductionFragment;
+import com.dequesystems.accessibility101.labels.LabelsAboutFragment;
+import com.dequesystems.accessibility101.labels.LabelsBrokenFragment;
+import com.dequesystems.accessibility101.labels.LabelsFixedFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationAboutFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationBrokenFragment;
+import com.dequesystems.accessibility101.tabbednavigation.TabbedNavigationFixedFragment;
+import com.dequesystems.accessibility101.talkback.TalkBackAboutFragment;
+import com.dequesystems.accessibility101.talkback.TalkBackAdvancedFragment;
+import com.dequesystems.accessibility101.talkback.TalkBackDemosFragment;
+import com.dequesystems.accessibility101.verybroken.FragmentVeryBroken;
 
 import java.util.ArrayList;
 
@@ -40,57 +64,57 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         TabLayout tempTabLayout = (TabLayout) mActivity.findViewById(R.id.globalTabLayout);
 
         Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title), false, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_intro_tab_1)).setIcon(R.drawable.aac_about_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_intro_tab_1)).setIcon(R.drawable.aac_about_icon), new AppIntroductionFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_talkBack_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_talkBack_tab_title_demo)).setIcon(R.drawable.aac_cont_desc_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_talkBack_tab_title_advanced)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new TalkBackAboutFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_talkBack_tab_title_demo)).setIcon(R.drawable.aac_cont_desc_icon), new TalkBackDemosFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_talkBack_tab_title_advanced)).setIcon(R.drawable.aac_fixed_icon), new TalkBackAdvancedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_separator_heading_title), false, tempTabLayout);
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_labels_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new LabelsAboutFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon), new LabelsBrokenFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon), new LabelsFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_cont_desc_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new ContDescAboutFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon), new ContDescBrokenFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon), new ContDescFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_edit_text_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new EditTextAboutFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon), new EditTextBrokenFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon), new EditTextFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_tab_nav_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new TabbedNavigationAboutFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon), new TabbedNavigationBrokenFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon), new TabbedNavigationFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_acronym_annoucement_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new AcronymAnnouncementAboutFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon), new AcronymAnnouncementBrokenFragment());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon), new AcronymAnnouncementFixedFragment());
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_important_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon));
-        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon), new FragmentImportantAbout());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_broken)).setIcon(R.drawable.aac_broken_icon), new FragmentImportantBroken());
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_fixed)).setIcon(R.drawable.aac_fixed_icon), new FragmentImportantFixed());
         this.add(tempStory);
 
         if (BuildConfig.DEBUG) {
             tempStory = new Story("Very Broken Demo", false, tempTabLayout);
-            tempStory.addTab(tempTabLayout.newTab().setText("Very Broken").setIcon(R.drawable.aac_about_icon));
+            tempStory.addTab(tempTabLayout.newTab().setText("Very Broken").setIcon(R.drawable.aac_about_icon), new FragmentVeryBroken());
             add(tempStory);
         }
     }
@@ -167,21 +191,26 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         TabLayoutWrapper mTabLayoutWrapper;
 
+        ArrayList<Fragment> mFragments;
+
         private Story (String title, boolean tabBarVisible, TabLayout tabLayout) {
             mTitle = title;
             mTabBarVisible = tabBarVisible;
             mTabs = new ArrayList<>();
+            mFragments = new ArrayList<>();
             mTabLayoutWrapper = new TabLayoutWrapper(tabLayout);
         }
 
-        private void addTab(TabLayout.Tab tab) {
+        private void addTab(TabLayout.Tab tab, Fragment fragment) {
             String tabID =  Story.this.getTitle().toUpperCase() + "_" + mTitle.toUpperCase() + "_TAB";
             tab.setTag(tabID);
 
             mTabs.add(tab);
+            mFragments.add(fragment);
         }
 
         private void makeActiveStory() {
+            //this is where we should inflate the fragments that are stored in mFragments array list
             mTabLayoutWrapper.clearTabs();
 
 
