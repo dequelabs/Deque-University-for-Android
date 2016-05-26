@@ -10,24 +10,10 @@ import java.util.ArrayList;
  */
 public class TabLayoutWrapper {
 
-    private ArrayList<TabLayout.Tab> mTabs;
     private TabLayout mTabLayout;
 
     public TabLayoutWrapper(TabLayout tabLayout) {
-        mTabs = new ArrayList<>();
         mTabLayout = tabLayout;
-    }
-
-    public TabLayout.Tab addTab(TabLayout.Tab tab) {
-        mTabs.add(tab);
-        //mTabLayout.addTab(tab);
-        setContentDescriptions();
-
-        return tab;
-    }
-
-    public TabLayout.Tab getTabAt(int position) {
-        return mTabs.get(position);
     }
 
     public TabLayout getTabLayout() {
@@ -41,11 +27,11 @@ public class TabLayoutWrapper {
         int tabNumber;
 
         for (tabNumber = 0; tabNumber < tabCount; tabNumber++) {
-            contentDescription = mTabs.get(tabNumber).getText() + ", tab " + (tabNumber + 1) + " of " + tabCount;
+            contentDescription = mTabLayout.getTabAt(tabNumber).getText() + ", tab " + (tabNumber + 1) + " of " + tabCount;
             if (tabNumber == mTabLayout.getSelectedTabPosition()) {
                 contentDescription = contentDescription + " , selected";
             }
-            mTabs.get(tabNumber).setContentDescription(contentDescription);
+            mTabLayout.getTabAt(tabNumber).setContentDescription(contentDescription);
         }
     }
 

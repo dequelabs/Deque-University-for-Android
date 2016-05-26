@@ -3,6 +3,7 @@ package com.dequesystems.accessibility101;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -37,18 +38,15 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
 
         TabLayout tempTabLayout = (TabLayout) mActivity.findViewById(R.id.globalTabLayout);
-        TabLayoutWrapper tempTabLayoutWrapper = new TabLayoutWrapper(tempTabLayout);
 
         Story tempStory = new Story(mActivity.getString(R.string.aac_intro_title), false, tempTabLayout);
-        tempStory.addTab(tempTabLayoutWrapper.addTab(tempTabLayout.newTab()).setText(mActivity.getString(R.string.aac_intro_tab_1)).setIcon(R.drawable.aac_about_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_intro_tab_1)).setIcon(R.drawable.aac_about_icon));
         this.add(tempStory);
 
-        tempTabLayoutWrapper.clearTabs();
-
         tempStory = new Story(mActivity.getString(R.string.aac_talkBack_title), true, tempTabLayout);
-        tempStory.addTab(tempTabLayoutWrapper.addTab(tempTabLayout.newTab()).setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
-        tempStory.addTab(tempTabLayoutWrapper.addTab(tempTabLayout.newTab()).setText(mActivity.getString(R.string.aac_talkBack_tab_title_demo)).setIcon(R.drawable.aac_cont_desc_icon));
-        tempStory.addTab(tempTabLayoutWrapper.addTab(tempTabLayout.newTab()).setText(mActivity.getString(R.string.aac_talkBack_tab_title_advanced)).setIcon(R.drawable.aac_fixed_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_tab_title_about)).setIcon(R.drawable.aac_about_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_talkBack_tab_title_demo)).setIcon(R.drawable.aac_cont_desc_icon));
+        tempStory.addTab(tempTabLayout.newTab().setText(mActivity.getString(R.string.aac_talkBack_tab_title_advanced)).setIcon(R.drawable.aac_fixed_icon));
         this.add(tempStory);
 
         tempStory = new Story(mActivity.getString(R.string.aac_separator_heading_title), false, tempTabLayout);
@@ -167,13 +165,13 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
         ArrayList<android.support.design.widget.TabLayout.Tab> mTabs;
 
-        TabLayoutWrapper mTabLayout;
+        TabLayoutWrapper mTabLayoutWrapper;
 
         private Story (String title, boolean tabBarVisible, TabLayout tabLayout) {
             mTitle = title;
             mTabBarVisible = tabBarVisible;
             mTabs = new ArrayList<>();
-            mTabLayout = new TabLayoutWrapper(tabLayout);
+            mTabLayoutWrapper = new TabLayoutWrapper(tabLayout);
         }
 
         private void addTab(TabLayout.Tab tab) {
@@ -184,25 +182,52 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         }
 
         private void makeActiveStory() {
-            mTabLayout.clearTabs();
-            //mTabLayout.setTabLayout(mTabLayout);
+            mTabLayoutWrapper.clearTabs();
+
+
+            final ColorFilter overlayColorDimmed = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
+            final ColorFilter overlayColorSelected = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_selected), PorterDuff.Mode.SRC_IN);
 
             for (int i = 0; i < mTabs.size(); i++) {
                 TabLayout.Tab tab = mTabs.get(i);
 
-                ColorFilter overlayColor = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
-                tab.getIcon().setColorFilter(overlayColor);
-                mTabLayout.addTab(tab);
-                mTabLayout.getTabLayout().addTab(tab);
-                mTabLayout.setContentDescriptions();
+                if(i == 0) {tab.getIcon().setColorFilter(overlayColorSelected);}
+                else {tab.getIcon().setColorFilter(overlayColorDimmed);}
 
+                mTabLayoutWrapper.getTabLayout().addTab(tab);
             }
+
+            mTabLayoutWrapper.setContentDescriptions();
+
+            mTabLayoutWrapper.getTabLayout().setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    mTabLayoutWrapper.setContentDescriptions();
+                    tab.getIcon().setColorFilter(overlayColorSelected);
+                }
+
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
+                    mTabLayoutWrapper.setContentDescriptions();
+                    tab.getIcon().setColorFilter(overlayColorDimmed);
+                }
+
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+
+                }
+            });
 
             if (mTabBarVisible) {
-                mTabLayout.getTabLayout().setVisibility(View.VISIBLE);
+                mTabLayoutWrapper.getTabLayout().setVisibility(View.VISIBLE);
             } else {
-                mTabLayout.getTabLayout().setVisibility(View.GONE);
+                mTabLayoutWrapper.getTabLayout().setVisibility(View.GONE);
             }
+
+            mTabLayoutWrapper.getTabLayout().setBackgroundColor(mActivity.getResources().getColor(R.color.aac_tab_bar_background));
+            mTabLayoutWrapper.getTabLayout().setTabTextColors(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), mActivity.getResources().getColor(R.color.aac_tab_bar_selected));
+            mTabLayoutWrapper.getTabLayout().setSelectedTabIndicatorColor(mActivity.getResources().getColor(R.color.aac_tab_bar_selected));
 
             StoryManager.this.mActiveStory = this;
         }
@@ -234,48 +259,5 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
 
             return null;
         }
-
-//        private class Tab implements  TabHost.TabContentFactory{
-//
-//            private View mView = null;
-//
-//            private final String mTitle;
-//
-//            private final String mTabID;
-//
-//            private Fragment mFragment;
-//
-//            private final int mImageResource;
-//
-//            private Tab(String title, int imageResource, Fragment fragment) {
-//                mFragment = fragment;
-//                mTitle = title;
-//                mTabID = Story.this.getTitle().toUpperCase() + "_" + mTitle.toUpperCase() + "_TAB";
-//                mImageResource = imageResource;
-//            }
-//
-//            public String getTitle() { return mTitle;}
-//
-//            public Fragment getFragment() { return mFragment;}
-//
-//            public String getTabID() { return mTabID;}
-//
-//            public int getImageResource() { return mImageResource;}
-//
-//            @Override
-//            public View createTabContent(String tag) {
-//
-//                if (mView != null) return mView;
-//
-//                mView = new RelativeLayout(mActivity);
-//                mView.setId(Math.abs(mTabID.hashCode()));
-//
-//                FragmentTransaction fragmentTransaction = mActivity.getFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(mView.getId(), mFragment, tag);
-//                fragmentTransaction.commit();
-//
-//                return mView;
-//            }
-//        }
     }
 }

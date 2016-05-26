@@ -21,6 +21,7 @@ import com.dequesystems.accessibility101.R;
 public class TabbedNavigationFixedFragment extends Fragment {
 
     private TabLayout mTabLayout;
+    private TabLayoutWrapper mTabLayoutWrapper;
 
     public TabbedNavigationFixedFragment() {
         // Required empty public constructor
@@ -34,26 +35,25 @@ public class TabbedNavigationFixedFragment extends Fragment {
 
         //Tab layout
         mTabLayout = (TabLayout) view.findViewById(R.id.tabNavFixedTabLayout);
+        mTabLayoutWrapper = new TabLayoutWrapper(mTabLayout);
 
-        mTabLayout.setBackgroundColor(ContextCompat.getColor(this.getActivity(), R.color.aac_demo_tab_bar_background));
-        mTabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this.getActivity(), R.color.aac_demo_tab_bar_selected));
-        mTabLayout.setTabTextColors(ContextCompat.getColor(getActivity(), R.color.aac_demo_tab_bar_dimmed), ContextCompat.getColor(getActivity(), R.color.aac_demo_tab_bar_selected));
+        mTabLayoutWrapper.getTabLayout().setBackgroundColor(ContextCompat.getColor(this.getActivity(), R.color.aac_demo_tab_bar_background));
+        mTabLayoutWrapper.getTabLayout().setSelectedTabIndicatorColor(ContextCompat.getColor(this.getActivity(), R.color.aac_demo_tab_bar_selected));
+        mTabLayoutWrapper.getTabLayout().setTabTextColors(ContextCompat.getColor(getActivity(), R.color.aac_demo_tab_bar_dimmed), ContextCompat.getColor(getActivity(), R.color.aac_demo_tab_bar_selected));
 
-        final TabLayoutWrapper tabLayoutWrapper = new TabLayoutWrapper(mTabLayout);
-
-        mTabLayout.addTab(tabLayoutWrapper.addTab(mTabLayout.newTab()).setText(R.string.aac_tab_nav_cat_tab_title));
-        mTabLayout.addTab(tabLayoutWrapper.addTab(mTabLayout.newTab()).setText(R.string.aac_tab_nav_dog_tab_title));
-        mTabLayout.addTab(tabLayoutWrapper.addTab(mTabLayout.newTab()).setText(R.string.aac_tab_nav_fish_tab_title));
+        mTabLayoutWrapper.getTabLayout().addTab(mTabLayout.newTab().setText(R.string.aac_tab_nav_cat_tab_title));
+        mTabLayoutWrapper.getTabLayout().addTab(mTabLayout.newTab().setText(R.string.aac_tab_nav_dog_tab_title));
+        mTabLayoutWrapper.getTabLayout().addTab(mTabLayout.newTab().setText(R.string.aac_tab_nav_fish_tab_title));
 
         ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_nav_fixed_image_view);
         imageView.setImageDrawable(ContextCompat.getDrawable(this.getActivity(), R.drawable.cat));
         imageView.setContentDescription(getResources().getString(R.string.aac_cont_desc_fixed_cat_cont_desc));
 
-        mTabLayout.setOnTabSelectedListener(new android.support.design.widget.TabLayout.OnTabSelectedListener() {
+        mTabLayoutWrapper.getTabLayout().setOnTabSelectedListener(new android.support.design.widget.TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(android.support.design.widget.TabLayout.Tab tab) {
-                tabLayoutWrapper.setContentDescriptions();
+                mTabLayoutWrapper.setContentDescriptions();
 
                 ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_nav_fixed_image_view);
                 Drawable newImage;
@@ -76,12 +76,11 @@ public class TabbedNavigationFixedFragment extends Fragment {
 
             @Override
             public void onTabUnselected(android.support.design.widget.TabLayout.Tab tab) {
-                tabLayoutWrapper.setContentDescriptions();
+                mTabLayoutWrapper.setContentDescriptions();
             }
 
             @Override
             public void onTabReselected(android.support.design.widget.TabLayout.Tab tab) {
-                tabLayoutWrapper.setContentDescriptions();
             }
 
         });

@@ -16,6 +16,8 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.dequesystems.a11yframework.TabLayoutWrapper;
+
 /*
  * created by chris.mcmeeking@deque.com
  *
@@ -46,6 +48,8 @@ public class MainActivity extends ActionBarActivity
 
     private TabLayout mGlobalTabLayout;
 
+    private TabLayoutWrapper mGlobalTabLayoutWrapper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,34 +58,6 @@ public class MainActivity extends ActionBarActivity
         mMainView = (RelativeLayout) findViewById(R.id.aac_main_content);
 
         mTitle = getTitle();
-
-        mGlobalTabLayout = (TabLayout) findViewById(R.id.globalTabLayout);
-       // mGlobalTabLayout.setTabLayout(mGlobalTabLayout);
-        mGlobalTabLayout.setBackgroundColor(getResources().getColor(R.color.aac_tab_bar_background));
-        mGlobalTabLayout.setTabTextColors(getResources().getColor(R.color.aac_tab_bar_dimmed), getResources().getColor(R.color.aac_tab_bar_selected));
-        mGlobalTabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.aac_tab_bar_selected));
-
-        mGlobalTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-
-              @Override
-              public void onTabSelected(TabLayout.Tab tab) {
-                  Drawable icon = tab.getIcon();
-                  int color = getResources().getColor(R.color.aac_demo_tab_bar_selected);
-                  icon.setColorFilter(color, PorterDuff.Mode.SRC_IN);
-              }
-
-              @Override
-              public void onTabUnselected(TabLayout.Tab tab) {
-                  Drawable icon = tab.getIcon();
-                  int color = getResources().getColor(R.color. aac_tab_bar_dimmed);
-                  icon.setColorFilter(color, PorterDuff.Mode.SRC_IN);
-              }
-
-              @Override
-              public void onTabReselected(TabLayout.Tab tab) {
-
-              }
-        });
 
         mStoryManager = new StoryManager(this);
 
