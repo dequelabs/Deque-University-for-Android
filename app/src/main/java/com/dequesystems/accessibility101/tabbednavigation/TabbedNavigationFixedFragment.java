@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.view.InputDevice;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,8 @@ public class TabbedNavigationFixedFragment extends Fragment {
         mTabLayoutWrapper.getTabLayout().addTab(mTabLayout.newTab().setText(R.string.aac_tab_nav_dog_tab_title));
         mTabLayoutWrapper.getTabLayout().addTab(mTabLayout.newTab().setText(R.string.aac_tab_nav_fish_tab_title));
 
+        mTabLayoutWrapper.setContentDescriptions();
+
         ImageView imageView = (ImageView) view.findViewById(R.id.aac_tab_nav_fixed_image_view);
         imageView.setImageDrawable(ContextCompat.getDrawable(this.getActivity(), R.drawable.cat));
         imageView.setContentDescription(getResources().getString(R.string.aac_cont_desc_fixed_cat_cont_desc));
@@ -76,7 +79,6 @@ public class TabbedNavigationFixedFragment extends Fragment {
 
             @Override
             public void onTabUnselected(android.support.design.widget.TabLayout.Tab tab) {
-                mTabLayoutWrapper.setContentDescriptions();
             }
 
             @Override

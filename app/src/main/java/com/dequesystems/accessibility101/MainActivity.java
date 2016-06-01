@@ -1,7 +1,5 @@
 package com.dequesystems.accessibility101;
 
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.widget.DrawerLayout;
@@ -60,6 +58,9 @@ public class MainActivity extends ActionBarActivity
         mTitle = getTitle();
 
         mStoryManager = new StoryManager(this);
+        observeOverlayIsOn();
+
+        mGlobalTabLayout = (TabLayout) findViewById(R.id.globalTabLayout);
 
         //Set up Navigation Drawer
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);

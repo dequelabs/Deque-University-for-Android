@@ -98,15 +98,6 @@
 
         </LinearLayout>
 
-        <com.dequesystems.a11yframework.TabLayout
-            android:id="@+id/aac_intro_tabLayout"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            app:tabBackground="@color/aac_tab_bar_background"
-            app:tabTextColor="@color/aac_tab_bar_dimmed"
-            app:tabSelectedTextColor="@color/aac_tab_bar_selected">
-        </com.dequesystems.a11yframework.TabLayout>
-
     </LinearLayout>
 
 </ScrollView>

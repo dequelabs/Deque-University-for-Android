@@ -3,16 +3,16 @@ package com.dequesystems.accessibility101;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import android.support.design.widget.TabLayout;
 
 import com.dequesystems.a11yframework.TabLayoutWrapper;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementAboutFragment;
@@ -115,7 +115,7 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
         if (BuildConfig.DEBUG) {
             tempStory = new Story("Very Broken Demo", false, tempTabLayout);
             tempStory.addTab(tempTabLayout.newTab().setText("Very Broken").setIcon(R.drawable.aac_about_icon), new FragmentVeryBroken());
-            add(tempStory);
+            this.add(tempStory);
         }
     }
 
@@ -206,27 +206,40 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             tab.setTag(tabID);
 
             mTabs.add(tab);
+
+            //mActivity.getSupportFragmentManager().beginTransaction().add().commit();
             mFragments.add(fragment);
         }
 
         private void makeActiveStory() {
-            //this is where we should inflate the fragments that are stored in mFragments array list
-            mTabLayoutWrapper.clearTabs();
+            //clear the general tablayout and add tabs for the active story
+            mTabLayoutWrapper.getTabLayout().removeAllTabs();
 
-
+            //set colors used for tabs text and icons
             final ColorFilter overlayColorDimmed = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), PorterDuff.Mode.SRC_IN);
             final ColorFilter overlayColorSelected = new PorterDuffColorFilter(mActivity.getResources().getColor(R.color.aac_tab_bar_selected), PorterDuff.Mode.SRC_IN);
 
-            for (int i = 0; i < mTabs.size(); i++) {
+            //add tabs to tablayout and set initial colors
+            for(int i = 0; i < mTabs.size(); i++) {
                 TabLayout.Tab tab = mTabs.get(i);
-
-                if(i == 0) {tab.getIcon().setColorFilter(overlayColorSelected);}
-                else {tab.getIcon().setColorFilter(overlayColorDimmed);}
-
+                if(i == 0) {
+                    tab.getIcon().setColorFilter(overlayColorSelected);
+                    tab.select();
+                }
+                else {
+                    tab.getIcon().setColorFilter(overlayColorDimmed);
+                }
                 mTabLayoutWrapper.getTabLayout().addTab(tab);
             }
-
+            //use acccessible wrapper to update content descriptions
             mTabLayoutWrapper.setContentDescriptions();
+
+            //set up view pager with specific adapter that returns fragments for this story
+            final ViewPager viewPager = (ViewPager) mActivity.findViewById(R.id.globalViewPager);
+            final FragmentPagerAdapter fragmentPagerAdapter = new TabFragmentPagerAdapter(mActivity.getSupportFragmentManager(), mFragments.size(), mFragments);
+            viewPager.setAdapter(fragmentPagerAdapter);
+
+            viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayoutWrapper.getTabLayout()));
 
             mTabLayoutWrapper.getTabLayout().setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -234,11 +247,12 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 public void onTabSelected(TabLayout.Tab tab) {
                     mTabLayoutWrapper.setContentDescriptions();
                     tab.getIcon().setColorFilter(overlayColorSelected);
+
+                    viewPager.setCurrentItem(tab.getPosition());
                 }
 
                 @Override
                 public void onTabUnselected(TabLayout.Tab tab) {
-                    mTabLayoutWrapper.setContentDescriptions();
                     tab.getIcon().setColorFilter(overlayColorDimmed);
                 }
 
@@ -248,16 +262,19 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 }
             });
 
+            //this allows stories to not include tab bar
             if (mTabBarVisible) {
                 mTabLayoutWrapper.getTabLayout().setVisibility(View.VISIBLE);
             } else {
                 mTabLayoutWrapper.getTabLayout().setVisibility(View.GONE);
             }
 
+            //sytle the tablayout
             mTabLayoutWrapper.getTabLayout().setBackgroundColor(mActivity.getResources().getColor(R.color.aac_tab_bar_background));
             mTabLayoutWrapper.getTabLayout().setTabTextColors(mActivity.getResources().getColor(R.color.aac_tab_bar_dimmed), mActivity.getResources().getColor(R.color.aac_tab_bar_selected));
             mTabLayoutWrapper.getTabLayout().setSelectedTabIndicatorColor(mActivity.getResources().getColor(R.color.aac_tab_bar_selected));
 
+            //set the active story
             StoryManager.this.mActiveStory = this;
         }
 
