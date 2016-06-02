@@ -55,9 +55,7 @@
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabNavAboutTabLayout"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                app:tabTextColor="@color/aac_demo_tab_bar_dimmed"
-                app:tabSelectedTextColor="@color/aac_demo_tab_bar_selected">
+                android:layout_height="fill_parent">
             </android.support.design.widget.TabLayout>
 
             <LinearLayout

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AxeAndroid/AxeAndroid.iml" filepath="$PROJECT_DIR$/AxeAndroid/AxeAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/Deque-University-for-Android.iml" filepath="$PROJECT_DIR$/Deque-University-for-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxeAndroid/axeandroid/axeandroid.iml" filepath="$PROJECT_DIR$/AxeAndroid/axeandroid/axeandroid.iml" />
     </modules>
   </component>
 </project>
