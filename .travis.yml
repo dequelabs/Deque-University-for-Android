@@ -7,11 +7,11 @@ android:
     # - tools
 
     # The BuildTools version used by your project
-    - build-tools-21.1.1
+    - build-tools-23.0.0
     - extra-android-m2repository
 
     # The SDK version used to compile your project
-    - android-22
+    - android-23
 
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
@@ -26,4 +26,4 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  ./gradlew build connectedCheck
+  ./gradlew build clean test

@@ -1,23 +1,20 @@
 package com.dequesystems.accessibility101;
 
-import android.graphics.PorterDuff;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-
 import android.view.accessibility.AccessibilityEvent;
-
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TabHost;
-import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
+
+import com.dequesystems.a11yframework.TabLayoutWrapper;
 
 /*
  * created by chris.mcmeeking@deque.com
@@ -47,7 +44,9 @@ public class MainActivity extends ActionBarActivity
 
     private StoryManager mStoryManager;
 
-    private TabHost mGlobalTabHost;
+    private TabLayout mGlobalTabLayout;
+
+    private TabLayoutWrapper mGlobalTabLayoutWrapper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,35 +57,10 @@ public class MainActivity extends ActionBarActivity
 
         mTitle = getTitle();
 
-        mGlobalTabHost = (TabHost) findViewById(R.id.globalTabHost);
-        mGlobalTabHost.setup();
-
-        mGlobalTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String tabId) {
-                int tab = mGlobalTabHost.getCurrentTab();
-
-                for (int i = 0; i < mGlobalTabHost.getTabWidget().getTabCount(); i++) {
-                    ImageView imageView = (ImageView) mGlobalTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_image);
-                    TextView textView = (TextView) mGlobalTabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.aac_tab_title);
-
-                    int color;
-
-                    if (i == tab) {
-                        color = getResources().getColor(R.color.aac_tab_bar_selected);
-                    } else {
-                        color = getResources().getColor(R.color.aac_tab_bar_dimmed);
-                    }
-
-                    imageView.setColorFilter(color, PorterDuff.Mode.SRC_IN);
-                    textView.setTextColor(color);
-                }
-
-                observeOverlayIsOn();
-            }
-        });
-
         mStoryManager = new StoryManager(this);
+        observeOverlayIsOn();
+
+        mGlobalTabLayout = (TabLayout) findViewById(R.id.globalTabLayout);
 
         //Set up Navigation Drawer
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -181,7 +155,7 @@ public class MainActivity extends ActionBarActivity
 
         int storyNumber = position > 0 ? position - 1 : 0;
 
-        mStoryManager.setActiveStory(storyNumber , mGlobalTabHost);
+        mStoryManager.setActiveStory(storyNumber);
         mTitle = mStoryManager.getActiveStory().getTitle();
     }
 
@@ -204,8 +178,8 @@ public class MainActivity extends ActionBarActivity
 
     public StoryManager getStoryManager(){return mStoryManager;}
 
-    public TabHost getTabHost(){
-        return mGlobalTabHost;
+    public TabLayout getTabLayout(){
+        return mGlobalTabLayout;
     }
 
 }

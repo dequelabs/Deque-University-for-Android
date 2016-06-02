@@ -1,11 +1,10 @@
 package com.dequesystems.accessibility101.verybroken;
 
 
-import android.app.Fragment;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.dequesystems.a11yframework.TabLayout;
 import com.dequesystems.accessibility101.R;
 
 /**
