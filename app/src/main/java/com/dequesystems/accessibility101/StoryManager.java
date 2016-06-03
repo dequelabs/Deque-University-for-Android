@@ -224,7 +224,6 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
                 TabLayout.Tab tab = mTabs.get(i);
                 if(i == 0) {
                     tab.getIcon().setColorFilter(overlayColorSelected);
-                    tab.select();
                 }
                 else {
                     tab.getIcon().setColorFilter(overlayColorDimmed);
