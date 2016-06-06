@@ -38,6 +38,7 @@
                 android:padding="@dimen/aac_global_border">
 
                 <TextView
+                    android:id="@+id/labelRed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -46,11 +47,12 @@
                     android:textAppearance="@style/AACTextAppearance.label" />
 
                 <Switch
-                    android:id="@+id/switchRed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/switchRed"
                     android:layout_weight="0"
-                    android:textAppearance="@style/AACTextAppearance.label" />
+                    android:textAppearance="@style/AACTextAppearance.label"/>
+
             </LinearLayout>
 
             <LinearLayout

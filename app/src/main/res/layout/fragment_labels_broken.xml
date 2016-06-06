@@ -41,7 +41,7 @@
                     android:text="@string/aac_labels_setting_1"
                     android:layout_weight="1"/>
 
-                <Switch android:id="@+id/switchRed"
+                <Switch android:id="@+id/switchRedBroken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
@@ -64,7 +64,7 @@
                     android:text="@string/aac_labels_setting_2"
                     android:layout_weight="1"/>
 
-                <Switch android:id="@+id/switchGreen"
+                <Switch android:id="@+id/switchGreenBroken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
@@ -87,7 +87,7 @@
                     android:text="@string/aac_labels_setting_3"
                     android:layout_weight="1"/>
 
-                <Switch android:id="@+id/switchBlue"
+                <Switch android:id="@+id/switchBlueBroken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/AACTextAppearance.label"
