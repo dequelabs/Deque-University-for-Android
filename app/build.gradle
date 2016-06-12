@@ -55,7 +55,4 @@ dependencies {
     androidTestCompile (project (':AxeAndroid:axeandroid')) {
         exclude module: 'appcompat-v7'
     }
-
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.robolectric:robolectric:3.1'
 }
