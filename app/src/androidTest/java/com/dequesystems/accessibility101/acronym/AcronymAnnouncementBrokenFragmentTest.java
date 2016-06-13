@@ -46,7 +46,7 @@ public class AcronymAnnouncementBrokenFragmentTest {
     public void testIsAccessible() {
 
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .acceptWarnings()
+                .exceptRule(RuleAcronymAnnouncement.class)
                 .isAccessible();
     }
 }
