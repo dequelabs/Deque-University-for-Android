@@ -29,10 +29,16 @@ android {
 }
 
 repositories {
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     maven {
-        url "https://jitpack.io"
+        url "https://agora.dequecloud.com/artifactory/attest-android"
+
+        credentials {
+            username artifactory_username
+            password artifactory_apikey
+        }
     }
+
+    maven { url "https://jitpack.io" }
 }
 
 //noinspection GroovyAssignabilityCheck
@@ -52,7 +58,7 @@ dependencies {
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
-    androidTestCompile (project (':AxeAndroid:axeandroid')) {
+    androidTestCompile ('com.dequesystems.axeandroid:axeandroid:0.0.4') {
         exclude module: 'appcompat-v7'
     }
 }

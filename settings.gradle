@@ -1,1 +1,1 @@
-include ':app', ':AxeAndroid:axeandroid'
+include ':app'

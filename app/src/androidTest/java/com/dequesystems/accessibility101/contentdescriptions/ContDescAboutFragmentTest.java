@@ -8,7 +8,7 @@ import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.rules.RuleImageViewControls;
+import com.dequesystems.axeandroid.RuleImageViewControls;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -43,6 +43,7 @@ public class ContDescAboutFragmentTest {
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
                 .expectedFailure(RuleImageViewControls.class, null)
                 .expectedFailure(RuleImageViewControls.class, " ")
+                .acceptWarnings()
                 .isAccessible();
     }
 }

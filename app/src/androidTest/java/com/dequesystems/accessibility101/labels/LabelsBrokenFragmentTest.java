@@ -8,7 +8,7 @@ import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.rules.RuleControlLabels;
+import com.dequesystems.axeandroid.RuleControlLabels;
 
 import org.junit.Before;
 import org.junit.Rule;

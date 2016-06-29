@@ -8,7 +8,7 @@ import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.rules.RuleAcronymAnnouncement;
+import com.dequesystems.axeandroid.RuleAcronymAnnouncement;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -47,6 +47,7 @@ public class AcronymAnnouncementBrokenFragmentTest {
 
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
                 .exceptRule(RuleAcronymAnnouncement.class)
+                .acceptWarnings()
                 .isAccessible();
     }
 }

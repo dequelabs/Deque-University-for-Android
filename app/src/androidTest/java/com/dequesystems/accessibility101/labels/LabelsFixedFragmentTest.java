@@ -36,6 +36,8 @@ public class LabelsFixedFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .acceptWarnings()
+                .isAccessible();
     }
 }

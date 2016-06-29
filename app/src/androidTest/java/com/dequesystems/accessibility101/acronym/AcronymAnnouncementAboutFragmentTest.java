@@ -10,6 +10,7 @@ import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.dequesystems.axeandroid.A11yAssert;
+import com.dequesystems.axeandroid.RuleDroidTouchTargetSize;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -43,6 +44,8 @@ public class AcronymAnnouncementAboutFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .acceptWarnings()
+                .isAccessible();
     }
 }
