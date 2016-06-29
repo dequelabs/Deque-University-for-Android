@@ -9,7 +9,7 @@ if (!defined? port_number || port_number == 0)
 	port_number=38383
 end
 
-device_test_url='http://localhost:' + port_number.to_s + '/a11ytest?json=true'
+device_test_url='http://localhost:' + port_number.to_s + '/a11ytest'
 
 ARGV.each_with_index { |value, index| 
 	if (value == "--format")
@@ -23,11 +23,39 @@ def getHtmlString(results, statusString, colorString)
 	htmlString = ""
 
 	results.each { |result|
-		htmlString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + " </font></b>" + result["message"] + "</p>")
-
-		result["nodes"].each { |node|
-			htmlString.concat("<blockquote><i>" + node + "</i></blockquote>")
-		}
+		resultObject = result["nodes"]
+		if (statusString == "FAIL" || statusString == "WARN")
+			if (result["impact"] == "critical") 
+				statusString = "FAIL"
+				colorString = "red"
+				resultObject.each { |resultObject2|
+					htmlString.prepend("<p><b><font color=\"" + colorString + "\">" + statusString + 
+					" </font> Object: </b>" + resultObject2["json"]["classname"] + 
+					" <b>Position:</b> Right: " + resultObject2["json"]["rect"]["right"].to_s + " Left: " + resultObject2["json"]["rect"]["left"].to_s +
+						" Top: " + resultObject2["json"]["rect"]["top"].to_s + " Bottom: " + resultObject2["json"]["rect"]["bottom"].to_s +
+					" <br>&emsp;<b>Fix all of: </b>" + result["description"] + "</p>")
+				}
+			elsif (result["impact"] == "moderate")
+				statusString = "WARN"
+				colorString = "gold"
+				resultObject.each { |resultObject2|
+					htmlString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + 
+					" </font> Object: </b>" + resultObject2["json"]["classname"] + 
+					" <b>Position:</b> Right: " + resultObject2["json"]["rect"]["right"].to_s + " Left: " + resultObject2["json"]["rect"]["left"].to_s +
+						" Top: " + resultObject2["json"]["rect"]["top"].to_s + " Bottom: " + resultObject2["json"]["rect"]["bottom"].to_s +
+					" <br>&emsp;<b>Fix all of: </b>" + result["description"] + "</p>")
+				}	
+			end
+		else 
+			resultObject.each { |resultObject2|
+				htmlString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + 
+				" </font> Object: </b>" + resultObject2["json"]["classname"] + 
+				" <b>Position:</b> Right: " + resultObject2["json"]["rect"]["right"].to_s + " Left: " + resultObject2["json"]["rect"]["left"].to_s +
+					" Top: " + resultObject2["json"]["rect"]["top"].to_s + " Bottom: " + resultObject2["json"]["rect"]["bottom"].to_s +
+				" <br>&emsp;<b>Fix all of: </b>" + result["description"] + "</p>")
+			}
+		end
+		
 	}
 
 	return htmlString
@@ -50,9 +78,8 @@ def runTestWithURL(url, silent, html_output)
 	if (html_output)
 		htmlString = ""
 
-		htmlString.concat(getHtmlString(responseObject["fail"], "FAIL", "red"))
-		htmlString.concat(getHtmlString(responseObject["warn"], "WARN", "yellow"))
-		#htmlString.concat(getHtmlString(responseObject["pass"], "PASS", "green"))
+		htmlString.concat(getHtmlString(responseObject["violations"], "FAIL", "red"))
+		htmlString.concat(getHtmlString(responseObject["passes"], "PASS", "green"))
 
 		puts htmlString
 	else 
