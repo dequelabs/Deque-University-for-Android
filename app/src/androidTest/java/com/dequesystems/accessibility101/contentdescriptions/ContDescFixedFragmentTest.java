@@ -36,7 +36,7 @@ public class ContDescFixedFragmentTest {
 
     @Test
     public void testIsAccessible() {
-        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).acceptWarnings().isAccessible();
     }
 
 }
