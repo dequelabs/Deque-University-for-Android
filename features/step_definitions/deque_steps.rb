@@ -21,6 +21,9 @@ ARGV.each_with_index { |value, index|
 
 def getHtmlString(results) 
 	htmlString = ""
+	failString = ""
+	warnString = ""
+	minorString = ""
 
 	results.each { |result|
 		resultObject = result["nodes"]
@@ -28,7 +31,7 @@ def getHtmlString(results)
 			statusString = "FAIL"
 			colorString = "red"
 			resultObject.each { |resultObject2|
-				htmlString.prepend("<p><b><font color=\"" + colorString + "\">" + statusString + 
+				failString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + 
 				" </font> Object: </b>" + resultObject2["json"]["classname"] + 
 				" <b>Position:</b> Right: " + resultObject2["json"]["rect"]["right"].to_s + " Left: " + resultObject2["json"]["rect"]["left"].to_s +
 					" Top: " + resultObject2["json"]["rect"]["top"].to_s + " Bottom: " + resultObject2["json"]["rect"]["bottom"].to_s +
@@ -36,9 +39,19 @@ def getHtmlString(results)
 			}
 		elsif (result["impact"] == "moderate")
 			statusString = "WARN"
-			colorString = "gold"
+			colorString = "orange"
 			resultObject.each { |resultObject2|
-				htmlString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + 
+				warnString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + 
+				" </font> Object: </b>" + resultObject2["json"]["classname"] + 
+				" <b>Position:</b> Right: " + resultObject2["json"]["rect"]["right"].to_s + " Left: " + resultObject2["json"]["rect"]["left"].to_s +
+					" Top: " + resultObject2["json"]["rect"]["top"].to_s + " Bottom: " + resultObject2["json"]["rect"]["bottom"].to_s +
+				" <br>&emsp;<b>Fix all of: </b>" + result["description"] + "</p>")
+			}
+		elsif (result["impact"] == "minor") 
+			statusString = "MINOR"
+			colorString = "blue"
+			resultObject.each { |resultObject2|
+				minorString.concat("<p><b><font color=\"" + colorString + "\">" + statusString + 
 				" </font> Object: </b>" + resultObject2["json"]["classname"] + 
 				" <b>Position:</b> Right: " + resultObject2["json"]["rect"]["right"].to_s + " Left: " + resultObject2["json"]["rect"]["left"].to_s +
 					" Top: " + resultObject2["json"]["rect"]["top"].to_s + " Bottom: " + resultObject2["json"]["rect"]["bottom"].to_s +
@@ -47,6 +60,8 @@ def getHtmlString(results)
 		end
 		
 	}
+
+	htmlString = htmlString.concat(failString + warnString + minorString)
 
 	return htmlString
 end
