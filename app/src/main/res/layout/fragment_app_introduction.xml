@@ -23,6 +23,7 @@
             android:linksClickable="false"
             android:padding="@dimen/aac_global_border"
             android:text="@string/aac_intro_about_paragraph1"
+            android:contentDescription="@string/aac_intro_about_paragraph1_content_description"
             android:textAppearance="@style/AACTextAppearance.body" />
 
         <LinearLayout

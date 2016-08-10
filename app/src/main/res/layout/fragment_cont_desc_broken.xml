@@ -126,6 +126,7 @@
                 android:background="@color/aac_worldspace_white"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_cont_desc_broken_conclusion_1"
+                android:contentDescription="@string/aac_cont_desc_broken_conclusion_1_content_description"
                 android:textAppearance="@style/AACTextAppearance.body" />
 
         </LinearLayout>
@@ -152,6 +153,7 @@
                 android:background="@color/aac_worldspace_white"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_cont_desc_broken_conclusion_2"
+                android:contentDescription="@string/aac_cont_desc_broken_conclusion_2_content_description"
                 android:textAppearance="@style/AACTextAppearance.body" />
 
             <com.dequesystems.a11yframework.TextViewLink
@@ -186,6 +188,7 @@
                 android:background="@color/aac_worldspace_white"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_cont_desc_broken_conclusion_3"
+                android:contentDescription="@string/aac_cont_desc_broken_conclusion_3_content_description"
                 android:textAppearance="@style/AACTextAppearance.body" />
 
 

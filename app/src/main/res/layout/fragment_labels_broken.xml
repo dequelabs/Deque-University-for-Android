@@ -117,6 +117,7 @@
                 android:layout_margin="@dimen/aac_global_border"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_labels_broken_conclusion"
+                android:contentDescription="@string/aac_labels_broken_conclusion_content_description"
                 android:textAppearance="@style/AACTextAppearance.body"
                 android:background="@color/aac_background_text" />
 
