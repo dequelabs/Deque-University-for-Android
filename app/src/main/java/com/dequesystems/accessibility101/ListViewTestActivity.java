@@ -40,7 +40,7 @@ public class ListViewTestActivity extends Fragment {
         ArrayList<String> list = new ArrayList<>();
         list.add("text");
 
-        mAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_checked, list);
+        mAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, list);
 
         mListView.setAdapter(mAdapter);
 
