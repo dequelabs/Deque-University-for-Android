@@ -116,10 +116,6 @@ public class StoryManager extends ArrayAdapter<StoryManager.Story> {
             tempStory = new Story("Very Broken Demo", false, tempTabLayout);
             tempStory.addTab(tempTabLayout.newTab().setText("Very Broken").setIcon(R.drawable.aac_about_icon), new FragmentVeryBroken());
             this.add(tempStory);
-
-            tempStory = new Story("ListView Demo", false, tempTabLayout);
-            tempStory.addTab(tempTabLayout.newTab().setText("ListView").setIcon(R.drawable.aac_about_icon), new ListViewTestActivity());
-            this.add(tempStory);
         }
     }
 
