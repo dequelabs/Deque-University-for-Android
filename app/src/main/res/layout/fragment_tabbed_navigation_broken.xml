@@ -72,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/aac_global_border"
                 android:text="@string/aac_tab_nav_broken_conclusion"
+                android:contentDescription="@string/aac_tab_nav_broken_conclusion_content_description"
                 android:textAppearance="@style/AACTextAppearance.body" />
 
             <com.dequesystems.a11yframework.TextViewLink
