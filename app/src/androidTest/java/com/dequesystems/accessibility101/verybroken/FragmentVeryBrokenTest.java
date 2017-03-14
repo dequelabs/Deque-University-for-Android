@@ -3,9 +3,10 @@ package com.dequesystems.accessibility101.verybroken;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 
+import com.deque.worldspace.RuleDroidTouchTargetSize;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
-import com.dequesystems.axeandroid.A11yAssert;
+import com.deque.worldspace.A11yAssert;
 
 
 import org.junit.Before;
@@ -39,6 +40,8 @@ public class FragmentVeryBrokenTest {
     @Test
     public void testIsAccessible() {
 
-        //A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation()).isAccessible();
+        A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
+                .exceptRule(RuleDroidTouchTargetSize.class)
+                .isAccessible();
     }
 }

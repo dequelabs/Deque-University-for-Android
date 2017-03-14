@@ -3,12 +3,11 @@ package com.dequesystems.accessibility101.acronym;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 
-import com.chriscm.clog.CLog;
-import com.dequesystems.accessibility101.BuildConfig;
+import com.deque.worldspace.RuleDroidTouchTargetSize;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
-import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.RuleAcronymAnnouncement;
+import com.deque.worldspace.A11yAssert;
+import com.deque.worldspace.RuleAcronymAnnouncement;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -24,10 +23,6 @@ import static org.junit.Assert.*;
  * Instrumentation tests for the broken Acronym Announcement fragment
  */
 public class AcronymAnnouncementBrokenFragmentTest {
-
-    static {
-        CLog.initialize(AcronymAnnouncementAboutFragmentTest.class.getSimpleName(), BuildConfig.DEBUG);
-    }
 
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
@@ -46,8 +41,7 @@ public class AcronymAnnouncementBrokenFragmentTest {
     public void testIsAccessible() {
 
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .exceptRule(RuleAcronymAnnouncement.class)
-                .acceptWarnings()
+                .exceptRule(RuleDroidTouchTargetSize.class)
                 .isAccessible();
     }
 }

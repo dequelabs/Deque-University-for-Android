@@ -11,8 +11,10 @@ import android.support.v4.app.FragmentActivity;
 import com.dequesystems.accessibility101.acronym.AcronymAnnouncementBrokenFragment;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
@@ -23,6 +25,7 @@ public class TestUtils {
 
     public static void replaceAllContentWithFragment(FragmentActivity activity, Fragment fragment) {
         onView(withId(R.id.aac_main_content)).check(matches(isDisplayed()));
+        onView(withContentDescription("Navigate up")).perform(click());
 
         android.support.v4.app.FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.aac_main_content, fragment);

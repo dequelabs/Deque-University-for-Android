@@ -2,13 +2,12 @@ package com.dequesystems.accessibility101.labels;
 
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
+import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
 
-import com.chriscm.clog.CLog;
-import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
-import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.RuleControlLabels;
+import com.deque.worldspace.A11yAssert;
+import com.deque.worldspace.RuleDroidTouchTargetSize;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -20,10 +19,6 @@ import org.junit.Test;
  * Instrumentation tests for the Labels broken fragment.
  */
 public class LabelsBrokenFragmentTest {
-
-    static {
-        CLog.initialize("DequeA11yTest", BuildConfig.DEBUG);
-    }
 
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
@@ -40,11 +35,16 @@ public class LabelsBrokenFragmentTest {
 
     @Test
     public void testIsAccessible() {
+
+        A11yAssert.setNodeInfoPrinter(new A11yAssert.NodeInfoPrinter() {
+            @Override
+            public String getString(AccessibilityNodeInfoCompat accessibilityNodeInfoCompat) {
+                return accessibilityNodeInfoCompat.toString();
+            }
+        });
+
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .expectedFailure(RuleControlLabels.class, null)
-                .expectedFailure(RuleControlLabels.class, null)
-                .expectedFailure(RuleControlLabels.class, null)
-                .acceptWarnings()
+                .exceptRule(RuleDroidTouchTargetSize.class)
                 .isAccessible();
     }
 }

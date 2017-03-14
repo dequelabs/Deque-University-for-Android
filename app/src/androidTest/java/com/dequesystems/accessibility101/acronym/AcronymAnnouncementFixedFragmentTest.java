@@ -4,11 +4,10 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.chriscm.clog.CLog;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
-import com.dequesystems.axeandroid.A11yAssert;
+import com.deque.worldspace.A11yAssert;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -20,9 +19,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(AndroidJUnit4.class)
 public class AcronymAnnouncementFixedFragmentTest {
-    static {
-        CLog.initialize(AcronymAnnouncementAboutFragmentTest.class.getSimpleName(), BuildConfig.DEBUG);
-    }
+
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
 
@@ -34,8 +31,6 @@ public class AcronymAnnouncementFixedFragmentTest {
         mActivity = mFragmentActivityRule.getActivity();
 
         TestUtils.replaceAllContentWithFragment(mActivity, new AcronymAnnouncementFixedFragment());
-
-
     }
 
     @Test

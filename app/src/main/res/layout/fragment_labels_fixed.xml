@@ -87,7 +87,8 @@
                 android:background="@color/aac_worldspace_white"
                 android:elevation="@dimen/aac_elevation_level_2"
                 android:orientation="horizontal"
-                android:padding="@dimen/aac_global_border">
+                android:padding="@dimen/aac_global_border"
+                android:importantForAccessibility="yes">
 
                 <TextView
                     android:layout_width="wrap_content"

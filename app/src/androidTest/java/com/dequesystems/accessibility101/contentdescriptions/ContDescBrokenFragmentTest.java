@@ -3,20 +3,16 @@ package com.dequesystems.accessibility101.contentdescriptions;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 
-import com.chriscm.clog.CLog;
+import com.deque.worldspace.RuleDroidTouchTargetSize;
 import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
-import com.dequesystems.axeandroid.A11yAssert;
-import com.dequesystems.axeandroid.RuleImageViewControls;
+import com.deque.worldspace.A11yAssert;
+import com.deque.worldspace.RuleImageViewControls;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
 
 /**
  * Created by chris.mcmeeking@deque.com on 3/18/16.
@@ -24,9 +20,6 @@ import static org.junit.Assert.*;
  * Instrumentation tests for the Broken Content Descriptions fragment
  */
 public class ContDescBrokenFragmentTest {
-    static {
-        CLog.initialize("DequeA11yTest", BuildConfig.DEBUG);
-    }
 
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
@@ -44,9 +37,7 @@ public class ContDescBrokenFragmentTest {
     @Test
     public void testIsAccessible() {
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .acceptWarnings()
-                .expectedFailure(RuleImageViewControls.class, null)
-                .expectedFailure(RuleImageViewControls.class, " ")
+                .exceptRule(RuleDroidTouchTargetSize.class)
                 .isAccessible();
     }
 }

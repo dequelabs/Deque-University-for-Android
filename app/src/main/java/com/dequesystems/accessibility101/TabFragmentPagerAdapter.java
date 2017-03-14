@@ -20,7 +20,7 @@ public class TabFragmentPagerAdapter extends FragmentPagerAdapter {
         this.tabCount = tabCount;
         mFragments = new ArrayList<>();
         mFragments = fragments;
-}
+    }
 
     @Override
     public Fragment getItem(int position) {
