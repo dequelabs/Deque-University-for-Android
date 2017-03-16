@@ -7,7 +7,7 @@ import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.deque.worldspace.A11yAssert;
-import com.deque.worldspace.RuleDroidTouchTargetSize;
+import com.deque.worldspace.Rule.RuleSet;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -44,7 +44,7 @@ public class LabelsBrokenFragmentTest {
         });
 
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .exceptRule(RuleDroidTouchTargetSize.class)
+                .ruleSet(RuleSet.WCAG2_0)
                 .isAccessible();
     }
 }
