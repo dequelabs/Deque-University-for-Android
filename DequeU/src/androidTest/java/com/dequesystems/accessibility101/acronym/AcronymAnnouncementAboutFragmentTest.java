@@ -1,28 +1,27 @@
 package com.dequesystems.accessibility101.acronym;
 
+
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
 
-import com.deque.worldspace.RuleDroidTouchTargetSize;
+import com.dequesystems.accessibility101.BuildConfig;
 import com.dequesystems.accessibility101.MainActivity;
 import com.dequesystems.accessibility101.TestUtils;
 import com.deque.worldspace.A11yAssert;
-import com.deque.worldspace.RuleAcronymAnnouncement;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
 
 /**
- * Created by chris.mcmeeking@deque.com on 3/18/16.
+ * Created by chris.mcmeeking@deque.com on 3/16/16.
  *
- * Instrumentation tests for the broken Acronym Announcement fragment
+ * Tests for the broken acronym announcement fragment.
  */
-public class AcronymAnnouncementBrokenFragmentTest {
+@RunWith(AndroidJUnit4.class)
+public class AcronymAnnouncementAboutFragmentTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mFragmentActivityRule = new ActivityTestRule<>(MainActivity.class);
@@ -34,14 +33,12 @@ public class AcronymAnnouncementBrokenFragmentTest {
 
         mActivity = mFragmentActivityRule.getActivity();
 
-        TestUtils.replaceAllContentWithFragment(mActivity, new AcronymAnnouncementBrokenFragment());
+        TestUtils.replaceAllContentWithFragment(mActivity, new AcronymAnnouncementAboutFragment());
     }
 
     @Test
     public void testIsAccessible() {
-
         A11yAssert.thatInstrumentation(InstrumentationRegistry.getInstrumentation())
-                .exceptRule(RuleDroidTouchTargetSize.class)
                 .isAccessible();
     }
 }
