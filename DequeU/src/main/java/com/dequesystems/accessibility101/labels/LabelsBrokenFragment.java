@@ -39,6 +39,8 @@ public class LabelsBrokenFragment extends Fragment {
         mSwitchGreen = (Switch) mView.findViewById(R.id.switchGreenBroken);
         mSwitchBlue = (Switch) mView.findViewById(R.id.switchBlueBroken);
 
+//        TextView redSwitch = (TextView) mView.findViewById(R.id.labelRed);
+//        redSwitch.setLabelFor(mSwitchRed.getId());
 
         mSwitchRed.setOnCheckedChangeListener(mSwitchListener);
         mSwitchGreen.setOnCheckedChangeListener(mSwitchListener);
