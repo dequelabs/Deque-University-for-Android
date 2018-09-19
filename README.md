@@ -3,8 +3,8 @@
 This repository is a set of interactive demos and informational text that demonstrate best practices when coding for both usability and accessibility. The demo application additionally exposes the difficulties faced by TalkBack users in using Native Android applications by enabling a user to use TalkBack with a masked screen. 
 
 <p align="center">
-  <img src="https://cdn.rawgit.com/dequelabs/Deque-University-for-Android/4d7fb3f3/main_screen.png" width="30%"/>
-  <img src="https://cdn.rawgit.com/dequelabs/Deque-University-for-Android/4d7fb3f3/active_views.png" width="30%"/>
+  <img src="https://cdn.rawgit.com/dequelabs/Deque-University-for-Android/e3d5acd8/docs/images/main_screen.png" width="30%"/>
+  <img src="https://github.com/dequelabs/Deque-University-for-Android/blob/master/docs/images/active_views.png" width="30%"/>
 </p>
 
 Each demo in this repository contains of a series of examples that show how the Rule can be handled accessibility, inaccessibility, what requires manual testing, and certain best practices.
