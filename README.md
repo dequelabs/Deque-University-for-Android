@@ -1,32 +1,47 @@
-[![Build Status](https://travis-ci.org/dequelabs/Deque-University-for-Android.svg?branch=master)](https://travis-ci.org/dequelabs/Deque-University-for-Android)
+# Deque University for Android
 
-# Deque-University-for-Android
+This repository is a set of interactive demos and informational text that demonstrate best practices when coding for both usability and accessibility. The demo application additionally exposes the difficulties faced by TalkBack users in using Native Android applications by enabling a user to use TalkBack with a masked screen. 
 
-Welcome to the git repository for Deque University for Android! If you are looking for the iOS version, we also have [Deque University for iOS](https://github.com/dequelabs/Deque-University-for-iOS)
+<p align="center">
+  <img src="https://cdn.rawgit.com/dequelabs/Deque-University-for-Android/4d7fb3f3/main_screen.png" width="30%"/>
+  <img src="https://cdn.rawgit.com/dequelabs/Deque-University-for-Android/4d7fb3f3/active_views.png" width="30%"/>
+</p>
 
-This app is a set of interactive demos and informational stories that demonstrate best practices when coding for both usability and accessibility.
+Each demo in this repository contains of a series of examples that show how the Rule can be handled accessibility, inaccessibility, what requires manual testing, and certain best practices.
+
+# Attest for Android
+
+This repository also serves as documentation for Deque's automated accessibility analysis framework. Utilizing Attest, you can find Accessibility Issues automatically. Attest for Android enables testing your app in a lot of different ways:
+
+As a Service that runs alongside your Application.
+As an Automated UI Testing Framework
+To Enhanced a Third Party UI Testing Library (like Calabash) to add an Accessibility Testing Step.
+Attest for Android is very flexible and is built to fit into a multitude of workflows. Each example in Deque University has rules in Attest that will help you debug and build the most Accessible behaviors.
+
+For more technical documentation see the [Attest for Android Documentation Wiki](https://github.com/dequelabs/Deque-University-for-Android/wiki), which is the Wiki in this repository.
+
+## Deque University for iOS
+If you are looking for the iOS version, it is over here! [Deque University for iOS](https://github.com/dequelabs/Deque-University-for-iOS)
 
 ### We are currently using:
 
-Android 4.2 or later
+Android 5.1 (Lollipop) or later
 
-Android Studio 1.3 or later
+Android Studio 3.1.3 or later
 
 Java SDK 1.8.0_45
 
-##Demo List
-
+## Demo List
 <ul>
-<li>TalkBack</li>
-<li>Control Labels</li>
-<li>Content Descriptions</li>
-<li>EditTexts</li>
-<li>Tabbed Navigation</li>
-<li>Acronym Announcement</li>
+  <li>Active Views</li>
+  <li>Color Contrast</li>
+  <li>Edit Text</li>
+  <li>Image Views</li>
+  <li>Informative Views</li>
+  <li>Labels</li>
+  <li>Nested Active Elements</li>
+  <li>Touch Target Size</li>
+  <li>TalkBack</li>
 </ul>
 
-The app also has a TalkBack simulation so that sighted users can see for themselves how an accessibility failure affects TalkBack users. Click the eye icon in the upper right hand corner of any story to put an overlay on the screen that forces you to rely on TalkBack to navigate the screen.
-
-## Contributor Information
-
-To get started adding content to this repository, sign the CLA [here](NEED A HYPERLINK). 
+The TalkBack simulation helps sighted users experience for themselves how an accessibility failure affects accessibility users. Click the eye icon in the upper right hand corner of any story to put an overlay on the screen that forces you to rely on TalkBack to navigate the screen.
