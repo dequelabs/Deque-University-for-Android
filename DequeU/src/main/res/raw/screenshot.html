@@ -1,0 +1,59 @@
+<!--suppress 7d3ac9f4fd5e7b305a09ef4807db135cf6229b27 JSUnresolvedVariable, JSUnresolvedFunction -->
+<style>
+    #highlight {
+        z-index: 2147483647;
+        position: fixed;
+        pointer-events: none;
+        outline: 3px solid #E03C31;
+    }
+
+    :hover {
+        outline: 3px solid #000000;
+    }
+
+    .talkback:hover {
+        outline: 3px solid #5FBE37;
+    }
+</style>
+<script>
+    function highlight(androidRect) {
+
+        var imageDiv = document.getElementById('screenshot');
+        var highlightDiv = document.getElementById('highlight');
+
+        highlightDiv.style.display = 'block';
+
+        var actualImageHeight = imageDiv.naturalHeight;
+        var actualImageWidth = imageDiv.naturalWidth;
+
+        var imageDivWidth = imageDiv.width;
+        var imageDivHeight = imageDiv.height;
+
+        var yScaleFactor = imageDivHeight / actualImageHeight;
+        var xScaleFactor = imageDivWidth / actualImageWidth;
+
+        highlightDiv.style.top = androidRect.top * yScaleFactor;
+        highlightDiv.style.left = androidRect.left * xScaleFactor;
+
+        highlightDiv.style.width = (androidRect.right - androidRect.left) * xScaleFactor;
+        highlightDiv.style.height = (androidRect.bottom - androidRect.top) * yScaleFactor;   
+    }
+
+    function stopHighlight() {
+
+        var highlightDiv = document.getElementById('highlight');
+        
+        highlightDiv.style.display = 'none';
+    }
+
+    function highlightTalkBackFocusableItems() {
+        var sheet = document.createElement('style')
+        sheet.innerHTML = ".talkback {outline: 3px solid #5FBE37;}";
+        document.body.appendChild(sheet);
+    }
+</script>
+<body style='margin:0'>
+    <img id="screenshot" style="height: 100%; width: 100%;" src="data:image/jpeg; base64, REPLACE_IMAGE_DATA"/>
+    REPLACE_HTML
+    <div id="highlight" style="display:none;" alt="Highlighted Accessibility Violation"></div>
+</body>

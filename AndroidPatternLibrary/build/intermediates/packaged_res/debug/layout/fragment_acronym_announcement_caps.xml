@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_layout"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/lg"
+    android:paddingStart="@dimen/lg">
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lg"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_best_practice" />
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/acronym_caps_body_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:background="@drawable/border_broken"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyle.body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/acronym_caps_example_1" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_weight="1"
+        android:text="@string/acronym_caps_body_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_marginTop="@dimen/attest_demo_border_small"
+        android:background="@drawable/border_fixed"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyle.body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/acronym_caps_content_desc"
+            android:text="@string/acronym_caps_example_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/acronym_caps_body_content_desc_visualization" />
+
+    </LinearLayout>
+
+</LinearLayout>

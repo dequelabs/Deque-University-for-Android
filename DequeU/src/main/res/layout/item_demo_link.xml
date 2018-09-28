@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/brand_alt_white"
+    android:padding="@dimen/lg"
+    android:layout_marginStart="@dimen/lg"
+    android:layout_marginEnd="@dimen/lg"
+    android:layout_marginTop="@dimen/lg"
+    android:layout_marginBottom="@dimen/lg"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/page_image"
+        android:layout_width="@dimen/wcag_min_touch_size"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/wcag_min_touch_size"
+        tools:src="@drawable/dq_attest_logo_heroblue"/>
+
+    <TextView
+        android:id="@+id/page_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/wcag_min_touch_size"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/brand_primary_navy"
+        android:paddingTop="@dimen/md"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:layout_below="@+id/page_image"
+        android:minWidth="@dimen/wcag_min_touch_size"
+        android:textStyle="bold"
+        tools:text="Dummy text" />
+
+</RelativeLayout>

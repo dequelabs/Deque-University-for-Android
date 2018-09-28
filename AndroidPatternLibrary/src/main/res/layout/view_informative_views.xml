@@ -1,0 +1,242 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/lg"
+    android:paddingEnd="@dimen/lg"
+    android:id="@+id/informative_views"
+    android:background="@drawable/background_white_rounded_bottom">
+
+    <TextView style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_critical_informative_views"/>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/xlg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/informative_views_demo_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/wcag_min_touch_size"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/informative_views_demo1"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/lg"
+                android:paddingEnd="@dimen/md"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/border_broken"
+                android:orientation="horizontal">
+
+                <Switch android:id="@+id/informative_views_switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/wcag_min_touch_size"
+                    android:height="@dimen/wcag_min_touch_size"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="@dimen/wcag_min_touch_size"
+                    android:minWidth="@dimen/wcag_min_touch_size"
+                    android:paddingStart="@dimen/xlg"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".75"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:labelFor="@id/informative_views_switch1"
+                    android:importantForAccessibility="no"
+                    android:textColor="@color/aac_worldspace_black"
+                    android:text="@string/critical" />
+            </LinearLayout>
+
+            <ImageButton
+                android:contentDescription="@string/collapsible_content_description_closed"
+                android:background="@drawable/closed"
+                android:id="@+id/informative_views_collapsible_button1"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/informative_views_help_view1"
+            style="@style/CollapsibleText"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/informative_views_failing" />
+
+    </LinearLayout>
+
+    <TextView style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_passing"/>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/xlg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/informative_views_demo_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/wcag_min_touch_size"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/informative_views_demo2"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/lg"
+                android:paddingEnd="@dimen/md"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/border_fixed"
+                android:orientation="horizontal">
+
+                <Switch android:id="@+id/informative_views_switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/wcag_min_touch_size"
+                    android:height="@dimen/wcag_min_touch_size"
+                    android:paddingStart="@dimen/xlg"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="@dimen/wcag_min_touch_size"
+                    android:minWidth="@dimen/wcag_min_touch_size"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:labelFor="@id/informative_views_switch2"
+                    android:textColor="@color/aac_worldspace_black"
+                    android:text="@string/passing" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:contentDescription="@string/collapsible_content_description_closed"
+                android:background="@drawable/closed"
+                android:id="@+id/informative_views_collapsible_button2"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/informative_views_help_view2"
+            style="@style/CollapsibleText"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/informative_views_passing" />
+
+    </LinearLayout>
+
+    <TextView style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_passing"/>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/xlg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/informative_views_demo_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/informative_views_demo3"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/lg"
+                android:paddingEnd="@dimen/md"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/border_fixed"
+                android:focusable="true"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/informative_views_switch3"
+                    android:layout_width="wrap_content"
+                    android:paddingStart="@dimen/xlg"
+                    android:layout_height="wrap_content"
+                    android:textOff="@string/switch_off"
+                    android:textOn="@string/switch_on"
+                    android:importantForAccessibility="no"
+                    android:height="@dimen/wcag_min_touch_size"
+                    android:minHeight="@dimen/wcag_min_touch_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/aac_worldspace_black"
+                    android:importantForAccessibility="no"
+                    android:focusable="false"
+                    android:text="@string/passing"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:contentDescription="@string/collapsible_content_description_closed"
+                android:background="@drawable/closed"
+                android:id="@+id/informative_views_collapsible_button3"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/informative_views_help_view3"
+            style="@style/CollapsibleText"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/informative_views_passing" />
+
+    </LinearLayout>
+</LinearLayout>

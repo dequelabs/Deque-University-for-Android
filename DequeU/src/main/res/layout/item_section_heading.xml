@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/aac_worldspace_white"
+    android:padding="@dimen/lg"
+    android:layout_marginStart="@dimen/lg"
+    android:layout_marginEnd="@dimen/lg"
+    android:layout_marginTop="@dimen/lg"
+    android:layout_marginBottom="@dimen/md"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/AACTextAppearance.title"
+        android:id="@+id/heading_text"
+        android:textColor="@color/brand_primary_navy"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        tools:text="Glossary"/>
+
+    <TextView
+        style="@style/AACTextAppearance"
+        android:layout_marginTop="@dimen/md"
+        android:id="@+id/body_text"
+        android:textColor="@color/brand_primary_navy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_text"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:text="Bacon ipsum dolor amet bresaola kevin brisket filet mignon pork shankle burgdoggen. Ham filet mignon pork loin salami meatball."/>
+
+</RelativeLayout>

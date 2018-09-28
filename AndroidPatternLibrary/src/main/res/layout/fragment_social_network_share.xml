@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_rounded_bottom"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/lg"
+    android:paddingStart="@dimen/lg">
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_marginTop="@dimen/xlg"/>
+        <!--android:text="@string/attest_violation_critical" />-->
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_rule_active_views_demo_bad" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lg"
+        android:background="@drawable/border_broken"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/brokenPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="yes"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewStyle.heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_john" />
+
+            <TextView
+                style="@style/TextViewStyle.body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/social_network_example_description" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_rule_active_view_demo_good" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lg"
+        android:layout_marginTop="@dimen/attest_demo_border_small"
+        android:background="@drawable/border_fixed"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/submit"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/apl_link"
+        style="@style/TextViewStyle.body.link"
+        android:text="@string/apl_link_wcag_1_1_1" />
+
+</LinearLayout>

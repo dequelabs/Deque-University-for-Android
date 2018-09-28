@@ -1,20 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme. -->
+    <style name="Theme.Transparent" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
     <style name="AACAppTheme" parent="Theme.AppCompat.Light">
-        <item name="android:activatedBackgroundIndicator">@drawable/selected_menu_option</item>
 
         <item name="android:actionBarStyle">@style/AACAppTheme.ActionBar</item>
         <item name="actionBarStyle">@style/AACAppTheme.ActionBar</item>
 
+        <item name="android:windowBackground">@color/brand_primary_gray_or_accent</item>
         <item name="android:actionMenuTextColor">@color/aac_navigation_drawer_text</item>
+    </style>
 
+    <style name="AACTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:paddingStart">@dimen/lg</item>
+        <item name="android:paddingEnd">@dimen/lg</item>
+        <item name="android:background">@drawable/background_white_rounded</item>
+    </style>
+
+    <style name="AACTextViewStyle.body">
+        <item name="android:textAppearance">@style/AACTextAppearance.body</item>
+    </style>
+
+    <style name="AACTextViewStyle.heading">
+        <item name="android:textAppearance">@style/AACTextAppearance.heading</item>
+        <item name="android:textColor">@color/brand_alt_text_or_accent</item>
+    </style>
+
+    <style name="AACTextViewStyle.top">
+        <item name="android:background">@drawable/background_white_rounded_top</item>
+    </style>
+
+    <style name="AACTextViewStyle.middle">
+        <item name="android:background">@color/aac_background_text</item>
+    </style>
+
+    <style name="AACTextViewStyle.bottom">
+        <item name="android:background">@drawable/background_white_rounded_bottom</item>
     </style>
 
     <style name="AACAppTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar">
 
         <item name="android:background">@color/aac_action_bar_background</item>
-        <item name="background">@color/aac_action_bar_background</item>
+        <item name="background">@color/aac_worldspace_white</item>
 
         <item name="android:titleTextStyle">@style/AACAppTheme.ActionBar.TitleTextStyle</item>
         <item name="titleTextStyle">@style/AACAppTheme.ActionBar.TitleTextStyle</item>
@@ -32,11 +67,17 @@
 
     <style name="AACTextAppearance.body">
         <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/brand_primary_gray_or_accent</item>
+    </style>
+
+    <style name="AACTextAppearance.title">
+        <item name="android:textSize">24sp</item>
     </style>
 
     <style name="AACTextAppearance.heading">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brand_primary_navy</item>
     </style>
 
     <style name="AACTextAppearance.navigation_drawer">
@@ -59,42 +100,16 @@
         <item name="android:textColor">@color/aac_text_link</item>
     </style>
 
-    <color name="aac_text_body">@color/aac_worldspace_black</color>
-    <color name="aac_text_link">@color/aac_deque_light_blue</color>
-    <color name="aac_background_text">@color/aac_worldspace_white</color>
-    <color name="aac_story_background">@color/aac_deque_light_blue</color>
-    <color name="aac_story_broken_background">@color/aac_deque_orange</color>
-    <color name="aac_story_fixed_background">@color/aac_worldspace_green</color>
+    <style name="AACAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
-    <color name="aac_tab_bar_background">@color/aac_deque_dark_blue</color>
-    <color name="aac_tab_bar_dimmed">@color/aac_worldspace_white</color>
-    <color name="aac_tab_bar_selected">@color/aac_deque_orange</color>
+    <style name="AACAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <color name="aac_demo_tab_bar_background">@color/aac_deque_pale_blue</color>
-    <color name="aac_demo_tab_bar_dimmed">@color/aac_deque_dark_blue</color>
-    <color name="aac_demo_tab_bar_selected">@color/aac_deque_orange</color>
+    <style name="AACAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <color name="aac_navigation_drawer_background">@color/aac_worldspace_white</color>
-    <color name="aac_navigation_drawer_text">@color/aac_deque_dark_blue</color>
-    <color name="aac_navigation_drawer_selected">@color/aac_deque_pale_blue</color>
-
-    <color name="aac_action_bar_background">@color/aac_deque_gray</color>
-
-    <color name="aac_table_divider_color">@color/aac_deque_dark_blue</color>
-
-    <color name="aac_worldspace_blue">#083378</color>
-    <color name="aac_worldspace_white">#F2F2F4</color>
-    <color name="aac_worldspace_orange">#EF611A</color>
-    <color name="aac_worldspace_green">#72BA32</color>
-    <color name="aac_worldspace_red">#DB341A</color>
-    <color name="aac_worldspace_black">#030210</color>
-
-    <color name="aac_deque_dark_blue">#061B3C</color>
-    <color name="aac_deque_light_blue">#0F3E89</color>
-    <color name="aac_deque_pale_blue">#E1EDF9</color>
-    <color name="aac_deque_gray">#E0E3E9</color>
-    <color name="aac_deque_orange">#E23A00</color>
-    <color name="aac_deque_green">#356B10</color>
-    <color name="aac_deque_yellow">#FEF30A</color>
-
+    <style name="AppTheme.Button">
+        <item name="android:background">@color/aac_worldspace_red</item>
+    </style>
 </resources>

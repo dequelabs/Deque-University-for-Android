@@ -1,0 +1,53 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rule_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_primary_navy"
+    tools:context="com.deque.accessibilityanalyzer.com.deque.worldspace.RuleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/lg"
+        android:layout_marginEnd="@dimen/lg">
+
+        <TextView
+            android:id="@+id/textViewRuleDescription"
+            style="@style/AACTextViewStyle.top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lg"
+            android:paddingTop="@dimen/lg"
+            android:paddingBottom="@dimen/sm"
+            android:textAppearance="@style/AACTextAppearance.body"
+            tools:text="A description of a rule." />
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/md" />
+
+        <TextView
+            style="@style/AACTextViewStyle.top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/md"
+            android:textAppearance="@style/AACTextAppearance.heading"
+            android:paddingTop="@dimen/md"
+            android:paddingBottom="@dimen/lg"
+            android:text="@string/rule_why_is_this_important" />
+
+        <TextView
+            android:id="@+id/textViewImportance"
+            style="@style/AACTextViewStyle.bottom"
+            android:textAppearance="@style/AACTextAppearance.body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/md"
+            android:layout_marginBottom="@dimen/lg"
+            tools:text="Lorem ipsum dolor semet Lorem ipsum dolor semet Lorem ipsum dolor semet Lorem ipsum dolor semet" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_rounded_bottom"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lg"
+        android:layout_marginTop="@dimen/xlg"/>
+        <!--android:text="@string/attest_violation_critical" />-->
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lg"
+        android:text="@string/informative_image_body_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:background="@drawable/border_broken"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:src="@drawable/dog_image" />
+
+        <TextView
+            style="@style/TextViewStyle.body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="@dimen/sm"
+            android:paddingStart="@dimen/sm"
+            android:text="@string/puppy_cute" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lg"
+        android:text="@string/informative_image_body_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:background="@drawable/border_fixed"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:contentDescription="@string/puppy_image_description"
+            android:src="@drawable/dog_image" />
+
+        <TextView
+            style="@style/TextViewStyle.body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="@dimen/sm"
+            android:paddingStart="@dimen/sm"
+            android:text="@string/puppy_cute" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/apl_link"
+        style="@style/TextViewStyle.body.link"
+        android:layout_marginBottom="@dimen/sm"
+        android:text="@string/apl_link_wcag_1_3_1" />
+
+</LinearLayout>

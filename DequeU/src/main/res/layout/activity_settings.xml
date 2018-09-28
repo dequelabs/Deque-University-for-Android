@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aac_story_background"
+    tools:context="com.deque.accessibilityanalyzer.service.SettingsActivity">
+    <TextView
+        android:id="@+id/imageLabel"
+        style="@style/AACTextAppearance.label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/att_image_capture_activity_last_image" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageLabel"
+        android:layout_alignEnd="@+id/imageLabel"
+        android:layout_below="@+id/imageLabel"
+        android:layout_margin="@dimen/aac_global_border"
+        android:background="@color/aac_deque_gray"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/dq_attest_logo_heroblue" />
+
+</RelativeLayout>

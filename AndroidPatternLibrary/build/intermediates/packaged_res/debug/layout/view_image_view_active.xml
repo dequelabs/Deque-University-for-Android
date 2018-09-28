@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/lg"
+    android:paddingEnd="@dimen/lg"
+    android:background="@drawable/background_white_rounded_bottom"
+    android:id="@+id/image_view">
+
+    <TextView style="@style/TextAppearance.heading"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attest_violation_critical_image_views"/>
+
+    <LinearLayout
+        android:id="@+id/violationDescription"
+        android:layout_marginBottom="@dimen/xlg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/image_view_demo_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/image_view_demo1"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/border_broken"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".85"
+                    android:textColor="@color/aac_worldspace_black"
+                    android:text="@string/critical"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/wcag_min_touch_size"
+                    android:layout_gravity="center"
+                    android:layout_weight=".15"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/dog_image"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:contentDescription="@string/collapsible_content_description_closed"
+                android:background="@drawable/closed"
+                android:id="@+id/image_view_collapsible_button1"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/image_view_help_view1"
+            style="@style/CollapsibleText"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/aac_worldspace_black"
+            android:text="@string/image_view_failing" />
+
+    </LinearLayout>
+
+    <TextView style="@style/TextAppearance.heading"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attest_violation_passing"/>
+
+    <LinearLayout
+        android:id="@+id/violationDescription2"
+        android:layout_marginBottom="@dimen/xlg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/image_view_demo_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/image_view_demo2"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight=".85"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/border_fixed"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".85"
+                    android:textColor="@color/aac_worldspace_black"
+                    android:text="@string/passing"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_weight=".15"
+                    android:contentDescription="@string/image_view_content_description"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/dog_image" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:contentDescription="@string/collapsible_content_description_closed"
+                android:background="@drawable/closed"
+                android:id="@+id/image_view_collapsible_button2"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/image_view_help_view2"
+            style="@style/CollapsibleText"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/image_view_passing"/>
+
+    </LinearLayout>
+</LinearLayout>
+
