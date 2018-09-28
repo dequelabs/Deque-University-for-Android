@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:background">@color/aac_background_text</item>
+        <item name="android:textColor">@color/aac_text_body</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextViewStyle.body">
+        <item name="android:textAppearance">@style/TextAppearance.body</item>
+    </style>
+
+    <style name="TextViewStyle.body.link">
+        <item name="android:paddingStart">@dimen/md</item>
+        <item name="android:paddingEnd">@dimen/lg</item>
+        <item name="android:paddingTop">@dimen/md</item>
+        <item name="android:paddingBottom">@dimen/sm</item>
+        <item name="android:textColor">@color/aac_worldspace_blue</item>
+        <item name="android:textColorLink">@color/aac_worldspace_blue</item>
+        <item name="android:minHeight">@dimen/wcag_min_touch_size</item>
+        <item name="android:minWidth">@dimen/wcag_min_touch_size</item>
+    </style>
+
+    <style name="TextViewStyle.heading">
+        <item name="android:textAppearance">@style/TextAppearance.heading</item>
+        <item name="android:textColor">@color/brand_alt_text_or_accent</item>
+    </style>
+
+    <style name="TextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/brand_primary_gray_or_accent</item>
+    </style>
+
+    <style name="TextAppearance.body">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.heading">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brand_primary_navy</item>
+    </style>
+
+    <style name="CollapsibleText">
+        <item name="android:padding">@dimen/md</item>
+        <item name="android:textColor">@color/brand_primary_gray_or_accent</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

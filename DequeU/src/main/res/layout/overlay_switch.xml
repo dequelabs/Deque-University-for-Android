@@ -7,6 +7,8 @@
     <Switch
         android:id="@+id/switchForActionBar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textOn="on"
+        android:textOff="off"/>
 
 </LinearLayout>

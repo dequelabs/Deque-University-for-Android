@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aac_text_body">@color/brand_primary_text</color>
+    <color name="aac_text_link">@color/aac_deque_light_blue</color>
+    <color name="aac_background_text">@color/aac_worldspace_white</color>
+    <color name="aac_story_background">@color/aac_deque_gray</color>
+    <color name="aac_story_broken_background">@color/aac_deque_orange</color>
+    <color name="aac_story_fixed_background">@color/aac_worldspace_green</color>
+    <color name="aac_story_incomplete_background">@color/aac_deque_yellow</color>
+
+    <color name="aac_tab_bar_background">@color/aac_deque_dark_blue</color>
+    <color name="aac_tab_bar_dimmed">@color/aac_worldspace_white</color>
+    <color name="aac_tab_bar_selected">@color/aac_deque_orange</color>
+
+    <color name="aac_demo_tab_bar_background">@color/aac_deque_pale_blue</color>
+    <color name="aac_demo_tab_bar_dimmed">@color/aac_deque_dark_blue</color>
+    <color name="aac_demo_tab_bar_selected">@color/aac_deque_orange</color>
+
+    <color name="aac_navigation_drawer_background">@color/aac_worldspace_white</color>
+    <color name="aac_navigation_drawer_text">@color/aac_deque_dark_blue</color>
+    <color name="aac_navigation_drawer_selected">@color/aac_deque_pale_blue</color>
+
+    <color name="aac_action_bar_background">@color/aac_deque_gray</color>
+
+    <color name="aac_table_divider_color">@color/aac_deque_dark_blue</color>
+
+    <color name="aac_worldspace_blue">#083378</color>
+    <color name="aac_worldspace_white">#F2F2F4</color>
+    <color name="aac_worldspace_orange">#EF611A</color>
+    <color name="aac_worldspace_green">#72BA32</color>
+    <color name="aac_worldspace_red">#DB341A</color>
+    <color name="aac_worldspace_black">#030210</color>
+
+    <color name="aac_deque_dark_blue">#061B3C</color>
+    <color name="aac_deque_light_blue">#0F3E89</color>
+    <color name="aac_deque_pale_blue">#E1EDF9</color>
+    <color name="aac_deque_gray">#e0e3e9</color>
+    <color name="aac_deque_orange">#E23A00</color>
+    <color name="aac_deque_green">#356B10</color>
+    <color name="aac_deque_yellow">#FFFF00</color>
+    <color name="aac_deque_purple">#DA70D6</color>
+
+    <!--app branding colors-->
+    <color name="brand_hero_blue">#0077C8</color>
+    <color name="brand_primary_navy">#003349</color>
+    <color name="brand_primary_green">#8EDD65</color>
+    <color name="brand_accent_red">#E03C31</color>
+    <color name="brand_alt_white">#F5F5F5</color>
+    <color name="brand_primary_text">#1E1E1E</color>
+    <color name="brand_alt_text_or_accent">#4B4F54</color>
+    <color name="brand_primary_gray_or_accent">#878787</color>
+
+</resources>

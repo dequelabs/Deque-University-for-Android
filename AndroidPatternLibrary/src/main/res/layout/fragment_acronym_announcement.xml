@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_layout"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/lg"
+    android:paddingStart="@dimen/lg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lg"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_weight="1"
+        android:text="@string/attest_best_practice"
+        android:textAppearance="@style/TextAppearance.heading" />
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_weight="1"
+        android:text="@string/acronym_body_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:background="@drawable/border_broken"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyle.body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/acronym_example_1" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewStyle.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:layout_weight="1"
+        android:text="@string/acronym_body_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:background="@drawable/border_fixed"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyle.body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/acronym_example_2" />
+    </LinearLayout>
+
+</LinearLayout>

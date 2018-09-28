@@ -1,0 +1,268 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/color_contrast"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_rounded_bottom"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/lg"
+    android:paddingStart="@dimen/lg"
+    tools:context="com.dequeuniversity.FragmentColorContrast">
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_serious_color_contrast" />
+
+    <LinearLayout
+        android:id="@+id/violationDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/color_contrast_demo_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/color_contrast_demo1"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight=".85"
+                android:background="@drawable/border_broken"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/serious"
+                    android:textAlignment="center"
+                    android:textColor="#999999" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/color_contrast_collapsible_button1"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed"
+                android:layout_gravity="center_vertical|end"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/color_contrast_help_view1"
+            style="@style/CollapsibleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_contrast_failing"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_incomplete" />
+
+    <LinearLayout
+        android:id="@+id/violationDescription2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/color_contrast_demo_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/color_contrast_demo2"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight="0.85"
+                android:background="@drawable/border_incomplete"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/incomplete"
+                    android:textAlignment="center"
+                    android:textColor="#888666" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/color_contrast_collapsible_button2"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/color_contrast_help_view2"
+            style="@style/CollapsibleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_contrast_ratio_incomplete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_incomplete" />
+
+    <LinearLayout
+        android:id="@+id/violationDescription3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/color_contrast_demo_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/color_contrast_demo3"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight="0.85"
+                android:background="@drawable/border_incomplete"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/color_contrast_edit_text_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight=".35"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:labelFor="@id/color_contrast_edit_text2"
+                    android:text="@string/incomplete_violation"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/aac_worldspace_black"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/color_contrast_edit_text2"
+                    android:layout_width="match_parent"
+                    android:hint="@string/incomplete_lowercase"
+                    android:minHeight="@dimen/wcag_min_touch_size"
+                    android:layout_height="@dimen/wcag_min_touch_size"
+                    android:minWidth="@dimen/wcag_min_touch_size" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/color_contrast_collapsible_button3"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/color_contrast_help_view3"
+            style="@style/CollapsibleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_contrast_edit_text_incomplete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_passing" />
+
+    <LinearLayout
+        android:id="@+id/violationDescription4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/color_contrast_demo_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/color_contrast_demo4"
+                style="@style/TextViewStyle.body"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight="0.85"
+                android:background="@drawable/border_fixed"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/passing"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/color_contrast_collapsible_button4"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/color_contrast_help_view4"
+            style="@style/CollapsibleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_contrast_passing"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

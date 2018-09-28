@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aac_action_bar_background">@color/aac_deque_gray</color>
+    <color name="aac_background_text">@color/aac_worldspace_white</color>
+    <color name="aac_demo_tab_bar_background">@color/aac_deque_pale_blue</color>
+    <color name="aac_demo_tab_bar_dimmed">@color/aac_deque_dark_blue</color>
+    <color name="aac_demo_tab_bar_selected">@color/aac_deque_orange</color>
+    <color name="aac_deque_dark_blue">#061B3C</color>
+    <color name="aac_deque_gray">#e0e3e9</color>
+    <color name="aac_deque_green">#356B10</color>
+    <color name="aac_deque_light_blue">#0F3E89</color>
+    <color name="aac_deque_orange">#E23A00</color>
+    <color name="aac_deque_pale_blue">#E1EDF9</color>
+    <color name="aac_deque_purple">#DA70D6</color>
+    <color name="aac_deque_yellow">#FFFF00</color>
+    <color name="aac_navigation_drawer_background">@color/aac_worldspace_white</color>
+    <color name="aac_navigation_drawer_selected">@color/aac_deque_pale_blue</color>
+    <color name="aac_navigation_drawer_text">@color/aac_deque_dark_blue</color>
+    <color name="aac_story_background">@color/aac_deque_gray</color>
+    <color name="aac_story_broken_background">@color/aac_deque_orange</color>
+    <color name="aac_story_fixed_background">@color/aac_worldspace_green</color>
+    <color name="aac_story_incomplete_background">@color/aac_deque_yellow</color>
+    <color name="aac_tab_bar_background">@color/aac_deque_dark_blue</color>
+    <color name="aac_tab_bar_dimmed">@color/aac_worldspace_white</color>
+    <color name="aac_tab_bar_selected">@color/aac_deque_orange</color>
+    <color name="aac_table_divider_color">@color/aac_deque_dark_blue</color>
+    <color name="aac_text_body">@color/brand_primary_text</color>
+    <color name="aac_text_link">@color/aac_deque_light_blue</color>
+    <color name="aac_worldspace_black">#030210</color>
+    <color name="aac_worldspace_blue">#083378</color>
+    <color name="aac_worldspace_green">#72BA32</color>
+    <color name="aac_worldspace_orange">#EF611A</color>
+    <color name="aac_worldspace_red">#DB341A</color>
+    <color name="aac_worldspace_white">#F2F2F4</color>
+    <color name="brand_accent_red">#E03C31</color>
+    <color name="brand_alt_text_or_accent">#4B4F54</color>
+    <color name="brand_alt_white">#F5F5F5</color>
+    <color name="brand_hero_blue">#0077C8</color>
+    <color name="brand_primary_gray_or_accent">#878787</color>
+    <color name="brand_primary_green">#8EDD65</color>
+    <color name="brand_primary_navy">#003349</color>
+    <color name="brand_primary_text">#1E1E1E</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="apl_link_padding">15dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="attest_demo_border">10dp</dimen>
+    <dimen name="attest_demo_border_small">5dp</dimen>
+    <dimen name="attest_demo_elevation">@dimen/attest_demo_border</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="lg">16dp</dimen>
+    <dimen name="md">8dp</dimen>
+    <dimen name="sm">4dp</dimen>
+    <dimen name="wcag_min_touch_size">48dp</dimen>
+    <dimen name="xlg">24dp</dimen>
+    <dimen name="xxlg">32dp</dimen>
+    <string name="acronym_body_1">TalkBack may automatically expand the announcement for shortened characters and words, this can be confusing if the expansion doesn\'t match your intent:</string>
+    <string name="acronym_body_2">An elegant fix is to include just a little bit more information:</string>
+    <string name="acronym_caps_body_1">TalkBack may announce strings of all capital letters one at a time rather than pronouncing the word:</string>
+    <string name="acronym_caps_body_2">Lower casing the string and setting it as the contentDescription (as below) allows the visual appearance of the text to stay the same, while allowing TalkBack to read it out more concisely:</string>
+    <string name="acronym_caps_body_content_desc_visualization">Content-Description: Welcome to nasa.</string>
+    <string name="acronym_caps_content_desc">Welcome to nasa.</string>
+    <string name="acronym_caps_example_1">Welcome to NASA.</string>
+    <string name="acronym_caps_example_2">Welcome to NASA.</string>
+    <string name="acronym_example_1">Flight leaves in 55m.</string>
+    <string name="acronym_example_2">Flight leaves in 55min.</string>
+    <string name="action_settings">Settings</string>
+    <string name="apl_link_android_touch_target_size"><a href="https://support.google.com/accessibility/android/answer/7101858?hl=en">Understanding Android Touch Target Size</a></string>
+    <string name="apl_link_wcag_1_1_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding 1.1.1</a></string>
+    <string name="apl_link_wcag_1_3_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding 1.3.1</a></string>
+    <string name="apl_link_wcag_1_4_3"><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding 1.4.3</a> </string>
+    <string name="apl_link_wcag_1_4_6"><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html">Understanding 1.4.6</a></string>
+    <string name="apl_link_wcag_2_4_3"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">Understanding 2.4.3</a></string>
+    <string name="apl_link_wcag_3_1_4"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html">Understanding 3.1.4</a></string>
+    <string name="apl_link_wcag_3_3_6"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html">Understanding 3.3.6</a></string>
+    <string name="apl_link_wcag_4_1_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">Understanding 4.1.2</a></string>
+    <string name="attest_best_practice">Best Practice</string>
+    <string name="attest_example_code">Here is where you share a little bit about the APIs used to do the fix.</string>
+    <string name="attest_example_failure">This layout should be used to include a basic failing example with a proper description.</string>
+    <string name="attest_example_fixed">This layout should be used to show a "fixed" example very similar to the one above. </string>
+    <string name="attest_example_wcag_criteria">@string/apl_link_wcag_1_1_1</string>
+    <string name="attest_future_violation_critical">Critical Impact (2.1)</string>
+    <string name="attest_minor_violation">Minor Impact</string>
+    <string name="attest_minor_violation_edit_text">Minor WCAG #1.3.1 Issue</string>
+    <string name="attest_minor_violation_nested_active_elements">Minor Best Practice Issue</string>
+    <string name="attest_rule_active_view_demo_good">This button has its own text, and its purpose is clear.</string>
+    <string name="attest_rule_active_views_demo_bad">This button has no value for text or contentDescription. This makes it difficult for TalkBack users to understand it\'s purpose.</string>
+    <string name="attest_user_agent_disclaimer">Note: Behaviors of this demo may vary widely based on Android, TalkBack, and Text-To-Speech engine version. If the user experience on your device is different, it is still an issue on other device combinations. All demos tested on Nexus 6 with Android 7.1.1, default TTS Engine and up to date TalkBack.</string>
+    <string name="attest_violation_critical_active_views">Critical WCAG #4.1.2 Issue</string>
+    <string name="attest_violation_critical_image_views">Critical WCAG #1.1.1 Issue</string>
+    <string name="attest_violation_critical_informative_views">Critical Platform Issue</string>
+    <string name="attest_violation_critical_labels">Critical Platform Issue</string>
+    <string name="attest_violation_critical_nested_active_elements">Critical WCAG #2.1.1 Issue</string>
+    <string name="attest_violation_incomplete">Incomplete</string>
+    <string name="attest_violation_passing">Passing</string>
+    <string name="attest_violation_serious">Serious Impact</string>
+    <string name="attest_violation_serious_color_contrast">Serious WCAG #1.4.3 Issue</string>
+    <string name="attest_violation_serious_touch_target_size">Serious Platform Issue</string>
+    <string name="bad_practice">Bad Practice</string>
+    <string name="collapsible_content_description_closed">Open for more information.</string>
+    <string name="collapsible_content_description_open">Close to hide additional information.</string>
+    <string name="color_contrast_body_1">The below text does not display a proper color contrast ratio of 4.5:1.</string>
+    <string name="color_contrast_body_2">The below text has a color contrast ratio between 4.5:1 and 3:1. This view requires manual testing.</string>
+    <string name="color_contrast_body_3">EditText views must be tested manually. Hint Text is not importantForAccessibilty. Text in an EditText is importantForAccessibility.</string>
+    <string name="color_contrast_body_4">The below text displays a proper color contrast ratio. The ratio is below 3:1 and is adequate for all text sizes.</string>
+    <string name="color_contrast_edit_text_incomplete">This view must be tested manually because EditText views have specific requirements for color contrast.</string>
+    <string name="color_contrast_example_1">This has poor Color Contrast.</string>
+    <string name="color_contrast_example_2">This text color requires manual testing.</string>
+    <string name="color_contrast_example_4">This has good Color Contrast.</string>
+    <string name="color_contrast_failing">This text does not have a color contrast ratio of at least [3.0:1.0].</string>
+    <string name="color_contrast_passing">This text will pass the color contrast rule because it has a color contrast ratio of [4.5:1.0] or greater.</string>
+    <string name="color_contrast_ratio_incomplete">This text has a color contrast of between [3.0:1.0] and [4.5:1.0].  This text must be tested manually.</string>
+    <string name="content_description_default">A content description.</string>
+    <string name="critical">BLOCKING VIOLATION</string>
+    <string name="critical_short">BLOCKING</string>
+    <string name="edit_text_failing">Adding hint text helps users determine what to enter in an EditText, but it and the contentDescription disappear once text is entered. That information is important to accessibility and does not return unless the EditText is cleared.</string>
+    <string name="edit_text_hint_default">John</string>
+    <string name="edit_text_label_default">First Name</string>
+    <string name="edit_text_passing">Correctly, this EditText has a label and no content description. Adding hint text can help users determine what to enter in the EditText.</string>
+    <string name="hello_blank_fragment">Be sure to include descriptions of your FAILING/PASSING examples.</string>
+    <string name="image_view_content_description">Donate to save the puppies!</string>
+    <string name="image_view_failing">This ImageView is active (though it doesn\'t do anything), but does not have speakable text.</string>
+    <string name="image_view_passing">This ImageView has a content description.</string>
+    <string name="incomplete">MANUAL TESTING REQUIRED</string>
+    <string name="incomplete_lowercase">testing required</string>
+    <string name="incomplete_violation">INCOMPLETE</string>
+    <string name="informative_image_body_1">The ImageView below presents important contextual information for the label next to it, but the image is not labeled, nor is it even focusable.</string>
+    <string name="informative_image_body_2">Here we have added a contentDescription, so TalkBack users can know that the cutie in question is in fact a puppy.</string>
+    <string name="informative_image_presentational_body_1">The ImageView below does not provide any additional context for the label next to it. Focusing the image and then focusing the label is just redundant:</string>
+    <string name="informative_image_presentational_body_2">By setting importantForAccessibility=yes on the layout, we get some awesome behavior for free. The image and its visible label are now bound together in one larger focusable container. We also have removed the contentDescription from the image, it is no longer required:</string>
+    <string name="informative_views_best_practice">Here is an example of the best practice mentioned in the demo above. The parent has a listener in the activity.</string>
+    <string name="informative_views_failing">The visible TextView with a labelFor=\"The Lights\" has been marked not important for accessibility. This means it is not accessibility focusable, which presents a confusing highlight for sighted TalkBack users.</string>
+    <string name="informative_views_passing">The Lights label is focusable. A best practice would be to wrap the switch and visible label together into one layout that is active.</string>
+    <string name="labels_failing">A view\'s label must have speakable text that is associated with the switch.  In this case, there is visible text, but it is not associated with the switch by either the text or labelFor attribute.</string>
+    <string name="labels_help_text_failing">The switch has no labelFor property to link it\'s label (The Lights), only its state (Off). This fails to identify the purpose of the switch to a non-sighted user.</string>
+    <string name="labels_passing">Here we have associated the visible \'The Lights\' label with the Switch using the labelFor attribute.</string>
+    <string name="labels_passing_best_practice">Here we have given the switch a text attribute, which on the Android API defaults the text to the left and fills the space.</string>
+    <string name="labels_passing_label_for">The above switch is properly labeled by an associated label using the Android labelFor attribute.</string>
+    <string name="labels_passing_text">The above switch has a proper Android text attribute associated with the switch.</string>
+    <string name="labels_text">The Lights</string>
+    <string name="minor">MINOR ISSUE</string>
+    <string name="minor_short">MINOR</string>
+    <string name="name_john">John</string>
+    <string name="nested_elements_barely_passing_1">A parent that is accessibility focusable (by importantForAccessibility and/or focusable) but contains an active element can confuse a user.</string>
+    <string name="nested_elements_barely_passing_2">A parent that is accessibility focusable (by importantForAccessibility and/or focusable) should not contain more than one active element.</string>
+    <string name="nested_elements_failing">The layout below is attempting to associate two views together. However, since one of them is active the simple \'importantForAccessibility=yes\' trick doesn\'t work. We end up with a focusable Switch nested inside a separately focusable layout. Very confusing for sighted TalkBack users.</string>
+    <string name="nested_elements_passing">In this case it is easiest just to let the views be individually focusable. Alternatively, we could wrap the Switch and TextView in a layout and share the state between the two. Either solution is acceptable, the former is implemented, the latter is a best practice.</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="passing">ACCESSIBLE</string>
+    <string name="puppy_cute">What a cutie!</string>
+    <string name="puppy_excitement">Look at my new puppy!</string>
+    <string name="puppy_image_description">A photo of a cute little puppy.</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="serious">INACCESSIBLE</string>
+    <string name="social_network_example_description">My awesome experience.</string>
+    <string name="submit">Submit</string>
+    <string name="switch_off">Switch off</string>
+    <string name="switch_on">Switch on</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_tab__widget">Tab_Widget</string>
+    <string name="touch_target_failing">This switch does not have adequate touch target size. This is a Switch created from the GUI layout creater. It\'s default size is too small.</string>
+    <string name="touch_target_passing_button">Independent Button (not nested in another element) that has adequate touch target size (48x48 CSS pixels).</string>
+    <string name="touch_target_passing_switch">This switch has the proper touch target size (minimum of 48x48 CSS pixels).</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="CollapsibleText">
+        <item name="android:padding">@dimen/md</item>
+        <item name="android:textColor">@color/brand_primary_gray_or_accent</item>
+    </style>
+    <style name="TextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/brand_primary_gray_or_accent</item>
+    </style>
+    <style name="TextAppearance.body">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.heading">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brand_primary_navy</item>
+    </style>
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:background">@color/aac_background_text</item>
+        <item name="android:textColor">@color/aac_text_body</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="TextViewStyle.body">
+        <item name="android:textAppearance">@style/TextAppearance.body</item>
+    </style>
+    <style name="TextViewStyle.body.link">
+        <item name="android:paddingStart">@dimen/md</item>
+        <item name="android:paddingEnd">@dimen/lg</item>
+        <item name="android:paddingTop">@dimen/md</item>
+        <item name="android:paddingBottom">@dimen/sm</item>
+        <item name="android:textColor">@color/aac_worldspace_blue</item>
+        <item name="android:textColorLink">@color/aac_worldspace_blue</item>
+        <item name="android:minHeight">@dimen/wcag_min_touch_size</item>
+        <item name="android:minWidth">@dimen/wcag_min_touch_size</item>
+    </style>
+    <style name="TextViewStyle.heading">
+        <item name="android:textAppearance">@style/TextAppearance.heading</item>
+        <item name="android:textColor">@color/brand_alt_text_or_accent</item>
+    </style>
+</resources>

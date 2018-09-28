@@ -1,7 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Deque University for Android</string>
-    <string name="app_name_short">DequeU</string>
-    <string name="navigation_drawer_title">Deque University for Android</string>
+    <string name="app_name">DQU Android</string>
+    <string name="app_short_name">DQU</string>
+
+    <string name="accessibility_service_description">This service looks at the information reported to TalkBack and checks it for Accessibility issues.  If issues are found, the offending views are highlighted in a thin border.</string>
+
+    <string name="aat_toast_stop_highlight">Attest desktop client still highlighting, stop highlighting to interact with app.</string>
+
+    <string name="att_image_capture_activity_last_image">Last Image Captured</string>
+
+    <string name="navigation_drawer_title">Attest for Android</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -10,8 +18,6 @@
     <string name="aac_logo_cont_desc">Deque logo</string>
     <string name="aac_navigation_drawer_non_sighted_icon_cont_desc">Non sighted simulation icon</string>
     <string name="aac_navigation_drawer_non_sighted_icon_text">TalkBack Simulation</string>
-
-    <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
 
@@ -33,60 +39,16 @@
     <string name="aac_hint_link"><a href="http://developer.android.com/reference/android/R.attr.html#hint">Hints</a></string>
     <string name="aac_tabLayout_link"><a href="https://developer.android.com/reference/android/support/design/widget/TabLayout.html">TabLayout</a></string>
 
-  <string name="aac_link_wcag_3_1_4"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html"></a>Understanding W Cag 3.1.4</string>
+    <string name="aac_link_wcag_3_1_4"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html">Understanding W Cag 3.1.4</a></string>
     <string name="aac_link_wcag_4_1_2"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">Understanding W Cag 4.1.2</a></string>
     <string name="aac_link_wcag_1_1_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding W Cag 1.1.1</a></string>
     <string name="aac_link_wcag_2_4_3"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">Understanding W Cag 2.4.3</a></string>
     <string name="aac_link_wcag_1_3_1"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding W Cag 1.3.1</a></string>
     <string name="aac_link_wcag_3_3_6"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html">Understanding W Cag 3.3.6</a></string>
 
-    <!-- Intro Story Strings-->
-    <string name="aac_intro_title">Introduction</string>
-    <string name="aac_intro_tab_1">Accessibility 101</string>
-
-    <string name="aac_intro_about_paragraph1">Welcome to Accessibility 101.  This app will take you through a set of demonstrations that aim to help developers understand the implications the Android Accessibility API has for users with disabilities.\n\nBe sure to enable <i>TalkBack</i>.  The demonstrations in this app use Android\'s accessibility API and are only meaningful in this context.  It is also helpful to enable the <i>TalkBack</i> shortcut, so you can turn <i>TalkBack</i> on and off easily.</string>
-    <string name="aac_intro_about_paragraph1_content_description">Welcome to Accessibility 101.  This app will take you through a set of demonstrations that aim to help developers understand the implications the Android Accessibility A P I has for users with disabilities.\n\nBe sure to enable <i>TalkBack</i>.  The demonstrations in this app use Android\'s accessibility A P I and are only meaningful in this context.  It is also helpful to enable the <i>TalkBack</i> shortcut, so you can turn <i>TalkBack</i> on and off easily.</string>
-
-    <string name="aac_intro_deque_heading">About Deque</string>
-    <string name="aac_intro_deque_paragraph1">Digital accessibility is both our mission and our passion. For over fifteen years we have been helping major corporations, government agencies, and other organizations ensure that their websites and mobile apps are accessible to everyone. Every one of us at Deque, and some of us have been with the company since it was founded in 1999, cares deeply about making sure people with disabilities are able to fully enjoy the benefits of the web. Helping our customers grow their brands, be inclusive and provide all of their customers with the best possible digital customer experience gives us joy. No matter who you work with at Deque you can be confident that you are in skillful and caring hands. Feel free to <i>Contact Us</i> or visit our <i>website</i> for more information.</string>
-
-    <!-- Labels Story Strings-->
-    <string name="aac_labels_title">Labels</string>
-
-    <string name="aac_labels_content_description">This is a content description.</string>
-
-    <string name="aac_labels_about_introduction">In Android Accessibility there are multiple ways of providing labels or alternate text for a control.  A label is not an Android element; it is a word chosen to represent the presence of either the <i>label for</i> or the <i>content description</i> attribute. While the <i>content description</i> is the most basic, the <i>label for</i> attribute is generally preferred for controls.  By marking a text element as the <i>label for</i> something, you associate a visible label with the announcement in TalkBack.  It is important to note that not all controls require a <i>content description</i>On the other hand, all controls that do not contain text as a primary feature of the control require a label of some kind.</string>
-
-    <string name="aac_labels_about_heading_1"><i>Content Description</i> Attribute</string>
-    <string name="aac_labels_about_visible_text_1">Visible Text 1</string>
-    <string name="aac_labels_about_paragraph_1"><i>Content descriptions</i> are similar to alt text in HTML.  They attach a text description to a control, <i>ImageView</i> or other focusable objct that otherwise has no string content.  When writing <i>content description</i> be sure to consider the basic ARIA name, role, state, and value.  That being said, <i>TalkBack</i> and the Android framework attempt to figure some of this out for you based on the type of control you are using. For this reason, it is helpful to test your application with TalkBack to ensure everything is announced properly.</string>
-    <string name="aac_labels_about_paragraph_1_cont_desc"><i>Content descriptions</i> are similar to alt text in Hypertext Markup Language.  They provide a control that otherwise has no string content, with a description of what the control is.  When writing <i>content description</i> be sure to consider the basic Accessibile Rich Internet Applications name, role, state, and value.  Though remember that TalkBack and the Android framework attempt to figure some of this out for you, based on the type of control you are using.  Test your application with TalkBack to ensure everything is announced properly.</string>
-
-    <string name="aac_labels_about_heading_2">Label For Attribute</string>
-    <string name="aac_labels_about_visible_text_2">Visible Text 2</string>
-    <string name="aac_labels_about_paragraph_2">The <i>label for</i> attribute allows you to link visual text labels with controls. Using this method, you create an association between the two elements instead of duplicating the text of the label in the control\'s <i>content description</i>. Then <i>TalkBack</i> will announce the visible text and remove any ambiguity about which control a label belongs to.</string>
-
-    <string name="aac_labels_about_heading_3">Mixing Them Together</string>
-    <string name="aac_labels_about_visible_text_3">Visible Text 3</string>
-    <string name="aac_labels_about_paragraph_3">Using both a <i>label for</i> and a <i>content description</i> is generally unnecessary. Moreover, using both could actually confuse the user. If a control requires more context than a simple label can provide, it may be better to modify elements of your design. A <i>content description</i> can be used to group sets of controls that require additional labeling. Just be careful not to overload <i>TalkBack</i> users with too much or duplicated information.</string>
-
-    <string name="aac_labels_broken_content_heading">Background Color Components</string>
-    <string name="aac_labels_setting_1">Red</string>
-    <string name="aac_labels_setting_2">Green</string>
-    <string name="aac_labels_setting_3">Blue</string>
-
-    <string name="aac_labels_broken_conclusion_heading">Control Association</string>
-    <string name="aac_labels_broken_conclusion">In this example, the labels are not associated with their controls.  This violates WCag 1.3.1, for more information, follow the link below. As you tab across the various labels, you are not sure whether the label refers to the value before, or after the visual label.</string>
-    <string name="aac_labels_broken_conclusion_content_description">In this example, the labels are not associated with their controls.  This violates the W Cag 1.3.1, for more information, follow the link below. As you tab across the various labels, you are not sure whether the label refers to the value before, or after the visual label.</string>
-
-    <string name="aac_labels_fixed_conclusion">By adding the <i>label for</i> attribute to the labels we create an association with the controls.  Now, when we highlight the control, we know which switch will toggle which setting.</string>
-
-    <!-- ContDesc Story Strings-->
-    <string name="aac_cont_desc_title">Content Descriptions</string>
-
     <!-- About Tab Strings-->
-    <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a control. The <i>content description</i> attribute is the most basic. It attaches a description to a control, <i>ImageView</i>, or other focusable object, that otherwise has no string content. When writing <i>content descriptions</i>, be sure to consider the basic ARIA name, role, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you based on the type of object you are using. That being said, it is important to test your application with TalkBack to ensure everything is announced properly.</string>
-    <string name="aac_cont_desc_about_intro_cont_desc">In the Android Accessibility world there are multiple ways of providing alternate text for a control. The <i>content description</i> attribute is the most basic. It attaches a description to a control, <i>ImageView</i>, or other focusable object, that otherwise has no string content. When writing <i>content descriptions</i>, be sure to consider the basic Accessible Rich Internet Application name, role, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you based on the type of object you are using. That being said, it is important to test your application with TalkBack to ensure everything is announced properly.</string>
+    <string name="aac_cont_desc_about_intro">In the Android Accessibility world there are multiple ways of providing alternate text for a view. The <i>content description</i> attribute is the most basic. It attaches a description to a view, <i>ImageView</i>, or other focusable object, that otherwise has no string content. When writing <i>content descriptions</i>, be sure to consider the basic ARIA name, role, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you based on the type of object you are using. That being said, it is important to test your application with TalkBack to ensure everything is announced properly.</string>
+    <string name="aac_cont_desc_about_intro_cont_desc">In the Android Accessibility world there are multiple ways of providing alternate text for a view. The <i>content description</i> attribute is the most basic. It attaches a description to a view, <i>ImageView</i>, or other focusable object, that otherwise has no string content. When writing <i>content descriptions</i>, be sure to consider the basic Accessible Rich Internet Application name, role, state, and value. Remember that TalkBack and the Android framework attempt to figure some of this out for you based on the type of object you are using. That being said, it is important to test your application with TalkBack to ensure everything is announced properly.</string>
     <string name="aac_cont_desc_about_heading_1">Null Content Description</string>
     <string name="aac_cont_desc_about_heading_2">Empty Content Description</string>
     <string name="aac_cont_desc_about_heading_3">When to Use Content Descriptions</string>
@@ -96,7 +58,7 @@
     <string name="aac_cont_desc_about_paragraph_2_empty">This image has a blank string as a <i>content description</i>. Such a description allows the user to focus on the image using <i>TalkBack</i>, but the description is a default image number and the information that the image is \"unlabeled,\" which is entirely unhelpful. An empty <i>content description</i> occurs when it is hardcoded in xml as a blank string, which is a string made up of whitespace characters. If it is hardcoded as an empty string or assigned as an empty or lank string in a separate strings.xml file, the <i>ImageView</i> behaves as if it had a null <i>content description</i></string>
     <string name="aac_cont_desc_about_paragraph_3_when_to_use"><i>Content descriptions</i> should be used in order to provide information desribing a focusable object, such as an <i>ImageView</i>. <i>Content descriptions</i> should not be used for background images, decorative borders, or other things that are not pertinent to the information being conveyed through your app or website.</string>
     <string name="aac_cont_desc_about_paragraph_4_duplicated_info">This image\'s <i>content description</i> exactly duplicates the visual label and thus provides no new information to a TalkBack user.</string>
-    <string name="aac_cont_desc_about_paragraph_5_fix_it">Fixing this accessibility issue is simple. All you need to do is add a <i>content description</i> to objects that display pertinent information or perform a function such as non-decorative ImageViews, Switches, Buttons, other controls, etc. These <i>content descriptions</i> should be concise, but as descriptive as possible in order to provide a TalkBack user with the information necessary to interpret the object. The first two issues, null and empty <i>content descriptions</i>, can be fixed in this way. To fix the third issue, duplicated information, be sure to think about the best combination of <i>content description</i> and visual label so as not to be redundant, but still provide necessary information for a TalkBack user. </string>
+    <string name="aac_cont_desc_about_paragraph_5_fix_it">Fixing this accessibility issue is simple. All you need to do is add a <i>content description</i> to objects that display pertinent information or perform a function such as non-decorative ImageViews, Switches, Buttons, other views, etc. These <i>content descriptions</i> should be concise, but as descriptive as possible in order to provide a TalkBack user with the information necessary to interpret the object. The first two issues, null and empty <i>content descriptions</i>, can be fixed in this way. To fix the third issue, duplicated information, be sure to think about the best combination of <i>content description</i> and visual label so as not to be redundant, but still provide necessary information for a TalkBack user. </string>
     <string name="aac_cont_desc_about_fish_cont_desc">fish image</string>
     <string name="aac_cont_desc_about_fish_label">Fish Image</string>
 
@@ -114,9 +76,8 @@
     <string name="aac_cont_desc_broken_conclusion_2_content_description">The second image in this example has a <i>content description</i>, so it is focusable using TalkBack. However, the <i>content description</i> is a blank string, so TalkBack describes the image by its image number and states that the image is unlabeled. Such information is not useful to the user. Unfortunately, Android Studio does not flag this as an accessibility warning. This violates the W Cag 1.1.1 which you can learn more about by following the link below.</string>
 
     <string name="aac_cont_desc_broken_conclusion_3_heading">Null Content Description</string>
-    <string name="aac_cont_desc_broken_conclusion_3">The third image in this example is not focusable because it has a null <i>content description</i>. A <i>TalkBack</i> user would not even know that htis image exists. Android Studio flags this as an accessibility warning, as long as the check is enabled. This violates WCag 2.4.3, which you cna learn more about by following the link below.</string>
-    <string name="aac_cont_desc_broken_conclusion_3_content_description">The third image in this example is not focusable because it has a null <i>content description</i>. A <i>TalkBack</i> user would not even know that htis image exists. Android Studio flags this as an accessibility warning, as long as the check is enabled. This violates the W Cag 2.4.3, which you cna learn more about by following the link below.</string>
-
+    <string name="aac_cont_desc_broken_conclusion_3">The third image in this example is not focusable because it has a null <i>content description</i>. A <i>TalkBack</i> user would not even know that this image exists. Android Studio flags this as an accessibility warning, as long as the check is enabled. This violates WCag 2.4.3, which you cna learn more about by following the link below.</string>
+    <string name="aac_cont_desc_broken_conclusion_3_content_description">The third image in this example is not focusable because it has a null <i>content description</i>. A <i>TalkBack</i> user would not even know that this image exists. Android Studio flags this as an accessibility warning, as long as the check is enabled. This violates the W Cag 2.4.3, which you cna learn more about by following the link below.</string>
 
     <!-- Fixed Tab Strings-->
     <string name="aac_cont_desc_fixed_heading_1">Look at these drawings of animals!</string>
@@ -130,111 +91,32 @@
 
     <string name="aac_cont_desc_fixed_conclusion">By providing concise, descriptive <i>content descriptions</i> that provide different information than the labels to these ImageViews, you can now use TalkBack to gain information about these objects.</string>
 
-    <!-- EditText Story Strings-->
-    <string name="aac_edit_text_title">Edit Texts</string>
-
-    <!-- About Tab Strings-->
-    <string name="aac_edit_text_about_intro">The <i>EditText</i> object is a subclass of the <i>TextView</i> object that is configured to be able to be edited by users. A thin veneer is overlaid on a <i>TextView</i>  before a user selects it. When a user selects an <i>EditText</i>, the keyboard appears and the user can enter data, which then appears in the <i>TextView</i>. The <i>EditText</i> object possesses the capability to have a <i>hint</i> and/or <i>content description</i> attribute to describe what should be entered into the field, and can also be associated with a visual label using the <i>label for</i> attribute. <i>EditText</i> objects are not inherently accessible. If no <i>hint</i> or visual label is associated with the <i>EditText</i>, any user, regardless of whether he or she is using TalkBack, would find it difficult to know what to put into the text field.</string>
-    <string name="aac_edit_text_about_heading_2_hints">Hint Attribute</string>
-    <string name="aac_edit_text_about_heading_3_cont_desc">Content Description Attribute</string>
-    <string name="aac_edit_text_about_heading_4_mixing">Mixing Them Together</string>
-    <string name="aac_edit_text_about_heading_5_label_for">Label For Attribute</string>
-
-    <string name="aac_edit_text_about_paragraph_2_hints">The <i>EditText</i> below utilizes the hint attribute. The <i>hint</i> is visible within the text field while the field is empty – either before the user has entered data or after a user has deleted all previously entered data. On some devices, <i>TalkBack</i> will announce hints regardless of the <i>EditText’s</i> contents. On most devices, though, <i>hints</i> are not read aloud by <i>TalkBack</i> if they are no longer visible on the screen.  In these cases, the <i>EditText</i> box becomes inaccessible.
-</string>
-
-    <string name="aac_edit_text_about_paragraph_3_cont_desc">The <i>EditText</i> object below has only a <i>content description</i> attribute and nothing else. This mean there is no visible text or label  associated with the <i>EditText</i>. TalkBack will read out the content description only if the EditText is empty. If a user has entered data, TalkBack will no longer announce the description for the EditText.</string>
-
-    <string name="aac_edit_text_about_paragraph_4_mixing_1">The <i>EditText</i> below has both a <i>content description</i> and a <i>hint</i> associated with it. This causes the <i>content description</i> to be ignored entirely and only the <i>hint</i> to be used. It is best practice to avoid using <i>content descriptions</i> to describe <i>EditText</i> objects due to their lack of functionality in general. </string>
-
-    <string name="aac_edit_text_about_paragraph_6_mixing_2">The <i>EditText</i> below has a visual label associated with the <i>EditText</i> via the <i>label for</i> attribute, a <i>hint</i>, and a <i>content description</i>. The <i>content description</i> is completely ignored by TalkBack and offers nothing in terms of accessibility. It is often best not to mix labels and <i>hint</i> for <i>EditText</i> objects as it becomes redundant for all users, but can be useful to provide users a guide for formatting their information (for example, a <i>hint</i> for a phone number could be (###)-###-### ).</string>
-
-    <string name="aac_edit_text_about_paragraph_5_label_for">The <i>EditText</i> below has a visual label beside it that utilizes the <i>label for</i>  attribute to associate the visual label with the <i>EditText</i>. TalkBack will announce the label as part of its description for the <i>EditText</i> regardless of the <i>EditText\'s</i> content. Non-TalkBack users have a constant visual clue that indicates what should be in the <i>EditText</i>.</string>
-
-    <!-- Broken Tab Strings -->
-    <string name="aac_edit_text_broken_heading_1_demo">Complete Your Profile</string>
-
-    <string name="aac_edit_text_broken_conclusion_1_heading">Label Association</string>
-    <string name="aac_edit_text_broken_conclusion_1">Notice that these <i>EditText</i> boxes have visible labels; however, these labels are not associated with the <i>EditText</i> boxes. A TalkBack user would be unsure which <i>EditText</i> requires which piece of information when scrolling through the objects on this page. This violates WCag 1.3.1; you can learn more about this in the link below.</string>
-    <string name="aac_edit_text_broken_conclusion_1_content_description">Notice that these <i>EditText</i> boxes have visible labels; however, these labels are not associated with the <i>EditText</i> boxes. A TalkBack user would be unsure which <i>EditText</i> requires which piece of information when scrolling through the objects on this page. This violates W Cag 1.3.1; you can learn more about this in the link below.</string>
-    <string name="aac_edit_text_broken_conclusion_2_heading">Hard Coded Text</string>
-    <string name="aac_edit_text_broken_conclusion_2">These <i>EditText</i> boxes have visible text within them. However, the text is not part of the <i>hint</i> attribute, but rather coded to be pre-populated text in the <i>EditText</i>. Such text initially alerts both a <i>TalkBack</i> or <i>non-TalkBack</i> user to the information desired in the <i>EditText</i>, but it causes more problems than it solves. It is cumbersome to enter the data, not to mention that the <i>hint</i> is inaccessible once data has been entered. The descriptive text does not repopulate the field, nor does <i>TalkBack</i> announce it if a user deletes the data. Additionally, a <i>TalkBack</i> user would not know to delete the text already in the <i>EditText</i> because the initial readout sounds the same as if the text were a <i>hint</i>. This violates WCag 3.3.6, which you can learn more about in the link below.</string>
-    <string name="aac_edit_text_broken_conclusion_2_content_description">These <i>EditText</i> boxes have visible text within them. However, the text is not part of the <i>hint</i> attribute, but rather coded to be pre-populated text in the <i>EditText</i>. Such text initially alerts both a <i>TalkBack</i> or <i>non-TalkBack</i> user to the information desired in the <i>EditText</i>, but it causes more problems than it solves. It is cumbersome to enter the data, not to mention that the <i>hint</i> is inaccessible once data has been entered. The descriptive text does not repopulate the field, nor does <i>TalkBack</i> announce it if a user deletes the data. Additionally, a <i>TalkBack</i> user would not know to delete the text already in the <i>EditText</i> because the initial readout sounds the same as if the text were a <i>hint</i>. This violates the W Cag 3.3.6, which you can learn more about in the link below.</string>
-
-    <!-- Fixed Tab Strings -->
-    <string name="aac_edit_text_fixed_heading_1_demo_1">Complete Your Profile</string>
-    <string name="aac_edit_text_fixed_heading_2_wrong">Using Hints (Warning!)</string>
-    <string name="aac_edit_text_fixed_heading_3_demo_2">Complete Your Profile</string>
-    <string name="aac_edit_text_fixed_conclusion_1">By eliminating pre-populated text and instead using the <i>hint</i> attribute for each <i>EditText</i> field, it may seem like these <i>EditText</i> boxes are accessible. But don’t be fooled – they aren’t. Once a user enters data into the text field, the <i>hint</i> disappears. On most devices, this has the implication that <i>TalkBack</i> will no longer announce the <i>hint</i>i>. As a result, the user no longer knows which piece of information belong in which field once data has been entered, unless the user deletes all data in the <i>EditText</i>.</string>
-    <string name="aac_edit_text_fixed_conclusion_2">After associating the <i>EditText</i> field with its label using the label for attribute, it is clear to a TalkBack user which box requires which information. Furthermore, by only using a hint where it is needed to provide additional information about formatting, TalkBack gives concise and useful readouts. </string>
-
-    <!-- Labels, Hints, Content Descriptions -->
-    <string name="aac_edit_text_about_cont_desc">This is a content description</string>
-    <string name="aac_edit_text_about_hint">This is a hint</string>
-    <string name="aac_edit_text_about_label">This is a label:</string>
-    <string name="aac_edit_text_first_name_label">First name:</string>
-    <string name="aac_edit_text_last_name_label">Last name:</string>
-    <string name="aac_edit_text_phone_num_label">Phone number:</string>
-    <string name="aac_edit_text_com_name_label">Company name:</string>
-    <string name="aac_edit_text_first_name_hint">First name</string>
-    <string name="aac_edit_text_last_name_hint">Last name</string>
-    <string name="aac_edit_text_phone_num_hint">Phone number</string>
-    <string name="aac_edit_text_com_name_hint">Company name</string>
-    <string name="aac_edit_text_fixed_phone_num_hint">(###) - ### - ####</string>
-    <string name="title_activity_splash_screen">SplashScreen</string>
-
-    <!-- Acronyms -->
-    <string name="aac_acronym_annoucement_title">Acronym Announcement</string>
-
-    <string name="aac_acronym_about_heading_1">TalkBack Announcement</string>
-    <string name="aac_acronym_about_cont_desc">Sometimes developers use acronyms in their apps to shorten verbose and commonly used phrases. Unfortunately, <i>TalkBack</i> often reads these acronyms out incorrectly. This can be quite confusing, since <i>TalkBack</i> users can’t tell when it’s an acronym being read or simply regular text. This story demonstrates the challenges that acronyms create and shows how to fix the issue.</string>
-    <string name="aac_acronym_about_talkback">With so many different devices out there, each coming with a different preinstalled version of <i>TalkBack</i>, predicting how the device specific version of <i>TalkBack</i> will interpret any given <i>acronym</i> can be difficult. To avoid confusing <i>TalkBack</i> users, we must find a solution such that the software always knows what an <i>acronym</i> means.</string>
-
-    <string name="aac_acronym_broken_heading_1">Ambigous Announcements</string>
-    <string name="aac_acronym_broken_flight">Flight XY-111 to Los Angeles, CA is on time to depart in 45m</string>
-    <string name="aac_acronym_broken_conclusion">Depending on which device or version of Android is being used, CA - meaning \"California\" - may have been read out by <i>TalkBack</i> as: \"Certificate Authority\". Another possible <i>TalkBack</i> bug, 45m - meaning \"forty-five minutes\" - may have been announced as \"forty-five meters\". Acronyms have the potential to quickly become confusing and inaccurate for <i>TalkBack</i> users. This violates WCag 3.1.4, which you can learn more about by following the link below.</string>
-    <string name="aac_acronym_broken_conclusion_content_description">Depending on which device or version of Android is being used, CA - meaning \"California\" - may have been read out by <i>TalkBack</i> as: \"Certificate Authority\". Another possible <i>TalkBack</i> bug, 45m - meaning \"forty-five minutes\" - may have been announced as \"forty-five meters\". Acronyms have the potential to quickly become confusing and inaccurate for <i>TalkBack</i> users. This violates the W Cag 3.1.4, which you can learn more about by following the link below.</string>
-
-    <string name="aac_acronym_flight_cont_desc">Flight X Y 111 to Los Angeles, California is on time to depart in forty-five minutes</string>
-
-    <string name="aac_acronym_the_fix">This issues can be fixed by adding a <i>content description</i> to the text field. The <i>content description</i> should have the same text as the body except the acronyms should e replaced with their expanded terms. No, CA is always announced as \"California\" and 45m is always \"forty-five minutes,\" no matter which device or version of Android the user has.</string>
-    <string name="aac_acronym_the_fix_cont_desc">By adding a content description for the text field with the same text from the body, but replacing the acronyms with their actual meanings. Now, C-A is always announced as California and forty-five M is always forty-five minutes, no matter which device or version of android the user has.</string>
-
     <!-- TalkBack Story -->
     <string name="aac_talkBack_title">TalkBack</string>
-
-    <string name="aac_talkBack_switch_on">TalkBack simulation switch, ON</string>
-    <string name="aac_talkBack_switch_off">TalkBack simulation switch, OFF</string>
-
+    <string name="aac_talkBack_switch_on">TalkBack simulation switch, on</string>
+    <string name="aac_talkBack_switch_off">TalkBack simulation switch, off</string>
     <string name="aac_talkBack_tab_title_demo">Demo</string>
     <string name="aac_talkBack_tab_title_advanced">Advanced</string>
-
-    <!-- TalkBack About Tab -->
-    <string name="aac_talkBack_about_description">Turn on TalkBack and click on this icon in the upper right hand corner of any story to simulate what it\'s like to rely on TalkBack to navigate through the screen.</string>
+    <string name="aac_talkBack_about_description">To simulate what its like to rely on TalkBack to navigate a mobile application first turn on TalkBack in Settings > Accessibility > TalkBack.</string>
+    <string name="aac_talkBack_about_description_2">Then, click on the icon in this application\'s toolbar. It looks exactly like the image above. Clicking that icon will mask the page and simulate what it is like to rely on TalkBack to navigate through the screen.</string>
     <string name="aac_talkBack_about_what_is_talkBack_heading">What is TalkBack?</string>
     <string name="aac_talkBack_about_how_to_use_heading">How to Use TalkBack</string>
     <string name="aac_talkBack_about_how_to_turn_on_heading">How to Turn on TalkBack</string>
     <string name="aac_talkBack_about_try_it_heading">Try It Out!</string>
-
-    <string name="aac_talkBack_about_what_is_talkBack_paragraph"><i>TalkBack</i> is a pre-installed screen reader and accessibility tool on Android devices. When activated, it uses cues such as audible announcements, vibrations, and sounds to provide users with the information they need to navigate the screen. <i>TalkBack</i> works with <i>Explore by Touch</i>, which is a system feature, to enable users to touch the screen and hear what is selected, along with other valuable information such as which actions are available or which other screen elements are associated with the selected element. </string>
+    <string name="aac_talkBack_about_what_is_talkBack_paragraph"><i>TalkBack</i> is a pre-installed screen reader and accessibility tool on Android devices. When activated it uses cues such as audible announcements, vibrations, and sounds to provide users with the information they need to navigate the screen.\n\n<i>TalkBack</i> works with <i>Explore by Touch</i>, which is a system feature, to enable users to touch the screen and hear what is selected, along with other valuable information such as which actions are available or which other screen elements are associated with the selected element. </string>
     <string name="aac_talkBack_about_how_to_turn_on_paragraph"><i>TalkBack</i> can be turned on by going into Settings > Accessibility > TalkBack and toggle the switch to turn it on (you will need to accept some conditions first). </string>
-    <string name="aac_talkBack_about_how_to_use_paragraph">There are dozens of shortcuts and gestures that help people most efficiently utilize <i>TalkBack</i>. Below are the most common ones.</string>
-
-    <string name="aac_talkBack_control_1"><b><i>Swipe down or right:</i></b> This scrolls \"down\" through views that can be highlighted.</string>
-    <string name="aac_talkBack_control_2"><b><i>Swipe up or left:</i></b> This scrolls \"up\" through views that can be highlighted.</string>
-    <string name="aac_talkBack_control_3"><b><i>Double tap:</i></b> This clicks on whichever view is currently highlighted. If clicking triggers an action for the current view, it will be triggered by this gesture when <i>TalkBack</i> is activated.</string>
-    <string name="aac_talkBack_control_4"><b><i>Two fingered scroll:</i></b> To scroll down a screen, you need to use two fingers when <i>TalkBack</i> is activated.</string>
-
-    <!-- TalkBack Demos Tab -->
+    <string name="aac_talkBack_about_how_to_use_paragraph">Talkback has a large number of shortcuts to enable expert users to utilize the application efficiently. The shortcuts may be confusing to a novice user. Android has a TalkBack tutorial built in, but in the interest of time the most common shortcuts are listed below.</string>
+    <string name="aac_talkBack_1"><b>Swipe down or right:</b> This <i><b>scrolls \"down\"</b></i> through views that can be highlighted.</string>
+    <string name="aac_talkBack_2"><b>Swipe up or left:</b> This <i><b>scrolls \"up\"</b></i> through views that can be highlighted.</string>
+    <string name="aac_talkBack_3"><b>Double tap:</b> This <i><b>clicks on a highlighted view.</b></i> If clicking triggers an action for the current view, it will be triggered by this gesture when <i>TalkBack</i> is activated.</string>
+    <string name="aac_talkBack_4"><b>Two fingered scroll:</b> This <i><b>scrolls a scrollable screen</b></i>, including nested scrolls such as lists.</string>
     <string name="aac_talkBack_demos_scroll_disclaimer">If you need to scroll down the page to view all its content when TalkBack is activated, don\'t forget to scroll with two fingers instead of one!</string>
-
     <string name="aac_talkBack_demos_step1_heading">Step 1: Turn on TalkBack</string>
     <string name="aac_talkBack_demos_step2_heading">Step 2: Scroll Down Through Views</string>
     <string name="aac_talkBack_demos_step3_heading">Step 3: Scroll Up Through Views</string>
     <string name="aac_talkBack_demos_step4_heading">Step 4: Explore By Touch</string>
     <string name="aac_talkBack_demos_step5_heading">Step 5: Double Tap to Click</string>
     <string name="aac_talkBack_demos_test_heading">Test Your Skills!</string>
-
     <string name="aac_talkBack_demos_step1_paragraph">Is TalkBack turned on? If not, see the \"About\" tab for instructions on how to do so. Once that\'s done, come back to this page and tap this TextView.</string>
     <string name="aac_talkBack_demos_step2_paragraph_1">Swipe right or down until you reach the EditText below.</string>
     <string name="aac_talkBack_demos_step2_paragraph_2">Now follow the prompts that TalkBack gives you and double tap to edit.</string>
@@ -250,21 +132,17 @@
     <!-- TalkBack Advanced Tab -->
     <string name="aac_talkBack_advanced_intro_heading">Advanced Gestures</string>
     <string name="aac_talkBack_advanced_conclusion_heading">Personalize Gestures</string>
-
     <string name="aac_talkBack_advanced_intro_paragraph">Now that you know the basics of how to navigate the screen using <i>TalkBack</i>, you can learn about some more handy gestures and shortcuts that can aid <i>TalkBack</i> users.</string>
     <string name="aac_talkBack_advanced_conclusion_paragraph">You can use the default gestures that are programmed into the pre-installed <i>TalkBack</i> or you can set your own by navigating to Settings > Accessibility > TalkBack > Settings > Touch Exploration > Manage gestures. This menu also hosts the entire set of default gestures that <i>TalkBack</i> recognizes.</string>
-
     <string name="aac_talkBack_advanced_title_gesture">Gesture</string>
     <string name="aac_talkBack_advanced_title_action">Action</string>
     <string name="aac_talkBack_advanced_gestures_heading">Gestures</string>
-
     <string name="aac_talkBack_advanced_gesture_1">Up then down</string>
     <string name="aac_talkBack_advanced_gesture_2">Down then up</string>
     <string name="aac_talkBack_advanced_gesture_3">Up then left</string>
     <string name="aac_talkBack_advanced_gesture_4">Down then left</string>
     <string name="aac_talkBack_advanced_gesture_5">Right then left</string>
     <string name="aac_talkBack_advanced_gesture_6">Left then right</string>
-
     <string name="aac_talkBack_advanced_action_1"><i><b>Up then down:</b></i> Highlight first element on the screen</string>
     <string name="aac_talkBack_advanced_action_2"><i><b>Down then up:</b></i> Highlight the last element on the screen</string>
     <string name="aac_talkBack_advanced_action_3"><i><b>Up then left:</b></i> Home button</string>
@@ -273,61 +151,32 @@
     <string name="aac_talkBack_advanced_action_6"><i><b>Left then right:</b></i> Scroll backwards, if the view is longer than one page</string>
 
     <!-- Separator Heading Story -->
-    <string name="aac_separator_heading_title">Demos</string>
+    <string name="aac_separator_heading_title">Rules</string>
 
-    <!-- Tabbed Navigation Story -->
-    <string name="aac_tab_nav_title">Tabbed Navigation</string>
-    <string name="aac_tab_nav_cat_tab_title">Cat</string>
-    <string name="aac_tab_nav_dog_tab_title">Dog</string>
-    <string name="aac_tab_nav_fish_tab_title">Fish</string>
-
-    <string name="aac_tab_nav_about_intro">Tabs can be implemented using the action bar or by utilizing the <i>TabLayout</i> class. It is a useful tool for developers, but you must add some features programmatically to make it accessible.  </string>
-    <string name="aac_tab_nav_about_heading_1">Name, Role, Value, State</string>
-    <string name="aac_tab_nav_demo_heading">Animal Images</string>
-    <string name="aac_tab_nav_about_paragraph_1">The tab bar at the bottom of this page has an added feature that forces <i>TalkBack</i> to announce the name, role, value and state of the selected tab. Alerting users to the name of the selected object is the only information provided by the app for <i>TalkBack</i> to announce. Alerting users to the role of the selected object, namely that it is a tab, is necessary for two important reasons. Firstly, without knowing that the object is a tab, <i>TalkBack</i> users cannot know to expect content change. Secondly, without the knowledge that the selected object is a tab, <i>TalkBack</i> users do not know what they can do with the selected object. By announcing the value, meaning which tab of how many, and if the tab is currently selected, <i>TalkBack</i> users gain valuable information about what is on the screen and can decide what their next action should be.</string>
-
-    <string name="aac_tab_nav_broken_heading">Missing Name, Role, State, Value</string>
-    <string name="aac_tab_nav_broken_conclusion">Notice that <i>TalkBack</i> does not announce anything other than the visible text, the name, when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information about the role, value, or state of the object and do not know much about what is on the screen or what their options are. This violates WCag 4.1.2, which you learn more about by following the link below.</string>
-
-    <string name="aac_tab_nav_broken_conclusion_content_description">Notice that <i>TalkBack</i> does not announce anything other than the visible text, the name, when a tab is selected. This means that <i>TalkBack</i> users do not gain useful information about the role, value, or state of the object and do not know much about what is on the screen or what their options are. This violates the W Cag 4.1.2, which you learn more about by following the link below.</string>
-
-    <string name="aac_tab_nav_fixed_conclusion">By forcing <i>TalkBack</i> to announce the role, value, and state of the tab in addition to its name, <i>TalkBack</i> users know exactly what is on the screen and can decide what their next action should be.</string>
-
-
-
-
-    <string name="aac_important_title">Important for Accessibility</string>
-
-    <string name="aac_important_about_intro">The <i>important for accessibility</i> attribute allows you to hide content from accessibility services.  When set to <i>no</i> accessibility services that inspect the view hierarchy will not get this information.  If set to <i>noHideDescendants</i> you can have entire layouts ignored.  While this attribute is powerful, it is important to use this carefully.  It is easy to create accessibility violations by misusing this attribute.  In general you want to leave this set to <i>auto</i>.  Below are examples of behaviors you get when you use no, noHideDescendants, and yes.</string>
-
-    <string name="aac_important_heading_no">NO</string>
-    <string name="aac_important_paragraph_no">When you set this attribute to <i>no</i> you are hiding information from TalkBack that it normally has access to.  This is generally a poor idea.  Notice how the button below, even thought it is dimmed, the fact that it is there and dimmed is important information!  Additionally, sighted users using TalkBack will be very confused why they cannot highlight visible onscreen controls.</string>
-
-    <string name="aac_important_heading_yes">YES</string>
-    <string name="aac_important_paragraph_yes">When you set <i>important for accessibility</i> to yes, you are able to communicate information to TalkBack that normally would be ignored.  With TalkBack on, focus moves to the layout, rather than the individual text views, because this layout is important for accessibility.  This can be useful for organizing information, however, in this instance we have probably captured too large of a group.  Finally, note that the control remains separately focusable.</string>
-
-    <string name="aac_important_heading_no_hd">No Hide Descendants</string>
-    <string name="aac_important_paragraph_no_hd">Using <i>no hide descendants</i> is very similar to just <i>no</i>, however, it will hide the entire view hierarchy within a layout.  TalkBack will not focus any of the views below.</string>
-
-    <string name="aac_important_broken_heading_issue_1">Top Layout Announcement</string>
-    <string name="aac_important_broken_paragraph_issue_1">In an attempt to provide association between the heading and the rest of the components the layout is marked as important for accessibility, by setting this property to yes.  This causes TalkBack to collect all text view information in the layout, and speak it out as the layouts content description.  However, the Green text view has been marked as not important, and so does not get included in the announcement.  Also not included in the announcement is the state of the on/off switches.  If all information within the layout were text based, this may have worked (ignoring our contrived Green not important for accessibility example).  However, if the layout contains active controls, it requires additional effort on the developers part to be made completely accessible. </string>
-    <string name="aac_important_broken_violation_issue_1">@string/aac_link_wcag_1_1_1</string>
-
-    <string name="aac_important_broken_heading_issue_2">Bottom Layout Announcement</string>
-    <string name="aac_important_broken_paragraph_issue_2">We have included a content description on the bottom layout.  This makes it important for accessibility automatically (unless overridden).  However, the content description does not include any information about the components.  Only the heading.  When text views are contained within a layout that is important for accessibility, it is assumed that the layout has announced the information for these text views, and so they are not individually focusable.  This information has been completely lost to TalkBack.</string>
-    <string name="aac_important_broken_violation_issue_2">@string/aac_link_wcag_1_1_1</string>
-
-    <string name="aac_important_broken_heading_issue_3">Switch Heading Association</string>
-    <string name="aac_important_broken_paragraph_issue_3">The switches in these examples, at least the ones that are focusable by TalkBack, have similar markup to our Labels example.  However, in the labels example, there was only one collection.  When we added an additional set of switches, we created an additional layer of control association that needs to be maintained, namely which set of controls you are dealing with.  When you focus a switch with TalkBack, do you know whether it is changing the top or bottom color component?</string>
-    <string name="aac_important_broken_violation_issue_3">@string/aac_link_wcag_1_3_1</string>
-
-    <string name="aac_important_content_heading_main">Settings</string>
-    <string name="aac_important_content_heading_top">Background Color Component Top</string>
-    <string name="aac_important_content_heading_bottom">Background Color Component Bottom</string>
-    <string name="aac_important_content_heading_bottom_cd">This is a content description.  Background Color Component Bottom</string>
-
-
-
-    <string name="aac_important_fixed_paragraph">Here we have two accessible groups of switches, using two very different approaches.  In the first we have set the content description of the main layout to hold all of the information pertinent to the layout.  This includes the heading, switch labels, switch roles, as well as their state.  Second, we set the content descriptions for the text views to associate them with the main heading.  Ex: The content description for Red is "Red Background Color Component Top".  Finally, we set the label for attribute on the switches to the text views.\n\nFor the second set we take advantage of the text property of the switch itself.  We set this to mark the label of the switch (red, green, blue).  We then set the content description of the switch itself to the text of the heading.\n\nBoth of these methods are accessible.  Which approach is better is dependent on your scenario.  In this case, the top method is more usable for non-sighted users relying on gesture navigation, and the bottom method for sighted users, relying only on voiceover readout, but using touch to explore navigation.  However, the top method would become weak in more complicated layouts, involving numerous settings.  Care must be taken to create discrete simple groups of information.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="rule_why_is_this_important">Why is this important?</string>
+    <string name="acc_landing_title">Attest</string>
+    <string name="title_home">Home</string>
+    <string name="title_talkback">TalkBack</string>
+    <string name="landing_rule_title">Rule Demos</string>
+    <string name="landing_rules_body">Reference these demos when you need clarity on a rule violation.</string>
+    <string name="landing_tool_title">Accessibility Tools</string>
+    <string name="rule_demos">Rule Demos</string>
+    <string name="accessibility_tools">Accessibility Tools</string>
+    <string name="header_title_rule_demos">Rule Demos</string>
+    <string name="header_body_rule_demos">Reference these demos when you need clarity on a rule violation.</string>
+    <string name="item_title_active_views">Active Views</string>
+    <string name="item_title_color_contrast">Color Contrast</string>
+    <string name="item_title_edit_text">Edit Text</string>
+    <string name="item_title_image_views">Image Views</string>
+    <string name="item_title_informative_views">Informative Views</string>
+    <string name="item_title_labels">Labels</string>
+    <string name="item_title_nested_active_elements">Nested Active Elements</string>
+    <string name="item_title_touch_target_size">Touch Target Size</string>
+    <string name="header_title_accessibility_tools">Accessibility Tools</string>
+    <string name="header_body_accessibility_tools">Accessibility Tools</string>
+    <string name="item_title_talkback">TalkBack</string>
 
 </resources>

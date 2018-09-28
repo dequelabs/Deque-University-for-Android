@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/touch_target"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_rounded_bottom"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/lg"
+    android:paddingStart="@dimen/lg">
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_serious_touch_target_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight="0.85"
+                android:background="@drawable/border_broken"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/touch_target_label1"
+                    style="@style/TextViewStyle.body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/touch_target_demo1"
+                    android:text="@string/serious"
+                    tools:ignore="NestedWeights" />
+
+                <Switch
+                    android:id="@+id/touch_target_demo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/touch_target_collapsible_button1"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/touch_target_help_view1"
+            style="@style/CollapsibleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/touch_target_failing"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_passing" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight="0.85"
+                android:background="@drawable/border_fixed"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/touch_target_demo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wcag_min_touch_size"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/passing" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/touch_target_collapsible_button2"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/touch_target_help_view2"
+            style="@style/CollapsibleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/touch_target_passing_switch"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md"
+        android:text="@string/attest_violation_passing" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xlg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/xlg"
+                android:layout_weight="0.85"
+                android:background="@drawable/border_fixed"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/touch_target_demo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:width="0dp"
+                    android:minHeight="@dimen/wcag_min_touch_size"
+                    android:text="@string/passing" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/touch_target_collapsible_button3"
+                android:layout_width="@dimen/wcag_min_touch_size"
+                android:layout_height="@dimen/wcag_min_touch_size"
+                android:minWidth="@dimen/wcag_min_touch_size"
+                android:minHeight="@dimen/wcag_min_touch_size"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/closed"
+                android:contentDescription="@string/collapsible_content_description_closed" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/touch_target_help_view3"
+            style="@style/CollapsibleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/touch_target_passing_button"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
+
+

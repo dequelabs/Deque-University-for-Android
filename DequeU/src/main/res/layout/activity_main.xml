@@ -1,44 +1,21 @@
 <!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
 
-<RelativeLayout android:id="@+id/aac_main_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aac_main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:theme="@style/AACAppTheme"
+    tools:context=".application.MainActivity">
 
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/drawer_layout"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/demo_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.design.widget.TabLayout
-                android:id="@+id/globalTabLayout"
-                android:layout_width="match_parent"
-                android:layout_weight="0"
-                android:layout_height="wrap_content"/>
-
-
-            <android.support.v4.view.ViewPager
-                android:id="@+id/globalViewPager"
-                android:layout_weight="2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
-
-        <fragment android:id="@+id/navigation_drawer"
-            android:layout_width="@dimen/navigation_drawer_width"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:name="com.dequesystems.accessibility101.NavigationDrawerFragment"
-            tools:layout="@layout/fragment_navigation_drawer" />
-
-    </android.support.v4.widget.DrawerLayout>
+    <FrameLayout
+        android:id="@+id/aac_main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
