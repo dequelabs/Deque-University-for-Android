@@ -1600,12 +1600,8 @@ layout view_touch_target_size
 menu global
 menu main
 menu menu_tab__widget__control
-mipmap attest_logo
-mipmap dq_attest_logo_grey
 mipmap dq_attest_logo_hero_blue
-mipmap dq_attest_logo_navy
-mipmap dq_attest_logo_white
-mipmap ic_launcher
+mipmap dqu_logo
 raw screenshot
 string aac_cont_desc_about_fish_cont_desc
 string aac_cont_desc_about_fish_label

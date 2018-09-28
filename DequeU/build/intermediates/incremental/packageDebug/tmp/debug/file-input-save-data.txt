@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Sep 28 15:04:55 EDT 2018
+#Fri Sep 28 15:30:16 EDT 2018
 2.base=/Users/christopheryono/Workspace/Deque-University-for-Android/DequeU/build/intermediates/transforms/dexMerger/debug/2
 5.set=DEX
 0.path=classes.dex

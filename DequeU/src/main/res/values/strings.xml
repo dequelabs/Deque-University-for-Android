@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WorldSpace Attest</string>
-    <string name="app_short_name">Attest</string>
+    <string name="app_name">DQU Android</string>
+    <string name="app_short_name">DQU</string>
 
     <string name="accessibility_service_description">This service looks at the information reported to TalkBack and checks it for Accessibility issues.  If issues are found, the offending views are highlighted in a thin border.</string>
 

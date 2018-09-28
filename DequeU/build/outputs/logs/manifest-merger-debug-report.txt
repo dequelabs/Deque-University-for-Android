@@ -71,7 +71,7 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/christophery
 	tools:ignore
 		ADDED from /Users/christopheryono/Workspace/Deque-University-for-Android/DequeU/src/main/AndroidManifest.xml:11:9-60
 	android:icon
-		ADDED from /Users/christopheryono/Workspace/Deque-University-for-Android/DequeU/src/main/AndroidManifest.xml:8:9-56
+		ADDED from /Users/christopheryono/Workspace/Deque-University-for-Android/DequeU/src/main/AndroidManifest.xml:8:9-40
 	android:allowBackup
 		ADDED from /Users/christopheryono/Workspace/Deque-University-for-Android/DequeU/src/main/AndroidManifest.xml:7:9-35
 	android:theme

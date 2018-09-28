@@ -1538,7 +1538,7 @@ public final class R {
     public static final class mipmap {
         private mipmap() {}
 
-        public static final int dq_attest_logo_hero_blue = 0x7f0d0002;
+        public static final int dq_attest_logo_hero_blue = 0x7f0d0000;
     }
     public static final class string {
         private string() {}

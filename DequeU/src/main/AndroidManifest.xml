@@ -5,7 +5,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/dq_attest_logo_hero_blue"
+        android:icon="@mipmap/dqu_logo"
         android:label="@string/app_short_name"
         android:theme="@style/AACAppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">

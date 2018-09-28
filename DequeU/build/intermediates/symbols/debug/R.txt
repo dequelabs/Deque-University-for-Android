@@ -1599,12 +1599,8 @@ int layout view_touch_target_size 0x7f0b005d
 int menu global 0x7f0c0000
 int menu main 0x7f0c0001
 int menu menu_tab__widget__control 0x7f0c0002
-int mipmap attest_logo 0x7f0d0000
-int mipmap dq_attest_logo_grey 0x7f0d0001
-int mipmap dq_attest_logo_hero_blue 0x7f0d0002
-int mipmap dq_attest_logo_navy 0x7f0d0003
-int mipmap dq_attest_logo_white 0x7f0d0004
-int mipmap ic_launcher 0x7f0d0005
+int mipmap dq_attest_logo_hero_blue 0x7f0d0000
+int mipmap dqu_logo 0x7f0d0001
 int raw screenshot 0x7f0e0000
 int string aac_cont_desc_about_fish_cont_desc 0x7f0f0000
 int string aac_cont_desc_about_fish_label 0x7f0f0001
