@@ -9,29 +9,14 @@ This repository is a set of interactive demos and informational text that demons
 
 Each demo in this repository contains of a series of examples that show how the Rule can be handled accessibility, inaccessibility, what requires manual testing, and certain best practices.
 
-# Attest for Android
+### TalkBack Simulation
 
-This repository also serves as documentation for Deque's automated accessibility analysis framework. Utilizing Attest, you can find Accessibility Issues automatically. Attest for Android enables testing your app in a lot of different ways:
+Create empathy with the TalkBack simulation button. It helps sighted users experience for themselves how an accessibility failure affects accessibility users. Click the eye icon in the upper right hand corner of any story to put an overlay on the screen that forces you to rely on TalkBack to navigate the screen.
 
-As a Service that runs alongside your Application.
-As an Automated UI Testing Framework
-To Enhanced a Third Party UI Testing Library (like Calabash) to add an Accessibility Testing Step.
-Attest for Android is very flexible and is built to fit into a multitude of workflows. Each example in Deque University has rules in Attest that will help you debug and build the most Accessible behaviors.
+### Demo List
 
-For more technical documentation see the [Attest for Android Documentation Wiki](https://github.com/dequelabs/Deque-University-for-Android/wiki), which is the Wiki in this repository.
+**Coming Next:** Accessible Carousel (View Pager)
 
-## Deque University for iOS
-If you are looking for the iOS version, it is over here! [Deque University for iOS](https://github.com/dequelabs/Deque-University-for-iOS)
-
-### We are currently using:
-
-Android 5.1 (Lollipop) or later
-
-Android Studio 3.1.3 or later
-
-Java SDK 1.8.0_45
-
-## Demo List
 <ul>
   <li>Active Views</li>
   <li>Color Contrast</li>
@@ -44,4 +29,20 @@ Java SDK 1.8.0_45
   <li>TalkBack</li>
 </ul>
 
-The TalkBack simulation helps sighted users experience for themselves how an accessibility failure affects accessibility users. Click the eye icon in the upper right hand corner of any story to put an overlay on the screen that forces you to rely on TalkBack to navigate the screen.
+## Ask Us for Accessibility Help
+
+One of the challenging things about Android Accessibility is the massive amount of flexibility provided by the Android Accessibility APIs. Help us explore this complicated space by building up our suite of Accessible behaviors. 
+
+### Ask a Question
+
+Issues don't have to be issues with this Repository! Ask Questions about Android Accessibility APIs and our Native Mobile Experts will answer them. 
+
+### Complicated Accessibility UI
+
+Need to know how to implement a complex User Interface and make it accessible? Post an Issue of a bit of UI you'd like to see added to this repository!
+
+### How to Make Something Accessible
+
+Have a control that you need to be made accessible with minimal design changes? Describe your problem in detail, or reproduce your example and push it to a branch and we will do our best. Though there are designs that are inherently inaccessible. 
+
+Attest Enterprise Customers will be heavily favored for this type of issue.
