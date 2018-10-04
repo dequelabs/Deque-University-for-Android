@@ -1,3 +1,14 @@
+# Need Android Accessibility Help?
+
+This open source project uses GitHub issues to allow you to ask **Deque Experts** your Android Accessibility Questions. Just post an issue. Help us build on our community of Android Accessibility Expertise! [Ask us a question](https://github.com/dequelabs/Deque-University-for-Android/issues/new/choose) or [explore answers already available](https://github.com/dequelabs/Deque-University-for-Android/issues?utf8=%E2%9C%93&q=is%3Aissue). You can ask about things like: 
+
+- Android Accessibility APIs 
+- How to implement complex widgets
+- Generic Android accessibility questions
+- The best thing to eat before a day at CSUN
+
+ANYTHING that is within the realms of Android Accessibility is fair game. If an issue template fitting your problem doesn't exist, wing it! We will figure it out and label it accordingly. **Attest Enterprise Customers** send your engagement manager a link to your Issue and our team will prioritize it accordingly.
+
 # Deque University for Android
 
 This repository is a set of interactive demos and informational text that demonstrate best practices when coding for both usability and accessibility. The demo application additionally exposes the difficulties faced by TalkBack users in using Native Android applications by enabling a user to use TalkBack with a masked screen. 
@@ -9,40 +20,17 @@ This repository is a set of interactive demos and informational text that demons
 
 Each demo in this repository contains of a series of examples that show how the Rule can be handled accessibility, inaccessibility, what requires manual testing, and certain best practices.
 
-### TalkBack Simulation
+### Build Empathy with the TalkBack Simulation Option
 
 Create empathy with the TalkBack simulation button. It helps sighted users experience for themselves how an accessibility failure affects accessibility users. Click the eye icon in the upper right hand corner of any story to put an overlay on the screen that forces you to rely on TalkBack to navigate the screen.
 
-### Demo List
+# Check Out Attest for Android
 
-**Coming Next:** Accessible Carousel (View Pager)
+Attest for Android is a suite of powerful accessibility tools that gives you access to:
 
-<ul>
-  <li>Active Views</li>
-  <li>Color Contrast</li>
-  <li>Edit Text</li>
-  <li>Image Views</li>
-  <li>Informative Views</li>
-  <li>Labels</li>
-  <li>Nested Active Elements</li>
-  <li>Touch Target Size</li>
-  <li>TalkBack</li>
-</ul>
+- Accessibility Debugging tools 
+- Accessibility Analysis 
+- The ability to share and collaborate on Accessibility Behaviors
+- Any question asked in Issues that is accompanied with the information from Attest will be prioritized
 
-## Ask Us for Accessibility Help
-
-One of the challenging things about Android Accessibility is the massive amount of flexibility provided by the Android Accessibility APIs. Help us explore this complicated space by building up our suite of Accessible behaviors. 
-
-### Ask a Question
-
-Issues don't have to be issues with this Repository! Ask Questions about Android Accessibility APIs and our Native Mobile Experts will answer them. 
-
-### Complicated Accessibility UI
-
-Need to know how to implement a complex User Interface and make it accessible? Post an Issue of a bit of UI you'd like to see added to this repository!
-
-### How to Make Something Accessible
-
-Have a control that you need to be made accessible with minimal design changes? Describe your problem in detail, or reproduce your example and push it to a branch and we will do our best. Though there are designs that are inherently inaccessible. 
-
-Attest Enterprise Customers will be heavily favored for this type of issue.
+Check out the [Attest for Android Documentation](https://github.com/dequelabs/Deque-University-for-Android/wiki).
