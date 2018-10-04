@@ -33,4 +33,4 @@ Attest for Android is a suite of powerful accessibility tools that gives you acc
 - The ability to share and collaborate on Accessibility Behaviors
 - Any question asked in Issues that is accompanied with the information from Attest will be prioritized
 
-Check out the [Attest for Android Documentation](https://github.com/dequelabs/Deque-University-for-Android/wiki).
+Check out the [Attest for Android Documentation](https://github.com/dequelabs/Deque-University-for-Android/wiki/Attest-for-Android-Accessibility-Suite).
