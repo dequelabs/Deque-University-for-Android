@@ -1,13 +1,13 @@
 # Need Android Accessibility Help?
 
-This open source project uses GitHub issues to allow you to ask **Deque Experts** your Android Accessibility Questions. Just post an issue. Help us build on our community of Android Accessibility Expertise! [Ask us a question](https://github.com/dequelabs/Deque-University-for-Android/issues/new/choose) or [explore answers already available](https://github.com/dequelabs/Deque-University-for-Android/issues?utf8=%E2%9C%93&q=is%3Aissue). You can ask about things like: 
+This open source project uses GitHub Issues to allow you to ask **Deque Experts** your Android Accessibility Questions. Just post an issue. Help us build on our community of Android Accessibility Expertise! [Ask us a question](https://github.com/dequelabs/Deque-University-for-Android/issues/new/choose) or [explore answers already available](https://github.com/dequelabs/Deque-University-for-Android/issues?utf8=%E2%9C%93&q=is%3Aissue). You can ask about things like: 
 
 - Android Accessibility APIs 
 - How to implement complex widgets
 - Generic Android accessibility questions
 - The best thing to eat before a day at CSUN
 
-ANYTHING that is within the realms of Android Accessibility is fair game. If an issue template fitting your problem doesn't exist, wing it! We will figure it out and label it accordingly. **Attest Enterprise Customers** send your engagement manager a link to your Issue and our team will prioritize it accordingly.
+Anything within the realms of **Android Accessibility** is fair game. If an issue template fitting your problem doesn't exist, wing it! We will figure it out and label it accordingly. **Attest Enterprise Customers** send your engagement manager a link to your Issue and our team will prioritize it accordingly.
 
 # Deque University for Android
 
