@@ -4,26 +4,27 @@ about: Generic bug report for when we mess up.
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+TITLE: A concise form of your issue OR a shorthand error message if available!
+
+A short description of your problem to get us grounded.
+
+> Quote any error messages. Can "code quote" longer error messages if it looks better.
 
 ### Technical Details
 
 A short description of the environment you're working in.
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
+ - Application Name: [Deque U Demo App, Attest Android App, Attest Desktop Client]
+ - Application Version: ???
+ - Device: [e.g. iPhone6, Galaxy S8]
+ - OS: [e.g. iOS8.1, Android 5.1]
 
 Any other context that may be helpful.
 
-### To Reproduce
+### Steps to Reproduce
 
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+ 1. A list of steps
+ 2. to reproduce
+ 3. your issue
 
-### Expected Behavior
-A clear and concise description of what you expected to happen.
-
-### Screenshots (If Applicable)
+### Screenshots
+Add screenshots to help explain your problem.

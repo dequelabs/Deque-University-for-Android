@@ -1,8 +1,6 @@
 ---
 name: '2C: Accessibility Help - Patterns'
-about: Need to implement a complex design pattern? Certain design patterns are common
-  in mobile development, but difficult to make accessible. Have one in mind that isn't
-  in our list yet... add it here!
+about: Need help making a design pattern or particular widget accessible?
 
 ---
 
@@ -10,7 +8,21 @@ TITLE: Keep Pattern Titles Short! Utilize known names if the patterns is common.
 
 A short summary of your pattern to get us grounded. 
 
-### App Store Example
+### Describe Pattern Behavior
+
+What does the pattern do in a list of bulleted steps.
+
+### Accessibility Considerations
+
+A list of ways in which the interactions above break for users of Assistive technologies.
+
+EX: 
+
+- As a TalkBack User I can't discover...
+- As a SwitchControl user I can't focus...
+- In Step 1 a TalkBack user would get lost...
+
+### App Store Example (If Availavble)
 
 An example of this pattern being used in the wild with a short description of its purpose and why you think it's generally valuable.
 
