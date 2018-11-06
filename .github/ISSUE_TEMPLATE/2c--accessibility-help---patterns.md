@@ -10,7 +10,11 @@ A short summary of your pattern to get us grounded.
 
 ### Describe Pattern Behavior
 
-What does the pattern do in a list of bulleted steps.
+Help us make sure we're on the same page with what your pattern does technically.
+
+1. Describe the way a capable user would interact with the hypothetical control. 
+2. It is best to do so in enumerated steps. 
+3. Then they can be referenced when talking about Accessibility Considerations.
 
 ### Accessibility Considerations
 
@@ -35,7 +39,3 @@ A link to the App
 ### Help Us Out
 
 Adding a scaffolding of the behavior in a feature branch that we can then make accessible will save us time AND make us more likely to prioritize your issue!
-
-### NOTE
-
-Responses to these may take time. When we set out to implement such a control we don't just say: eh... try this API. We set out to make a beautifully accessible experience for customers. This includes putting our finished product in front of users with disabilities BEFORE the implementation makes its way into the master branch. If we accept one of these issues expect to see design ideas, concept art, and a beta before the issue is "Closed".
