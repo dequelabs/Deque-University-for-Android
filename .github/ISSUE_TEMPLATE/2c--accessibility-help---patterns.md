@@ -8,9 +8,9 @@ TITLE: Keep Pattern Titles Short! Utilize known names if the patterns is common.
 
 A short summary of your pattern to get us grounded. 
 
-### Describe Pattern Behavior
+### User Interactions
 
-Help us make sure we're on the same page with what your pattern does technically.
+An ordered list of the interactions a non-disabled user would go through using this pattern.
 
 1. Describe the way a capable user would interact with the hypothetical control. 
 2. It is best to do so in enumerated steps. 
